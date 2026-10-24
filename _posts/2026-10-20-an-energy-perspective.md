@@ -49,8 +49,8 @@ $$
 Note: $$E_p \le 0$$, and that $$\theta = 0$$ is a maximum of $$E_p$$: the upright position is an unstable equilibrium.
 
 <figure>
-  <img src="img/fig1_undamped.gif" alt="Inverted pendulum with PD control and no damping oscillating about the vertical, with E_c constant">
-  <figcaption>Figure 5b. The same controller without damping ($k_p > mgh$, $k_d = 0$). The restoring torque keeps the body from falling, but nothing dissipates energy: $dE_c/dt = 0$, so $E_c$ stays constant and the body oscillates about the vertical indefinitely. The equilibrium is stable but not asymptotically stable.</figcaption>
+  <img src="/assets/img/fig1_undamped.gif" alt="Inverted pendulum with PD control and no damping oscillating about the vertical, with E_c constant">
+  <figcaption markdown="span">Figure 1. Energy conservation for single inverted pendulum with no torques.</figcaption>
 </figure>
 
 Differentiating $E_p$ with respect to time, with $\omega = \dot\theta$:
@@ -104,8 +104,8 @@ $$
 The condition $$k_p > mgh$$ means that the active stiffness produced by the muscles must exceed the destabilizing pull of gravity, while  $$k_d > 0$$ provides the dissipation that damps oscillations. The two conditions fail in different ways. If $$k_p < mgh$$, the body simply falls. If $$k_p > mgh$$ but $$k_d = 0$$, the body oscillates about the vertical without ever settling.
 
 <figure>
-  <img src="img/fig2_damped.gif" alt="Inverted pendulum with PD control and damping returning to the vertical, with E and E_c tending to zero">
-  <figcaption>Figure 5a. Inverted pendulum with PD control and damping ($k_p > mgh$, $k_d > 0$). The body returns to the vertical (left). The mechanical energy $E$ rises and falls as the torque alternately adds and removes energy ($dE/dt = \tau\omega$), while $E_c$ decreases monotonically ($dE_c/dt = -k_d\omega^2 \le 0$). Both tend to zero, the energy of the upright equilibrium.</figcaption>
+  <img src="/assets/img/fig2_damped.gif" alt="Inverted pendulum with PD control and damping returning to the vertical, with E and E_c tending to zero">
+  <figcaption markdown="span">Figure 2. Inverted pendulum with PD control and damping ($$k_p > mgh$$, $$k_d > 0$$). The body returns to the vertical (left). The mechanical energy $$E$$ rises and falls as the torque alternately adds and removes energy ($$dE/dt = \tau\omega$$), while $$E_c$$ decreases monotonically ($$dE_c/dt = -k_d\omega^2 \le 0$$). Both tend to zero, the energy of the upright equilibrium.</figcaption>
 </figure>
 
 The two conditions can also be read directly from the energy equation. Add the energy stored in the "control spring" to the mechanical energy:
