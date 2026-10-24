@@ -90,6 +90,11 @@ In our single inverted pendulum model, the center of mass describes a **simple h
 
 In a real handstand, where micro-adjustments are performed by the fingers and palms to maintain balance, this motion deviates slightly from a pure harmonic profile. Transient accelerations and decelerations naturally occur due to neuromuscular control, but these variations must remain extremely small to stay within the stability limits of the system.
 
+One way to interpret these results is that, when a handstand tilts, the ability to recover balance depends on the torque we can generate at the wrists.
+More experienced athletes, who have greater neuromuscular control, perform better in this specific task and are better able to maintain the position.
+
+In the next post we will look at another way to analyze this ability: we will leave the mechanical description aside for a moment and introduce the concept of energy.
+
 #### Sources and references
 - [Frontiers](https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1694648/full) - Biomechanical analyses of the handstand: a systematic review
 - Figure 1, 2 - AI-generated illustration created with Claude (Anthropic) for dopamine-chamber.github.io
