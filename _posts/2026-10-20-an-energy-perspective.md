@@ -1,4 +1,4 @@
----
+<img width="720" height="304" alt="fig2_damped" src="https://github.com/user-attachments/assets/f2e5bf90-b621-4790-8c09-9e562d0b1953" />---
 layout: post
 title: "An energy perspective"
 date: 2026-10-20 12:00:00 +0200
@@ -51,16 +51,8 @@ $$
 Note: $$E_p \le 0$$, and that $$\theta = 0$$ is a maximum of $$E_p$$: the upright position is an unstable equilibrium.
 
 <figure>
-  <iframe
-    src="{{ '/assets/img/interactive/handstand_potential_energy_hilltop.html' | relative_url }}"
-    width="100%"
-    height="600"
-    style="border:none;">
-  </iframe>
-
-  <figcaption>
-    Figure X. ...
-  </figcaption>
+  <img src="fig1_undamped.gif" alt="Conservation of energy for the inverted pendulum">
+  <figcaption>Figure 4. Conservation of energy for the inverted pendulum with no control torque ($$\tau = 0$$): kinetic and potential energy are exchanged while their sum E stays constant.</figcaption>
 </figure>
 
 Differentiating $E_p$ with respect to time, with $\omega = \dot\theta$:
@@ -88,7 +80,7 @@ $$
 This is the work–energy theorem applied to the pendulum: the rate of change of total mechanical energy equals the power delivered by the control torque. When the body tilts away from the vertical, gravitational potential energy decreases and, if $$\tau = 0$$, kinetic energy increases by exactly the same amount. Without a control torque the total energy is conserved ($$\frac{dE}{dt} = 0$$).
 
 <figure>
-  <img src="{{ site.baseurl }}/assets/img/figure4_energy_conservation.gif" alt="Conservation of energy for the inverted pendulum">
+  <img src="fig1_undamped.gif" alt="Conservation of energy for the inverted pendulum">
   <figcaption>Figure 4. Conservation of energy for the inverted pendulum with no control torque ($$\tau = 0$$): kinetic and potential energy are exchanged while their sum E stays constant.</figcaption>
 </figure>
 
@@ -119,16 +111,8 @@ $$
 The condition $$k_p > mgh$$ means that the active stiffness produced by the muscles must exceed the destabilizing pull of gravity, while  $$k_d > 0$$ provides the dissipation that damps oscillations. The two conditions fail in different ways. If $$k_p < mgh$$, the body simply falls. If $$k_p > mgh$$ but $$k_d = 0$$, the body oscillates about the vertical without ever settling.
 
 <figure>
-  <iframe
-    src="{{ '/assets/img/interactive/handstand_pd_control_energy_dissipation.html' | relative_url }}"
-    width="100%"
-    height="650"
-    style="border:none;">
-  </iframe>
-
-  <figcaption>
-    Figure X. Inverted pendulum with PD control and damping ($k_p > mgh$, $k_d > 0$). The body returns to the vertical (left). The mechanical energy $E$ rises and falls as the torque alternately adds and removes energy ($dE/dt = \tau\omega$), while $E_c$ decreases monotonically ($dE_c/dt = -k_d\omega^2 \le 0$). Both tend to zero, the energy of the upright equilibrium.*
-  </figcaption>
+  <img src="fig2_damped.gif" alt="Conservation of energy for the inverted pendulum">
+  <figcaption>Figure 4. Inverted pendulum with PD control and damping ($k_p > mgh$, $k_d > 0$). The body returns to the vertical (left). The mechanical energy $E$ rises and falls as the torque alternately adds and removes energy ($dE/dt = \tau\omega$), while $E_c$ decreases monotonically ($dE_c/dt = -k_d\omega^2 \le 0$). Both tend to zero, the energy of the upright equilibrium.</figcaption>
 </figure>
 
 The two conditions can also be read directly from the energy equation. Add the energy stored in the "control spring" to the mechanical energy:
