@@ -5,7 +5,7 @@ date: 2026-10-20 12:00:00 +0200
 
 Models help us understand the mechanics of a handstand, but how should the body adjust its position to maintain balance? To effectively restore equilibrium, adjustments must be applied in the right direction, with the appropriate magnitude, and at the right time. Mechanics can tell us which joint torques are needed, but not how to produce them: that takes training in strength, mobility and coordination. We set this aside for now and return to a simplified model in which the body behaves as a single-segment inverted pendulum pivoting about the wrists.
 
-## The single inverted pendulum 
+## Back to single inverted pendulum 
 
 We consider motion in the sagittal plane, where main handstand sway occur. We have also seen that $$ddot{\theta}$$ as the notation used to represent a second derivative. Therefore, $$ddot{\theta}$$ corresponds to the second derivative of the angular position, that is, the angular acceleration ($$\omega$$). Throughout this article, we assume that positive angles represent a tilt to the right.
 
@@ -44,14 +44,14 @@ $$
 The gravitational term is the power of gravity, which equals minus the rate of change of potential energy. We take the handstand position ($$\theta = 0$$) as the reference level, so that:
 
 $$
-E_p = mgh\cos\(theta-1)
+E_p = m g h\,(\cos\theta - 1)
 $$
 
 Note: $$E_p \le 0$$, and that $$\theta = 0$$ is a maximum of $$E_p$$: the upright position is an unstable equilibrium.
 
 <figure>
-  <img src="fig1_undamped.gif" alt="Conservation of energy for the inverted pendulum">
-  <figcaption>Figure 4. Conservation of energy for the inverted pendulum with no control torque ($$\tau = 0$$): kinetic and potential energy are exchanged while their sum E stays constant.</figcaption>
+  <img src="fig1_undamped.gif" alt="Kinetic and potential energy of the inverted pendulum with no control torque, with constant total energy">
+  <figcaption>Figure 4. Conservation of energy for the inverted pendulum with no control torque ($\tau = 0$): kinetic and potential energy are exchanged while their sum $E$ stays constant.</figcaption>
 </figure>
 
 Differentiating $E_p$ with respect to time, with $\omega = \dot\theta$:
@@ -77,11 +77,6 @@ $$
 $$
 
 This is the work–energy theorem applied to the pendulum: the rate of change of total mechanical energy equals the power delivered by the control torque. When the body tilts away from the vertical, gravitational potential energy decreases and, if $$\tau = 0$$, kinetic energy increases by exactly the same amount. Without a control torque the total energy is conserved ($$\frac{dE}{dt} = 0$$).
-
-<figure>
-  <img src="fig1_undamped.gif" alt="Conservation of energy for the inverted pendulum">
-  <figcaption>Figure 4. Conservation of energy for the inverted pendulum with no control torque ($$\tau = 0$$): kinetic and potential energy are exchanged while their sum E stays constant.</figcaption>
-</figure>
 
 With this choice of reference, the upright equilibrium has $$E=0$$. Balancing therefore means bringing E to zero while $$\omega$$ goes to zero as well, and the control torque is the only way to change E. Its role is not merely to oppose the fall, but to add or remove energy at the right moments. Balancing on one's hands is, in this sense, a matter of energy management through well-timed, calibrated adjustments rather than abrupt, large corrections.
 
@@ -110,8 +105,8 @@ $$
 The condition $$k_p > mgh$$ means that the active stiffness produced by the muscles must exceed the destabilizing pull of gravity, while  $$k_d > 0$$ provides the dissipation that damps oscillations. The two conditions fail in different ways. If $$k_p < mgh$$, the body simply falls. If $$k_p > mgh$$ but $$k_d = 0$$, the body oscillates about the vertical without ever settling.
 
 <figure>
-  <img src="fig2_damped.gif" alt="Conservation of energy for the inverted pendulum">
-  <figcaption>Figure 4. Inverted pendulum with PD control and damping ($k_p > mgh$, $k_d > 0$). The body returns to the vertical (left). The mechanical energy $E$ rises and falls as the torque alternately adds and removes energy ($dE/dt = \tau\omega$), while $E_c$ decreases monotonically ($dE_c/dt = -k_d\omega^2 \le 0$). Both tend to zero, the energy of the upright equilibrium.</figcaption>
+  <img src="fig2_damped.gif" alt="Inverted pendulum with PD control and damping returning to the vertical, with E and E_c tending to zero">
+  <figcaption>Figure 5. Inverted pendulum with PD control and damping ($k_p > mgh$, $k_d > 0$). The body returns to the vertical (left). The mechanical energy $E$ rises and falls as the torque alternately adds and removes energy ($dE/dt = \tau\omega$), while $E_c$ decreases monotonically ($dE_c/dt = -k_d\omega^2 \le 0$). Both tend to zero, the energy of the upright equilibrium.</figcaption>
 </figure>
 
 The two conditions can also be read directly from the energy equation. Add the energy stored in the "control spring" to the mechanical energy:
