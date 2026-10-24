@@ -1,4 +1,3 @@
-<img width="720" height="304" alt="fig2_damped" src="https://github.com/user-attachments/assets/f2e5bf90-b621-4790-8c09-9e562d0b1953" />---
 layout: post
 title: "An energy perspective"
 date: 2026-10-20 12:00:00 +0200
