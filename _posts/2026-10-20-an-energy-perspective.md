@@ -5,7 +5,7 @@ date: 2026-10-20 12:00:00 +0200
 
 Models help us understand the mechanics of a handstand, but how should the body adjust its position to maintain balance? To effectively restore equilibrium, adjustments must be applied in the right direction, with the appropriate magnitude, and at the right time. Mechanics can tell us which joint torques are needed, but not how to produce them: that takes training in strength, mobility and coordination. We set this aside for now and return to a simplified model in which the body behaves as a single-segment inverted pendulum pivoting about the wrists.
 
-## Back to single inverted pendulum 
+## Energy conservation in SIP
 
 We consider motion in the sagittal plane, where main handstand sway occur. We have also seen that $$ddot{\theta}$$ as the notation used to represent a second derivative. Therefore, $$ddot{\theta}$$ corresponds to the second derivative of the angular position, that is, the angular acceleration ($$\omega$$). Throughout this article, we assume that positive angles represent a tilt to the right.
 
@@ -18,8 +18,6 @@ For small deviations ($$\theta \ll 1$$), we use $$\sin\theta \approx \theta$$, w
 $$I\ddot{\theta} \approx mgh\,\theta + \tau$$
 
 If the body tilts to the right ($$\theta > 0$$), a negative torque is required to counteract the fall. However, simply pushing against the direction of the fall is not always sufficient: the effectiveness of a correction depends on its magnitude and timing, as well as the body’s angular velocity.
-
-## Energy 
 
 To quantify how torque transfers energy into rotational motion, we consider mechanical power ($$P$$). For a torque acting around a single axis:
 
@@ -80,7 +78,7 @@ This is the work–energy theorem applied to the pendulum: the rate of change of
 
 With this choice of reference, the upright equilibrium has $$E=0$$. Balancing therefore means bringing E to zero while $$\omega$$ goes to zero as well, and the control torque is the only way to change E. Its role is not merely to oppose the fall, but to add or remove energy at the right moments. Balancing on one's hands is, in this sense, a matter of energy management through well-timed, calibrated adjustments rather than abrupt, large corrections.
 
-## Adaptive control
+## The damped oscillator
 
 To illustrate this control mechanism, consider a linear Proportional-Derivative (PD) control law:
 
