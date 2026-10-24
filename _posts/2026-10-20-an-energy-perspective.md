@@ -53,7 +53,7 @@ Note: $$E_p \le 0$$, and that $$\theta = 0$$ is a maximum of $$E_p$$: the uprigh
   <figcaption markdown="span">Figure 1. Energy conservation for single inverted pendulum with no torques.</figcaption>
 </figure>
 
-Differentiating $$E_p$$ with respect to time, with $\omega = \dot\theta$:
+Differentiating $$E_p$$ with respect to time, with $$\omega = \dot\theta$$:
 
 $$
 \frac{dE_p}{dt} = -\,m g h \,\sin\theta \; \omega
