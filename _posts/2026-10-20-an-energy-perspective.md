@@ -8,7 +8,7 @@ Models help us understand the mechanics of a handstand, but how should the body 
 
 ## Energy conservation in SIP
 
-We consider motion in the sagittal plane, where main handstand sway occur. We have also seen that $$ddot{\theta}$$ as the notation used to represent a second derivative. Therefore, $$ddot{\theta}$$ corresponds to the second derivative of the angular position, that is, the angular acceleration ($$\omega$$). Throughout this article, we assume that positive angles represent a tilt to the right.
+We consider motion in the sagittal plane, where main handstand sway occur. We have also seen that $$\ddot{\theta}$$ as the notation used to represent a second derivative. Therefore, $$\ddot{\theta}$$ corresponds to the second derivative of the angular position, that is, the angular acceleration ($$\omega$$). Throughout this article, we assume that positive angles represent a tilt to the right.
 
 Recalling the rotational equation of motion:
 
