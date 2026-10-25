@@ -1,4 +1,4 @@
----
+<img width="4032" height="511" alt="image" src="https://github.com/user-attachments/assets/a6e07105-41ca-4a12-a8e6-5db94b6cb4cd" />---
 layout: post
 title: "The straight two-arm handstand model"
 date: 2026-10-20
@@ -95,7 +95,7 @@ In a real handstand, where micro-adjustments are performed by the fingers and pa
 One way to interpret these results is that, when a handstand tilts, the ability to recover balance depends on the torque we can generate at the wrists.
 More experienced athletes, who have greater neuromuscular control, perform better in this specific task and are better able to maintain the position.
 
-Because of the dipendance of $$\tau$$ from $$h$$, this result also suggest that the magnitude of the required torque to recover balance depends on the position of the center of mass, meaning that taller people struggle more in handstands. In next post we will se that other parameters exists and the wrists can only exert a limited torque, bounded by the size of the contact area under the hands: if $$mgh\sin\theta$$ exceeds that limit, the fall can no longer be stopped.
+Because of the dependence of $\tau$ on $h$, this result also suggests that the magnitude of the torque required to recover balance depends on the position of the center of mass, meaning that taller people may struggle more in handstands. In the next post, we will see that other parameters also play a role and that the wrists can exert only a limited torque, bounded by the size of the contact area under the hands: if $mgh\sin\theta$ exceeds that limit, the fall can no longer be stopped.
 
 In the next post we will look at another way to analyze this ability: we will leave the mechanical description aside for a moment and introduce the concept of energy.
 
