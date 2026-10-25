@@ -1,4 +1,4 @@
-<img width="4032" height="511" alt="image" src="https://github.com/user-attachments/assets/a6e07105-41ca-4a12-a8e6-5db94b6cb4cd" />---
+---
 layout: post
 title: "The straight two-arm handstand model"
 date: 2026-10-20
