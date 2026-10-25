@@ -49,8 +49,8 @@ $$
 Note: $$E_p \le 0$$, and that $$\theta = 0$$ is a maximum of $$E_p$$: the upright position is an unstable equilibrium.
 
 <figure>
-  <img src="/assets/img/fig1_undamped.gif" alt="Inverted pendulum with PD control and no damping oscillating about the vertical, with E_c constant">
-  <figcaption markdown="span">Figure 1. Energy conservation for single inverted pendulum with no torques.</figcaption>
+  <img src="/assets/img/fig_hilltop.gif" alt="Inverted pendulum with no control torque falling away from the vertical while its kinetic energy grows and the total energy stays constant">
+  <figcaption markdown="span">Figure 1. Conservation of energy for the inverted pendulum with no control torque ($$\tau = 0$$). The upright position is a maximum of $$E_p$$, so the body falls away from it: kinetic and potential energy are exchanged while their sum $$E$$ stays constant.</figcaption>
 </figure>
 
 Differentiating $$E_p$$ with respect to time, with $$\omega = \dot\theta$$:
@@ -75,7 +75,12 @@ $$
 \frac{dE}{dt} = \tau\omega
 $$
 
-This is the work–energy theorem applied to the pendulum: the rate of change of total mechanical energy equals the power delivered by the control torque. When the body tilts away from the vertical, gravitational potential energy decreases and, if $$\tau = 0$$, kinetic energy increases by exactly the same amount. Without a control torque the total energy is conserved ($$\frac{dE}{dt} = 0$$).
+This is the work–energy theorem applied to the pendulum (Figure 2): the rate of change of total mechanical energy equals the power delivered by the control torque. When the body tilts away from the vertical, gravitational potential energy decreases and, if $$\tau = 0$$, kinetic energy increases by exactly the same amount. Without a control torque the total energy is conserved ($$\frac{dE}{dt} = 0$$).
+
+<figure>
+  <img src="/assets/img/fig1_undamped.gif" alt="Inverted pendulum with PD control and no damping oscillating about the vertical, with E_c constant">
+  <figcaption markdown="span">Figure 2. Energy conservation for single inverted pendulum with no torques.</figcaption>
+</figure>
 
 With this choice of reference, the upright equilibrium has $$E=0$$. Balancing therefore means bringing E to zero while $$\omega$$ goes to zero as well, and the control torque is the only way to change E. Its role is not merely to oppose the fall, but to add or remove energy at the right moments. Balancing on one's hands is, in this sense, a matter of energy management through well-timed, calibrated adjustments rather than abrupt, large corrections.
 
