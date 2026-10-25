@@ -25,12 +25,15 @@ I acknowledge the notation is a bit tricky but, in other words, instead of consi
 </figure>
 
 Let’s analyze the individual terms:
+where:
 
-<i>ρ</i> = mass density of the medium (the tissue)<br>
-<i>u</i> (or <i>u</i><sub>i</sub>) = displacement field<br>
-<i>σ</i> = stress tensor<br>
-<i>∇·σ</i> = divergence of the stress field<br>
-<i>f</i> = external body forces per unit mass (e.g., gravity)
+$$\rho$$ = mass density of the medium (the tissue) [kg/m^3]<br>
+$$\mathbf{u}$$ (or $$u_i$$) = displacement field [m]<br>
+$$\boldsymbol{\sigma}$$ = stress tensor [Pa = N/m^2]<br>
+$$\nabla \cdot \boldsymbol{\sigma}$$ = divergence of the stress field [N/m^3]<br>
+$$\mathbf{f}$$ = external body force per unit mass (e.g., gravity) [N/kg = m/s^2]<br>
+
+Every term of the equation has the dimensions of a force per unit volume (\\( \mathrm{N/m^3} \\)): the inertial term \\( \rho\,\partial^2\mathbf{u}/\partial t^2 \\) (\\( \mathrm{kg/m^3} \times \mathrm{m/s^2} \\)), the stress term \\( \nabla\cdot\boldsymbol{\sigma} \\) (\\( \mathrm{Pa/m} \\)) and the body-force term \\( \rho\,\mathbf{f} \\) (\\( \mathrm{kg/m^3} \times \mathrm{m/s^2} \\)).
 
 This model is useful to show that things are more complicated and that another scale of study exists. Yet, with this model we assume small displacements and small strains, which allows us to write the equation of motion with the simple time derivative \\( \partial^2 \mathbf{u}/\partial t^2 \\). For large deformations, as in a strongly contracting muscle, the exact formulation refers to the reference configuration and uses the first Piola–Kirchhoff stress.
 
