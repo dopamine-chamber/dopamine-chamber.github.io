@@ -43,9 +43,13 @@ The equations above are evaluated on a grid of CoP and CoM positions with $$\ome
 
 The CoP is commanded as
 
-$$c = d_{ref} + k_p(\theta - \theta_{ref}) + k_d\,\omega$$
+$$
+c = d_{ref} + k_p(\theta - \theta_{ref}) + k_d\,\omega
+$$
 
-saturated to the hand footprint, with $$k_p = 1.5,l$$ and $$k_d = 0.30\ \text{s}$$. This stands for the modulation of palm and finger pressure; the gains are illustrative and not identified from data. The equations of motion are integrated with a fourth-order Runge–Kutta scheme (time step 1 ms, 6 s). A trial is counted as a fall if $$|\theta|$$ exceeds 0.35 rad. Each trial starts at rest with an angular offset of 0.04 rad (2.3°, about 4 cm of CoM displacement) from the reference posture $$\theta_{ref} = \arcsin(d_{ref}/l)$$, for four reference CoM positions.
+saturated to the hand footprint, with $$k_p = 1.5,l$$ and $$k_d = 0.30\ \text{s}$$. 
+
+This stands for the modulation of palm and finger pressure; the gains are illustrative and not identified from data. The equations of motion are integrated with a fourth-order Runge–Kutta scheme (time step 1 ms, 6 s). A trial is counted as a fall if $$|\theta|$$ exceeds 0.35 rad. Each trial starts at rest with an angular offset of 0.04 rad (2.3°, about 4 cm of CoM displacement) from the reference posture $$\theta_{ref} = \arcsin(d_{ref}/l)$$, for four reference CoM positions.
 
 Recoverable margin. For a given reference CoM, the largest initial angular offset from which balance is recovered, forwards and backwards, is found by bisection (14 iterations, time step 2 ms, 6 s). It is reported as the corresponding CoM displacement in centimetres.
 
