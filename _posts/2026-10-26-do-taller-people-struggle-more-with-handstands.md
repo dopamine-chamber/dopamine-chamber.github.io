@@ -78,7 +78,7 @@ A CoP at 9 cm gives 343 N and 30.9 N·m per wrist, and a CoP at the fingertips (
 Heat maps of the vertical force, shear force, resultant force and wrist moment as functions of CoP and CoM. 
 
 <figure>
-  <img src="/assets/img/cmaps_cop_com.png" alt="Inverted pendulum with no control torque falling away from the vertical while its kinetic energy grows and the total energy stays constant">
+  <img src="/assets/img/maps_cop_com.png" alt="Loads per wrist as functions of CoP (horizontal axis) and CoM (vertical axis), both relative to the wrist">
   <figcaption markdown="span">Figure 2. Loads per wrist as functions of CoP (horizontal axis) and CoM (vertical axis), both relative to the wrist. Dashed line: CoM = CoP. Dotted lines: hand edges. White square: region where equilibrium is feasible, with CoM and CoP both inside the hand.</figcaption>
 </figure>
 
