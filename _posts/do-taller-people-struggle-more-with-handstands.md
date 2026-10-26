@@ -16,7 +16,7 @@ and drew a first result: the magnitude of the torque depends on the tilt $$\thet
 
 There is a concept that comes up when talking about upright stance: the **centre of pressure**. The same idea can be applied to the handstand, with the hands taking the place of the feet. Studies of the handstand itself have examined how balance is maintained and controlled in the anterior–posterior direction.
 
-## Let's complicate a bit our model
+## Let's complicate our model a bit
 
 The body is a rigid stick of mass $$m$$ and length $$H$$ rotating about the wrist, with the CoM at distance $$l$$ from the pivot. Let $$\theta$$ be the inclination from the vertical (positive towards the fingers), $$d = l\sin\theta$$ the horizontal position of the CoM relative to the wrist, and $$c$$ the position of the CoP under the hand, also relative to the wrist. The CoP can only lie within the hand footprint, $$c \in [-0.02,\ 0.18]\ \text{m}$$. Taking moments about the wrist, with the wrist at ground level and the hand mass neglected:
 
@@ -35,10 +35,11 @@ The loads on the wrists are the vertical force $$N$$, the shear force $$F_x$$ (p
 | Body height (total length of our stick) $$H$$ | 1.75 m, so $$I = 87.9\ \text{kg m}^2$$ about the wrist |
 | Hand footprint | 2 cm behind the wrist to 18 cm in front of it |
 
+### Note on the model
 
-Load maps. The equations above are evaluated on a grid of CoP and CoM positions with $$\omega = 0$$, giving the instantaneous loads as functions of the two positions.
+The equations above are evaluated on a grid of CoP and CoM positions with $$\omega = 0$$, giving the instantaneous loads as functions of the two positions.
 
-Active balance. The CoP is commanded as
+The CoP is commanded as
 
 $$c = d_{ref} + k_p(\theta - \theta_{ref}) + k_d\,\omega,$$
 
@@ -52,6 +53,7 @@ Recoverable margin. For a given reference CoM, the largest initial angular offse
 </figure>
 
 ## Results
+
 3.1 In static equilibrium the wrist is loaded by a moment, not by extra force
 
 When the CoM is vertically above the CoP ($$d = c$$) the body does not accelerate, so $$N = mg$$, $$F_x = 0$$ and
