@@ -87,7 +87,14 @@ Heat maps of the vertical force, shear force, resultant force and wrist moment a
 
 The iso-lines of $$F_x$$ in Figure 2 are parallel to the CoM = CoP diagonal: the shear force depends on the offset $$d - c$$ only. It is zero on the diagonal, positive when the CoM is ahead of the CoP (the body tips towards the fingers) and negative when it is behind. Near equilibrium it is about 2.7 N per centimetre of offset per wrist: an offset of 5 cm gives $$F_x = 13.7$$ N and $$\ddot\theta = 0.39\ \text{rad/s}^2$$, and an offset of 10 cm gives 27 N.
 
-The vertical force is much less sensitive. Inside the feasible region $$N$$ stays between 334 and 346 N per wrist, within about 3 % of the static value, so the magnitude of the force on the wrist is a poor descriptor of wrist loading in this model. Over the same region the largest ratio $$|F_x|/N$$ is 0.16, reached at the corners where the offset is 20 cm. These are instantaneous values at $$\omega = 0$$; they indicate how much friction the hand would need to avoid slipping, not the loads during a real wobble.
+The vertical force is much less sensitive. Inside the feasible region $$N$$ stays between 334 and 346 N per wrist, within about 3 % of the static value, so the magnitude of the force on the wrist is a poor descriptor of wrist loading in this model. Over the same region the largest ratio 
+
+$$
+|F_x|/N
+$$ 
+
+is 0.16, reached at the corners where the offset is 20 cm. These are instantaneous values at $$\omega = 0$$; 
+they indicate how much friction the hand would need to avoid slipping, not the loads during a real wobble.
 
 3.3 Feasible region and correction margin
 
@@ -98,10 +105,13 @@ Table 1 gives the largest CoM displacement from which balance is recovered, star
 Table 1. Recoverable CoM displacement and wrist moment for four reference CoM positions.
 
 Reference CoM	Max recoverable displacement, forwards	Max recoverable displacement, backwards	Wrist moment at the reference
-3 cm	15.0 cm	5.0 cm	10.3 N·m
-8 cm (mid-hand)	10.0 cm	10.0 cm	27.5 N·m
-9 cm	9.0 cm	11.0 cm	30.9 N·m
-15 cm	3.0 cm	17.0 cm	51.5 N·m
+
+| Reference CoM | Max recoverable displacement, forwards | Max recoverable displacement, backwards | Wrist moment at the reference |
+| :--- | :--- | :--- | :--- |
+| 3 cm | 15.0 cm | 5.0 cm | 10.3 N·m |
+| 8 cm (mid-hand) | 10.0 cm | 10.0 cm | 27.5 N·m |
+| 9 cm | 9.0 cm | 11.0 cm | 30.9 N·m |
+| 15 cm | 3.0 cm | 17.0 cm | 51.5 N·m |
 
 In every case the forward margin equals the distance from the reference CoM to the fingertip edge (18 cm) and the backward margin equals the distance to the heel edge (−2 cm). In the cases tested, balance from rest is recoverable exactly as long as the CoM can be brought back within the hand footprint. The two margins are equal at mid-hand (8 cm), where the wrist moment is 27.5 N·m per wrist. Balancing closer to the wrist lowers the moment but leaves little room to correct backwards; balancing closer to the fingers raises the moment and leaves little room to correct forwards.
 
