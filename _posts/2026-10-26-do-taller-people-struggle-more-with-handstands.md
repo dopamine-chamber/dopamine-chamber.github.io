@@ -62,7 +62,7 @@ Recoverable margin. For a given reference CoM, the largest initial angular offse
 
 <figure>
   <img src="/assets/img/com vs cop.gif" alt="Inverted pendulum with no control torque falling away from the vertical while its kinetic energy grows and the total energy stays constant">
-  <figcaption markdown="span">Figure 1. Animation of the model. A: CoM = CoP is moved towards the fingers. B: CoP is fixed and the CoM moves backwards. C: CoM is fixed and the CoP moves back under it.</figcaption>
+  <figcaption markdown="span">Figure 1. Animation of the model. A) CoM = CoP is moved towards the fingers. B) CoP is fixed and the CoM moves backwards. C) CoM is fixed and the CoP moves back under it.</figcaption>
 </figure>
 
 ## Results
