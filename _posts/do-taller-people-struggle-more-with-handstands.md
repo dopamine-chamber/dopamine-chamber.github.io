@@ -19,7 +19,7 @@ There is a concept that comes up when talking about upright stance: the **centre
 
 ## Let's complicate a bit our model
 
-The body is a rigid rod of mass $$m$$ and length $$H$$ rotating about the wrist, with the CoM at distance $$l$$ from the pivot. Let $$\theta$$ be the inclination from the vertical (positive towards the fingers), $$d = l\sin\theta$$ the horizontal position of the CoM relative to the wrist, and $$c$$ the position of the CoP under the hand, also relative to the wrist. The CoP can only lie within the hand footprint, $$c \in [-0.02,\ 0.18]\ \text{m}$$. Taking moments about the wrist, with the wrist at ground level and the hand mass neglected:
+The body is a rigid stick of mass $$m$$ and length $$H$$ rotating about the wrist, with the CoM at distance $$l$$ from the pivot. Let $$\theta$$ be the inclination from the vertical (positive towards the fingers), $$d = l\sin\theta$$ the horizontal position of the CoM relative to the wrist, and $$c$$ the position of the CoP under the hand, also relative to the wrist. The CoP can only lie within the hand footprint, $$c \in [-0.02,\ 0.18]\ \text{m}$$. Taking moments about the wrist, with the wrist at ground level and the hand mass neglected:
 
 $$I\,\ddot\theta = m g\, d - N c, \qquad N = m(g + \ddot z), \qquad F_x = m\,\ddot x,$$
 
@@ -29,11 +29,13 @@ $$\ddot\theta = \frac{m g (d - c) + m c\, l\cos\theta\ \omega^2}{I - m c\, d}, \
 
 The loads on the wrists are the vertical force $$N$$, the shear force $$F_x$$ (positive towards the fingers, the direction in which the body accelerates), their resultant $$F$$, and the wrist moment $$M = N c$$, that is the moment of the ground reaction about the wrist. All values are reported per wrist, the total being shared equally between the two hands.
 
-Parameter	Value
-Body mass $$m$$	70 kg (body weight 687 N, 343 N per wrist)
-Wrist-to-CoM distance $$l$$	1.00 m
-Body height (rod length) $$H$$	1.75 m, so $$I = 87.9\ \text{kg m}^2$$ about the wrist
-Hand footprint	2 cm behind the wrist to 18 cm in front of it
+| Parameter | Value |
+|:---|:---|
+| Body mass $$m$$ | 70 kg (body weight 687 N, 343 N per wrist) |
+| Wrist-to-CoM distance $$l$$ | 1.00 m |
+| Body height (rod length) $$H$$ | 1.75 m, so $$I = 87.9\ \text{kg m}^2$$ about the wrist |
+| Hand footprint | 2 cm behind the wrist to 18 cm in front of it |
+
 
 Load maps. The equations above are evaluated on a grid of CoP and CoM positions with $$\omega = 0$$, giving the instantaneous loads as functions of the two positions.
 
