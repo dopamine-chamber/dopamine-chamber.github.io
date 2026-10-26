@@ -2,7 +2,6 @@
 layout: post
 title: "Do taller people struggle more with handstands?"
 date: 2026-10-26
-
 ---
 
 In my years of practice, one thing I have heard a lot is that, as a short girl, I must find it easier to balance in a handstand. And yes, but… it's a simplistic way of thinking about the phenomenon, and I'm not comfortable with assumptions that come without any evidence. Of course, if an experienced athlete says it, I trust them: it's empirical, and I don't necessarily need evidence. But, you know, I'm obsessed with handstands, so if there is more to it than this, I need to discover it. So let's introduce another important concept in this handstand-dismantling journey.
@@ -33,7 +32,7 @@ The loads on the wrists are the vertical force $$N$$, the shear force $$F_x$$ (p
 |:---|:---|
 | Body mass $$m$$ | 70 kg (body weight 687 N, 343 N per wrist) |
 | Wrist-to-CoM distance $$l$$ | 1.00 m |
-| Body height (rod length) $$H$$ | 1.75 m, so $$I = 87.9\ \text{kg m}^2$$ about the wrist |
+| Body height (total length of our stick) $$H$$ | 1.75 m, so $$I = 87.9\ \text{kg m}^2$$ about the wrist |
 | Hand footprint | 2 cm behind the wrist to 18 cm in front of it |
 
 
