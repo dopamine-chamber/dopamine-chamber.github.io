@@ -93,7 +93,7 @@ In our single inverted pendulum model, the center of mass describes a **simple h
 <figure>
   <img src="{{ '/assets/img/handstand_shm.gif' | relative_url }}"
        alt="Simple harmonic oscillator">
-  <figcaption>Figure 4. Figure: Kinematic and dynamic model of a straight-arm handstand represented as an inverted pendulum. Left: Diagram of the model where the wrists act as a pivot point, while the center of mass (CM) oscillates relative to the vertical equilibrium line. Top right: Graph of simple harmonic motion showing the tilt angle $$\theta(t)$$ as a function of time (which is a cosine function), with a period $$T = 2.0\text{ s}$$. Bottom right: Plot of angular velocity $$\dot{\theta}(t)$$, which is the time derivative of the position functionand it's magnitude reaches its maximum when the body crosses the vertical.</figcaption>
+  <figcaption>Figure 4. Figure: Kinematic and dynamic model of a straight-arm handstand represented as an inverted pendulum. Left: Diagram of the model where the wrists act as a pivot point, while the center of mass (CM) oscillates relative to the vertical equilibrium line. Top right: Graph of simple harmonic motion showing the tilt angle $\theta(t)$ as a function of time (which is a cosine function), with a period $$T = 2.0\text{ s}$$. Bottom right: Plot of angular velocity $$\dot{\theta}(t)$$, which is the time derivative of the position functionand it's magnitude reaches its maximum when the body crosses the vertical.</figcaption>
 </figure>
 
 
