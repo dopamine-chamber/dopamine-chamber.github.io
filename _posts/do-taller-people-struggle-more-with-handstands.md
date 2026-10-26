@@ -46,8 +46,6 @@ saturated to the hand footprint, with $$k_p = 1.5,l$$ and $$k_d = 0.30\ \text{s}
 
 Recoverable margin. For a given reference CoM, the largest initial angular offset from which balance is recovered, forwards and backwards, is found by bisection (14 iterations, time step 2 ms, 6 s). It is reported as the corresponding CoM displacement in centimetres.
 
-Animation of the model: CoP and CoM are moved along a path, and the body schematic, the shear-force map and the wrist-moment map update together.
-
 <figure>
   <img src="/assets/img/com vs cop.gif" alt="Inverted pendulum with no control torque falling away from the vertical while its kinetic energy grows and the total energy stays constant">
   <figcaption markdown="span">Figure 1. Animation of the model. A: CoM = CoP is moved towards the fingers. B: CoP is fixed and the CoM moves backwards. C: CoM is fixed and the CoP moves back under it.</figcaption>
