@@ -8,15 +8,17 @@ In my years of practice, one thing I have heard a lot is that, as a short girl, 
 
 ## The wrist strategy and the centre of pressure
 
-In my previous post, we derived the relation
+In my previous post, we derived that the torque exerted at the wrist is the player that counteracts the fall:
 
 $$|\tau| = m g h \sin\theta$$
 
-and drew a first result: the magnitude of the torque depends on the tilt $$\theta$$ and on the height $$h$$ of the centre of mass, and therefore on the height of the performer. In that model, we treated the human body as a single rigid pendulum, and the torque exerted at the wrist is the player that counteracts the fall: this is what is called the **wrist strategy**.
+and drew a first result: the magnitude of the torque depends on the tilt $$\theta$$ and on the height $$h$$ of the centre of mass, and therefore on the height of the performer. 
 
-There is a concept that comes up when talking about upright stance: the **centre of pressure**. The same idea can be applied to the handstand, with the hands taking the place of the feet. Studies of the handstand itself have examined how balance is maintained and controlled in the anterior–posterior direction.
+The ability to recover from falling is defined **wrist strategy** among several studies of the handstand itself, which have examined how balance is maintained and controlled in the anterior–posterior direction. These studies, condupted among experienced athletes, have shown that wrist strategy is the most commonly used to recover the balance when the centre of mass is swaying from its stability range. In the future posts, we will explore other strategies, but we will need to introduce different models: as like as happens in handstand trainings, we will go step by step along this journey.
 
 ## Let's complicate our model a bit
+
+There is another important concept that comes up when talking about upright stance: the **centre of pressure**. The same idea can be applied to the handstand, with the hands taking the place of the feet.
 
 The body is a rigid stick of mass $$m$$ and length $$H$$ rotating about the wrist, with the CoM at distance $$l$$ from the pivot. Let $$\theta$$ be the inclination from the vertical (positive towards the fingers), $$d = l\sin\theta$$ the horizontal position of the CoM relative to the wrist, and $$c$$ the position of the CoP under the hand, also relative to the wrist. The CoP can only lie within the hand footprint, $$c \in [-0.02,\ 0.18]\ \text{m}$$. Taking moments about the wrist, with the wrist at ground level and the hand mass neglected:
 
