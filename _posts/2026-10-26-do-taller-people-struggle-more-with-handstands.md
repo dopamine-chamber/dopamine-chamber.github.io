@@ -18,22 +18,39 @@ The ability to recover from falling is defined **wrist strategy** among several 
 
 ## Let's complicate our model a bit
 
-There is another important concept that comes up when talking about upright stance: the **centre of pressure**. The same idea can be applied to the handstand, with the hands taking the place of the feet.
+There is another important concept that comes up when talking about upright stance: the **centre of pressure** (CoP). The same idea can be applied to the handstand, with the hands taking the place of the feet.
 
-The body is a rigid stick of mass $$m$$ and length $$H$$ rotating about the wrist, with the CoM at distance $$l$$ from the pivot. Let $$\theta$$ be the inclination from the vertical (positive towards the fingers), $$d = l\sin\theta$$ the horizontal position of the CoM relative to the wrist, and $$c$$ the position of the CoP under the hand, also relative to the wrist. The CoP can only lie within the hand footprint, $$c \in [-0.02,\ 0.18]\ \text{m}$$. Taking moments about the wrist, with the wrist at ground level and the hand mass neglected:
+The body is a rigid stick of mass $$m$$ and length $$H$$ rotating about the wrist, with the centre of mass (CoM) at distance $$h$$ from the pivot. Let $$\theta$$ be the inclination from the vertical (positive towards the fingers), $$d = h\sin\theta$$ the horizontal position of the CoM relative to the wrist, and $$c$$ the position of the CoP under the hand, also relative to the wrist. The CoP can only lie within the hand footprint, $$c \in [-0.02,\ 0.18]\ \text{m}$$ (Figure 1).
+
+<figure>
+  <img src="/assets/img/handstand_center_of_pressure_model.png" alt="centre of mass vs centre of pressure">
+  <figcaption markdown="span">Figure 1. Schematic centre of mass and centre of pressure.</figcaption>
+</figure>
+
+Taking moments about the wrist, with the wrist at ground level and neglecting the mass hand:
 
 $$I\,\ddot\theta = m g\, d - N c, \qquad N = m(g + \ddot z), \qquad F_x = m\,\ddot x,$$
 
-where $$I = m,(H^2/12 + l^2)$$, $$z = l\cos\theta$$ and $$x = l\sin\theta$$. Eliminating $$N$$ gives the instantaneous angular acceleration (Appendix A):
+where:
 
-$$\ddot\theta = \frac{m g (d - c) + m c\, l\cos\theta\ \omega^2}{I - m c\, d}, \qquad \omega = \dot\theta.$$
+$$I = m,(H^2/12 + l^2)$$<br>
+$$z = h\cos\theta$$<br>
+$$x = h\sin\theta$$
+
+Eliminating $$N$$ gives the instantaneous angular acceleration (Appendix A):
+
+$$\ddot\theta = \frac{m g (d - c) + m c\, h\cos\theta\ \omega^2}{I - m c\, d}, \qquad \omega = \dot\theta.$$
 
 The loads on the wrists are the vertical force $$N$$, the shear force $$F_x$$ (positive towards the fingers, the direction in which the body accelerates), their resultant $$F$$, and the wrist moment $$M = N c$$, that is the moment of the ground reaction about the wrist. All values are reported per wrist, the total being shared equally between the two hands.
+
+### case 1: the gymbro
+
+Our first case of study is a person with these parameters:
 
 | Parameter | Value |
 |:---|:---|
 | Body mass $$m$$ | 70 kg (body weight 687 N, 343 N per wrist) |
-| Wrist-to-CoM distance $$l$$ | 1.00 m |
+| Wrist-to-CoM distance $$h$$ | 1.00 m |
 | Body height (total length of our stick) $$H$$ | 1.75 m, so $$I = 87.9\ \text{kg m}^2$$ about the wrist |
 | Hand footprint | 2 cm behind the wrist to 18 cm in front of it |
 
@@ -47,7 +64,7 @@ $$
 c = d_{ref} + k_p(\theta - \theta_{ref}) + k_d\,\omega
 $$
 
-saturated to the hand footprint, with $$k_p = 1.5,l$$ and $$k_d = 0.30\ \text{s}$$. 
+saturated to the hand footprint, with $$k_p = 1.5h$$ and $$k_d = 0.30\ \text{s}$$. 
 
 This stands for the modulation of palm and finger pressure; the gains are illustrative and not identified from data. 
 The equations of motion are integrated with a fourth-order Runge–Kutta scheme (time step 1 ms, 6 s). A trial is counted as a fall if $$|\theta|$$ exceeds 0.35 rad. Each trial starts at rest with an angular offset of 0.04 rad (2.3°, about 4 cm of CoM displacement) from the reference posture 
