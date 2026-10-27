@@ -38,12 +38,20 @@ If you are located in the European Economic Area (EEA), the United Kingdom, or r
 * Website usage data
 * Approximate location data
 
-#### Legal Basis for Processing:
+---
+
+## Legal Basis for Processing
+
+---
 
 * **Your Consent:** For non-essential cookies and personalized ads via Google AdSense.
 * **Legitimate Interest:** To maintain site security, prevent fraud, and analyze technical performance.
 
-#### Your Rights:
+---
+
+## Your rights
+
+---
 
 1. Access your personal data.
 2. Request correction of inaccurate data.
