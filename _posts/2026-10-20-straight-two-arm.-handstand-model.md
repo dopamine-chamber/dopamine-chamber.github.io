@@ -138,7 +138,7 @@ Moreover, because of the dependence of $$\tau$$ on $$h$$, this result also sugge
 
 In the next post we will look at another way to analyze this ability: we will leave the mechanical description aside for a moment and introduce the concept of energy.
 
-[Next post →](url-del-post-successivo](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html)
+[Next post →](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html)
 
 #### Sources and references
 - [Frontiers](https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1694648/full) - Biomechanical analyses of the handstand: a systematic review
