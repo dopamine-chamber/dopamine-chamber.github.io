@@ -16,6 +16,7 @@ This website uses **Google AdSense** to display advertisements. Google and its p
 ## Cookies & Tracking Technologies
 
 We use cookies and similar technologies to:
+
 * Display and measure advertisements
 * Understand website traffic and user behavior
 * Improve user experience and site functionality
@@ -29,6 +30,7 @@ We use cookies and similar technologies to:
 If you are located in the European Economic Area (EEA), the United Kingdom, or regions with equivalent laws, data processing is based on your consent or legitimate interest.
 
 **Data collected via advertising technologies may include:**
+
 * IP address
 * Device and browser information
 * User identifiers
@@ -36,10 +38,12 @@ If you are located in the European Economic Area (EEA), the United Kingdom, or r
 * Approximate location data
 
 **Legal Basis for Processing:**
+
 * **Your Consent:** For non-essential cookies and personalized ads via Google AdSense.
 * **Legitimate Interest:** To maintain site security, prevent fraud, and analyze technical performance.
 
 **Your Rights:**
+
 1. Access your personal data.
 2. Request correction of inaccurate data.
 3. Request deletion of your data.
