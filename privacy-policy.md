@@ -1,81 +1,74 @@
 ---
 layout: page
-title: privacy policy
+title: Privacy Policy
 permalink: /privacy-policy/
 ---
 
-#### Advertising
+## Advertising Disclosure
 
-This website uses **Google AdSense**, an advertising service provided by Google LLC ("Google"), to display advertisements to visitors.
+This website uses **Google AdSense** to display advertisements. Google and its partners may use cookies and similar tracking technologies to personalize ads and measure performance.
 
-Advertisements displayed on this website may be personalized based on your interests, browsing activity, geographic location, or other information collected through cookies and similar technologies. Google and its advertising partners may use cookies, web beacons, and related technologies to deliver relevant ads and measure advertising performance.
+* For details on how Google uses data, visit: [Google Partner Sites Policy](https://policies.google.com/technologies/partner-sites){:target="_blank" rel="noopener"}
+* To manage your ad settings and personalized advertising, visit: [Google Ad Settings](https://adssettings.google.com){:target="_blank" rel="noopener"}
 
-By using this website, you acknowledge that third-party vendors, including Google, may collect and process certain information in accordance with their own privacy policies and applicable laws.
+---
 
-For more information about how Google uses information from sites and apps that use its services, please visit: [Google Partner Sites Policy](https://policies.google.com/technologies/partner-sites){:target="_blank" rel="noopener"}
+## Cookies & Tracking Technologies
 
-You can learn more about personalized advertising and manage your ad settings at: [Google Ad Settings](https://adssettings.google.com){:target="_blank" rel="noopener"}
+We use cookies and similar technologies to:
+* Display and measure advertisements
+* Understand website traffic and user behavior
+* Improve user experience and site functionality
 
-#### Cookies
+*Note:* Where required by law, non-essential cookies and advertising technologies are activated only after obtaining your prior consent.
 
-This website may use cookies and similar technologies for the following purposes:
+---
 
-**Displaying advertisements;**<br>
-**Measuring advertising performance;**<br>
-**Understanding website traffic and user behavior;**<br>
-**Improving user experience and website functionality.**
+## GDPR Compliance (EEA & UK)
 
-Some cookies may be essential for the operation of the website, while others are used for analytics and advertising purposes.
+If you are located in the European Economic Area (EEA), the United Kingdom, or regions with equivalent laws, data processing is based on your consent or legitimate interest.
 
-> **Note:** Where required by applicable law, non-essential cookies and advertising technologies will only be activated after obtaining your consent.
+**Data collected via advertising technologies may include:**
+* IP address
+* Device and browser information
+* User identifiers
+* Website usage data
+* Approximate location data
 
-#### GDPR Compliance (EEA & UK)
+**Legal Basis for Processing:**
+* **Your Consent:** For non-essential cookies and personalized ads via Google AdSense.
+* **Legitimate Interest:** To maintain site security, prevent fraud, and analyze technical performance.
 
-If you are located in the European Economic Area (EEA), the United Kingdom, or another jurisdiction with similar privacy laws, certain personal data may be processed based on your consent.
+**Your Rights:**
+1. Access your personal data.
+2. Request correction of inaccurate data.
+3. Request deletion of your data.
+4. Withdraw your consent at any time.
+5. Object to data processing.
+6. Lodge a complaint with your local data protection authority.
 
-Depending on your choices, data collected through advertising technologies may include:
+---
 
-IP addresss<br>
-Device information;<br>
-Browser information;<br>
-User identifiers;<br>
-Website usage data;<br>
-Approximate location data.
+## Third-Party Services
 
+We use third-party services that may collect information directly from your browser or device, governed by their respective privacy policies:
+* Google AdSense & Ad Manager
+* Google Analytics
+* [Google Privacy Policy](https://policies.google.com/privacy){:target="_blank" rel="noopener"}
 
-We process personal data based on:
-* **Your Consent:** For non-essential cookies and personalized advertising via Google AdSense.
-* **Legitimate Interest:** To maintain website security, prevent fraud, and analyze technical site performance.
+Visitors can manage or withdraw their consent at any time using the website's cookie banner or privacy settings tool. Refusing consent will not block access to the site, though it may limit certain features or result in non-personalized ads.
 
-You have the right to:
+---
 
-Access your personal data;<br>
-Request correction of inaccurate data;<br>
-Request deletion of your personal data;<br>
-Withdraw consent at any time;<br>
-Object to certain types of data processing;<br>
-Lodge a complaint with your local data protection authority.
+## Contact Information
 
-### Third-Party Services
+For questions regarding this Privacy Notice or your data, you may contact:
 
-This website may use third-party services, including but not limited to:
+* **Data Controller:** Benedetta Giglio
+* **Location:** Turin, Italy
+* **Email:** thehumanbeinn@gmail.com
 
-Google AdSense<br>
-Google Ad Manager<br>
-Google Analytics
+---
 
-These services may collect information directly from your browser or device. Their data processing practices are governed by their respective privacy policies: [Google Privacy Policy](https://policies.google.com/privacy){:target="_blank" rel="noopener"}
-
-Visitors may manage or withdraw their cookie and advertising consent at any time through the website's consent management platform (cookie banner or privacy settings tool), where available.
-
-Refusing consent will not prevent access to the website but may result in less relevant advertising and reduced functionality of certain features.
-
-
-If you have questions regarding this Privacy Notice or the processing of your personal data, you may contact:
-
-Benedetta Giglio<br>
-Turin, Italy<br>
-thehumanbeinn@gmail.com
-
-This website displays advertisements through Google AdSense. Google and its partners may use cookies and similar technologies to personalize ads and measure performance. For more information, please review our [Privacy Policy](/privacy-policy/) and Cookie Policy.
+This website displays advertisements through Google AdSense. Google and its partners may use cookies and similar technologies to personalize ads and measure performance. For more information, please review our [Privacy Policy](/privacy-policy/).
 {: .footer-disclosure style="font-size: 0.8em; opacity: 0.8;"}
