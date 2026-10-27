@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Privacy policy
+title: privacy policy
 permalink: /privacy-policy/
 ---
 
-### Advertising Disclosure
+#### Advertising
 
 This website uses **Google AdSense**, an advertising service provided by Google LLC ("Google"), to display advertisements to visitors.
 
@@ -16,7 +16,7 @@ For more information about how Google uses information from sites and apps that 
 
 You can learn more about personalized advertising and manage your ad settings at: [Google Ad Settings](https://adssettings.google.com){:target="_blank" rel="noopener"}
 
-### Cookies and Tracking Technologies
+#### Cookies
 
 This website may use cookies and similar technologies for the following purposes:
 
@@ -29,25 +29,26 @@ Some cookies may be essential for the operation of the website, while others are
 
 > **Note:** Where required by applicable law, non-essential cookies and advertising technologies will only be activated after obtaining your consent.
 
-### GDPR Compliance (EEA & UK)
+#### GDPR Compliance (EEA & UK)
 
 If you are located in the European Economic Area (EEA), the United Kingdom, or another jurisdiction with similar privacy laws, certain personal data may be processed based on your consent.
 
 Depending on your choices, data collected through advertising technologies may include:
-IP addres;s<br>
+
+IP addresss<br>
 Device information;<br>
 Browser information;<br>
 User identifiers;<br>
 Website usage data;<br>
 Approximate location data.
 
-### Legal Basis for Processing
+
 We process personal data based on:
 * **Your Consent:** For non-essential cookies and personalized advertising via Google AdSense.
 * **Legitimate Interest:** To maintain website security, prevent fraud, and analyze technical site performance.
 
-### Your Rights
 You have the right to:
+
 Access your personal data;<br>
 Request correction of inaccurate data;<br>
 Request deletion of your personal data;<br>
@@ -58,21 +59,17 @@ Lodge a complaint with your local data protection authority.
 ### Third-Party Services
 
 This website may use third-party services, including but not limited to:
+
 Google AdSense<br>
 Google Ad Manager<br>
 Google Analytics
 
 These services may collect information directly from your browser or device. Their data processing practices are governed by their respective privacy policies: [Google Privacy Policy](https://policies.google.com/privacy){:target="_blank" rel="noopener"}
 
-### Consent Management
-
 Visitors may manage or withdraw their cookie and advertising consent at any time through the website's consent management platform (cookie banner or privacy settings tool), where available.
 
 Refusing consent will not prevent access to the website but may result in less relevant advertising and reduced functionality of certain features.
-#
----
 
-## Contact Information
 
 If you have questions regarding this Privacy Notice or the processing of your personal data, you may contact:
 
