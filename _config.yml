@@ -2,6 +2,9 @@ title: the handstand dilemma
 description: disassembling the dilemma
 theme: minima
 lang: en
+header_pages:
+  - privacy.md
+  - about.md
 markdown: kramdown
 kramdown:
   math_engine: mathjax
