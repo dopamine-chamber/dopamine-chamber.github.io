@@ -77,7 +77,5 @@ Benedetta Giglio<br>
 Turin, Italy<br>
 thehumanbeinn@gmail.com
 
----
-
-> This website displays advertisements through Google AdSense. Google and its partners may use cookies and similar technologies to personalize ads and measure performance. For more information, please review our [Privacy Policy](/privacy-policy/) and Cookie Policy.
+This website displays advertisements through Google AdSense. Google and its partners may use cookies and similar technologies to personalize ads and measure performance. For more information, please review our [Privacy Policy](/privacy-policy/) and Cookie Policy.
 {: .footer-disclosure style="font-size: 0.8em; opacity: 0.8;"}
