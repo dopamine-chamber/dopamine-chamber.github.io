@@ -13,7 +13,7 @@ This website uses **Google AdSense** to display advertisements. Google and its p
 
 <div style="text-align: left;" markdown="1">
 
-- For details on how Google uses data, visit:m[Google Partner Sites Policy](https://policies.google.com/technologies/partner-sites)
+- For details on how Google uses data, visit: [Google Partner Sites Policy](https://policies.google.com/technologies/partner-sites)
 
 - To manage your ad settings and personalized advertising, visit: [Google Ad Settings](https://adssettings.google.com)
 
@@ -57,7 +57,7 @@ Data collected via advertising technologies may include:
 
 ---
 
-### Legal Basis for 
+### Legal Basis for Processing
 {: style="text-align: left;"}
 
 <div style="text-align: left;" markdown="1">
@@ -113,5 +113,6 @@ benedettagiglio@gmail.com
 
 ---
 
-This website displays advertisements through Google AdSense. Google and its partners may use cookies and similar technologies to personalize ads and measure performance. For more information, please review our [Privacy Policy](/privacy-policy/).
+This website displays advertisements through Google AdSense. Google and its partners may use cookies and similar technologies to personalize ads and measure performance. For more information, please review our [Privacy Policy](https://dopamine-chamber.github.io/privacy-policy/).
+
 {: .footer-disclosure}
