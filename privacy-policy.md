@@ -45,6 +45,7 @@ If you are located in the European Economic Area (EEA), the United Kingdom, or r
 ---
 
 ## Legal Basis for Processing
+{: style="text-align: left;"}
 
 * Your Consent: For non-essential cookies and personalized ads via Google AdSense;
 * Legitimate Interest: To maintain site security, prevent fraud, and analyze technical performance.
