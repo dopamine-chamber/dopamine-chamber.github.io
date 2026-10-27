@@ -7,19 +7,25 @@ permalink: /privacy-policy/
 ---
 
 ### Advertising Disclosure
+{: style="text-align: left;"}
 
 This website uses **Google AdSense** to display advertisements. Google and its partners may use cookies and similar tracking technologies to personalize ads and measure performance.
 
 <div style="text-align: left;" markdown="1">
 
-- For details on how Google uses data, visit: [Google Partner Sites Policy](https://policies.google.com/technologies/partner-sites)
-- To manage your ad settings and personalized advertising, visit: [Google Ad Settings](https://adssettings.google.com)
+- For details on how Google uses data, visit:
+
+[Google Partner Sites Policy](https://policies.google.com/technologies/partner-sites)
+
+- To manage your ad settings and personalized advertising, visit:
+[Google Ad Settings](https://adssettings.google.com)
 
 </div>
 
 ---
 
 ### Cookies & Tracking Technologies
+{: style="text-align: left;"}
 
 We use cookies and similar technologies to:
 
@@ -36,6 +42,7 @@ We use cookies and similar technologies to:
 ---
 
 ### GDPR Compliance (EEA & UK)
+{: style="text-align: left;"}
 
 If you are located in the European Economic Area (EEA), the United Kingdom, or regions with equivalent laws, data processing is based on your consent or legitimate interest.
 
@@ -53,7 +60,8 @@ Data collected via advertising technologies may include:
 
 ---
 
-### Legal Basis for Processing
+### Legal Basis for 
+{: style="text-align: left;"}
 
 <div style="text-align: left;" markdown="1">
 
@@ -65,21 +73,23 @@ Data collected via advertising technologies may include:
 ---
 
 ### Your rights
+{: style="text-align: left;"}
 
 <div style="text-align: left;" markdown="1">
-
-1. Access your personal data.
-2. Request correction of inaccurate data.
-3. Request deletion of your data.
-4. Withdraw your consent at any time.
-5. Object to data processing.
-6. Lodge a complaint with your local data protection authority.
+  
+- Access your personal data.
+- Request correction of inaccurate data.
+- Request deletion of your data.
+- Withdraw your consent at any time.
+- Object to data processing.
+- Lodge a complaint with your local data protection authority.
 
 </div>
 
 ---
 
 ### Third-Party Services
+{: style="text-align: left;"}
 
 We use third-party services that may collect information directly from your browser or device, governed by their respective privacy policies:
 
@@ -96,6 +106,7 @@ Visitors can manage or withdraw their consent at any time using the website's co
 ---
 
 ### Contact Information
+{: style="text-align: left;"}
 
 For questions regarding this Privacy Notice or your data, you may contact:
 
