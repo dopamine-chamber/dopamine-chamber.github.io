@@ -112,3 +112,15 @@ In the next post we will look at another way to analyze this ability: we will le
 - [Frontiers](https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1694648/full) - Biomechanical analyses of the handstand: a systematic review
 - Figure 1, 2 - AI-generated illustration created with Claude (Anthropic) for dopamine-chamber.github.io
 - Figure 3, 4 - Generated via Python
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7508630837578903"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7508630837578903"
+     data-ad-slot="6047488771"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
