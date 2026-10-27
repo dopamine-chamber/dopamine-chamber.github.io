@@ -38,15 +38,31 @@
     padding-left: 0 !important;
   }
 
-   /* Impedisce lo scroll orizzontale superfluo sul body */
 html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
 
-/* Evita che box con padding/border superino la larghezza impostata */
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, table, pre {
+  max-width: 100%;
+  height: auto;
 }
    
 </style>
