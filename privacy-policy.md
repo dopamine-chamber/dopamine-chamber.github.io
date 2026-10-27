@@ -18,9 +18,9 @@ To manage your ad settings and personalized advertising, visit: [Google Ad Setti
 
 We use cookies and similar technologies to:
 
-* Display and measure advertisements
-* Understand website traffic and user behavior
-* Improve user experience and site functionality
+* Display and measure advertisements<br>
+* Understand website traffic and user behavior<br>
+* Improve user experience and site functionality<br>
 
 *Note:* Where required by law, non-essential cookies and advertising technologies are activated only after obtaining your prior consent.
 
@@ -32,17 +32,17 @@ If you are located in the European Economic Area (EEA), the United Kingdom, or r
 
 **Data collected via advertising technologies may include:**
 
-* IP address
-* Device and browser information
-* User identifiers
-* Website usage data
-* Approximate location data
+* IP address<br>
+* Device and browser information<br>
+* User identifiers<br>
+* Website usage data<br>
+* Approximate location data<br>
 
 ---
 
 ## Legal Basis for Processing
 
-* **Your Consent:** For non-essential cookies and personalized ads via Google AdSense.
+**Your Consent:** For non-essential cookies and personalized ads via Google AdSense.<br>
 * **Legitimate Interest:** To maintain site security, prevent fraud, and analyze technical performance.
 
 ---
@@ -61,8 +61,9 @@ If you are located in the European Economic Area (EEA), the United Kingdom, or r
 ## Third-Party Services
 
 We use third-party services that may collect information directly from your browser or device, governed by their respective privacy policies:
-* Google AdSense & Ad Manager
-* Google Analytics
+
+* Google AdSense & Ad Manager<br>
+* Google Analytics<br>
 * [Google Privacy Policy](https://policies.google.com/privacy){:target="_blank" rel="noopener"}
 
 Visitors can manage or withdraw their consent at any time using the website's cookie banner or privacy settings tool. Refusing consent will not block access to the site, though it may limit certain features or result in non-personalized ads.
