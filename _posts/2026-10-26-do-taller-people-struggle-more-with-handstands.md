@@ -16,9 +16,11 @@ and drew a first result: the magnitude of the torque depends on the tilt $$\thet
 
 The ability to recover from falling is defined **wrist strategy** among several studies of the handstand itself, which have examined how balance is maintained and controlled in the anterior–posterior direction. These studies, condupted among experienced athletes, have shown that wrist strategy is the most commonly used to recover the balance when the centre of mass is swaying from its stability range. In the future posts, we will explore other strategies, but we will need to introduce different models: as like as happens in handstand trainings, we will go step by step along this journey.
 
-## Let's complicate our model a bit
+There is another important concept that comes up when talking about upright stance: the **centre of pressure** (CoP), the point of application of the resultant ground reaction force acting on the plantar surface of the foot (or feet) during standing, walking or other activities. It is the weighted average of all the pressure exerted by the foot on the ground, and its trajectory over time is widely used to assess balance, postural control and gait.
 
-There is another important concept that comes up when talking about upright stance: the **centre of pressure** (CoP). The same idea can be applied to the handstand, with the hands taking the place of the feet.
+The same idea can be applied to the handstand, with the hands taking the place of the feet.
+
+## Let's complicate our model a bit
 
 The body is a rigid stick of mass $$m$$ and length $$H$$ rotating about the wrist, with the centre of mass (CoM) at distance $$h$$ from the pivot. Let $$\theta$$ be the inclination from the vertical (positive towards the fingers), $$d = h\sin\theta$$ the horizontal position of the CoM relative to the wrist, and $$c$$ the position of the CoP under the hand, also relative to the wrist. The CoP can only lie within the hand footprint (Figure 1).
 
