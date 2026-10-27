@@ -106,7 +106,11 @@ This is reasonably consistent with what we observe in practice: small oscillatio
 
 ## The simple harmonic oscillator
 
-In our single inverted pendulum model, the center of mass describes a **simple harmonic oscillatory motion** along a circular arc, where the angular position over time is modeled by a cosine function, $$\theta(t) = \theta_0 \cos(\omega_0 t$)$$, where $$\theta_0$$ is the initial amplitude and $$\omega_0$$ is the angular frequency. Under this regime, its velocity continuously changes direction at the oscillation limits and varies in magnitude, reaching its maximum as the system crosses the vertical reference line (Figure 4).
+In our single inverted pendulum model, the center of mass describes a **simple harmonic oscillatory motion** along a circular arc, where the angular position over time is modeled by a cosine function, $$\theta(t) = \theta_0 \cos(\omega_0 t$)$$, where $$\theta_0$$ is the initial amplitude and $$\omega_0$$ is the angular frequency. 
+
+*Well, this may not be very useful for understanding handstands, but... In case you didn't know, I love waves.*
+
+Under this regime, its velocity continuously changes direction at the oscillation limits and varies in magnitude, reaching its maximum as the system crosses the vertical reference line (Figure 4).
 
 <figure>
   <img src="{{ '/assets/img/handstand_shm.gif' | relative_url }}"
@@ -117,13 +121,12 @@ In our single inverted pendulum model, the center of mass describes a **simple h
   <figcaption>Figure 4. Figure: Kinematic and dynamic model of a straight-arm handstand represented as an inverted pendulum. Left: Diagram of the model where the wrists act as a pivot point, while the center of mass (CM) oscillates relative to the vertical equilibrium line in lateral view (top) and top view (bottom). Top right: Graph of simple harmonic motion showing the tilt angle as a function of time (which is a cosine function), with a period T = 2.0 s. Bottom right: Plot of angular velocity, which is the time derivative of the position function and it's magnitude reaches its maximum when the body crosses the vertical.</figcaption>
 </figure>
 
-
-*Well, this may not be very useful for understanding handstands, but... In case you didn't know, I love waves.*
-
 Anyway, one way to interpret these results is that, when a handstand tilts, the ability to recover balance depends on the torque we can generate at the wrists.
 More experienced athletes, who have greater neuromuscular control, perform better in this specific task and are better able to maintain the position.
 
-However, in a real handstand, where micro-adjustments are performed by the fingers and palms to maintain balance, this motion deviates slightly from a pure harmonic profile. Transient accelerations and decelerations naturally occur due to neuromuscular control, but these variations must remain extremely small to stay within the stability limits of the system.
+This is what happens at the beginning of practice, when the common wisdom about controlling a handstand revolves, more or less, around this simplification: if you are falling forward, push with your fingers; if you are falling backward, push with your palms. At this stage of learning, before any serious study of the practice, what people are doing is nothing more than reducing themselves to inverted pendulums. The problem is that, as we have said, this takes years of practice, and at first the movements are anything but this finely tuned.
+
+However, in a real handstand, even where micro-adjustments are performed by the fingers and palms to maintain balance, this motion deviates slightly from a pure harmonic profile. Transient accelerations and decelerations naturally occur due to neuromuscular control, but these variations must remain extremely small to stay within the stability limits of the system.
 
 Moreover, because of the dependence of $$\tau$$ on $$h$$, this result also suggests that the magnitude of the torque required to recover balance depends on the position of the center of mass, meaning that taller people may struggle more in handstands. In the next posts, we will see that other parameters also play a role and that the wrists can exert only a limited torque, bounded by the size of the contact area under the hands: if $$mgh\sin\theta$$ exceeds that limit, the fall can no longer be stopped.
 
@@ -134,6 +137,8 @@ Moreover, because of the dependence of $$\tau$$ on $$h$$, this result also sugge
 </figure>
 
 In the next post we will look at another way to analyze this ability: we will leave the mechanical description aside for a moment and introduce the concept of energy.
+
+[Next post →](url-del-post-successivo](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html)
 
 #### Sources and references
 - [Frontiers](https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1694648/full) - Biomechanical analyses of the handstand: a systematic review
