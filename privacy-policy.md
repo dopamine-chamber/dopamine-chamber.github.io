@@ -69,9 +69,9 @@ Visitors can manage or withdraw their consent at any time using the website's co
 
 For questions regarding this Privacy Notice or your data, you may contact:
 
-* **Data Controller:** Benedetta Giglio
-* **Location:** Turin, Italy
-* **Email:** thehumanbeinn@gmail.com
+Benedetta Giglio<br>
+Turin, Italy<br>
+thehumanbeinn@gmail.com
 
 ---
 
