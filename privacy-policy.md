@@ -73,10 +73,11 @@ Refusing consent will not prevent access to the website but may result in less r
 
 If you have questions regarding this Privacy Notice or the processing of your personal data, you may contact:
 
-**Website Owner:** Benedetta Giglio
-**Location:** Turin, Italy
-**Email:** thehumanbeinn@gmail.com
+Benedetta Giglio<br>
+Turin, Italy<br>
+thehumanbeinn@gmail.com
 
 ---
+
 > This website displays advertisements through Google AdSense. Google and its partners may use cookies and similar technologies to personalize ads and measure performance. For more information, please review our [Privacy Policy](/privacy-policy/) and Cookie Policy.
-{: .footer-disclosure}
+{: .footer-disclosure style="font-size: 0.8em; opacity: 0.8;"}
