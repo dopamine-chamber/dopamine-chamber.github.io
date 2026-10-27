@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "1. The straight two-arm handstand model"
+title: "1. How to engage your fingertips? The straight two-arm handstand model"
 date: 2026-10-20
 ---
 
@@ -106,12 +106,18 @@ However, in a real handstand, where micro-adjustments are performed by the finge
 
 Moreover, because of the dependence of $$\tau$$ on $$h$$, this result also suggests that the magnitude of the torque required to recover balance depends on the position of the center of mass, meaning that taller people may struggle more in handstands. In the next posts, we will see that other parameters also play a role and that the wrists can exert only a limited torque, bounded by the size of the contact area under the hands: if $$mgh\sin\theta$$ exceeds that limit, the fall can no longer be stopped.
 
+<figure>
+  <img src="{{ '/assets/img/height_com_visual.gif' | relative_url }}"
+       alt="Heigh of the centre of mass">
+  <figcaption>Figure 5. the magnitude of the torque required to recover balance depends on the position of the center of mass,.</figcaption>
+</figure>
+
 In the next post we will look at another way to analyze this ability: we will leave the mechanical description aside for a moment and introduce the concept of energy.
 
 #### Sources and references
 - [Frontiers](https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1694648/full) - Biomechanical analyses of the handstand: a systematic review
 - Figure 1, 2 - AI-generated illustration created with Claude (Anthropic) for dopamine-chamber.github.io
-- Figure 3, 4 - Generated via Python for dopamine-chamber.github.io
+- Figure 3, 4, 5 - Generated via Python for dopamine-chamber.github.io
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7508630837578903"
      crossorigin="anonymous"></script>
