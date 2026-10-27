@@ -9,7 +9,7 @@ In this post we will use a first “simple” model to start understanding why h
 ## A first model: the body is a stick
 
 <details>
-<summary>Vocabulary</summary>
+<summary>Toolbox</summary>
 
 <div style="text-align: left;">
   
