@@ -11,8 +11,8 @@ permalink: /privacy-policy/
 
 This website uses **Google AdSense** to display advertisements. Google and its partners may use cookies and similar tracking technologies to personalize ads and measure performance.
 
-* For details on how Google uses data, visit: [Google Partner Sites Policy](https://policies.google.com/technologies/partner-sites)
-* To manage your ad settings and personalized advertising, visit: [Google Ad Settings](https://adssettings.google.com)
+- For details on how Google uses data, visit: [Google Partner Sites Policy](https://policies.google.com/technologies/partner-sites)
+- To manage your ad settings and personalized advertising, visit: [Google Ad Settings](https://adssettings.google.com)
 
 ---
 
@@ -21,11 +21,11 @@ This website uses **Google AdSense** to display advertisements. Google and its p
 
 We use cookies and similar technologies to:
 
-<div style="text-align: left;">
+<div style="text-align: left;" markdown="1">
 
-* Display and measure advertisements
-* Understand website traffic and user behavior
-* Improve user experience and site functionality
+- Display and measure advertisements
+- Understand website traffic and user behavior
+- Improve user experience and site functionality
 
 </div>
 
@@ -40,13 +40,13 @@ If you are located in the European Economic Area (EEA), the United Kingdom, or r
 
 Data collected via advertising technologies may include:
 
-<div style="text-align: left;">
+<div style="text-align: left;" markdown="1">
 
-* IP address
-* Device and browser information
-* User identifiers
-* Website usage data
-* Approximate location data
+- IP address
+- Device and browser information
+- User identifiers
+- Website usage data
+- Approximate location data
 
 </div>
 
@@ -55,15 +55,15 @@ Data collected via advertising technologies may include:
 ### Legal Basis for Processing
 {: style="text-align: left;"}
 
-* Your Consent: For non-essential cookies and personalized ads via Google AdSense;
-* Legitimate Interest: To maintain site security, prevent fraud, and analyze technical performance.
+- Your Consent: For non-essential cookies and personalized ads via Google AdSense;
+- Legitimate Interest: To maintain site security, prevent fraud, and analyze technical performance.
 
 ---
 
 ### Your rights
 {: style="text-align: left;"}
 
-<div style="text-align: left;">
+<div style="text-align: left;" markdown="1">
 
 1. Access your personal data.
 2. Request correction of inaccurate data.
@@ -81,11 +81,11 @@ Data collected via advertising technologies may include:
 
 We use third-party services that may collect information directly from your browser or device, governed by their respective privacy policies:
 
-<div style="text-align: left;">
+<div style="text-align: left;" markdown="1">
 
-* Google AdSense & Ad Manager
-* Google Analytics
-* [Google Privacy Policy](https://policies.google.com/privacy)
+- Google AdSense & Ad Manager
+- Google Analytics
+- [Google Privacy Policy](https://policies.google.com/privacy)
 
 </div>
 
