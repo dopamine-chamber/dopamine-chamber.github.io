@@ -4,12 +4,6 @@ title: Privacy policy
 permalink: /privacy/
 ---
 
----
-layout: page
-title: Advertising Disclosure & Privacy Notice
-permalink: /privacy/
----
-
 ## Advertising Disclosure
 
 This website uses **Google AdSense**, an advertising service provided by Google LLC ("Google"), to display advertisements to visitors.
