@@ -7,6 +7,7 @@ permalink: /privacy-policy/
 ---
 
 ## Advertising Disclosure
+{: style="text-align: left;"}
 
 This website uses **Google AdSense** to display advertisements. Google and its partners may use cookies and similar tracking technologies to personalize ads and measure performance.
 
@@ -16,6 +17,7 @@ This website uses **Google AdSense** to display advertisements. Google and its p
 ---
 
 ## Cookies & Tracking Technologies
+{: style="text-align: left;"}
 
 We use cookies and similar technologies to:
 
@@ -28,6 +30,7 @@ We use cookies and similar technologies to:
 ---
 
 ## GDPR Compliance (EEA & UK)
+{: style="text-align: left;"}
 
 If you are located in the European Economic Area (EEA), the United Kingdom, or regions with equivalent laws, data processing is based on your consent or legitimate interest.
 
@@ -49,6 +52,7 @@ If you are located in the European Economic Area (EEA), the United Kingdom, or r
 ---
 
 ## Your rights
+{: style="text-align: left;"}
 
 1. Access your personal data.
 2. Request correction of inaccurate data.
@@ -60,6 +64,7 @@ If you are located in the European Economic Area (EEA), the United Kingdom, or r
 ---
 
 ## Third-Party Services
+{: style="text-align: left;"}
 
 We use third-party services that may collect information directly from your browser or device, governed by their respective privacy policies:
 
@@ -72,6 +77,7 @@ Visitors can manage or withdraw their consent at any time using the website's co
 ---
 
 ## Contact Information
+{: style="text-align: left;"}
 
 For questions regarding this Privacy Notice or your data, you may contact:
 Benedetta Giglio<br>
