@@ -53,6 +53,11 @@ Depending on your choices, data collected through advertising technologies may i
 * Website usage data
 * Approximate location data
 
+### Legal Basis for Processing
+We process personal data based on:
+* **Your Consent:** For non-essential cookies and personalized advertising via Google AdSense.
+* **Legitimate Interest:** To maintain website security, prevent fraud, and analyze technical site performance.
+
 ### Your Rights
 You have the right to:
 1. Access your personal data.
@@ -90,7 +95,8 @@ Refusing consent will not prevent access to the website but may result in less r
 If you have questions regarding this Privacy Notice or the processing of your personal data, you may contact:
 
 * **Website Owner:** Benedetta Giglio
-* **Email:** [thehumanbeinn@gmail.com]
+* **Location:** Turin, Italy
+* **Email:** thehumanbeinn@gmail.com
 
 ---
 
