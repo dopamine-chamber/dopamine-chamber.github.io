@@ -3,7 +3,7 @@ description: disassembling the dilemma
 theme: minima
 lang: en
 header_pages:
-  - privacy.md
+  - privacy-policy.md
   - about.md
 markdown: kramdown
 kramdown:
