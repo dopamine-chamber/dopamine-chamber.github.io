@@ -4,6 +4,8 @@ title: Privacy Policy
 permalink: /privacy-policy/
 ---
 
+---
+
 ## Advertising Disclosure
 
 This website uses **Google AdSense** to display advertisements. Google and its partners may use cookies and similar tracking technologies to personalize ads and measure performance.
