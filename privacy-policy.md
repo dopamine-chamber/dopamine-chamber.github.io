@@ -98,6 +98,7 @@ Visitors can manage or withdraw their consent at any time using the website's co
 ### Contact Information
 
 For questions regarding this Privacy Notice or your data, you may contact:
+
 Benedetta Giglio<br>
 Turin, IT<br>
 thehumanbeinn@gmail.com
