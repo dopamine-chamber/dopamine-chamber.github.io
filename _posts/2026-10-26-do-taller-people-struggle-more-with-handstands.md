@@ -176,11 +176,10 @@ The conclusions are model-based and need experimental validation before being ap
 #### Source and references
 
 <a href="https://www.circoteca.cl/wp-content/uploads/2019/08/Strategies-for-maintaining-a-handstand-in-the-anterior-posterior-direction-Revista-Ingles-DAVID-G.-KERWIN-GRANT-TREWARTHA-2001.pdf" target="_blank" rel="noopener noreferrer">
-    Frontiers (2001). <i> - Strategies for Maintaining a Handstand in the Anterior-Posterior Direction</i>
-</a> 
-
+    Frontiers
+</a> - Strategies for Maintaining a Handstand in the Anterior-Posterior Direction<br>
 <a href="[https://www.circoteca.cl/wp-content/uploads/2019/08/Strategies-for-maintaining-a-handstand-in-the-anterior-posterior-direction-Revista-Ingles-DAVID-G.-KERWIN-GRANT-TREWARTHA-2001.pdf" target="_blank" rel="noopener noreferrer](https://researchportal.bath.ac.uk/en/publications/control-strategy-for-a-hand-balance/)">
-   University of Bath (2001). <i>Control strategy for a hand balance</i>
-</a>
+   University of Bath
+</a> - Control strategy for a hand balance
 
 
