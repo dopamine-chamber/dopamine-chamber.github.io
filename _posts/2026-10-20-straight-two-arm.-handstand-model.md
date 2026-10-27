@@ -13,11 +13,11 @@ In this post we will use a first “simple” model to start understanding why h
 
 <div style="text-align: left;">
   
-* **Rigid body**: an idealisation in which the distance between any two points of the body stays constant: the body does not deform and can only translate and rotate. In biomechanics, the human body is often represented as a rigid-body model.<br>
-* **Moment of inertia**: a measure of a body’s resistance to changes in its rotation.<br>
-* **Centre of mass** (CoM): the point where the whole mass of a body can be considered concentrated, and which moves like a single particle subject to the total external force.<br>
-* **Lever arm**: the perpendicular distance between the line of action of a force and the axis of rotation.<br>
-* **Torque**: the rotational effect of a force about an axis, equal to the force times its lever arm.Il tuo testo qui, anche **in Markdown**.
+- Rigid body: an idealisation in which the distance between any two points of the body stays constant: the body does not deform and can only translate and rotate. In biomechanics, the human body is often represented as a rigid-body model.<br>
+- Moment of inertia: a measure of a body’s resistance to changes in its rotation.<br>
+- Centre of mass (CoM): the point where the whole mass of a body can be considered concentrated, and which moves like a single particle subject to the total external force.<br>
+- Lever arm: the perpendicular distance between the line of action of a force and the axis of rotation.<br>
+- Torque: the rotational effect of a force about an axis, equal to the force times its lever arm.Il tuo testo qui, anche **in Markdown**.
   
 </div>
 
