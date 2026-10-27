@@ -17,7 +17,7 @@ In this post we will use a first “simple” model to start understanding why h
 - Moment of inertia: a measure of a body’s resistance to changes in its rotation.<br>
 - Centre of mass (CoM): the point where the whole mass of a body can be considered concentrated, and which moves like a single particle subject to the total external force.<br>
 - Lever arm: the perpendicular distance between the line of action of a force and the axis of rotation.<br>
-- Torque: the rotational effect of a force about an axis, equal to the force times its lever arm.Il tuo testo qui, anche **in Markdown**.
+- Torque: the rotational effect of a force about an axis, equal to the force times its lever arm.
   
 </div>
 
