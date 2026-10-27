@@ -24,6 +24,15 @@ The same idea can be applied to the handstand, with the hands taking the place o
 
 The body is a rigid stick of mass $$m$$ and length $$H$$ rotating about the wrist, with the centre of mass (CoM) at distance $$h$$ from the pivot. Let $$\theta$$ be the inclination from the vertical (positive towards the fingers), $$d = h\sin\theta$$ the horizontal position of the CoM relative to the wrist, and $$c$$ the position of the CoP under the hand, also relative to the wrist. The CoP can only lie within the hand footprint (Figure 1).
 
+<iframe
+src="{{ '/assets/interactive/handstand_model.html' | relative_url }}"
+width="100%"
+height="700"
+style="border:none;">
+</iframe>
+
+
+
 <figure>
   <img src="/assets/img/handstand_center_of_pressure_model.png" alt="centre of mass vs centre of pressure">
   <figcaption markdown="span">Figure 1. Schematic centre of mass and centre of pressure.</figcaption>
