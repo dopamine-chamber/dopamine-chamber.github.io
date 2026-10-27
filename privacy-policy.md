@@ -13,12 +13,9 @@ This website uses **Google AdSense** to display advertisements. Google and its p
 
 <div style="text-align: left;" markdown="1">
 
-- For details on how Google uses data, visit:
+- For details on how Google uses data, visit:m[Google Partner Sites Policy](https://policies.google.com/technologies/partner-sites)
 
-[Google Partner Sites Policy](https://policies.google.com/technologies/partner-sites)
-
-- To manage your ad settings and personalized advertising, visit:
-[Google Ad Settings](https://adssettings.google.com)
+- To manage your ad settings and personalized advertising, visit: [Google Ad Settings](https://adssettings.google.com)
 
 </div>
 
