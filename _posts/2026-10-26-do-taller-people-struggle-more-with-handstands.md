@@ -89,11 +89,6 @@ for four reference CoM positions.
 
 Regarding recoverable margins, for a given reference CoM, the largest initial angular offset from which balance is recovered, forwards and backwards, is found by bisection (14 iterations, time step 2 ms, 6 s). It is reported as the corresponding CoM displacement in centimetres.
 
-<figure>
-  <img src="/assets/img/com vs cop.gif" alt=" Animation of the model">
-  <figcaption markdown="span">Figure 2. Animation of the model. A) CoM = CoP is moved towards the fingers. B) CoP is fixed and the CoM moves backwards. C) CoM is fixed and the CoP moves back under it.</figcaption>
-</figure>
-
 In static equilibrium the wrist is loaded by a moment, not by extra force
 
 When the CoM is vertically above the CoP ($$d = c$$) the body does not accelerate: 
