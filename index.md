@@ -1,6 +1,6 @@
 ---
 layout: home
-list_title: breakdown
+list_title: Deep dive
 ---
 
 Observe the phenomenon like a physicist.
