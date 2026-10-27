@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+
+<p>
+CoP:
+<input id="cop" type="range" min="-2" max="18" value="9" step="0.1">
+<span id="copValue">9</span>
+</p>
+
+<p>
+CoM:
+<input id="com" type="range" min="-10" max="30" value="9" step="0.1">
+<span id="comValue">9</span>
+</p>
+
+<div id="plot" style="width:800px;height:500px;"></div>
+
+<script>
+
+const copSlider = document.getElementById("cop");
+const comSlider = document.getElementById("com");
+
+Plotly.newPlot(
+    "plot",
+    [{
+        x:[9],
+        y:[9],
+        mode:"markers",
+        marker:{size:20}
+    }],
+    {
+        xaxis:{
+            title:"CoP [cm]",
+            range:[-2,18]
+        },
+        yaxis:{
+            title:"CoM [cm]",
+            range:[-10,30]
+        }
+    }
+);
+
+function update(){
+
+    const cop = Number(copSlider.value);
+    const com = Number(comSlider.value);
+
+    document.getElementById("copValue").textContent = cop;
+    document.getElementById("comValue").textContent = com;
+
+    Plotly.restyle(
+        "plot",
+        {
+            x:[[cop]],
+            y:[[com]]
+        }
+    );
+}
+
+copSlider.addEventListener("input", update);
+comSlider.addEventListener("input", update);
+
+update();
+
+</script>
+
+</body>
+</html>
