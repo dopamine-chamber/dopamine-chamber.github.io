@@ -1,285 +1,85 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="utf-8">
-    <title>Verticale sulle mani - Modello interattivo</title>
-    <!-- Inclusione di Plotly.js -->
-    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
-    <style>
-        body { font-family: sans-serif; margin: 20px; background-color: #f4f4f9; color: #333; }
-        h1 { text-align: center; font-size: 1.4em; color: #306998; }
-        .container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-        .panel { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 450px; }
-        .controls { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%; max-width: 930px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: center; }
-        .control-group { display: flex; flex-direction: column; }
-        label { font-size: 0.9em; font-weight: bold; margin-bottom: 3px; }
-        .full-width { grid-column: span 2; }
-        button { background-color: #306998; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: bold; }
-        button:hover { background-color: #1e4b6e; }
-        #infoPanel { font-family: monospace; font-size: 0.9em; white-space: pre-line; background: #eef2f5; padding: 10px; border-radius: 5px; margin-top: 10px; }
-    </style>
+<meta charset="utf-8">
+<title>Handstand CoM & CoP Moment Analysis</title>
+<!-- Caricamento robusto di Plotly con fallback -->
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.27.0/plotly.min.js"></script>
+<style>
+    body { font-family: sans-serif; margin: 20px; color: #2b2b2b; background-color: #f9f9f9; }
+    .control-group { margin-bottom: 15px; background: #fff; padding: 12px 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: inline-block; margin-right: 15px; }
+    label { font-weight: bold; }
+    .panel { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+    .box { flex: 1; min-width: 400px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    #momentValue { font-size: 1.2em; font-weight: bold; color: #306998; }
+</style>
 </head>
+
 <body>
 
-<h1>Modello di Equilibrio della Verticale sulle Mani (CoM & CoP)</h1>
+<h2>Modello di Equilibrio: CoM vs CoP e Momento al Polso</h2>
 
-<div class="container">
-    <!-- Pannello Schema del Corpo e Controlli -->
-    <div class="panel">
-        <div id="plotSchema" style="width:100%; height:380px;"></div>
-        <div id="infoPanel"></div>
+<div>
+    <div class="control-group">
+        <label for="cop">CoP (c):</label>
+        <input id="cop" type="range" min="-5" max="25" value="5" step="0.5">
+        <span id="copValue">5</span> cm
     </div>
 
-    <!-- Pannelli Heatmap/Grafici -->
-    <div style="display: flex; flex-direction: column; gap: 20px;">
-        <div class="panel" style="width: 450px;">
-            <div id="plotFx" style="width:100%; height:200px;"></div>
-        </div>
-        <div class="panel" style="width: 450px;">
-            <div id="plotTau" style="width:100%; height:200px;"></div>
-        </div>
+    <div class="control-group">
+        <label for="com">CoM (d):</label>
+        <input id="com" type="range" min="-10" max="30" value="10" step="0.5">
+        <span id="comValue">10</span> cm
+    </div>
+
+    <div class="control-group">
+        <span>Momento al polso: <span id="momentValue">0.0</span> a.u.</span>
     </div>
 </div>
 
-<div class="container" style="margin-top: 20px;">
-    <div class="controls">
-        <div class="control-group">
-            <label for="sliderC">CoP [cm]: <span id="valC">9.0</span></label>
-            <input type="range" id="sliderC" min="-2.0" max="18.0" value="9.0" step="0.1">
-        </div>
-        <div class="control-group">
-            <label for="sliderD">CoM [cm]: <span id="valD">9.0</span></label>
-            <input type="range" id="sliderD" min="-10.0" max="30.0" value="9.0" step="0.1">
-        </div>
-        <div class="control-group">
-            <label for="sliderM">Massa [kg]: <span id="valM">70</span></label>
-            <input type="range" id="sliderM" min="40" max="120" value="70" step="1">
-        </div>
-        <div class="control-group">
-            <label for="sliderL">Polso-CoM l [m]: <span id="valL">1.00</span></label>
-            <input type="range" id="sliderL" min="0.80" max="1.30" value="1.00" step="0.01">
-        </div>
-        <div class="control-group full-width">
-            <label for="sliderOmega">Velocità angolare omega [rad/s]: <span id="valOmega">0.00</span></label>
-            <input type="range" id="sliderOmega" min="-1.0" max="1.0" value="0.0" step="0.01">
-        </div>
-        <div class="full-width">
-            <button id="btnEq">Imposta Equilibrio: CoM = CoP</button>
-        </div>
+<div class="panel">
+    <!-- Grafico 1: Mappa di stato CoM vs CoP -->
+    <div class="box">
+        <div id="plotState" style="width:100%; height:380px;"></div>
+    </div>
+    <!-- Grafico 2: Variazione del Momento -->
+    <div class="box">
+        <div id="plotMoment" style="width:100%; height:380px;"></div>
     </div>
 </div>
 
 <script>
-    // Costanti fisiche
-    const G = 9.81;
-    const N_POLSI = 2;
-    const H_CORPO = 1.75;
-    const C_MIN = -0.02;
-    const C_MAX = 0.18;
+// Funzione eseguita subito per evitare problemi di caricamento
+document.addEventListener("DOMContentLoaded", function() {
+    const copSlider = document.getElementById("cop");
+    const comSlider = document.getElementById("com");
+    const copValue = document.getElementById("copValue");
+    const comValue = document.getElementById("comValue");
+    const momentValue = document.getElementById("momentValue");
 
-    // Riferimenti agli elementi HTML
-    const sliderC = document.getElementById('sliderC');
-    const sliderD = document.getElementById('sliderD');
-    const sliderM = document.getElementById('sliderM');
-    const sliderL = document.getElementById('sliderL');
-    const sliderOmega = document.getElementById('sliderOmega');
-    const btnEq = document.getElementById('btnEq');
+    const mg = 1.0; // Costante di massa e gravità normalizzata
 
-    const valC = document.getElementById('valC');
-    const valD = document.getElementById('valD');
-    const valM = document.getElementById('valM');
-    const valL = document.getElementById('valL');
-    const valOmega = document.getElementById('valOmega');
-    const infoPanel = document.getElementById('infoPanel');
-
-    // Funzione di calcolo del modello fisico
-    function wristLoads(m, l, d, c, omega = 0.0) {
-        const I = m * (Math.pow(H_CORPO, 2) / 12.0 + Math.pow(l, 2));
-        let sin_t = Math.max(-1.0, Math.min(1.0, d / l));
-        let cos_t = Math.sqrt(1.0 - Math.pow(sin_t, 2));
-        
-        let theta_dd = (m * G * (d - c) + m * c * l * cos_t * Math.pow(omega, 2)) / (I - m * c * d);
-        let N = m * (G - d * theta_dd - l * cos_t * Math.pow(omega, 2));
-        let Fx = m * (l * cos_t * theta_dd - d * Math.pow(omega, 2));
-        let F = Math.hypot(N, Fx);
-        let tau = N * c;
-        
-        return { theta_dd, N, Fx, F, tau, cos_t };
-    }
-
-    function perWrist(val) {
-        return val / N_POLSI;
-    }
-
-    // Generazione griglie per le heatmaps
-    const c_ax = Array.from({length: 60}, (_, i) => -0.06 + i * (0.30 / 59));
-    const d_ax = Array.from({length: 60}, (_, i) => -0.10 + i * (0.40 / 59));
-
-    function updateVisualization() {
-        const c = parseFloat(sliderC.value) / 100.0;
-        const d = parseFloat(sliderD.value) / 100.0;
-        const m = parseFloat(sliderM.value);
-        const l = parseFloat(sliderL.value);
-        const omega = parseFloat(sliderOmega.value);
-
-        valC.textContent = sliderC.value;
-        valD.textContent = sliderD.value;
-        valM.textContent = sliderM.value;
-        valL.textContent = sliderL.value;
-        valOmega.textContent = sliderOmega.value;
-
-        const L = wrist_loads(m, l, d, c, omega);
-
-        // Calcolo matrici per le heatmap
-        let zf_matrix = [];
-        let zt_matrix = [];
-        for (let i = 0; i < d_ax.length; i++) {
-            let row_fx = [];
-            let row_t = [];
-            for (let j = 0; j < c_ax.length; j++) {
-                let res = wrist_loads(m, l, d_ax[i], c_ax[j], omega);
-                row_fx.push(perWrist(res.Fx));
-                row_t.push(perWrist(res.tau));
-            }
-            zf_matrix.push(row_fx);
-            zt_matrix.push(row_t);
+    function generateMomentCurve(currentCom) {
+        let copRange = [];
+        let momentRange = [];
+        for (let c = -5; c <= 25; c += 0.5) {
+            copRange.push(c);
+            let m = (mg * currentCom) - (mg * c); // Formula del momento: mg*d - N*c
+            momentRange.push(m);
         }
-
-        // ---- 1. Schema del corpo ----
-        let th = Math.asin(Math.max(-1, Math.min(1, d / l)));
-        let ux = Math.sin(th);
-        let uz = Math.cos(th);
-        let tip = l + H_CORPO / 2;
-
-        let bodyTrace = {
-            x: [0, tip * ux],
-            y: [0, tip * uz],
-            mode: 'lines',
-            line: {color: '#555', width: 6},
-            name: 'Corpo'
-        };
-
-        let comTrace = {
-            x: [d],
-            y: [l * uz],
-            mode: 'markers',
-            marker: {size: 12, color: 'crimson'},
-            name: 'CoM'
-        };
-
-        let copTrace = {
-            x: [c],
-            y: [0],
-            mode: 'markers',
-            marker: {size: 10, color: 'navy', symbol: 'square'},
-            name: 'CoP'
-        };
-
-        // Forze vettoriali come annotazioni o forme nello schema
-        let bw = m * G;
-        let scale = 0.45;
-        let sN = scale * L.N / bw;
-        let sFx = scale * L.Fx / bw;
-
-        let shapes = [
-            // Mano / Terreno
-            {type: 'rect', x0: C_MIN, x1: C_MAX, y0: -0.04, y1: 0, fillcolor: 'tan', opacity: 0.8, line: {width: 0}},
-            {type: 'line', x0: -0.6, x1: 0.9, y0: -0.04, y1: -0.04, line: {color: 'black', width: 1.5}},
-            // Freccia Peso (da CoM verso il basso)
-            {type: 'line', x0: d, y0: l * uz, x1: d, y1: l * uz - scale, line: {color: 'crimson', width: 3}},
-            // Freccia N (da CoP verso l'alto)
-            {type: 'line', x0: c, y0: 0, x1: c, y1: sN, line: {color: 'navy', width: 3}},
-            // Freccia Fx
-            {type: 'line', x0: c, y0: 0.02, x1: c + 10 * sFx, y1: 0.02, line: {color: 'darkorange', width: 3}}
-        ];
-
-        let layoutSchema = {
-            title: 'Vista laterale (peso, N, Fx x10)',
-            xaxis: {range: [-0.6, 0.9], title: 'x [m]' },
-            yaxis: {range: [-0.15, 2.35], scaleanchor: 'x', title: 'quota [m]' },
-            shapes: shapes,
-            margin: {t: 30, b: 30, l: 30, r: 30},
-            showlegend: false
-        };
-
-        Plotly.react('plotSchema', [bodyTrace, comTrace, copTrace], layoutSchema);
-
-        // ---- 2. Heatmap Fx ----
-        let dataFx = [{
-            z: zf_matrix,
-            x: c_ax.map(val => val * 100),
-            y: d_ax.map(val => val * 100),
-            type: 'heatmap',
-            colorscale: 'RdBu',
-            zmid: 0
-        }, {
-            x: [c * 100],
-            y: [d * 100],
-            mode: 'markers',
-            marker: {size: 14, color: 'lime', symbol: 'star', line: {color: 'black', width: 1}}
-        }];
-        let layoutFx = {
-            title: 'Forza orizzontale (taglio) per polso [N]',
-            xaxis: {title: 'CoP [cm]'},
-            yaxis: {title: 'CoM [cm]'},
-            margin: {t: 30, b: 30, l: 40, r: 10},
-            showlegend: false
-        };
-        Plotly.react('plotFx', dataFx, layoutFx);
-
-        // ---- 3. Heatmap Momento (Tau) ----
-        let dataTau = [{
-            z: zt_matrix,
-            x: c_ax.map(val => val * 100),
-            y: d_ax.map(val => val * 100),
-            type: 'heatmap',
-            colorscale: 'Plasma'
-        }, {
-            x: [c * 100],
-            y: [d * 100],
-            mode: 'markers',
-            marker: {size: 14, color: 'lime', symbol: 'star', line: {color: 'black', width: 1}}
-        }];
-        let layoutTau = {
-            title: 'Momento di estensione del polso [N·m]',
-            xaxis: {title: 'CoP [cm]'},
-            yaxis: {title: 'CoM [cm]'},
-            margin: {t: 30, b: 30, l: 40, r: 10},
-            showlegend: false
-        };
-        Plotly.react('plotTau', dataTau, layoutTau);
-
-        // ---- Aggiornamento Testo Info ----
-        let diff = (d - c) * 100;
-        let stato = "equilibrio";
-        if (Math.abs(diff) >= 0.3) {
-            stato = diff > 0 ? "cade in avanti" : "cade indietro";
-        }
-        let fuori = (c < C_MIN || c > C_MAX || d < C_MIN || d > C_MAX) ? " (CoM/CoP fuori mano!)" : "";
-
-        infoPanel.textContent = 
-            `CARICHI PER POLSO\n` +
-            `N  verticale  = ${perWrist(L.N).toFixed(1)} N\n` +
-            `Fx taglio     = ${perWrist(L.Fx).toFixed(1)} N\n` +
-            `F  risultante = ${perWrist(L.F).toFixed(1)} N\n` +
-            `M  momento    = ${perWrist(L.tau).toFixed(1)} N·m\n` +
-            `CoM-CoP = ${diff >= 0 ? '+' : ''}${diff.toFixed(1)} cm -> ${stato}${fuori}\n` +
-            `theta'' = ${L.theta_dd >= 0 ? '+' : ''}${L.theta_dd.toFixed(2)} rad/s²`;
+        return { x: copRange, y: momentRange };
     }
 
-    // Event Listeners per i controlli
-    [sliderC, sliderD, sliderM, sliderL, sliderOmega].forEach(slider => {
-        slider.addEventListener('input', updateVisualization);
-    });
+    function updateCharts() {
+        const cop = Number(copSlider.value);
+        const com = Number(comSlider.value);
 
-    btnEq.addEventListener('click', () => {
-        sliderD.value = sliderC.value;
-        updateVisualization();
-    });
+        // Aggiorna i testi numerici istantaneamente
+        copValue.textContent = cop;
+        comValue.textContent = com;
 
-    // Inizializzazione pagina
-    updateVisualization();
-</script>
+        // Calcolo momento attuale
+        let currentMoment = (mg * com) - (mg * cop);
+        momentValue.textContent = currentMoment.toFixed(2);
 
-</body>
-</html>
+        // Dati Grafico 1 (
