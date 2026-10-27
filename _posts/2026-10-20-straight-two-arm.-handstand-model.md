@@ -4,11 +4,26 @@ title: "1. How to engage your fingertips? The straight two-arm handstand model"
 date: 2026-10-20
 ---
 
-In this post we will exploit a first simple model to start understanding why handstand are intrinsically unstable. Let’s start with a simplified case: a straight, two-arm handstand. 
+In this post we will use a first “simple” model to start understanding why handstands are intrinsically unstable. Let’s start with a simplified case: a straight, two-arm handstand. *Only the model is simple, because, to me, the straight handstand is anything but simple.*
 
 ## A first model: the body is a stick
 
-Let’s suppose that the handstand system is perfectly symmetrical, with two arms pushing with the same force and in the same direction. We assume zero inclination in the frontal plane, and consider only the inclination that occurs in the sagittal plane when we push with both fingers and palms to adjust the balance. We also assume that arms, shoulders, hips and legs work identically and do not generate twists. If we initially treat the human body as a single rigid body, we can describe its motion through the position of its center of mass. We are looking at the system from sagittal plane, that divides the encephalus and the rest of the body into right and left sections (Figure 1):
+<details>
+<summary>Vocabulary</summary>
+
+<div style="text-align: left;">
+  
+* **Rigid body**: an idealisation in which the distance between any two points of the body stays constant: the body does not deform and can only translate and rotate. In biomechanics, the human body is often represented as a rigid-body model.<br>
+* **Moment of inertia**: a measure of a body’s resistance to changes in its rotation.<br>
+* **Centre of mass** (CoM): the point where the whole mass of a body can be considered concentrated, and which moves like a single particle subject to the total external force.<br>
+* **Lever arm**: the perpendicular distance between the line of action of a force and the axis of rotation.<br>
+* **Torque**: the rotational effect of a force about an axis, equal to the force times its lever arm.Il tuo testo qui, anche **in Markdown**.
+  
+</div>
+
+</details>
+
+Let’s start with a handful of assumptions: we suppose that the handstand system is perfectly symmetrical, with two arms pushing with the same force and in the same direction. We assume zero inclination in the frontal plane, and consider only the inclination that occurs in the sagittal plane when we push with both fingers and palms to adjust the balance. We also assume that arms, shoulders, hips and legs work identically and do not generate twists. If we initially treat the human body as a **single rigid body**, we can describe its motion through the position of its **centre of mass**. We are looking at the system from sagittal plane, that divides the encephalus and the rest of the body into right and left sections (Figure 1):
 
 
 <figure>
