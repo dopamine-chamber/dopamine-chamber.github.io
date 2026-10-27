@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "3 - An energy perspective"
+title: "2. An energy perspective"
 date: 2026-10-20 12:00:00 +0200
 ---
 
