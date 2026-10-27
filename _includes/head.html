@@ -12,7 +12,7 @@
   
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   {%- feed_meta -%}
@@ -37,6 +37,18 @@
     margin-left: 1.2em !important;
     padding-left: 0 !important;
   }
+
+   /* Impedisce lo scroll orizzontale superfluo sul body */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Evita che box con padding/border superino la larghezza impostata */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+   
 </style>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7508630837578903"
