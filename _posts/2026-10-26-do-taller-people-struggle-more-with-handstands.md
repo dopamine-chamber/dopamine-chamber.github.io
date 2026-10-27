@@ -40,13 +40,6 @@ $$z = h\cos\theta$$<br>
 $$x = h\sin\theta$$
 
 
-<iframe
-src="{{ '/assets/interactive/handstand_model.html' | relative_url }}"
-width="100%"
-height="700"
-style="border:none;">
-</iframe>
-
 
 
 
@@ -178,6 +171,14 @@ In a single-pendulum model of the handstand, the force at each wrist stays close
 The shear force depends only on the CoM–CoP offset (about 2.7 N per centimetre per wrist) and is small compared with the vertical force.
 Balance from rest is recoverable as long as the CoM can be brought back within the hand footprint, so the choice of balance position trades wrist moment against correction margin; the margins are equal at mid-hand.
 The conclusions are model-based and need experimental validation before being applied to real performers.
+
+<iframe
+src="{{ '/assets/interactive/handstand_model.html' | relative_url }}"
+width="100%"
+height="700"
+style="border:none;">
+</iframe>
+
 
 
 
