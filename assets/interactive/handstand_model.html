@@ -2,75 +2,69 @@
 <html>
 <head>
 <meta charset="utf-8">
+<title>Handstand CoM & CoP Moment Analysis</title>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<style>
+    body { font-family: sans-serif; margin: 20px; color: #2b2b2b; }
+    .control-group { margin-bottom: 15px; }
+    label { font-weight: bold; display: inline-block; width: 60px; }
+    .panel { display: flex; gap: 30px; flex-wrap: wrap; }
+    .box { flex: 1; min-width: 350px; }
+    #momentValue { font-size: 1.2em; font-weight: bold; color: #306998; }
+</style>
 </head>
 
 <body>
 
-<p>
-CoP:
-<input id="cop" type="range" min="-2" max="18" value="9" step="0.1">
-<span id="copValue">9</span>
-</p>
+<h2>Modello di Equilibrio: CoM vs CoP e Momento al Polso</h2>
 
-<p>
-CoM:
-<input id="com" type="range" min="-10" max="30" value="9" step="0.1">
-<span id="comValue">9</span>
-</p>
+<div class="control-group">
+    <label for="cop">CoP ($c$):</label>
+    <input id="cop" type="range" min="-5" max="25" value="5" step="0.5">
+    <span id="copValue">5</span> cm
+</div>
 
-<div id="plot" style="width:800px;height:500px;"></div>
+<div class="control-group">
+    <label for="com">CoM ($d$):</label>
+    <input id="com" type="range" min="-10" max="30" value="10" step="0.5">
+    <span id="comValue">10</span> cm
+</div>
 
-<div id="status"></div>
+<div class="control-group">
+    <p>Momento stimato al polso ($mg \cdot d - N \cdot c$): <span id="momentValue">0.0</span> arbitrary units</p>
+</div>
+
+<div class="panel">
+    <!-- Grafico 1: Mappa di stato CoM vs CoP -->
+    <div class="box">
+        <div id="plotState" style="width:100%;height:400px;"></div>
+    </div>
+    <!-- Grafico 2: Variazione del Momento al variare di CoM e CoP -->
+    <div class="box">
+        <div id="plotMoment" style="width:100%;height:400px;"></div>
+    </div>
+</div>
 
 <script>
-
 const copSlider = document.getElementById("cop");
 const comSlider = document.getElementById("com");
+const copValue = document.getElementById("copValue");
+const comValue = document.getElementById("comValue");
+const momentValue = document.getElementById("momentValue");
 
+// Assumiamo una massa m*g normalizzata e un'altezza h di riferimento
+const mg = 1.0; 
+
+// Inizializzazione Grafico 1 (CoP sull'asse X, CoM sull'asse Y)
 Plotly.newPlot(
-    "plot",
+    "plotState",
     [{
-        x:[9],
-        y:[9],
-        mode:"markers",
-        marker:{size:20}
+        x: [Number(copSlider.value)],
+        y: [Number(comSlider.value)],
+        mode: "markers",
+        marker: { size: 16, color: '#FFD43B', line: { color: '#306998', width: 2 } },
+        name: 'Stato Corrente'
     }],
     {
-        xaxis:{
-            title:"CoP [cm]",
-            range:[-2,18]
-        },
-        yaxis:{
-            title:"CoM [cm]",
-            range:[-10,30]
-        }
-    }
-);
-
-function update(){
-
-    const cop = Number(copSlider.value);
-    const com = Number(comSlider.value);
-
-    document.getElementById("copValue").textContent = cop;
-    document.getElementById("comValue").textContent = com;
-
-    Plotly.restyle(
-        "plot",
-        {
-            x:[[cop]],
-            y:[[com]]
-        }
-    );
-}
-
-copSlider.addEventListener("input", update);
-comSlider.addEventListener("input", update);
-
-update();
-
-</script>
-
-</body>
-</html>
+        title: "Posizione CoM vs CoP",
+        xaxis: { title: "CoP (c) [cm]", range
