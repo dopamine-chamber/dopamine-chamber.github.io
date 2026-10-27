@@ -8,9 +8,8 @@ permalink: /privacy-policy/
 
 This website uses **Google AdSense** to display advertisements. Google and its partners may use cookies and similar tracking technologies to personalize ads and measure performance.
 
-For details on how Google uses data, visit: [Google Partner Sites Policy](https://policies.google.com/technologies/partner-sites){:target="_blank" rel="noopener"}
-
-To manage your ad settings and personalized advertising, visit: [Google Ad Settings](https://adssettings.google.com){:target="_blank" rel="noopener"}
+* For details on how Google uses data, visit: [Google Partner Sites Policy](https://policies.google.com/technologies/partner-sites){:target="_blank" rel="noopener"}
+* To manage your ad settings and personalized advertising, visit: [Google Ad Settings](https://adssettings.google.com){:target="_blank" rel="noopener"}
 
 ---
 
@@ -73,11 +72,8 @@ Visitors can manage or withdraw their consent at any time using the website's co
 ## Contact Information
 
 For questions regarding this Privacy Notice or your data, you may contact:
-
-Benedetta Giglio
-
-Turin, Italy
-
+Benedetta Giglio<br>
+Turin, Italy<br>
 thehumanbeinn@gmail.com
 
 ---
