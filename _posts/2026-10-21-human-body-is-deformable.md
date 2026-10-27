@@ -72,6 +72,18 @@ where:
 
 The muscle is connected in series with an elastic tendon, so that the force transmitted to the skeleton is \\( F_T = F_M \cos\alpha \\), where \\( \alpha \\) is the pennation angle. Multiplying this force by the moment arm \\( r \\) of the muscle about the joint gives the torque it produces, \\( \tau = r\,F_T \\). This is the torque \\( \tau \\) that appears in the equation of motion of the inverted pendulum.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7508630837578903"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7508630837578903"
+     data-ad-slot="8175170690"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 #### Sources and references
 <a href="https://bmclab.github.io/BMC/"
    target="_blank"
