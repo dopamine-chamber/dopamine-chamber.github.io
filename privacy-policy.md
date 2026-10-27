@@ -21,9 +21,13 @@ This website uses **Google AdSense** to display advertisements. Google and its p
 
 We use cookies and similar technologies to:
 
+<div style="text-align: left;">
+
 - Display and measure advertisements
 - Understand website traffic and user behavior
 - Improve user experience and site functionality
+
+</div>
 
 *Note:* Where required by law, non-essential cookies and advertising technologies are activated only after obtaining your prior consent.
 
@@ -34,13 +38,17 @@ We use cookies and similar technologies to:
 
 If you are located in the European Economic Area (EEA), the United Kingdom, or regions with equivalent laws, data processing is based on your consent or legitimate interest.
 
-**Data collected via advertising technologies may include:**
+Data collected via advertising technologies may include:
+
+<div style="text-align: left;">
 
 - IP address
 - Device and browser information
 - User identifiers
 - Website usage data
 - Approximate location data
+
+</div>
 
 ---
 
@@ -55,12 +63,16 @@ If you are located in the European Economic Area (EEA), the United Kingdom, or r
 ## Your rights
 {: style="text-align: left;"}
 
+<div style="text-align: left;">
+
 1. Access your personal data.
 2. Request correction of inaccurate data.
 3. Request deletion of your data.
 4. Withdraw your consent at any time.
 5. Object to data processing.
 6. Lodge a complaint with your local data protection authority.
+
+</div>
 
 ---
 
@@ -69,9 +81,13 @@ If you are located in the European Economic Area (EEA), the United Kingdom, or r
 
 We use third-party services that may collect information directly from your browser or device, governed by their respective privacy policies:
 
+<div style="text-align: left;">
+
 - Google AdSense & Ad Manager
 - Google Analytics
 - [Google Privacy Policy](https://policies.google.com/privacy)
+
+</div>
 
 Visitors can manage or withdraw their consent at any time using the website's cookie banner or privacy settings tool. Refusing consent will not block access to the site, though it may limit certain features or result in non-personalized ads.
 
