@@ -22,7 +22,7 @@ In this post we will use a first “simple” model to start understanding why h
 </div>
 
 </details>
-
+<br>
 
 Let’s start with a handful of assumptions: we suppose that the handstand system is perfectly symmetrical, with two arms pushing with the same force and in the same direction. We assume zero inclination in the frontal plane, and consider only the inclination that occurs in the sagittal plane when we push with both fingers and palms to adjust the balance. We also assume that arms, shoulders, hips and legs work identically and do not generate twists. If we initially treat the human body as a **single rigid body**, we can describe its motion through the position of its **centre of mass**. We are looking at the system from sagittal plane, that divides the encephalus and the rest of the body into right and left sections (Figure 1):
 
