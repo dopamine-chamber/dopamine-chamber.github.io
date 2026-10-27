@@ -4,7 +4,7 @@ title: "1. The straight two-arm handstand model"
 date: 2026-10-20
 ---
 
-In this post we will exploit a first simple model to start understanding why handstand are intrinsecally unstable. Let’s start with a simplified case: a straight, two-arm handstand. 
+In this post we will exploit a first simple model to start understanding why handstand are intrinsically unstable. Let’s start with a simplified case: a straight, two-arm handstand. 
 
 ## A first model: the body is a stick
 
