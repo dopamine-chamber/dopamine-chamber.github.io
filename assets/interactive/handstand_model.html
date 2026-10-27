@@ -2,8 +2,8 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<title>Handstand CoM & CoP Moment Analysis</title>
-<!-- Caricamento robusto di Plotly con fallback -->
+<title>CoM vs CoP</title>
+<!-- Libreria Plotly stabile -->
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.27.0/plotly.min.js"></script>
 <style>
     body { font-family: sans-serif; margin: 20px; color: #2b2b2b; background-color: #f9f9f9; }
@@ -17,17 +17,17 @@
 
 <body>
 
-<h2>Modello di Equilibrio: CoM vs CoP e Momento al Polso</h2>
+<h2>CoM vs CoP vs wrist torque</h2>
 
 <div>
     <div class="control-group">
-        <label for="cop">CoP (c):</label>
+        <label for="cop">CoP ("c"):</label>
         <input id="cop" type="range" min="-5" max="25" value="5" step="0.5">
         <span id="copValue">5</span> cm
     </div>
 
     <div class="control-group">
-        <label for="com">CoM (d):</label>
+        <label for="com">CoM ("d"):</label>
         <input id="com" type="range" min="-10" max="30" value="10" step="0.5">
         <span id="comValue">10</span> cm
     </div>
@@ -40,16 +40,15 @@
 <div class="panel">
     <!-- Grafico 1: Mappa di stato CoM vs CoP -->
     <div class="box">
-        <div id="plotState" style="width:100%; height:380px;"></div>
+        <div id="plotState" style="width:100%; height:400px; min-height:400px;"></div>
     </div>
     <!-- Grafico 2: Variazione del Momento -->
     <div class="box">
-        <div id="plotMoment" style="width:100%; height:380px;"></div>
+        <div id="plotMoment" style="width:100%; height:400px; min-height:400px;"></div>
     </div>
 </div>
 
 <script>
-// Funzione eseguita subito per evitare problemi di caricamento
 document.addEventListener("DOMContentLoaded", function() {
     const copSlider = document.getElementById("cop");
     const comSlider = document.getElementById("com");
@@ -57,29 +56,87 @@ document.addEventListener("DOMContentLoaded", function() {
     const comValue = document.getElementById("comValue");
     const momentValue = document.getElementById("momentValue");
 
-    const mg = 1.0; // Costante di massa e gravità normalizzata
+    const mg = 1.0; 
 
     function generateMomentCurve(currentCom) {
         let copRange = [];
         let momentRange = [];
         for (let c = -5; c <= 25; c += 0.5) {
             copRange.push(c);
-            let m = (mg * currentCom) - (mg * c); // Formula del momento: mg*d - N*c
+            let m = (mg * currentCom) - (mg * c);
             momentRange.push(m);
         }
         return { x: copRange, y: momentRange };
     }
 
+    // Inizializzazione vuota per creare i canvas
+    Plotly.newPlot("plotState", [{x: [], y: [], mode: "markers"}], {
+        title: "Posizione CoM vs CoP",
+        xaxis: { title: "CoP (c) [cm]", range: [-5, 25] },
+        yaxis: { title: "CoM (d) [cm]", range: [-15, 35] }
+    });
+
+    Plotly.newPlot("plotMoment", [{x: [], y: [], mode: "lines"}], {
+        title: "Variazione Momento",
+        xaxis: { title: "CoP (c) [cm]", range: [-5, 25] },
+        yaxis: { title: "Momento [a.u.]", range: [-40, 40] }
+    });
+
     function updateCharts() {
         const cop = Number(copSlider.value);
         const com = Number(comSlider.value);
 
-        // Aggiorna i testi numerici istantaneamente
         copValue.textContent = cop;
         comValue.textContent = com;
 
-        // Calcolo momento attuale
         let currentMoment = (mg * com) - (mg * cop);
         momentValue.textContent = currentMoment.toFixed(2);
 
-        // Dati Grafico 1 (
+        let traceState = {
+            x: [cop],
+            y: [com],
+            mode: "markers",
+            marker: { size: 16, color: '#FFD43B', line: { color: '#306998', width: 2 } },
+            name: 'Stato Corrente'
+        };
+        let layoutState = {
+            title: "Posizione CoM vs CoP",
+            xaxis: { title: "CoP (c) [cm]", range: [-5, 25] },
+            yaxis: { title: "CoM (d) [cm]", range: [-15, 35] },
+            margin: { t: 40, r: 30, b: 40, l: 50 }
+        };
+
+        let curve = generateMomentCurve(com);
+        let traceMoment = {
+            x: curve.x,
+            y: curve.y,
+            mode: "lines",
+            line: { color: '#306998', width: 3 },
+            name: 'Momento'
+        };
+        let layoutMoment = {
+            title: `Variazione Momento (CoM = ${com} cm)`,
+            xaxis: { title: "CoP (c) [cm]", range: [-5, 25] },
+            yaxis: { title: "Momento [a.u.]", range: [-40, 40] },
+            margin: { t: 40, r: 30, b: 40, l: 50 }
+        };
+
+        // Aggiornamento grafico tramite Plotly.react
+        Plotly.react("plotState", [traceState], layoutState);
+        Plotly.react("plotMoment", [traceMoment], layoutMoment);
+    }
+
+    copSlider.addEventListener("input", updateCharts);
+    comSlider.addEventListener("input", updateCharts);
+
+    // Esecuzione immediata e forzatura resize per renderizzare i grafici dentro i div
+    updateCharts();
+    setTimeout(() => {
+        Plotly.Plots.resize("plotState");
+        Plotly.Plots.resize("plotMoment");
+    }, 150);
+});
+</script>
+
+</body>
+</html>
