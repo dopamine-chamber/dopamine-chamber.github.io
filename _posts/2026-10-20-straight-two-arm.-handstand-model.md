@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The straight two-arm handstand model"
+title: "1. The straight two-arm handstand model"
 date: 2026-10-20
 ---
 
