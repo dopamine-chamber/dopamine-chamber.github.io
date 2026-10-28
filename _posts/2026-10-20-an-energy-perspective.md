@@ -30,7 +30,9 @@ Chain rule: if y depends on x and x on t, then dy/dt = (dy/dx)(dx/dt).<br>
 
 Let's go back to our SIP: we consider motion in the sagittal plane, where the main handstand sway occur. We have also seen that $$\dot{\theta}$$ as the notation used to represent a derivative. Therefore, $$\dot{\theta}$$ corresponds to the derivative of the angular position $$\theta$$, that is the angular velocity ($$\omega$$), and  $$\ddot{\theta}$$ corresponds to the derivative of the angular velocity $$\dot{\theta}$$, or the second derivative of the angular position $$\theta$$, that is the angular acceleration ($$\dot{\omega}$$). Throughout this article, we assume that positive angles represent a tilt to the right.
 
-The center of mass oscillates periodically with simple harmonic motion (Figure 1).
+The motion we want to recall is the simple harmonic motion, where the center of mass oscillates periodically about its equilibrium position. (Figure 1).
+
+Keep in mind that this behaviour is only possible because of **active control at the wrists**. Unlike a hanging pendulum, an inverted pendulum is not governed by simple harmonic motion and cannot remain stable without continuous corrective action.
 
 <figure>
   <img src="/assets/img/fig1_undamped.gif" alt="Inverted pendulum with PD control and no damping oscillating about the vertical, with E_c constant">
