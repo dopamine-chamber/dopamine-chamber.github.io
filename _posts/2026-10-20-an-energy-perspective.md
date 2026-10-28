@@ -45,7 +45,7 @@ Keep in mind that this behaviour is only possible because of **active control at
   <figcaption markdown="span">Figure 1. Inverted pendulum with torque control.</figcaption>
 </figure>
 
-*Note: this post contains a lot of maths, which may make the notation a bit heavy. If you want to skip the whole mathematical treatment, jump straight to the section “Conservation of mechanical energy in SIP”. The meaning will not change.*
+*Note: this part contains a lot of maths, which may make the notation a bit heavy. If you want to skip the whole mathematical treatment, jump straight to the section “Conservation of mechanical energy in SIP”. The meaning will not change.*
 
 Recalling the rotational equation of motion:
 
