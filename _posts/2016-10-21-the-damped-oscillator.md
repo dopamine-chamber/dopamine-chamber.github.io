@@ -11,19 +11,11 @@ In the [previous post](/2026/10/20/an-energy-perspective.html) we saw that, in o
 
 <div style="text-align: left;">
 
-- Feedback control: a strategy in which the control torque is computed from the measured state of the system (here the tilt and its rate of change), so that errors are corrected as they appear.<br>
-- PD control: Proportional-Derivative control, $$\tau = -k_p\theta - k_d\dot{\theta}$$. One term reacts to how far the body is from the vertical, the other to how fast it is moving.<br>
-- Gains ($$k_p$$, $$k_d$$): the coefficients that set the strength of each term. They are the "tuning knobs" of the controller; in the body they correspond to how strongly and how quickly the wrists respond.<br>
-- Restoring torque (active stiffness): the $$-k_p\theta$$ term, which pulls the body back towards the vertical like a spring. $$k_p$$ plays the role of a spring constant produced by the muscles.<br>
-- Damping (dissipation): the $$-k_d\dot{\theta}$$ term, proportional to the angular velocity, which removes energy and stops the oscillations.
-- Net stiffness ($$k_p - mgh$$): gravity acts on the inverted pendulum like a negative spring of stiffness $$mgh$$, so the stiffness that actually matters is the active one minus gravity's.<br>
-- Damped oscillator: a system obeying $$I\ddot{\theta} + k_d\dot{\theta} + k\theta = 0$$, with $$k = k_p - mgh$$. Its natural frequency is $$\omega_n = \sqrt{k/I}$$ and its damping ratio is $$\zeta = k_d / (2\sqrt{Ik})$$. With $$\zeta = 0$$ it oscillates forever; with $$0 < \zeta < 1$$ it oscillates with decaying amplitude; with $$\zeta \ge 1$$ it returns without oscillating.<br>
-- Linearisation: replacing the exact equations with their first-order version around an equilibrium, valid for small deviations (here $$\sin\theta \approx \theta$$).<br>
-- Equilibrium and asymptotic stability: an equilibrium is a state where the system can stay at rest. It is asymptotically stable if, after a small disturbance, the system returns to it and stays there.<br>
-- Positive definite function: a function that is positive everywhere except at the equilibrium, where it is zero. If an energy-like function of this kind never increases along the motion (a Lyapunov function), the equilibrium is stable.<br>
-- Sensorimotor delay: the time between a disturbance and the muscular response, made up of sensing, neural processing and muscle activation. In handstands it has been estimated at 160–240 ms in a small sample of gymnasts.<br>
-- Wrist strategy: balancing a handstand mainly by changing the torque at the wrists (fingers and palms), while shoulders and hips keep the body configuration fixed.<br>
-- Contact area (centre of pressure): the torque at the wrists comes from shifting the point where the force is applied under the hands, so it cannot exceed what the size of the contact area allows.<br>
+- Feedback control: a control strategy in which the corrective torque is computed from the measured state of the system (here the tilt angle θ and its angular velocity θ̇), so that deviations from balance are continuously corrected as they occur.<br>
+- Gains: the coefficients kp and kd that determine the strength of the controller terms. They act as tuning parameters and represent how strongly and how quickly the wrists respond to a perturbation.<br>
+- Restoring torque (active stiffness): the term −kpθ, which generates a torque directed towards the upright position, similarly to a spring pulling a displaced mass back to equilibrium. The coefficient kp plays the role of an effective spring constant produced by muscular action.<br>
+- Damping (dissipation): the term −kdθ̇, proportional to angular velocity, which opposes motion and dissipates mechanical energy, thereby reducing or eliminating oscillations.<br>
+- Net stiffness (kp − mgh): gravity acts on the inverted pendulum as a destabilising spring with effective stiffness mgh. The stiffness governing the actual dynamics is therefore the active stiffness minus the gravitational contribution, giving an effective stiffness of kp − mgh.<br>
   
 </div>
 
