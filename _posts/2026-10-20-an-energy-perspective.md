@@ -85,7 +85,9 @@ $$
 E_p = mgh\cos\theta + \text{const}
 $$
 
-The term $$mgh\cos\theta$$ is simply the weight times the height of the centre of mass above the wrists, $$h\cos\theta$$. Only changes in potential energy matter, so we are free to choose where it is zero: we take the handstand position ($$\theta = 0$$) as the reference level, so that
+The term $$mgh\cos\theta$$ is simply the weight times the height of the centre of mass above the wrists, $$h\cos\theta$$. 
+
+Only changes in potential energy matter, so we are free to choose where it is zero: *we take the handstand position as the reference level* ($$\theta = 0$$), so that
 
 $$E_p = mgh\,(\cos\theta - 1)$$
 
@@ -127,11 +129,9 @@ $$
 
 From this result, we can see that one way to understand how the wrists must work against gravity is to think in terms of power and energy. In our single-segment model, the body has a **kinetic energy** (it is moving) and a **gravitational potential energy** (how high its centre of mass is). The upright position is where the centre of mass is highest, and we take it as the zero of potential energy: any tilt lowers the centre of mass, so gravity releases energy and the body speeds up as it falls, like a ball rolling off the top of a hill. Left to itself, the total energy stays constant, and the body falls away from the vertical (Figure 2).
 
-Conceptually, I have always liked to think of these adjustments in terms of energy, because the right angular impulse (torque times duration) is something you learn from experience. Since $$\frac{dE}{dt} = \tau\omega$$, the energy changes only through the work done by the wrists, so it is intuitive to aim at keeping it constant, but at the right value. 
+Conceptually, I have always liked to think of these adjustments in terms of energy, because the importance of giving the right angular impulse (torque times duration) is something you learn from experience. Since $$\frac{dE}{dt} = \tau\omega$$, the energy changes only through the work done by the wrists, so it is intuitive to aim at keeping it constant, but at the right value. 
 
 In our model, this work serves to continuously bring the system back towards the state where its energy is zero:
-
-- Near the vertical, $$E \approx \tfrac{1}{2}I\omega^2 - \tfrac{1}{2}mgh\,\theta^2$$, and the value that matters is $$E = 0$$, the energy of the upright position.
   
 - With $$E < 0$$, a body moving towards the vertical runs out of energy, stops short and falls back.
   
