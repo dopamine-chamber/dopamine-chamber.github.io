@@ -12,7 +12,6 @@ In the [previous post](/2026/10/20/an-energy-perspective.html) we saw that, in o
 <div style="text-align: left;">
 
 - Feedback control: a control strategy in which the corrective torque is computed from the measured state of the system (here the tilt angle θ and its angular velocity θ̇), so that deviations from balance are continuously corrected as they occur.<br>
-- Gains: the coefficients kp and kd that determine the strength of the controller terms. They act as tuning parameters and represent how strongly and how quickly the wrists respond to a perturbation.<br>
 - Restoring torque (active stiffness): the term −kpθ, which generates a torque directed towards the upright position, similarly to a spring pulling a displaced mass back to equilibrium. The coefficient kp plays the role of an effective spring constant produced by muscular action.<br>
 - Damping (dissipation): the term −kdθ̇, proportional to angular velocity, which opposes motion and dissipates mechanical energy, thereby reducing or eliminating oscillations.<br>
 - Net stiffness (kp − mgh): gravity acts on the inverted pendulum as a destabilising spring with effective stiffness mgh. The stiffness governing the actual dynamics is therefore the active stiffness minus the gravitational contribution, giving an effective stiffness of kp − mgh.<br>
@@ -29,15 +28,25 @@ $$
 \tau = -k_p\theta - k_d\dot{\theta}
 $$
 
-The term $$-k_p\theta$$ is a restoring torque proportional to the angular displacement, while $$-k_d\dot{\theta}$$ provides damping proportional to the angular velocity.
+The coefficients $k_p$$ and $k_d$$ are the gains of the system, i.e. coefficients that determine the strength of the controller terms. They act as tuning parameters and represent how strongly and how quickly the wrists respond to a perturbation:
 
-Wrist torques of this form, linear in the displacement and velocity of the centre of mass, have been proposed as a model of the wrist strategy used by gymnasts.
+- The term $$-k_p\theta$$ is a restoring torque proportional to the angular displacement
+- $$-k_d\dot{\theta}$$ provides damping proportional to the angular velocity
 
 Substituting this control law into the linearized equation of motion (valid for small angles) yields:
 
 $$
 I\ddot{\theta} + k_d\dot{\theta} + (k_p - mgh)\theta = 0
 $$
+
+which is the motion of a **damped inverted pendulum**, an system motion is affected by **damping**, a term proportional to angular velocity.
+
+<figure>
+  <img src="/assets/img/fig2_damped.gif" alt="Inverted pendulum with PD control and damping returning to the vertical, with E and E_c tending to zero">
+  <figcaption markdown="span">Figure 3. Inverted pendulum with PD control and damping ($$k_p > mgh$$, $$k_d > 0$$). The body returns to the vertical (left). The mechanical energy $$E$$ rises and falls as the torque alternately adds and removes energy ($$dE/dt = \tau\omega$$), while $$E_c$$ decreases monotonically ($$dE_c/dt = -k_d\omega^2 \le 0$$). Both tend to zero, the energy of the upright equilibrium.</figcaption>
+</figure>
+
+## Damped inverted pendulum
 
 To guarantee **asymptotic stability** (the ability of the system to return to equilibrium after a disturbance that in out model, remember, it's considered small) around the vertical equilibrium ($$\theta = 0$$, $$\dot{\theta} = 0$$), the gains must satisfy two conditions:
 
@@ -47,15 +56,9 @@ $$
 
 The condition $$k_p > mgh$$ means that the active stiffness produced by the muscles must exceed the destabilizing pull of gravity, while  $$k_d > 0$$ provides the dissipation that damps oscillations.
 
-<figure>
-  <img src="/assets/img/fig2_damped.gif" alt="Inverted pendulum with PD control and damping returning to the vertical, with E and E_c tending to zero">
-  <figcaption markdown="span">Figure 3. Inverted pendulum with PD control and damping ($$k_p > mgh$$, $$k_d > 0$$). The body returns to the vertical (left). The mechanical energy $$E$$ rises and falls as the torque alternately adds and removes energy ($$dE/dt = \tau\omega$$), while $$E_c$$ decreases monotonically ($$dE_c/dt = -k_d\omega^2 \le 0$$). Both tend to zero, the energy of the upright equilibrium.</figcaption>
-</figure>
-
 Actually:
 - If $$k_p < mgh$$, the body simply falls
 - If $$k_p > mgh$$ but $$k_d = 0$$, the body oscillates about the vertical without ever settling.
-
 
 The two conditions can also be read directly from the energy equation. Add the energy stored in the "control spring" to the mechanical energy:
 
@@ -69,10 +72,10 @@ $$
 \frac{dE_c}{dt} = -k_d\,\omega^2 \le 0
 $$
 
-The derivative term continuously removes energy. Near the vertical,
+The derivative term continuously removes energy. Near the vertical
 
 $$
-E_c \approx \tfrac{1}{2} I \omega^2 + \tfrac{1}{2}\,(k_p - m g h)\,\theta^2,
+E_c \approx \tfrac{1}{2} I \omega^2 + \tfrac{1}{2}\,(k_p - m g h)\,\theta^2
 $$
 
 which is positive definite exactly when $$k_p > m g h$$. Together these facts show that the system settles at the upright position.
