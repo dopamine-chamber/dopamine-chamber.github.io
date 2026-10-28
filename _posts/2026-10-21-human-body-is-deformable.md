@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "3. Muscle is a heterogeneous, deformable material"
-date: 2026-10-21
+title: "4. Muscle is a heterogeneous, deformable material"
+date: 2026-10-22
 ---
 
 A perfectly balanced handstand is what we would call the ideal case. The human body, by contrast, is a remarkable organic assembly of tissues that deform under load. Our goal in a handstand is to coordinate all these components so that they work together to — metaphorically speaking — escape gravity (which, physically speaking, is impossible for a body subject to gravity). Therefore, to build a useful model, we must account for the mechanical complexity of the human body.
