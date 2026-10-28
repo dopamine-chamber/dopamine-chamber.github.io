@@ -133,8 +133,9 @@ In short, in a hanging pendulum, harmonic motion (which is what we want our cent
 
 Luckily, in reality, you are not an hanging pendulum, nor a inverted one, and you can train your muscle to describe what type of motion you want (differently from pendulums, they learn). So, once again: understand how the motion works, what its characteristics are, and how to reproduce it with our body.
 
-With active wrist control, we can create behaviour that resembles simple harmonic motion, but nature will not produce it for us automatically. 
-Nature will not produce restoring torques for you, but have provide you with the neuromotor control system, which can learn how continuously generates corrective torques to stabilise the body (Figure 4).
+With active wrist control, we can create behaviour that resembles simple harmonic motion. 
+
+In other words, *nature will not produce restoring torques for you, but at least have provided you with the neuromotor control system which can learn how to generate them* (Figure 4).
 
 <figure>
   <img src="{{ '/assets/img/handstand_shm.gif' | relative_url }}"
