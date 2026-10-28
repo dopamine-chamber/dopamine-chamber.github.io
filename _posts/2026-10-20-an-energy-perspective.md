@@ -26,7 +26,7 @@ Chain rule: if y depends on x and x on t, then dy/dt = (dy/dx)(dx/dt).<br>
 - Damping: the −k_d θ̇ term, proportional to velocity, which removes energy and stops oscillations.<br>
 - <br>Asymptotic stability: after a small disturbance, the system returns to equilibrium and stays there.
 - Lyapunov function (positive definite): an energy-like function that is positive everywhere except at equilibrium and never increases along the motion. If it exists, the equilibrium is stable.<br>
-- Sensorimotor delay: the time between a disturbance and the muscular response, from sensing, neural processing and muscle activation. In handstands it has been estimated at 160–240 ms.<br>
+- 
   
 </div>
 
@@ -131,43 +131,50 @@ The only thing that can change the total energy is the torque at the wrists, whi
 
 We can describe this with a simple control rule: a torque that grows with the tilt (like a spring pulling the body back) and one that grows with the speed (like a damper absorbing the oscillations). The spring has to be stiffer than gravity’s pull, otherwise the body simply falls; without damping, it would swing around the vertical forever without settling. In real bodies, delays in the nervous system (160–240 ms in gymnasts) limit how strong the correction can be: too weak and we fall, too strong and we over-correct and oscillate. And the wrists can only produce a limited torque, bounded by the size of the contact area under the hands.
 
+This is the work–energy theorem applied to the pendulum (Figure 2): the rate of change of total mechanical energy equals the power delivered by the control torque. When the body tilts away from the vertical, gravitational potential energy decreases and, if $$\tau = 0$$, kinetic energy increases by exactly the same amount. Without a control torque the total energy is conserved ($$\frac{dE}{dt} = 0$$).
+
+With this choice of reference, the upright equilibrium has $$E=0$$. Balancing therefore means bringing E to zero while $$\omega$$ goes to zero as well, and the control torque is the only way to change E. Its role is not merely to oppose the fall, but to add or remove energy at the right moments. Balancing on one's hands is, in this sense, a matter of energy management through well-timed, calibrated adjustments rather than abrupt, large corrections.
+
 <figure>
   <img src="/assets/img/fig1_undamped.gif" alt="Inverted pendulum with PD control and no damping oscillating about the vertical, with E_c constant">
   <figcaption markdown="span">Figure 2. Energy conservation for single inverted pendulum with torque control.</figcaption>
 </figure>
 
-This is the work–energy theorem applied to the pendulum (Figure 2): the rate of change of total mechanical energy equals the power delivered by the control torque. When the body tilts away from the vertical, gravitational potential energy decreases and, if $$\tau = 0$$, kinetic energy increases by exactly the same amount. Without a control torque the total energy is conserved ($$\frac{dE}{dt} = 0$$).
-
-With this choice of reference, the upright equilibrium has $$E=0$$. Balancing therefore means bringing E to zero while $$\omega$$ goes to zero as well, and the control torque is the only way to change E. Its role is not merely to oppose the fall, but to add or remove energy at the right moments. Balancing on one's hands is, in this sense, a matter of energy management through well-timed, calibrated adjustments rather than abrupt, large corrections.
-
 ## The damped oscillator
 
-To illustrate this control mechanism, consider a linear Proportional-Derivative (PD) control law:
+To illustrate this control mechanism, consider a linear Proportional-Derivative (PD) control law, a type of feedback control that combines proportional and derivative actions to regulate the behavior of a system:
 
 $$
 \tau = -k_p\theta - k_d\dot{\theta}
 $$
 
-The term $$-k_p\theta$$ is a restoring torque proportional to the angular displacement, while $$-k_d\dot{\theta}$$ provides damping proportional to the angular velocity. Wrist torques of this form, linear in the displacement and velocity of the centre of mass, have been proposed as a model of the wrist strategy used by gymnasts.
+The term $$-k_p\theta$$ is a restoring torque proportional to the angular displacement, while $$-k_d\dot{\theta}$$ provides damping proportional to the angular velocity.
 
-Substituting this control law into the linearized equation of motion yields:
+Wrist torques of this form, linear in the displacement and velocity of the centre of mass, have been proposed as a model of the wrist strategy used by gymnasts.
+
+Substituting this control law into the linearized equation of motion (valid for small angles) yields:
 
 $$
 I\ddot{\theta} + k_d\dot{\theta} + (k_p - mgh)\theta = 0
 $$
 
-To guarantee asymptotic stability around the vertical equilibrium ($$\theta = 0$$, $$\dot{\theta} = 0$$), the gains must satisfy two strict inequalities:
+To guarantee **asymptotic stability** (the ability of the system to return to equilibrium after a disturbance that in out model, remember, it's considered small) around the vertical equilibrium ($$\theta = 0$$, $$\dot{\theta} = 0$$), the gains must satisfy two conditions:
 
 $$
 k_d > 0 \qquad \text{and} \qquad k_p > mgh
 $$
 
-The condition $$k_p > mgh$$ means that the active stiffness produced by the muscles must exceed the destabilizing pull of gravity, while  $$k_d > 0$$ provides the dissipation that damps oscillations. The two conditions fail in different ways. If $$k_p < mgh$$, the body simply falls. If $$k_p > mgh$$ but $$k_d = 0$$, the body oscillates about the vertical without ever settling.
+The condition $$k_p > mgh$$ means that the active stiffness produced by the muscles must exceed the destabilizing pull of gravity, while  $$k_d > 0$$ provides the dissipation that damps oscillations.
 
 <figure>
   <img src="/assets/img/fig2_damped.gif" alt="Inverted pendulum with PD control and damping returning to the vertical, with E and E_c tending to zero">
   <figcaption markdown="span">Figure 3. Inverted pendulum with PD control and damping ($$k_p > mgh$$, $$k_d > 0$$). The body returns to the vertical (left). The mechanical energy $$E$$ rises and falls as the torque alternately adds and removes energy ($$dE/dt = \tau\omega$$), while $$E_c$$ decreases monotonically ($$dE_c/dt = -k_d\omega^2 \le 0$$). Both tend to zero, the energy of the upright equilibrium.</figcaption>
 </figure>
+
+Actually:
+- If $$k_p < mgh$$, the body simply falls
+- If $$k_p > mgh$$ but $$k_d = 0$$, the body oscillates about the vertical without ever settling.
+
 
 The two conditions can also be read directly from the energy equation. Add the energy stored in the "control spring" to the mechanical energy:
 
@@ -189,7 +196,9 @@ $$
 
 which is positive definite exactly when $$k_p > m g h$$. Together these facts show that the system settles at the upright position.
 
-Note: Without delay, any $$k_p > m g h$$ and $$k_d > 0$$ would be stable, however large. In reality the sensorimotor loop is slow: delays of 160 to 240 ms have been estimated in gymnasts. With a delay, the stable region in the plane of gains is bounded, so gains that are too high also destabilize the system. This is where over-correcting causes sustained oscillations, and why a well-tuned balance needs both enough stiffness and not too much.
+Note: Without delay, any $k_p > m g h$ and $k_d > 0$ would be stable, however large. In reality the sensorimotor loop is slow. In a study of four male gymnasts, Yeadon and Trewartha (2003) estimated delays of 160 to 240 ms by regressing the wrist torque against earlier values of the centre-of-mass position and velocity. These are statistical estimates from a small sample, not direct measurements, so they should be read as an order of magnitude, but they are consistent with long-latency reflexes. With a delay, the stable region in the plane of gains is bounded, so gains that are too high also destabilize the system. This is where over-correcting causes sustained oscillations, and why a well-tuned balance needs both enough stiffness and not too much.
+
+With a delay, the stable region in the plane of gains is bounded, so gains that are too high also destabilize the system. This is where over-correcting causes sustained oscillations, and why a well-tuned balance needs both enough stiffness and not too much.
 
 However, the torque at the wrists is limited by the size of the contact area under the hands, so large perturbations cannot always be recovered. Moreover, shoulders and hips also contribute to balance control, and we will see a more accurate model to capture how other joints contribute to the balance.
 
