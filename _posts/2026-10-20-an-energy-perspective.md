@@ -45,9 +45,11 @@ Keep in mind that this behaviour is only possible because of **active control at
   <figcaption markdown="span">Figure 1. Inverted pendulum with torque control.</figcaption>
 </figure>
 
-Conceptually, I have always liked to think of these adjustments in terms of energy, because the importance of giving the right angular impulse (torque times duration) is something you learn from experience. In fact $$\frac{dE}{dt} = \tau\omega$$, meaning the "power of the force" is the rate at which that force transfers energy to the system. The energy changes only through the work done by the wrists, so it is intuitive to aim at keeping it constant, but at the right value. In the following, we verify how maths supports our intuition.
+Conceptually, I have always liked to think of these adjustments in terms of energy, because the importance of giving the right angular impulse (torque times duration) is something you learn from experience. 
 
-*Note: the following part contains a lot of maths, which may make the notation a bit heavy. If you want to skip the whole mathematical treatment, jump straight to the section “Conservation of mechanical energy in SIP”. The meaning will not change.*
+In fact $$\frac{dE}{dt} = \tau\omega$$, meaning the "power of the force" is the rate at which that force transfers energy to the system. The energy changes only through the work done by the wrists, so it is intuitive to aim at keeping it constant, but at the right value. In the following, we verify how maths supports our intuition.
+
+*Editorial note: the following part contains a lot of maths, which may make the notation a bit heavy. If you want to skip the whole mathematical treatment and go directly to what interests you most, please jump straight to the section: “Conservation of mechanical energy in SIP”. The whole picture will not change.*
 
 Recalling the rotational equation of motion:
 
@@ -93,28 +95,40 @@ $$
 E_p = mgh\cos\theta + \text{const}
 $$
 
-The term $$mgh\cos\theta$$ is simply the weight times the height of the centre of mass above the wrists, $$h\cos\theta$$. 
+Since only changes in potential energy matter, we are free to choose where it is zero.
 
-Only changes in potential energy matter, so we are free to choose where it is zero: *we take the handstand position as the reference level* ($$\theta = 0$$), so that
+*We take the handstand position as the reference level* ($$\theta = 0$$), so that:
 
 $$E_p = mgh\,(\cos\theta - 1)$$
 
-By the chain rule, 
+By the chain rule:
+
 $$
 \frac{dE_p}{dt} = \frac{dE_p}{d\theta}\,\omega = -mgh\sin\theta\,\omega
 $$
 
 so the gravitational term in the power balance is exactly $$-\frac{dE_p}{dt}$$.
 
-Note that $$\cos\theta \le 1$$, so $$E_p \le 0$$: any tilt lowers the centre of mass, and with it the potential energy.
+Note that $$\cos\theta \le 1$$ by definition, so $$E_p \le 0$$: any tilt lowers the centre of mass, and with it the potential energy.
 
-In other words, $$\theta = 0$$ is a maximum of $$E_p$$, like a ball on top of a hill. Any small displacement releases potential energy, which turns into kinetic energy: the upright position is an unstable equilibrium. 
+In other words, $$\theta = 0$$ is a maximum of $$E_p$$, like a ball on top of a hill. 
+*Any small displacement releases potential energy, which turns into kinetic energy*: the upright position is an unstable equilibrium. 
 
-For small angles
+For small angles:
 
-$$E_p \approx -\tfrac{1}{2}mgh\,\theta^2$$
+cos θ ≈ 1 − θ²/2     →     $$E_p \approx -\tfrac{1}{2}mgh\,\theta^2$$
 
-that is an upside-down parabola: this is the energy counterpart of the $$mgh\,\theta$$ term in the linearised equation, which pushes the body away from the vertical (Figure 1).
+A torque is the negative slope of the energy. 
+
+Differentiating $$E_p$$ with respect to $$\theta$$, the gravitational torque is:
+
+$$
+-\frac{dE_p}{d\theta} = mgh\sin\theta \approx mgh\,\theta
+$$
+
+which is exactly the term $$mgh\,\theta$$ in the linearised equation of motion, $$I_O\ddot{\theta} \approx mgh\,\theta + \tau$$.
+
+Its sign is positive: it pushes the body in the direction in which it is already tilted, and therefore away from the vertical. The upside-down parabola is the same information, read as energy instead of torque: the steeper the hill, the stronger the push away from the top. (Figure 1).
 
 Differentiating $$E_p$$ with respect to time, with $$\omega = \dot\theta$$:
 
@@ -128,9 +142,7 @@ $$
 \frac{dE_k}{dt} = -\frac{dE_p}{dt} + \tau\omega \implies \frac{d}{dt}(E_k + E_p) = \tau\omega
 $$
 
-Defining the total mechanical energy as 
-
-$$E = E_k + E_p$$
+Defining the **total mechanical energy** as $$E = E_k + E_p$$
 
 we obtain the energy rate equation:
 
