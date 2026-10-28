@@ -85,7 +85,7 @@ By the chain rule, $$\frac{dE_p}{dt} = \frac{dE_p}{d\theta}\,\omega = -mgh\sin\t
 
 Note that $$\cos\theta \le 1$$, so $$E_p \le 0$$: any tilt lowers the centre of mass, and with it the potential energy. (Figure 1)
 
-In other words, $$\theta = 0$ is a maximum of $E_p$$, like a ball on top of a hill. Any small displacement releases potential energy, which turns into kinetic energy: the upright position is an unstable equilibrium. For small angles, $$E_p \approx -\tfrac{1}{2}mgh\,\theta^2$$, an upside-down parabola: this is the energy counterpart of the $$mgh\,\theta$$ term in the linearised equation, which pushes the body away from the vertical.
+In other words, $$\theta = 0$$ is a maximum of $$E_p$$, like a ball on top of a hill. Any small displacement releases potential energy, which turns into kinetic energy: the upright position is an unstable equilibrium. For small angles, $$E_p \approx -\tfrac{1}{2}mgh\,\theta^2$$, an upside-down parabola: this is the energy counterpart of the $$mgh\,\theta$$ term in the linearised equation, which pushes the body away from the vertical.
 
 <figure>
   <img src="/assets/img/fig_hilltop.gif" alt="Inverted pendulum with no control torque falling away from the vertical while its kinetic energy grows and the total energy stays constant">
