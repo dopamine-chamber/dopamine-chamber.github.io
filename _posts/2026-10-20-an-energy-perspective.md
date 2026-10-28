@@ -4,11 +4,40 @@ title: "2. An energy perspective"
 date: 2026-10-20 12:00:00 +0200
 ---
 
-Models help us understand the mechanics of a handstand, but how should the body adjust its position to maintain balance? To effectively restore equilibrium, adjustments must be applied in the right direction, with the appropriate magnitude, and at the right time. Mechanics can tell us which joint torques are needed, but not how to produce them: that takes training in strength, mobility and coordination. We set this aside for now and return to a simplified model in which the body behaves as a single-segment inverted pendulum pivoting about the wrists.
+To effectively restore equilibrium, adjustments must be applied in the right direction, with the appropriate magnitude, and at the right time. Models help us understand the mechanics of a handstand, and mechanics can tell us which joint torques are needed. But learning how to produce them is another discipline that includes training in strength, mobility and coordination. 
+
+<details>
+<summary>Toolbox</summary>
+
+<div style="text-align: left;">
+  
+- Rigid body: an idealisation in which the distance between any two points of the body stays constant: the body does not deform and can only translate and rotate. In biomechanics, the human body is often represented as a rigid-body model.<br>
+- Newton’s second law: the net force on a body equals its mass times its acceleration (ΣF = ma). Its rotational analogue is that the net moment equals the moment of inertia times the angular acceleration (ΣM = Iα).<br>
+- Moment (of a force): the rotational effect of a force about a point. It is used interchangeably with torque in the post.<br>
+- Angular velocity (ω): how fast the tilt angle changes over time [rad/s]. It is the time derivative of θ.<br>
+- Angular acceleration (α): how fast the angular velocity changes over time [rad/s²].<br>
+- Rotational dynamic equilibrium: the condition in which the net moment about the pivot is zero, so the angular acceleration is zero. The body is either still or rotating at constant speed.<br>
+- Control torque (τ): the torque the athlete produces at the wrists to oppose gravity’s torque.<br
+- Moment of inertia: a measure of a body’s resistance to changes in its rotation.<br>
+- Centre of mass (CoM): the point where the whole mass of a body can be considered concentrated, and which moves like a single particle subject to the total external force.<br>
+- Lever arm: the perpendicular distance between the line of action of a force and the axis of rotation.<br>
+- Torque: the rotational effect of a force about an axis, equal to the force times its lever arm.<br
+- Pivot: the fixed point about which the body rotates. In the model it is the wrists.
+- Amplitude (θ₀): the maximum angle reached during the oscillation.<br>
+- Angular frequency (ω₀): how fast the oscillation cycles [rad/s]. It is related to the period by T = 2π/ω₀.<br>
+- Period (T): the time taken for one complete oscillation [s].<br>
+- Hanging pendulum: a body free to rotate about a pivot, with its centre of mass below it. Gravity acts as a restoring torque, so the equilibrium is stable and, for small angles, the motion is harmonic.
+  
+</div>
+
+</details>
+<br>
 
 ## Energy conservation in SIP
 
-We consider motion in the sagittal plane, where main handstand sway occur. We have also seen that $$\ddot{\theta}$$ as the notation used to represent a second derivative. Therefore, $$\ddot{\theta}$$ corresponds to the second derivative of the angular position, that is, the angular acceleration ($$\omega$$). Throughout this article, we assume that positive angles represent a tilt to the right.
+Let's go back to our SIP: we consider motion in the sagittal plane, where the main handstand sway occur. We have also seen that $$\ddot{\theta}$$ as the notation used to represent a second derivative. Therefore, $$\ddot{\theta}$$ corresponds to the second derivative of the angular position, that is, the angular velocity ($$\omega$$). Throughout this article, we assume that positive angles represent a tilt to the right.
+
+*Note: this post contains a lot of maths, which may make the notation a bit heavy. If you want to skip the whole mathematical treatment, jump straight to the section “Conservation of mechanical energy”.*
 
 Recalling the rotational equation of motion:
 
@@ -18,7 +47,9 @@ For small deviations ($$\theta \ll 1$$), we use $$\sin\theta \approx \theta$$, w
 
 $$I\ddot{\theta} \approx mgh\,\theta + \tau$$
 
-If the body tilts to the right ($$\theta > 0$$), a negative torque is required to counteract the fall. However, simply pushing against the direction of the fall is not always sufficient: the effectiveness of a correction depends on its magnitude and timing, as well as the body’s angular velocity.
+If the body tilts to the right ($$\theta > 0$$), a negative torque is required to counteract the fall. 
+
+However, simply pushing against the direction of the fall is not always sufficient: the effectiveness of a correction depends on its magnitude and timing, as well as the body’s angular velocity.
 
 To quantify how torque transfers energy into rotational motion, we consider mechanical power ($$P$$). For a torque acting around a single axis:
 
@@ -34,19 +65,25 @@ $$
 I\ddot{\theta}\,\omega = mgh\sin\theta\,\omega + \tau\omega
 $$
 
-The left-hand side represents the rate of change of rotational kinetic energy $$E_k = \frac{1}{2}I\omega^2$$ (assuming $$I$$ is constant):
+The left-hand side represents the contribute due to rate of change of rotational kinetic energy $$E_k = \frac{1}{2}I\omega^2$$ (assuming $$I$$ is constant):
 
 $$
 \frac{dE_k}{dt} = I\omega\dot{\omega} = I\ddot{\theta}\,\omega
 $$
 
-The gravitational term is the power of gravity, which equals minus the rate of change of potential energy. We take the handstand position ($$\theta = 0$$) as the reference level, so that:
+The gravitational term is the power of gravity. Gravity is a conservative force, so its torque can be written as minus the derivative of a potential energy $E_p$ with respect to the angle:
 
-$$
-E_p = m g h\,(\cos\theta - 1)
-$$
+$$mgh\sin\theta = -\frac{dE_p}{d\theta}$$
 
-Note: $$E_p \le 0$$, and that $$\theta = 0$$ is a maximum of $$E_p$$: the upright position is an unstable equilibrium.
+Integrating gives $E_p = mgh\cos\theta + \text{const}$. The term $mgh\cos\theta$ is simply the weight times the height of the centre of mass above the wrists, $h\cos\theta$. Only changes in potential energy matter, so we are free to choose where it is zero: we take the handstand position ($\theta = 0$) as the reference level, so that
+
+$$E_p = mgh\,(\cos\theta - 1)$$
+
+By the chain rule, $\frac{dE_p}{dt} = \frac{dE_p}{d\theta}\,\omega = -mgh\sin\theta\,\omega$, so the gravitational term in the power balance is exactly $-\frac{dE_p}{dt}$.
+
+Note that $\cos\theta \le 1$, so $E_p \le 0$: any tilt lowers the centre of mass, and with it the potential energy. (Figure 1)
+
+In other words, $\theta = 0$ is a maximum of $E_p$, like a ball on top of a hill. Any small displacement releases potential energy, which turns into kinetic energy: the upright position is an unstable equilibrium. For small angles, $E_p \approx -\tfrac{1}{2}mgh\,\theta^2$, an upside-down parabola: this is the energy counterpart of the $mgh\,\theta$ term in the linearised equation, which pushes the body away from the vertical.
 
 <figure>
   <img src="/assets/img/fig_hilltop.gif" alt="Inverted pendulum with no control torque falling away from the vertical while its kinetic energy grows and the total energy stays constant">
@@ -79,7 +116,7 @@ This is the work–energy theorem applied to the pendulum (Figure 2): the rate o
 
 <figure>
   <img src="/assets/img/fig1_undamped.gif" alt="Inverted pendulum with PD control and no damping oscillating about the vertical, with E_c constant">
-  <figcaption markdown="span">Figure 2. Energy conservation for single inverted pendulum with no torques.</figcaption>
+  <figcaption markdown="span">Figure 2. Energy conservatio.</figcaption>
 </figure>
 
 With this choice of reference, the upright equilibrium has $$E=0$$. Balancing therefore means bringing E to zero while $$\omega$$ goes to zero as well, and the control torque is the only way to change E. Its role is not merely to oppose the fall, but to add or remove energy at the right moments. Balancing on one's hands is, in this sense, a matter of energy management through well-timed, calibrated adjustments rather than abrupt, large corrections.
@@ -152,5 +189,5 @@ However, the torque at the wrists is limited by the size of the contact area und
 #### Source and references
 - [Loughborough University Repository](https://repository.lboro.ac.uk/articles/journal_contribution/Control_strategy_for_a_hand_balance/9630269?file=17279426) - Control strategy for a hand balance
 - [Royal Society Open Science](https://royalsocietypublishing.org/rsos/article/4/7/161018/93310/Balance-control-strategies-during-perturbed-and) - Balance control strategies during perturbed and unperturbed balance in standing and handstand
-- [Philosophical Transactions of the Royal Society A](https://royalsocietypublishing.org/rsta/article-abstract/367/1891/1195/17515/Delay-effects-in-the-human-sensory-system-during?redirectedFrom=fulltext) - Delay effects in the human sensory system during balancing
+- [Philosophical Transactions of the Royal Society A](https://royalsocietypublishing.org/rsta/article-abstract/367/1891/1195/17515/Delay-effects-in-the-human-sensory-system-during?redirectedFrom=fulltext) - Delay effects in the human sensory system during balancing<br>
 Figure 1, Figure 2 - Generated via Python for dopamine-chamber.github.io
