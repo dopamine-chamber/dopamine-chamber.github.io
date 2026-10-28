@@ -36,7 +36,7 @@ Chain rule: if y depends on x and x on t, then dy/dt = (dy/dx)(dx/dt)<br>
 
 ## Introducing mechanical power
 
-In the previous post we modelled our handstands this way: an inverted pendulum that want to mask as a hanging pendulum. The motion we want to recall is the simple harmonic motion, where the center of mass oscillates periodically about its equilibrium position. (Figure 1).
+In the previous post we modelled our handstand like an inverted pendulum that want to mask as a hanging pendulum. The motion we want to recall is the simple harmonic motion, where the center of mass oscillates periodically about its equilibrium position. (Figure 1).
 
 Keep in mind that this behaviour is only possible because of **active control at the wrists**. Unlike a hanging pendulum, an inverted pendulum is not governed by simple harmonic motion and cannot remain stable without continuous corrective action.
 
