@@ -33,11 +33,11 @@ To effectively restore equilibrium, adjustments must be applied in the right dir
 </details>
 <br>
 
-## Energy conservation in SIP
+## The power 
 
 Let's go back to our SIP: we consider motion in the sagittal plane, where the main handstand sway occur. We have also seen that $$\dot{\theta}$$ as the notation used to represent a derivative. Therefore, $$\dot{\theta}$$ corresponds to the derivative of the angular position $$\theta$$, that is the angular velocity ($$\omega$$). Throughout this article, we assume that positive angles represent a tilt to the right.
 
-*Note: this post contains a lot of maths, which may make the notation a bit heavy. If you want to skip the whole mathematical treatment, jump straight to the section “Conservation of mechanical energy”.*
+*Note: this post contains a lot of maths, which may make the notation a bit heavy. If you want to skip the whole mathematical treatment, jump straight to the section “Conservation of mechanical energy in SIP”.*
 
 Recalling the rotational equation of motion:
 
@@ -108,11 +108,13 @@ Defining the total mechanical energy as
 
 $$E = E_k + E_p$$
 
-wwe obtain the energy rate equation:
+we obtain the energy rate equation:
 
 $$
 \frac{dE}{dt} = \tau\omega
 $$
+
+## Conservation of mechanical energy in SIP
 
 This is the work–energy theorem applied to the pendulum (Figure 2): the rate of change of total mechanical energy equals the power delivered by the control torque. When the body tilts away from the vertical, gravitational potential energy decreases and, if $$\tau = 0$$, kinetic energy increases by exactly the same amount. Without a control torque the total energy is conserved ($$\frac{dE}{dt} = 0$$).
 
