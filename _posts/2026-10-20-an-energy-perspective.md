@@ -35,7 +35,7 @@ To effectively restore equilibrium, adjustments must be applied in the right dir
 
 ## Energy conservation in SIP
 
-Let's go back to our SIP: we consider motion in the sagittal plane, where the main handstand sway occur. We have also seen that $$\ddot{\theta}$$ as the notation used to represent a second derivative. Therefore, $$\ddot{\theta}$$ corresponds to the second derivative of the angular position, that is, the angular velocity ($$\omega$$). Throughout this article, we assume that positive angles represent a tilt to the right.
+Let's go back to our SIP: we consider motion in the sagittal plane, where the main handstand sway occur. We have also seen that $$\dot{\theta}$$ as the notation used to represent a derivative. Therefore, $$\dot{\theta}$$ corresponds to the derivative of the angular position $$\theta$$, that is the angular velocity ($$\omega$$). Throughout this article, we assume that positive angles represent a tilt to the right.
 
 *Note: this post contains a lot of maths, which may make the notation a bit heavy. If you want to skip the whole mathematical treatment, jump straight to the section “Conservation of mechanical energy”.*
 
