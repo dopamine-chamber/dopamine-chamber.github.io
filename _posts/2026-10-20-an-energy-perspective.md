@@ -28,9 +28,14 @@ Chain rule: if y depends on x and x on t, then dy/dt = (dy/dx)(dx/dt).<br>
 
 ## Introducing mechanical power
 
-Let's go back to our SIP: we consider motion in the sagittal plane, where the main handstand sway occur. We have also seen that $$\dot{\theta}$$ as the notation used to represent a derivative. Therefore, $$\dot{\theta}$$ corresponds to the derivative of the angular position $$\theta$$, that is the angular velocity ($$\omega$$), and  $$\ddot{\theta}$$ corresponds to the derivative of the angular velocity $$\dot{\theta}$$, or the second derivative of the angular position $$\theta$$, that is the angular acceleration ($$\dot{\omega}$$).
+Let's go back to our SIP: we consider motion in the sagittal plane, where the main handstand sway occur. We have also seen that $$\dot{\theta}$$ as the notation used to represent a derivative. Therefore, $$\dot{\theta}$$ corresponds to the derivative of the angular position $$\theta$$, that is the angular velocity ($$\omega$$), and  $$\ddot{\theta}$$ corresponds to the derivative of the angular velocity $$\dot{\theta}$$, or the second derivative of the angular position $$\theta$$, that is the angular acceleration ($$\dot{\omega}$$). Throughout this article, we assume that positive angles represent a tilt to the right.
 
-Throughout this article, we assume that positive angles represent a tilt to the right.
+The center of mass oscillates periodically with simple harmonic motion (Figure 1).
+
+<figure>
+  <img src="/assets/img/fig1_undamped.gif" alt="Inverted pendulum with PD control and no damping oscillating about the vertical, with E_c constant">
+  <figcaption markdown="span">Figure 1. Inverted pendulum with torque control.</figcaption>
+</figure>
 
 *Note: as you noticed, this post contains a lot of maths, which may make the notation a bit heavy. If you want to skip the whole mathematical treatment, jump straight to the section “Conservation of mechanical energy in SIP”.*
 
@@ -118,7 +123,7 @@ $$
 
 ## Conservation of mechanical energy in SIP
 
-From this result, we can see that one way to understand how the wrists must work against gravity is to think in terms of power and energy. In our single-segment model, the body has a **kinetic energy** (it is moving) and a **gravitational potential energy** (how high its centre of mass is). The upright position is where the centre of mass is highest, and we take it as the zero of potential energy: any tilt lowers the centre of mass, so gravity releases energy and the body speeds up as it falls, like a ball rolling off the top of a hill. Left to itself, the total energy stays constant, and the body falls away from the vertical (Figure 1).
+From this result, we can see that one way to understand how the wrists must work against gravity is to think in terms of power and energy. In our single-segment model, the body has a **kinetic energy** (it is moving) and a **gravitational potential energy** (how high its centre of mass is). The upright position is where the centre of mass is highest, and we take it as the zero of potential energy: any tilt lowers the centre of mass, so gravity releases energy and the body speeds up as it falls, like a ball rolling off the top of a hill. Left to itself, the total energy stays constant, and the body falls away from the vertical (Figure 2).
 
 Conceptually, I have always liked to think of these adjustments in terms of energy, because the right angular impulse (torque times duration) is something you learn from experience. Since $$\frac{dE}{dt} = \tau\omega$$, the energy changes only through the work done by the wrists, so it is intuitive to aim at keeping it constant, but at the right value. 
 
@@ -136,7 +141,7 @@ In an ideal world, once $$E = 0$$ with the body moving towards the vertical, the
 
 <figure>
   <img src="/assets/img/fig_hilltop.gif" alt="Inverted pendulum with no control torque falling away from the vertical while its kinetic energy grows and the total energy stays constant">
-  <figcaption markdown="span">Figure 1. Conservation of energy for the inverted pendulum with no control torque ($$\tau = 0$$). The upright position is a maximum of $$E_p$$, so the body falls away from it: kinetic and potential energy are exchanged while their sum $$E$$ stays constant.</figcaption>
+  <figcaption markdown="span">Figure 2. Conservation of energy for the inverted pendulum with no control torque ($$\tau = 0$$). The upright position is a maximum of $$E_p$$, so the body falls away from it: kinetic and potential energy are exchanged while their sum $$E$$ stays constant.</figcaption>
 </figure>
 
 In reality, noise, delays and small perturbations keep pushing $$E$$ away from zero, so the muscles never stop working. The energy stays close to zero, with the wrists adding or removing small amounts of it, depending on whether the torque acts along ($$\tau\omega > 0$$) or against ($$\tau\omega < 0$$) the motion.
@@ -144,11 +149,6 @@ In reality, noise, delays and small perturbations keep pushing $$E$$ away from z
 Balancing is therefore not simply “pushing against the fall”: the wrists have to add or remove the right amount of energy at the right moments, until both the tilt and the velocity go to zero. This is why small, well-timed adjustments work better than large, abrupt ones.
 
 We can describe this with a simple control rule: a torque that grows with the tilt (like a spring pulling the body back) and one that grows with the speed (like a damper absorbing the oscillations). The spring has to be stiffer than gravity’s pull, otherwise the body simply falls; without damping, it would swing around the vertical forever without settling. In real bodies, delays in the nervous system (160–240 ms in gymnasts) limit how strong the correction can be: too weak and we fall, too strong and we over-correct and oscillate. And the wrists can only produce a limited torque, bounded by the size of the contact area under the hands.
-
-<figure>
-  <img src="/assets/img/fig1_undamped.gif" alt="Inverted pendulum with PD control and no damping oscillating about the vertical, with E_c constant">
-  <figcaption markdown="span">Figure 2. Inverted pendulum with torque control.</figcaption>
-</figure>
 
 In the next post we will see in details which control rule is good to describe and model our wrist control, performed, in our body, by our **fingertips**.
 
