@@ -45,7 +45,9 @@ Keep in mind that this behaviour is only possible because of **active control at
   <figcaption markdown="span">Figure 1. Inverted pendulum with torque control.</figcaption>
 </figure>
 
-*Note: this part contains a lot of maths, which may make the notation a bit heavy. If you want to skip the whole mathematical treatment, jump straight to the section “Conservation of mechanical energy in SIP”. The meaning will not change.*
+Conceptually, I have always liked to think of these adjustments in terms of energy, because the importance of giving the right angular impulse (torque times duration) is something you learn from experience. In fact $$\frac{dE}{dt} = \tau\omega$$, meaning the "power of the force" is the rate at which that force transfers energy to the system. The energy changes only through the work done by the wrists, so it is intuitive to aim at keeping it constant, but at the right value. In the following, we verify how maths supports our intuition.
+
+*Note: the following part contains a lot of maths, which may make the notation a bit heavy. If you want to skip the whole mathematical treatment, jump straight to the section “Conservation of mechanical energy in SIP”. The meaning will not change.*
 
 Recalling the rotational equation of motion:
 
@@ -143,10 +145,6 @@ One way to understand how the wrists must work against gravity is to think in te
 $$E = E_k + E_p$$
 
 The upright position is where the centre of mass is highest, and we take it as the zero of potential energy (that in our model is the maximum): any tilt lowers the centre of mass, so gravity releases energy and the body speeds up as it falls, like a ball rolling off the top of a hill. Left to itself, the total energy stays constant, and the body falls away from the vertical (Figure 2).
-
-Conceptually, I have always liked to think of these adjustments in terms of energy, because the importance of giving the right angular impulse (torque times duration) is something you learn from experience. Since $$\frac{dE}{dt} = \tau\omega$$, the energy changes only through the work done by the wrists, so it is intuitive to aim at keeping it constant, but at the right value. 
-
-In our model, this work serves to continuously bring the system back towards the state where its energy is zero:
   
 - With $$E < 0$$, a body moving towards the vertical runs out of energy, stops short and falls back.
   
