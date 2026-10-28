@@ -117,7 +117,7 @@ This is reasonably consistent with what we observe in practice: small oscillatio
 
 ## The simple harmonic oscillator
 
-In a hanging pendulum, the centre of mass describes **harmonic motion**, at least for small oscillations. In the ideal case, the angular position over time is modelled by a cosine function, $$\theta(t) = \theta_0 \cos(\omega_0 t)$$, where $$\theta_0$$ is the initial amplitude and $$\omega_0$$ is the angular frequency. I know this may sound tedious and long-winded, but there is a reason why understanding the difference between being a hanging pendulum and being an inverted pendulum matters.
+In a hanging pendulum, the centre of mass describes **harmonic motion**, at least for small oscillations. In the ideal case, the angular position over time is modelled by a cosine function, $$\theta(t) = \theta_0 \cos(\omega_0 t)$$, where $$\theta_0$$ is the initial amplitude and $$\omega_0$$ is the angular frequency. I know this may sound tedious and long-winded, but there is a reason why understanding the difference between the hanging pendulum model and the inverted pendulum model matters.
 
 *And in case you didn't know, I love waves.*
 
@@ -132,7 +132,7 @@ Under this regime, its velocity continuously changes direction at the oscillatio
   <figcaption>Figure 4. Figure: Kinematic and dynamic model of a straight-arm handstand represented as an inverted pendulum. Left: Diagram of the model where the wrists act as a pivot point, while the center of mass (CM) oscillates relative to the vertical equilibrium line in lateral view (top) and top view (bottom). Top right: Graph of simple harmonic motion showing the tilt angle as a function of time (which is a cosine function), with a period T = 2.0 s. Bottom right: Plot of angular velocity, which is the time derivative of the position function and it's magnitude reaches its maximum when the body crosses the vertical.</figcaption>
 </figure>
 
-This is what happens, more or less, to your center of mass when you use the control torque to recover balance. The common wisdom about controlling a handstand revolves, in fact, around this idea: if you are falling forward, push with your fingers; if you are falling backward, push with your palms.
+This is what happens, more or less, to your center of mass when you use the control torque to recover balance. The common wisdom about controlling a handstand revolves, in fact, around this idea: if you are falling forward, push with your fingers; if you are falling backward, push with your palms. WWhat you are being asked to do is behave like a **harmonic oscillator**.
 
 An inverted pendulum, on the other hand, diverges exponentially from the vertical (for small angles). This is where the **control torque** comes in. In other words, you are being asked to +behave like a harmonic oscillato+r: to turn an unstable system into one that oscillates about the vertical. The problem is that even a real hanging pendulum does not behave like an ideal harmonic oscillator, and you are neither an ideal pendulum nor a hanging one. The system you most resemble is unstable by nature: left to itself, it tends to fall.
 
