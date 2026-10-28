@@ -5,7 +5,7 @@ date: 2026-10-21 12:00:00 +0200
 published: false
 ---
 
-In the [previous post](/2026/10/20/an-energy-perspective.html) we saw that, in our model, the wrists are the only way to change the energy of the body: without a control torque the upright position is the top of a hill, and the body simply falls. What we have not said yet is how the torque should be produced.
+In the [previous post](/2026/10/20/an-energy-perspective.html) we saw that, in our model, the wrists are the only way to change the energy of the body: without a control torque the upright position is the top of a hill, and the body simply falls. What we have not said yet is how the torque should be produced. Therefore, the system can't be modelled with like a simple harmonic oscillator. What actually describes the motion of an inverted pendulum is a damped oscillator governed by a specific control law.
 
 <details>
 <summary>Toolbox</summary>
