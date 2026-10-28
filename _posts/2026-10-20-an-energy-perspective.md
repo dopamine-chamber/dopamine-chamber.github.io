@@ -139,7 +139,11 @@ $$
 
 Defining the **total mechanical energy** as $$E = E_k + E_p$$
 
-we obtain the energy rate equation $$\frac{dE}{dt} = \tau\omega$$
+we obtain the energy rate equation:
+
+$$
+\frac{dE}{dt} = \tau\omega
+$$
 
 ## Conservation of mechanical energy in SIP
 
