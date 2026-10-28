@@ -150,14 +150,14 @@ The upright position is where the centre of mass is highest, and we take it as t
   
 - With $$E > 0$$, it overshoots and falls to the other side.
 
-This is why flailing in response to a loss of balance backfires: a large correction can push $$E$$ well above zero, and the body overshoots. A correction that is too small leaves $$E < 0$$, and the body falls back.
-
-In an ideal world, once $$E = 0$$ with the body moving towards the vertical, the wrists would have nothing left to do: $$\frac{dE}{dt} = \tau\omega = 0$$, and the energy would stay constant at zero. 
-
 <figure>
   <img src="/assets/img/fig_hilltop.gif" alt="Inverted pendulum with no control torque falling away from the vertical while its kinetic energy grows and the total energy stays constant">
   <figcaption markdown="span">Figure 2. Conservation of energy for the inverted pendulum with no control torque ($$\tau = 0$$). The upright position is a maximum of $$E_p$$, so the body falls away from it: kinetic and potential energy are exchanged while their sum $$E$$ stays constant.</figcaption>
 </figure>
+
+This is why flailing in response to a loss of balance backfires: a large correction can push $$E$$ well above zero, and the body overshoots. A correction that is too small leaves $$E < 0$$, and the body falls back.
+
+In an ideal world, once $$E = 0$$ with the body moving towards the vertical, the wrists would have nothing left to do: $$\frac{dE}{dt} = \tau\omega = 0$$, and the energy would stay constant at zero. 
 
 In reality, noise, delays and small perturbations keep pushing $$E$$ away from zero, so the muscles never stop working. The energy stays close to zero, with the wrists adding or removing small amounts of it, depending on whether the torque acts along ($$\tau\omega > 0$$) or against ($$\tau\omega < 0$$) the motion.
 
