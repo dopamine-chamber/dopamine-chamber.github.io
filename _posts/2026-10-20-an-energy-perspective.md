@@ -28,7 +28,7 @@ Chain rule: if y depends on x and x on t, then dy/dt = (dy/dx)(dx/dt).<br>
 
 ## Introducing mechanical power
 
-Let's go back to our SIP: we consider motion in the sagittal plane, where the main handstand sway occur. We have also seen that $$\dot{\theta}$$ as the notation used to represent a derivative. Therefore, $$\dot{\theta}$$ corresponds to the derivative of the angular position $$\theta$$, that is the angular velocity ($$\omega$$), and  $$\ddot{\theta}$$ corresponds to the derivative of the angular velocity $$\dot{\theta}$$, or the second derivative of the angular position $$\theta$$, that is the angular acceleration ($$\dot{\omega}).
+Let's go back to our SIP: we consider motion in the sagittal plane, where the main handstand sway occur. We have also seen that $$\dot{\theta}$$ as the notation used to represent a derivative. Therefore, $$\dot{\theta}$$ corresponds to the derivative of the angular position $$\theta$$, that is the angular velocity ($$\omega$$), and  $$\ddot{\theta}$$ corresponds to the derivative of the angular velocity $$\dot{\theta}$$, or the second derivative of the angular position $$\theta$$, that is the angular acceleration ($$\dot{\omega}$$).
 
 Throughout this article, we assume that positive angles represent a tilt to the right.
 
@@ -145,7 +145,7 @@ We can describe this with a simple control rule: a torque that grows with the ti
 
 <figure>
   <img src="/assets/img/fig1_undamped.gif" alt="Inverted pendulum with PD control and no damping oscillating about the vertical, with E_c constant">
-  <figcaption markdown="span">Figure 2. Energy conservation for single inverted pendulum with torque control.</figcaption>
+  <figcaption markdown="span">Figure 2. Inverted pendulum with torque control.</figcaption>
 </figure>
 
 In the next post we will describe this control law.
