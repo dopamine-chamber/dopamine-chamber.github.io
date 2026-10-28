@@ -6,6 +6,7 @@ date: 2026-10-21 12:00:00 +0200
 
 In the [previous post](/2026/10/20/an-energy-perspective.html) we saw that, in our model, the wrists are the only way to change the energy of the body: without a control torque the upright position is the top of a hill, and the body simply falls. What we have not said yet is how the torque should be produced.
 
+
 <details>
 <summary>Toolbox</summary>
 
@@ -27,8 +28,8 @@ In the [previous post](/2026/10/20/an-energy-perspective.html) we saw that, in o
   
 </div>
 
-</details>
-<br>
+</details><br>
+
 
 ## The linear Proportional-Derivative (PD) control law
 
