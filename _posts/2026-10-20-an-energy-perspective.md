@@ -149,7 +149,17 @@ $$
 
 One way to understand how the wrists must work against gravity is to think in terms of power and energy. In our single-segment model, the body has a kinetic energy (it is moving) and a gravitational potential energy (how high its centre of mass is), which give the total mechanical energy of the system:
 
-$$E = E_k + E_p$$
+$$
+E = E_k + E_p = \tfrac{1}{2}I_O\omega^2 + mgh\,(\cos\theta - 1)
+$$
+
+How does this energy change in time? Using the equation of motion gives the **energy rate equation**:
+
+$$
+\frac{dE}{dt} = I_O\omega\dot{\omega} - mgh\sin\theta\,\omega = \omega\,(I_O\ddot{\theta} - mgh\sin\theta) = \tau\omega
+$$
+
+The gravitational term cancels out: gravity only exchanges energy between its kinetic and potential forms, and the total energy changes only through the power $$\tau\omega$$ delivered by the control torque. This is why the wrists have to supply power to work against gravity.
 
 The upright position is where the centre of mass is highest, and *we take it as the zero of potential energy* (that in our model is the maximum): any tilt lowers the centre of mass, so gravity releases energy and the body speeds up as it falls, like a ball rolling off the top of a hill. Left to itself, the total energy stays constant, and the body falls away from the vertical (Figure 2).
 
