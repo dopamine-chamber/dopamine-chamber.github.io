@@ -133,7 +133,11 @@ $$
 
 ## Conservation of mechanical energy in SIP
 
-One way to understand how the wrists must work against gravity is to think in terms of power and energy. In our single-segment model, the body has a **kinetic energy** (it is moving) and a **gravitational potential energy** (how high its centre of mass is). The upright position is where the centre of mass is highest, and we take it as the zero of potential energy: any tilt lowers the centre of mass, so gravity releases energy and the body speeds up as it falls, like a ball rolling off the top of a hill. Left to itself, the total energy stays constant, and the body falls away from the vertical (Figure 2).
+One way to understand how the wrists must work against gravity is to think in terms of power and energy. In our single-segment model, the body has a kinetic energy (it is moving) and a gravitational potential energy (how high its centre of mass is), which give the total mechanical energy of the system:
+
+$$E = E_k + E_p$$
+
+The upright position is where the centre of mass is highest, and we take it as the zero of potential energy (that in our model is the maximum): any tilt lowers the centre of mass, so gravity releases energy and the body speeds up as it falls, like a ball rolling off the top of a hill. Left to itself, the total energy stays constant, and the body falls away from the vertical (Figure 2).
 
 Conceptually, I have always liked to think of these adjustments in terms of energy, because the importance of giving the right angular impulse (torque times duration) is something you learn from experience. Since $$\frac{dE}{dt} = \tau\omega$$, the energy changes only through the work done by the wrists, so it is intuitive to aim at keeping it constant, but at the right value. 
 
