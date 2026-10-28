@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "1. The straight two-arm model: how good are your joint at locking?"
+title: "1. The straight two-arm model and why it is important to fit it"
 date: 2026-10-20
 ---
 
@@ -14,10 +14,21 @@ In this post we will use a first “simple” model to start understanding why h
 <div style="text-align: left;">
   
 - Rigid body: an idealisation in which the distance between any two points of the body stays constant: the body does not deform and can only translate and rotate. In biomechanics, the human body is often represented as a rigid-body model.<br>
+- Newton’s second law: the net force on a body equals its mass times its acceleration (ΣF = ma). Its rotational analogue is that the net moment equals the moment of inertia times the angular acceleration (ΣM = Iα).<br>
+- Moment (of a force): the rotational effect of a force about a point. It is used interchangeably with torque in the post.<br>
+- Angular velocity (ω): how fast the tilt angle changes over time [rad/s]. It is the time derivative of θ.<br>
+- Angular acceleration (α): how fast the angular velocity changes over time [rad/s²].<br>
+- Rotational dynamic equilibrium: the condition in which the net moment about the pivot is zero, so the angular acceleration is zero. The body is either still or rotating at constant speed.<br>
+- Control torque (τ): the torque the athlete produces at the wrists to oppose gravity’s torque.<br
 - Moment of inertia: a measure of a body’s resistance to changes in its rotation.<br>
 - Centre of mass (CoM): the point where the whole mass of a body can be considered concentrated, and which moves like a single particle subject to the total external force.<br>
 - Lever arm: the perpendicular distance between the line of action of a force and the axis of rotation.<br>
-- Torque: the rotational effect of a force about an axis, equal to the force times its lever arm.
+- Torque: the rotational effect of a force about an axis, equal to the force times its lever arm.<br
+- Pivot: the fixed point about which the body rotates. In the model it is the wrists.
+- Amplitude (θ₀): the maximum angle reached during the oscillation.<br>
+- Angular frequency (ω₀): how fast the oscillation cycles [rad/s]. It is related to the period by T = 2π/ω₀.<br>
+- Period (T): the time taken for one complete oscillation [s].<br>
+- Hanging pendulum: a body free to rotate about a pivot, with its centre of mass below it. Gravity acts as a restoring torque, so the equilibrium is stable and, for small angles, the motion is harmonic.
   
 </div>
 
@@ -34,7 +45,7 @@ Let’s start with a handful of assumptions: we suppose that the handstand syste
 </figure>
 
 
-In this configuration, that tipically takes years of practice, the governing equation is Newton’s second law:
+In this configuration, that typically takes years of practice, the governing equation is Newton’s second law:
 
 $$
 \sum \mathbf{F} = m\mathbf{a}_{CM}
@@ -106,9 +117,9 @@ This is reasonably consistent with what we observe in practice: small oscillatio
 
 ## The simple harmonic oscillator
 
-In our single inverted pendulum model, the center of mass describes a **simple harmonic oscillatory motion** along a circular arc, where the angular position over time is modeled by a cosine function, $$\theta(t) = \theta_0 \cos(\omega_0 t$)$$, where $$\theta_0$$ is the initial amplitude and $$\omega_0$$ is the angular frequency. 
+In a hanging pendulum, the centre of mass describes **harmonic motion**, at least for small oscillations. In the ideal case, the angular position over time is modelled by a cosine function, $$\theta(t) = \theta_0 \cos(\omega_0 t)$$, where $$\theta_0$$ is the initial amplitude and $$\omega_0$$ is the angular frequency. I know this may sound tedious and long-winded, but there is a reason why understanding the difference between being a hanging pendulum and being an inverted pendulum matters.
 
-*Well, this may not be very useful for understanding handstands, but... In case you didn't know, I love waves.*
+*And in case you didn't know, I love waves.*
 
 Under this regime, its velocity continuously changes direction at the oscillation limits and varies in magnitude, reaching its maximum as the system crosses the vertical reference line (Figure 4).
 
@@ -121,19 +132,20 @@ Under this regime, its velocity continuously changes direction at the oscillatio
   <figcaption>Figure 4. Figure: Kinematic and dynamic model of a straight-arm handstand represented as an inverted pendulum. Left: Diagram of the model where the wrists act as a pivot point, while the center of mass (CM) oscillates relative to the vertical equilibrium line in lateral view (top) and top view (bottom). Top right: Graph of simple harmonic motion showing the tilt angle as a function of time (which is a cosine function), with a period T = 2.0 s. Bottom right: Plot of angular velocity, which is the time derivative of the position function and it's magnitude reaches its maximum when the body crosses the vertical.</figcaption>
 </figure>
 
-Anyway, one way to interpret these results is that, when a handstand tilts, the ability to recover balance depends on the torque we can generate at the wrists.
-More experienced athletes, who have greater neuromuscular control, perform better in this specific task and are better able to maintain the position.
+This is what happens, more or less, to your center of mass when you use the control torque to recover balance. The common wisdom about controlling a handstand revolves, in fact, around this idea: if you are falling forward, push with your fingers; if you are falling backward, push with your palms.
 
-This is what happens when, at the very beginning of practice, the common wisdom about controlling a handstand revolves, more or less, around this simplification: if you are falling forward, push with your fingers; and if you are falling backward, push with your palms. At this stage of learning, before any serious study of the practice, what people are doing is nothing more than reducing themselves to inverted pendulums. The problem is that, as we have said, this takes years of practice, and at first the movements are anything but this finely tuned. Basically, not the disruptive suggestion for a beginner practioner without any self-consciousness when upside down.
+An inverted pendulum, on the other hand, diverges exponentially from the vertical (for small angles). This is where the control torque comes in. In other words, you are being asked to behave like a harmonic oscillator: to turn an unstable system into one that oscillates about the vertical. The problem is that even a real hanging pendulum does not behave like an ideal harmonic oscillator, and you are neither an ideal pendulum nor a hanging one. The system you most resemble is unstable by nature: left to itself, it tends to fall.
 
-However, in a real handstand, even where micro-adjustments are performed by the fingers and palms to maintain balance, this motion deviates slightly from a pure harmonic profile. Transient accelerations and decelerations naturally occur due to neuromuscular control, but these variations must remain extremely small to stay within the stability limits of the system.
+Shortly, in a hanging pendulum, harmonic motion (which is what we want our centre of mass to do around the vertical) is the natural motion of the system, with no control needed. In an inverted pendulum, we have to recreate it ourselves. So, once again: understand it, understand its characteristics, and understand how to reproduce it with our body.
 
-Moreover, because of the dependence of $$\tau$$ on $$h$$, this result also suggests that the magnitude of the torque required to recover balance depends on the position of the center of mass, meaning that taller people may struggle more in handstands. In the next posts, we will see that other parameters also play a role and that the wrists can exert only a limited torque, bounded by the size of the contact area under the hands: if $$mgh\sin\theta$$ exceeds that limit, the fall can no longer be stopped.
+In other words, *the ability to recover balance depends on the torque we can generate at the wrists*. This is the reason why more experienced athletes, who have greater neuromuscular control, perform better in this specific task and are better able to maintain the position.
+
+Moreover, because of the dependence of $$\tau$$ on $$h$$, this result also suggests that the magnitude of the torque required to recover balance depends on the height of the center of mass, meaning that taller people may struggle more in handstands. In the next posts, we will see that other parameters also play a role and that the wrists can exert only a limited torque, bounded by the size of the contact area under the hands: if $$mgh\sin\theta$$ exceeds that limit, the fall can no longer be stopped.
 
 <figure>
   <img src="{{ '/assets/img/height_com_visual.gif' | relative_url }}"
        alt="Heigh of the centre of mass">
-  <figcaption>Figure 5. the magnitude of the torque required to recover balance depends on the position of the center of mass,.</figcaption>
+  <figcaption>Figure 5. the magnitude of the torque required to recover balance depends on the height of the center of mass.</figcaption>
 </figure>
 
 In the next post we will look at another way to analyze this ability: we will leave the mechanical description aside for a moment and introduce the concept of energy.
