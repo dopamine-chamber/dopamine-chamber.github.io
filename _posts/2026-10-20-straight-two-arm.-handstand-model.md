@@ -83,7 +83,7 @@ In a real handstand, however, body is never perfectly stationary and perpendicul
 
 ## Single inverted pendulum: a more accurate model for humans
 
-A better model to represent the body tilting in a handstand is the **single inverted pendulum** (SIP), a common model used in biomechanics applications like gait analysis, upright position and athletics skills, including handstands. (Figure 2).
+The body tilting in a handstand is *more similar* to what in physics is known as **single inverted pendulum** (SIP), a pendulum where the center of mass above the pivot point. Due to its configuration, the system implements control logic to mantain the pivot point below the center-of mass and not falling, being so a common model used in biomechanics applications that include balance requirements like gait analysis, upright position and athletics skills, including handstands. In fact, (Figure 2).
 
 <figure>
   <img src="{{ '/assets/img/inverted_pendulum_handstand_model_r1.png' | relative_url }}"
