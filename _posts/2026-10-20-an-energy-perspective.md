@@ -101,40 +101,33 @@ Since only changes in potential energy matter, we are free to choose where it is
 
 $$E_p = mgh\,(\cos\theta - 1)$$
 
-By the chain rule:
+Since $$\cos\theta \le 1$$, we have $$E_p \le 0$$: any tilt lowers the centre of mass, and with it the potential energy.
+
+In other words, $$\theta = 0$$ is a maximum of $$E_p$$, like a ball on top of a hill. *Any small displacement releases potential energy, which turns into kinetic energy*: the upright position is an unstable equilibrium.
+
+For small angles, $$\cos\theta \approx 1 - \theta^2/2$$, so
+
+$$
+E_p \approx -\tfrac{1}{2}mgh\,\theta^2
+$$
+
+which is an upside-down parabola (Figure 1).
+
+A torque is the negative slope of the energy. Differentiating $$E_p$$ with respect to $$\theta$$, the gravitational torque is
+
+$$
+-\frac{dE_p}{d\theta} = mgh\sin\theta \approx mgh\,\theta
+$$
+
+which is exactly the term $$mgh\,\theta$$ in the linearised equation of motion, $$I_O\ddot{\theta} \approx mgh\,\theta + \tau$$. Its sign is positive: it pushes the body in the direction in which it is already tilted, and therefore away from the vertical. The upside-down parabola is the same information, read as energy instead of torque: the steeper the hill, the stronger the push away from the top.
+
+The same function also tells us how the energy changes in time. Because $$E_p$$ depends on time only through $$\theta$$, the chain rule, with $$\omega = \dot{\theta}$$, gives
 
 $$
 \frac{dE_p}{dt} = \frac{dE_p}{d\theta}\,\omega = -mgh\sin\theta\,\omega
 $$
 
 so the gravitational term in the power balance is exactly $$-\frac{dE_p}{dt}$$.
-
-Note that $$\cos\theta \le 1$$ by definition, so $$E_p \le 0$$: any tilt lowers the centre of mass, and with it the potential energy.
-
-In other words, $$\theta = 0$$ is a maximum of $$E_p$$, like a ball on top of a hill. 
-*Any small displacement releases potential energy, which turns into kinetic energy*: the upright position is an unstable equilibrium. 
-
-For small angles:
-
-cos θ ≈ 1 − θ²/2     →     $$E_p \approx -\tfrac{1}{2}mgh\,\theta^2$$
-
-A torque is the negative slope of the energy. 
-
-Differentiating $$E_p$$ with respect to $$\theta$$, the gravitational torque is:
-
-$$
--\frac{dE_p}{d\theta} = mgh\sin\theta \approx mgh\,\theta
-$$
-
-which is exactly the term $$mgh\,\theta$$ in the linearised equation of motion, $$I_O\ddot{\theta} \approx mgh\,\theta + \tau$$.
-
-Its sign is positive: it pushes the body in the direction in which it is already tilted, and therefore away from the vertical. The upside-down parabola is the same information, read as energy instead of torque: the steeper the hill, the stronger the push away from the top. (Figure 1).
-
-Differentiating $$E_p$$ with respect to time, with $$\omega = \dot\theta$$:
-
-$$
-\frac{dE_p}{dt} = -\,m g h \,\sin\theta \; \omega
-$$
 
 Rearranging the power balance:
 
@@ -163,7 +156,7 @@ With $$E < 0$$, the body does not have enough energy to reach the vertical. As i
 * With $$E = 0$$, we have the the borderline case between the two behaviours: the body would balance on the top of the hill, but any tiny disturbance makes it fall to one side or the other.
 
 <figure>
-  <img src="/assets/img/fig_hilltop.gif" alt="Inverted pendulum with no control torque falling away from the vertical while its kinetic energy grows and the total energy stays constant">
+  <img src="/assets/img/fig_hilltop.gif" alt="Conservation of energy for the inverted pendulum with no control torque">
   <figcaption markdown="span">Figure 2. Conservation of energy for the inverted pendulum with no control torque ($$\tau = 0$$). The upright position is a maximum of $$E_p$$, so the body falls away from it: kinetic and potential energy are exchanged while their sum $$E$$ stays constant.</figcaption>
 </figure>
 
@@ -196,5 +189,4 @@ In the next post we will see in details the control rule that describe this fine
 #### Source and references
 - [Loughborough University Repository](https://repository.lboro.ac.uk/articles/journal_contribution/Control_strategy_for_a_hand_balance/9630269?file=17279426) - Control strategy for a hand balance
 - [Royal Society Open Science](https://royalsocietypublishing.org/rsos/article/4/7/161018/93310/Balance-control-strategies-during-perturbed-and) - Balance control strategies during perturbed and unperturbed balance in standing and handstand
-- [Philosophical Transactions of the Royal Society A](https://royalsocietypublishing.org/rsta/article-abstract/367/1891/1195/17515/Delay-effects-in-the-human-sensory-system-during?redirectedFrom=fulltext) - Delay effects in the human sensory system during balancing<br>
 Figure 1, Figure 2 - Generated via Python for dopamine-chamber.github.io
