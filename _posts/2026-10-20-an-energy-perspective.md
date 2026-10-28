@@ -113,13 +113,15 @@ $$
 
 which is an upside-down parabola (Figure 1).
 
-A torque is the negative slope of the energy. Differentiating $$E_p$$ with respect to $$\theta$$, the gravitational torque is
+A torque is the negative slope of the energy. 
+Differentiating $$E_p$$ with respect to $$\theta$$, the gravitational torque is
 
 $$
 -\frac{dE_p}{d\theta} = mgh\sin\theta \approx mgh\,\theta
 $$
 
-which is exactly the term $$mgh\,\theta$$ in the linearised equation of motion, $$I_O\ddot{\theta} \approx mgh\,\theta + \tau$$. Its sign is positive: it pushes the body in the direction in which it is already tilted, and therefore away from the vertical. The upside-down parabola is the same information, read as energy instead of torque: the steeper the hill, the stronger the push away from the top.
+which is exactly the term $$mgh\,\theta$$ in the linearised equation of motion, $$I_O\ddot{\theta} \approx mgh\,\theta + \tau$$. Its sign is positive: *it pushes the body in the direction in which it is already tilted, and therefore away from the vertical*. 
+The upside-down parabola is the same information, read as energy instead of torque: the steeper the hill, the stronger the push away from the top.
 
 The same function also tells us how the energy changes in time. Because $$E_p$$ depends on time only through $$\theta$$, the chain rule, with $$\omega = \dot{\theta}$$, gives
 
@@ -137,11 +139,7 @@ $$
 
 Defining the **total mechanical energy** as $$E = E_k + E_p$$
 
-we obtain the energy rate equation:
-
-$$
-\frac{dE}{dt} = \tau\omega
-$$
+we obtain the energy rate equation $$\frac{dE}{dt} = \tau\omega$$
 
 ## Conservation of mechanical energy in SIP
 
