@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2. An energy perspective"
+title: "2. An energy perspective: less is more?"
 date: 2026-10-20 12:00:00 +0200
 ---
 
@@ -125,7 +125,9 @@ Conceptually, I have always liked to think of these adjustments in terms of ener
 In our model, this work serves to continuously bring the system back towards the state where its energy is zero:
 
 - Near the vertical, $$E \approx \tfrac{1}{2}I\omega^2 - \tfrac{1}{2}mgh\,\theta^2$$, and the value that matters is $$E = 0$$, the energy of the upright position.
+  
 - With $$E < 0$$, a body moving towards the vertical runs out of energy, stops short and falls back.
+  
 - With $$E > 0$$, it overshoots and falls to the other side.
 
 This is why flailing in response to a loss of balance backfires: a large correction can push $$E$$ well above zero, and the body overshoots. A correction that is too small leaves $$E < 0$$, and the body falls back.
