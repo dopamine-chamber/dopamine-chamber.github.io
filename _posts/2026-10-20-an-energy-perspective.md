@@ -97,7 +97,12 @@ Only changes in potential energy matter, so we are free to choose where it is ze
 
 $$E_p = mgh\,(\cos\theta - 1)$$
 
-By the chain rule, $$\frac{dE_p}{dt} = \frac{dE_p}{d\theta}\,\omega = -mgh\sin\theta\,\omega$$, so the gravitational term in the power balance is exactly $$-\frac{dE_p}{dt}$$.
+By the chain rule, 
+$$
+\frac{dE_p}{dt} = \frac{dE_p}{d\theta}\,\omega = -mgh\sin\theta\,\omega
+$$
+
+so the gravitational term in the power balance is exactly $$-\frac{dE_p}{dt}$$.
 
 Note that $$\cos\theta \le 1$$, so $$E_p \le 0$$: any tilt lowers the centre of mass, and with it the potential energy.
 
