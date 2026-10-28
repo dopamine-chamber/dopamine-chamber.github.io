@@ -150,7 +150,7 @@ We can describe this with a simple control rule: a torque that grows with the ti
   <figcaption markdown="span">Figure 2. Inverted pendulum with torque control.</figcaption>
 </figure>
 
-In the next post we will see in details which control law is good to describe and model our wrist control, performed in our body by our **fingertips**.
+In the next post we will see in details which control rule is good to describe and model our wrist control, performed, in our body, by our **fingertips**.
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7508630837578903"
      crossorigin="anonymous"></script>
