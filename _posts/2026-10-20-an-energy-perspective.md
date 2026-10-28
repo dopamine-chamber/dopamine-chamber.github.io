@@ -10,23 +10,23 @@ To effectively restore equilibrium, adjustments must be applied in the right dir
 <summary>Toolbox</summary>
 
 <div style="text-align: left;">
-  
-- Rigid body: an idealisation in which the distance between any two points of the body stays constant: the body does not deform and can only translate and rotate. In biomechanics, the human body is often represented as a rigid-body model.<br>
-- Newton’s second law: the net force on a body equals its mass times its acceleration (ΣF = ma). Its rotational analogue is that the net moment equals the moment of inertia times the angular acceleration (ΣM = Iα).<br>
-- Moment (of a force): the rotational effect of a force about a point. It is used interchangeably with torque in the post.<br>
-- Angular velocity (ω): how fast the tilt angle changes over time [rad/s]. It is the time derivative of θ.<br>
-- Angular acceleration (α): how fast the angular velocity changes over time [rad/s²].<br>
-- Rotational dynamic equilibrium: the condition in which the net moment about the pivot is zero, so the angular acceleration is zero. The body is either still or rotating at constant speed.<br>
-- Control torque (τ): the torque the athlete produces at the wrists to oppose gravity’s torque.<br
-- Moment of inertia: a measure of a body’s resistance to changes in its rotation.<br>
-- Centre of mass (CoM): the point where the whole mass of a body can be considered concentrated, and which moves like a single particle subject to the total external force.<br>
-- Lever arm: the perpendicular distance between the line of action of a force and the axis of rotation.<br>
-- Torque: the rotational effect of a force about an axis, equal to the force times its lever arm.<br
-- Pivot: the fixed point about which the body rotates. In the model it is the wrists.
-- Amplitude (θ₀): the maximum angle reached during the oscillation.<br>
-- Angular frequency (ω₀): how fast the oscillation cycles [rad/s]. It is related to the period by T = 2π/ω₀.<br>
-- Period (T): the time taken for one complete oscillation [s].<br>
-- Hanging pendulum: a body free to rotate about a pivot, with its centre of mass below it. Gravity acts as a restoring torque, so the equilibrium is stable and, for small angles, the motion is harmonic.
+
+- Dot notation: θ̇ and θ̈ are the first and second time derivatives of the tilt angle. θ̇ = ω is the angular velocity [rad/s]; θ̈ = α is the angular acceleration [rad/s²].<br>
+- Small-angle approximation: for θ ≪ 1 rad, sin θ ≈ θ and cos θ ≈ 1 − θ²/2. It turns the nonlinear equations into linear ones.<br>
+- Mechanical power: the rate at which a force or torque transfers energy. For a torque about a fixed axis, P = τω [W].<br>
+- Rotational kinetic energy: the energy of rotation, E_k = ½Iω².<br>
+- Conservative force: a force whose work depends only on the start and end positions, so it can be described by a potential energy. Gravity is one.<br>
+- Gravitational potential energy and reference level: the energy stored by position. For the pendulum it is mg times the height of the CoM above the wrists, h cos θ. Only changes matter, so the zero can be chosen freely; here it is the upright position.<br>
+- Mechanical energy and work–energy theorem: E = E_k + E_p. Its rate of change equals the power of the non-conservative torques: dE/dt = τω.
+Chain rule: if y depends on x and x on t, then dy/dt = (dy/dx)(dx/dt).<br>
+- Unstable equilibrium: an equilibrium that a small disturbance makes the system leave. In the inverted pendulum it is a maximum of the potential energy.<br>
+- Feedback control law: a rule that sets the control torque from the measured state of the body.<br>
+- PD control: Proportional-Derivative control, τ = −k_p θ − k_d θ̇. The gains k_p and k_d set the strength of the two terms.<br>
+- Restoring torque (active stiffness): the −k_p θ term, which pushes the body back towards the vertical like a spring. It must exceed gravity’s destabilising term: k_p > mgh.<br>
+- Damping: the −k_d θ̇ term, proportional to velocity, which removes energy and stops oscillations.<br>
+- <br>Asymptotic stability: after a small disturbance, the system returns to equilibrium and stays there.
+- Lyapunov function (positive definite): an energy-like function that is positive everywhere except at equilibrium and never increases along the motion. If it exists, the equilibrium is stable.<br>
+- Sensorimotor delay: the time between a disturbance and the muscular response, from sensing, neural processing and muscle activation. In handstands it has been estimated at 160–240 ms.<br>
   
 </div>
 
@@ -89,9 +89,7 @@ The term $$mgh\cos\theta$$ is simply the weight times the height of the centre o
 
 $$E_p = mgh\,(\cos\theta - 1)$$
 
-By the chain rule, $$\frac{dE_p}{dt} = \frac{dE_p}{d\theta}\,
-
-\omega = -mgh\sin\theta\,\omega$$, so the gravitational term in the power balance is exactly $$-\frac{dE_p}{dt}$$.
+By the chain rule, $$\frac{dE_p}{dt} = \frac{dE_p}{d\theta}\,\omega = -mgh\sin\theta\,\omega$$, so the gravitational term in the power balance is exactly $$-\frac{dE_p}{dt}$$.
 
 Note that $$\cos\theta \le 1$$, so $$E_p \le 0$$: any tilt lowers the centre of mass, and with it the potential energy.
 
