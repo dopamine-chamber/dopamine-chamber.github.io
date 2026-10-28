@@ -117,7 +117,7 @@ This is reasonably consistent with what we observe in practice: small oscillatio
 
 ## You're not a simple harmonic oscillator
 
-In a "straight" hanging pendulum (the one whose body is suspended from a fixed point that swings freely under gravity) the centre of mass describes **harmonic motion**, at least for small oscillations. In the ideal case, the angular position over time is modelled by a cosine function, $$\theta(t) = \theta_0 \cos(\omega_0 t)$$, where $$\theta_0$$ is the initial amplitude and $$\omega_0$$ is the angular frequency. I know this may sound tedious and long-winded, but there is a reason why understanding the difference between the hanging pendulum model and the inverted pendulum model matters.
+In a straight hanging pendulum (the one whose body is suspended from a fixed point that swings freely under gravity) the centre of mass describes **harmonic motion**, at least for small oscillations. In the ideal case, the angular position over time is modelled by a cosine function, $$\theta(t) = \theta_0 \cos(\omega_0 t)$$, where $$\theta_0$$ is the initial amplitude and $$\omega_0$$ is the angular frequency. I know this may sound tedious and long-winded, but there is a reason why understanding the difference between the hanging pendulum model and the inverted pendulum model matters.
 
 *And in case you didn't know, I love waves.*
 
@@ -127,11 +127,14 @@ This is what happens, more or less, to your center of mass when you use the cont
 
 Unfortunately for whose who genuinely approach handbalancing, as we have seen from the equation above, this result cannot be achieved without active control at the wrists ($$\tau$$).
 
-Yet, an ideal inverted pendulum cannot be mathematically described by simple harmonic motion: it diverges exponentially from the vertical (for small angles). In other words, what we would like to obtain is simply not supported by the underlying physics of the system. You (the inverted pendulum) are being asked to behave like a simple pendulum, turning an unstable system into one that oscillates about the vertical. The difficulty is that even a real hanging pendulum does not behave like an ideal harmonic oscillator, and you are neither an hanging pendulum. Gravity is against you, and the system you most resemble is unstable by nature: left to itself, it tends to fall.
+Yet, an ideal inverted pendulum cannot be mathematically described by simple harmonic motion: it diverges exponentially from the vertical (for small angles). In other words, what we would like to obtain is simply not supported by the underlying physics of the system. You (the inverted pendulum) are being asked to behave like a simple pendulum, turning an unstable system into one that oscillates about the vertical. The difficulty is that even a real hanging pendulum does not behave like an ideal hanging pendulum, and you are neither an hanging pendulum. Gravity is against you, and the system you most resemble is unstable by nature: left to itself, it tends to fall.
 
-In short, in a hanging pendulum, harmonic motion (which is what we want our centre of mass to do around the vertical) is the natural behaviour of the system and needs no control, because gravity provides the restoring torque that brings it back to equilibrium. In an inverted pendulum, *gravity pushes us away from equilibrium*, so we have to *counteract it and recreate the harmonic oscillations ourselves*. So, once again: understand how the motion works, what its characteristics are, and how to reproduce it with our body.
+In short, in a hanging pendulum, harmonic motion (which is what we want our centre of mass to do around the vertical) is the natural behaviour of the system and needs no control, because gravity provides the restoring torque that brings it back to equilibrium. In an inverted pendulum, *gravity pushes us away from equilibrium*, so we have to *counteract it and recreate the harmonic oscillations ourselves*. 
 
-"Luckily", in reality, you are not an hanging pendulum, nor a inverted one, and you can train your muscle to describe what type of motion you want. With active wrist control, we can create behaviour that resembles simple harmonic motion, but nature will not produce it for us automatically. The work is performed instead by our neuromotor control system, which continuously generates corrective torques to stabilise the body (Figure 4).
+Luckily, in reality, you are not an hanging pendulum, nor a inverted one, and you can train your muscle to describe what type of motion you want (differently from pendulums, they learn). So, once again: understand how the motion works, what its characteristics are, and how to reproduce it with our body.
+
+With active wrist control, we can create behaviour that resembles simple harmonic motion, but nature will not produce it for us automatically. 
+Nature will not produce restoring torques for you, but have provide you with the neuromotor control system, which can learn how continuously generates corrective torques to stabilise the body (Figure 4).
 
 <figure>
   <img src="{{ '/assets/img/handstand_shm.gif' | relative_url }}"
@@ -142,11 +145,11 @@ In short, in a hanging pendulum, harmonic motion (which is what we want our cent
   <figcaption>Figure 4. Figure: Kinematic and dynamic model of a straight-arm handstand represented as an inverted pendulum. Left: Diagram of the model where the wrists act as a pivot point, while the center of mass (CM) oscillates relative to the vertical equilibrium line in lateral view (top) and top view (bottom). Top right: Graph of simple harmonic motion showing the tilt angle as a function of time (which is a cosine function), with a period T = 2.0 s. Bottom right: Plot of angular velocity, which is the time derivative of the position function and it's magnitude reaches its maximum when the body crosses the vertical.</figcaption>
 </figure>
 
-In short terms, the ability to recover balance depends on the torque we can generate at the wrists. This is the reason why more experienced athletes, who have greater neuromuscular control, perform better in this specific task and are better able to maintain the position.
+In short terms, the ability to recover balance depends on the torque we can generate at the wrists. 
 
 ## If in doubt, be a pendulum
 
-Either way, whether you are a hanging pendulum or an inverted one, being a pendulum is what truly matters: as we will see, this is the simplest configuration to study and define, and therefore the simplest case in which to predict and contain perturbations. Unfortunately, holding the posture that makes the body behave like a pendulum is very hard, and it involves non-trivial muscle activations. As I said at the beginning of the post, the straight handstand was the hardest position for me to learn. Not to understand, but to actually learn. Things improved when I learned the correct **posterior pelvic tilt**. In the next posts we will look at what these activations are and how they affect the model.
+Either way, whether you are a hanging pendulum or an inverted one, being a pendulum is what truly matters: as we will see, this is the simplest configuration to study and define, and therefore the simplest case in which to predict and contain perturbations. Unfortunately, holding the posture that makes the body behave like a pendulum is very hard, and it involves non-trivial muscle activations. This is the reason why more experienced athletes, who have greater neuromuscular control, perform better in this specific task and are better able to maintain the position. As I said at the beginning of the post, the straight handstand was the hardest position for me to learn. Not to understand, but to actually learn. Things improved when I learned the correct **posterior pelvic tilt**. In the next posts we will look at what these activations are and how they affect the model. 
 
 Moreover, because of the dependence of $$\tau$$ on $$h$$, this result also suggests that the magnitude of the torque required to recover balance depends on the height of the center of mass, meaning that taller people may struggle more in handstands (Figure 5).
 
