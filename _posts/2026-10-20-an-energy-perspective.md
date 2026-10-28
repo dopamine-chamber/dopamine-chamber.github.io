@@ -33,11 +33,13 @@ To effectively restore equilibrium, adjustments must be applied in the right dir
 </details>
 <br>
 
-## The power 
+## Introducing mechanical power
 
-Let's go back to our SIP: we consider motion in the sagittal plane, where the main handstand sway occur. We have also seen that $$\dot{\theta}$$ as the notation used to represent a derivative. Therefore, $$\dot{\theta}$$ corresponds to the derivative of the angular position $$\theta$$, that is the angular velocity ($$\omega$$). Throughout this article, we assume that positive angles represent a tilt to the right.
+Let's go back to our SIP: we consider motion in the sagittal plane, where the main handstand sway occur. We have also seen that $$\dot{\theta}$$ as the notation used to represent a derivative. Therefore, $$\dot{\theta}$$ corresponds to the derivative of the angular position $$\theta$$, that is the angular velocity ($$\omega$$), and  $$\ddot{\theta}$$ corresponds to the derivative of the angular velocity $$\dot{\theta}$$, or the second derivative of the angular position $$\theta$$, that is the angular acceleration ($$\dot{\omega}).
 
-*Note: this post contains a lot of maths, which may make the notation a bit heavy. If you want to skip the whole mathematical treatment, jump straight to the section “Conservation of mechanical energy in SIP”.*
+Throughout this article, we assume that positive angles represent a tilt to the right.
+
+*Note: as you noticed, this post contains a lot of maths, which may make the notation a bit heavy. If you want to skip the whole mathematical treatment, jump straight to the section “Conservation of mechanical energy in SIP”.*
 
 Recalling the rotational equation of motion:
 
@@ -49,48 +51,51 @@ $$I\ddot{\theta} \approx mgh\,\theta + \tau$$
 
 If the body tilts to the right ($$\theta > 0$$), a negative torque is required to counteract the fall. 
 
-However, simply pushing against the direction of the fall is not always sufficient: the effectiveness of a correction depends on its magnitude and timing, as well as the body’s angular velocity.
+To quantify how torque transfers energy into rotational motion, we introduce **mechanical power** ($$P$$), expressed in **watt** (torque × angular velocity).
 
-To quantify how torque transfers energy into rotational motion, we consider mechanical power ($$P$$). For a torque acting around a single axis:
+For a torque acting around a single axis:
 
 $$
 P = \tau\,\omega
 $$
 
-where $$\omega = \dot{\theta}$$ is the angular velocity.
+with $$\omega = \dot{\theta}$$ being the angular velocity.
 
-Multiplying the full (nonlinear) equation of motion by $$\omega$$ gives
+Multiplying the full (nonlinear) equation of motion by $$\omega$$ turns every term into a power: 
 
 $$
 I\ddot{\theta}\,\omega = mgh\sin\theta\,\omega + \tau\omega
 $$
 
-Multiplying by ω turns every term into a power (torque × angular velocity).
+Analyzing terms:
 
-The left-hand side represents the contribute due to rate of change of rotational kinetic energy $$E_k = \frac{1}{2}I\omega^2$$ (assuming $$I$$ is constant):
+- The left-hand side represents the contribute due to rate of change of rotational kinetic energy $$E_k = \frac{1}{2}I\omega^2$$ (assuming $$I$$ is constant):
 
 $$
 \frac{dE_k}{dt} = I\omega\dot{\omega} = I\ddot{\theta}\,\omega
 $$
 
-The gravitational term is the power of gravity. Gravity is a conservative force, so its torque can be written as minus the derivative of a potential energy $$E_p$$ with respect to the angle:
+- The gravitational term is the power of gravity. Gravity is a conservative force, so its torque can be written as minus the derivative of a potential energy $$E_p$$ with respect to the angle:
 
 $$mgh\sin\theta = -\frac{dE_p}{d\theta}$$
 
-Integrating gives $$E_p = mgh\cos\theta + \text{const}$$. The term $$mgh\cos\theta$$ is simply the weight times the height of the centre of mass above the wrists, $$h\cos\theta$$. Only changes in potential energy matter, so we are free to choose where it is zero: we take the handstand position ($$\theta = 0$$) as the reference level, so that
+Integrating gives:
+
+$$
+E_p = mgh\cos\theta + \text{const}
+$$
+
+The term $$mgh\cos\theta$$ is simply the weight times the height of the centre of mass above the wrists, $$h\cos\theta$$. Only changes in potential energy matter, so we are free to choose where it is zero: we take the handstand position ($$\theta = 0$$) as the reference level, so that
 
 $$E_p = mgh\,(\cos\theta - 1)$$
 
-By the chain rule, $$\frac{dE_p}{dt} = \frac{dE_p}{d\theta}\,\omega = -mgh\sin\theta\,\omega$$, so the gravitational term in the power balance is exactly $$-\frac{dE_p}{dt}$$.
+By the chain rule, $$\frac{dE_p}{dt} = \frac{dE_p}{d\theta}\,
 
-Note that $$\cos\theta \le 1$$, so $$E_p \le 0$$: any tilt lowers the centre of mass, and with it the potential energy. (Figure 1)
+\omega = -mgh\sin\theta\,\omega$$, so the gravitational term in the power balance is exactly $$-\frac{dE_p}{dt}$$.
 
-In other words, $$\theta = 0$$ is a maximum of $$E_p$$, like a ball on top of a hill. Any small displacement releases potential energy, which turns into kinetic energy: the upright position is an unstable equilibrium. For small angles, $$E_p \approx -\tfrac{1}{2}mgh\,\theta^2$$, an upside-down parabola: this is the energy counterpart of the $$mgh\,\theta$$ term in the linearised equation, which pushes the body away from the vertical.
+Note that $$\cos\theta \le 1$$, so $$E_p \le 0$$: any tilt lowers the centre of mass, and with it the potential energy.
 
-<figure>
-  <img src="/assets/img/fig_hilltop.gif" alt="Inverted pendulum with no control torque falling away from the vertical while its kinetic energy grows and the total energy stays constant">
-  <figcaption markdown="span">Figure 1. Conservation of energy for the inverted pendulum with no control torque ($$\tau = 0$$). The upright position is a maximum of $$E_p$$, so the body falls away from it: kinetic and potential energy are exchanged while their sum $$E$$ stays constant.</figcaption>
-</figure>
+In other words, $$\theta = 0$$ is a maximum of $$E_p$$, like a ball on top of a hill. Any small displacement releases potential energy, which turns into kinetic energy: the upright position is an unstable equilibrium. For small angles, $$E_p \approx -\tfrac{1}{2}mgh\,\theta^2$$, that is an upside-down parabola: this is the energy counterpart of the $$mgh\,\theta$$ term in the linearised equation, which pushes the body away from the vertical (Figure 1).
 
 Differentiating $$E_p$$ with respect to time, with $$\omega = \dot\theta$$:
 
@@ -116,12 +121,24 @@ $$
 
 ## Conservation of mechanical energy in SIP
 
-This is the work–energy theorem applied to the pendulum (Figure 2): the rate of change of total mechanical energy equals the power delivered by the control torque. When the body tilts away from the vertical, gravitational potential energy decreases and, if $$\tau = 0$$, kinetic energy increases by exactly the same amount. Without a control torque the total energy is conserved ($$\frac{dE}{dt} = 0$$).
+Another way to see how the wrists must work against gravity is to think in terms of energy. In our single-segment model, the body has a **kinetic energy** (it is moving) and a **gravitational potential energy** (how high its centre of mass is). The upright position is the highest point: any tilt lowers the centre of mass, so gravity releases energy and the body speeds up as it falls, like a ball rolling off the top of a hill. Left alone, the total energy stays constant, and the body falls away from the vertical.
+
+<figure>
+  <img src="/assets/img/fig_hilltop.gif" alt="Inverted pendulum with no control torque falling away from the vertical while its kinetic energy grows and the total energy stays constant">
+  <figcaption markdown="span">Figure 1. Conservation of energy for the inverted pendulum with no control torque ($$\tau = 0$$). The upright position is a maximum of $$E_p$$, so the body falls away from it: kinetic and potential energy are exchanged while their sum $$E$$ stays constant.</figcaption>
+</figure>
+
+
+The only thing that can change the total energy is the torque at the wrists, which adds or removes energy depending on whether it acts along or against the motion. Balancing is therefore not simply “pushing against the fall”: the wrists have to add or remove the right amount of energy at the right moments, until both the tilt and the velocity go to zero. This is why small, well-timed adjustments work better than large, abrupt ones.
+
+We can describe this with a simple control rule: a torque that grows with the tilt (like a spring pulling the body back) and one that grows with the speed (like a damper absorbing the oscillations). The spring has to be stiffer than gravity’s pull, otherwise the body simply falls; without damping, it would swing around the vertical forever without settling. In real bodies, delays in the nervous system (160–240 ms in gymnasts) limit how strong the correction can be: too weak and we fall, too strong and we over-correct and oscillate. And the wrists can only produce a limited torque, bounded by the size of the contact area under the hands.
 
 <figure>
   <img src="/assets/img/fig1_undamped.gif" alt="Inverted pendulum with PD control and no damping oscillating about the vertical, with E_c constant">
   <figcaption markdown="span">Figure 2. Energy conservation for single inverted pendulum with torque control.</figcaption>
 </figure>
+
+This is the work–energy theorem applied to the pendulum (Figure 2): the rate of change of total mechanical energy equals the power delivered by the control torque. When the body tilts away from the vertical, gravitational potential energy decreases and, if $$\tau = 0$$, kinetic energy increases by exactly the same amount. Without a control torque the total energy is conserved ($$\frac{dE}{dt} = 0$$).
 
 With this choice of reference, the upright equilibrium has $$E=0$$. Balancing therefore means bringing E to zero while $$\omega$$ goes to zero as well, and the control torque is the only way to change E. Its role is not merely to oppose the fall, but to add or remove energy at the right moments. Balancing on one's hands is, in this sense, a matter of energy management through well-timed, calibrated adjustments rather than abrupt, large corrections.
 
@@ -160,7 +177,7 @@ $$
 E_c = \tfrac{1}{2} I \omega^2 + m g h\,(\cos\theta - 1) + \tfrac{1}{2} k_p \theta^2
 $$
 
-Using $dE/dt = \tau\,\omega$ and the PD law, one finds
+Using $$dE/dt = \tau\,\omega$$ and the PD law, one finds
 
 $$
 \frac{dE_c}{dt} = -k_d\,\omega^2 \le 0
@@ -172,7 +189,7 @@ $$
 E_c \approx \tfrac{1}{2} I \omega^2 + \tfrac{1}{2}\,(k_p - m g h)\,\theta^2,
 $$
 
-which is positive definite exactly when $k_p > m g h$. Together these facts show that the system settles at the upright position.
+which is positive definite exactly when $$k_p > m g h$$. Together these facts show that the system settles at the upright position.
 
 Note: Without delay, any $$k_p > m g h$$ and $$k_d > 0$$ would be stable, however large. In reality the sensorimotor loop is slow: delays of 160 to 240 ms have been estimated in gymnasts. With a delay, the stable region in the plane of gains is bounded, so gains that are too high also destabilize the system. This is where over-correcting causes sustained oscillations, and why a well-tuned balance needs both enough stiffness and not too much.
 
