@@ -117,7 +117,11 @@ This is reasonably consistent with what we observe in practice: small oscillatio
 
 ## You're not a simple harmonic oscillator
 
-In a straight hanging pendulum (the one whose body is suspended from a fixed point that swings freely under gravity) the centre of mass describes **harmonic motion**, at least for small oscillations. In the ideal case, the angular position over time is modelled by a cosine function, $$\theta(t) = \theta_0 \cos(\omega_0 t)$$, where $$\theta_0$$ is the initial amplitude and $$\omega_0$$ is the angular frequency. I know this may sound tedious and long-winded, but there is a reason why understanding the difference between the hanging pendulum model and the inverted pendulum model matters.
+To introduce this topic, it is helpful to briefly revisit the simple pendulum and its equation of motion.
+
+In a simple hanging pendulum (the one whose body is suspended from a fixed point that swings freely under gravity) the centre of mass describes **harmonic motion**, at least for small oscillations. In the ideal case, the angular position over time is modelled by a cosine function, $$\theta(t) = \theta_0 \cos(\omega_0 t)$$, where $$\theta_0$$ is the initial amplitude and $$\omega_0$$ is the angular frequency. 
+
+I understand this may sound tedious and long-winded, but there is a reason why understanding the difference between the hanging pendulum model and the inverted pendulum model matters.
 
 *And in case you didn't know, I love waves.*
 
@@ -127,11 +131,17 @@ This is what happens, more or less, to your center of mass when you use the cont
 
 Unfortunately for whose who genuinely approach handbalancing, as we have seen from the equation above, this result cannot be achieved without active control at the wrists ($$\tau$$).
 
-Yet, an ideal inverted pendulum cannot be mathematically described by simple harmonic motion: it diverges exponentially from the vertical (for small angles). In other words, what we would like to obtain is simply not supported by the underlying physics of the system. You (the inverted pendulum) are being asked to behave like a simple pendulum, turning an unstable system into one that oscillates about the vertical. The difficulty is that even a real hanging pendulum does not behave like an ideal hanging pendulum, and you are neither an hanging pendulum. Gravity is against you, and the system you most resemble is unstable by nature: left to itself, it tends to fall.
+Yet, an ideal inverted pendulum cannot be mathematically described by simple harmonic motion: it diverges exponentially from the vertical (for small angles). In other words, what we would like to obtain is simply not supported by the underlying physics of the system. 
+
+This is due to the unfavorable configuration we occupy within the gravitational field: our pivot point is located at ground level, while the entire weight of our body is distributed above and rotates around it.
+
+When balancing on hands, you (the inverted pendulum) are being asked to behave like a simple pendulum, turning an unstable system into one that oscillates about the vertical (our handstand). 
+
+Furthermore, *even a real hanging pendulum does not behave like an ideal hanging pendulum*, and you are neither an hanging pendulum. Gravity is against you, and the system you most resemble is unstable by nature: left to itself, it tends to fall.
 
 In short, in a hanging pendulum, harmonic motion (which is what we want our centre of mass to do around the vertical) is the natural behaviour of the system and needs no control, because gravity provides the restoring torque that brings it back to equilibrium. In an inverted pendulum, *gravity pushes us away from equilibrium*, so we have to *counteract it and recreate the harmonic oscillations ourselves*. 
 
-Luckily, in reality, you are not an hanging pendulum, nor a inverted one, and you can train your muscle to describe what type of motion you want (differently from pendulums, they learn). So, once again: understand how the motion works, what its characteristics are, and how to reproduce it with our body.
+Luckily, in reality, *you are not an hanging pendulum, nor a inverted one*, and you can train your muscle to describe what type of motion you want (differently from pendulums, they learn). So, once again: understand how the motion works, what its characteristics are, and how to reproduce it with our body.
 
 With active wrist control, we can create behaviour that resembles simple harmonic motion. 
 
