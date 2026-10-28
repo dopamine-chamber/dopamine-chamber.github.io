@@ -156,11 +156,11 @@ One way to understand how the wrists must work against gravity is to think in te
 
 $$E = E_k + E_p$$
 
-The upright position is where the centre of mass is highest, and we take it as the zero of potential energy (that in our model is the maximum): any tilt lowers the centre of mass, so gravity releases energy and the body speeds up as it falls, like a ball rolling off the top of a hill. Left to itself, the total energy stays constant, and the body falls away from the vertical (Figure 2).
-  
-- With $$E < 0$$, a body moving towards the vertical runs out of energy, stops short and falls back.
-  
-- With $$E > 0$$, it overshoots and falls to the other side.
+The upright position is where the centre of mass is highest, and *we take it as the zero of potential energy* (that in our model is the maximum): any tilt lowers the centre of mass, so gravity releases energy and the body speeds up as it falls, like a ball rolling off the top of a hill. Left to itself, the total energy stays constant, and the body falls away from the vertical (Figure 2).
+
+With $$E < 0$$, the body does not have enough energy to reach the vertical. As it approaches the upright position its potential energy rises towards zero while its kinetic energy drops, until it vanishes at a tilt \\( \theta_s \\) given by \\( \cos\theta_s = 1 + E/(mgh) \\). There the body stops for an instant, and then gravity pulls it back: it falls away from the vertical on the same side it came from.
+* With $$E > 0$$, the body reaches the vertical with kinetic energy to spare, \\( \tfrac{1}{2}I_O\omega^2 = E \\). It crosses the upright position without stopping and keeps going: it overshoots, and then falls to the other side.
+* With $$E = 0$$, we have the the borderline case between the two behaviours: the body would balance on the top of the hill, but any tiny disturbance makes it fall to one side or the other.
 
 <figure>
   <img src="/assets/img/fig_hilltop.gif" alt="Inverted pendulum with no control torque falling away from the vertical while its kinetic energy grows and the total energy stays constant">
@@ -177,7 +177,7 @@ Balancing is therefore not simply “pushing against the fall”: the wrists hav
 
 We can describe this with a simple control rule: a torque that grows with the tilt (like a spring pulling the body back) and one that grows with the speed (like a damper absorbing the oscillations). The spring has to be stiffer than gravity’s pull, otherwise the body simply falls; without damping, it would swing around the vertical forever without settling. In real bodies, delays in the nervous system (160–240 ms in gymnasts) limit how strong the correction can be: too weak and we fall, too strong and we over-correct and oscillate. And the wrists can only produce a limited torque, bounded by the size of the contact area under the hands.
 
-In the next post we will see in details which control rule is good to describe and model our wrist control, performed, in our body, by our **fingertips**.
+In the next post we will see in details the control rule that describe this fine wrist control.
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7508630837578903"
      crossorigin="anonymous"></script>
