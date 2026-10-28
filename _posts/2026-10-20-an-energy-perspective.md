@@ -65,25 +65,27 @@ $$
 I\ddot{\theta}\,\omega = mgh\sin\theta\,\omega + \tau\omega
 $$
 
+Multiplying by ω turns every term into a power (torque × angular velocity).
+
 The left-hand side represents the contribute due to rate of change of rotational kinetic energy $$E_k = \frac{1}{2}I\omega^2$$ (assuming $$I$$ is constant):
 
 $$
 \frac{dE_k}{dt} = I\omega\dot{\omega} = I\ddot{\theta}\,\omega
 $$
 
-The gravitational term is the power of gravity. Gravity is a conservative force, so its torque can be written as minus the derivative of a potential energy $E_p$ with respect to the angle:
+The gravitational term is the power of gravity. Gravity is a conservative force, so its torque can be written as minus the derivative of a potential energy $$E_p$$ with respect to the angle:
 
 $$mgh\sin\theta = -\frac{dE_p}{d\theta}$$
 
-Integrating gives $E_p = mgh\cos\theta + \text{const}$. The term $mgh\cos\theta$ is simply the weight times the height of the centre of mass above the wrists, $h\cos\theta$. Only changes in potential energy matter, so we are free to choose where it is zero: we take the handstand position ($\theta = 0$) as the reference level, so that
+Integrating gives $$E_p = mgh\cos\theta + \text{const}$$. The term $$mgh\cos\theta$$ is simply the weight times the height of the centre of mass above the wrists, $$h\cos\theta$$. Only changes in potential energy matter, so we are free to choose where it is zero: we take the handstand position ($$\theta = 0$$) as the reference level, so that
 
 $$E_p = mgh\,(\cos\theta - 1)$$
 
-By the chain rule, $\frac{dE_p}{dt} = \frac{dE_p}{d\theta}\,\omega = -mgh\sin\theta\,\omega$, so the gravitational term in the power balance is exactly $-\frac{dE_p}{dt}$.
+By the chain rule, $$\frac{dE_p}{dt} = \frac{dE_p}{d\theta}\,\omega = -mgh\sin\theta\,\omega$$, so the gravitational term in the power balance is exactly $$-\frac{dE_p}{dt}$$.
 
-Note that $\cos\theta \le 1$, so $E_p \le 0$: any tilt lowers the centre of mass, and with it the potential energy. (Figure 1)
+Note that $$\cos\theta \le 1$$, so $$E_p \le 0$$: any tilt lowers the centre of mass, and with it the potential energy. (Figure 1)
 
-In other words, $\theta = 0$ is a maximum of $E_p$, like a ball on top of a hill. Any small displacement releases potential energy, which turns into kinetic energy: the upright position is an unstable equilibrium. For small angles, $E_p \approx -\tfrac{1}{2}mgh\,\theta^2$, an upside-down parabola: this is the energy counterpart of the $mgh\,\theta$ term in the linearised equation, which pushes the body away from the vertical.
+In other words, $$\theta = 0$ is a maximum of $E_p$$, like a ball on top of a hill. Any small displacement releases potential energy, which turns into kinetic energy: the upright position is an unstable equilibrium. For small angles, $$E_p \approx -\tfrac{1}{2}mgh\,\theta^2$$, an upside-down parabola: this is the energy counterpart of the $$mgh\,\theta$$ term in the linearised equation, which pushes the body away from the vertical.
 
 <figure>
   <img src="/assets/img/fig_hilltop.gif" alt="Inverted pendulum with no control torque falling away from the vertical while its kinetic energy grows and the total energy stays constant">
