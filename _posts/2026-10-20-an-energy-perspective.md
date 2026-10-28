@@ -11,15 +11,23 @@ The intrinsic instability of the system can also be explained through the concep
 
 <div style="text-align: left;">
 
-- Dot notation: θ̇ and θ̈ are the first and second time derivatives of the tilt angle. θ̇ = ω is the angular velocity [rad/s]; θ̈ = α is the angular acceleration [rad/s²].<br>
-- Small-angle approximation: for θ ≪ 1 rad, sin θ ≈ θ and cos θ ≈ 1 − θ²/2. It turns the nonlinear equations into linear ones.<br>
-- Mechanical power: the rate at which a force or torque transfers energy. For a torque about a fixed axis, P = τω [W].<br>
-- Rotational kinetic energy: the energy of rotation, E_k = ½Iω².<br>
-- Conservative force: a force whose work depends only on the start and end positions, so it can be described by a potential energy. Gravity is one.<br>
-- Gravitational potential energy and reference level: the energy stored by position. For the pendulum it is mg times the height of the CoM above the wrists, h cos θ. Only changes matter, so the zero can be chosen freely; here it is the upright position.<br>
-- Mechanical energy and work–energy theorem: E = E_k + E_p. Its rate of change equals the power of the non-conservative torques: dE/dt = τω.
-Chain rule: if y depends on x and x on t, then dy/dt = (dy/dx)(dx/dt).<br>
-- Unstable equilibrium: an equilibrium that a small disturbance makes the system leave. In the inverted pendulum it is a maximum of the potential energy.<br>
+- Dot notation: θ̇ and θ̈ are the first and second time derivatives of the tilt angle. θ̇ = ω is the angular velocity [rad/s]; θ̈ = α is the angular acceleration [rad/s²]<br>
+
+- Small-angle approximation: for θ ≪ 1 rad, sin θ ≈ θ and cos θ ≈ 1 − θ²/2. It turns the nonlinear equations into linear ones<br>
+
+- Mechanical power: the rate at which a force or torque transfers energy. For a torque about a fixed axis, P = τω [W]<br>
+
+- Rotational kinetic energy: the energy of rotation, E_k = ½Iω²<br>
+
+- Conservative force: a force whose work depends only on the start and end positions, so it can be described by a potential energy. Gravity is one<br>
+
+- Gravitational potential energy and reference level: the energy stored by position. For the pendulum it is mg times the height of the CoM above the wrists, h cos θ. Only changes matter, so the zero can be chosen freely; here it is the upright position<br>
+
+- Mechanical energy and work–energy theorem: E = E_k + E_p. Its rate of change equals the power of the non-conservative torques: dE/dt = τω
+- 
+Chain rule: if y depends on x and x on t, then dy/dt = (dy/dx)(dx/dt)<br>
+
+- Unstable equilibrium: an equilibrium that a small disturbance makes the system leave. In the inverted pendulum it is a maximum of the potential energy<br>
   
 </div>
 
