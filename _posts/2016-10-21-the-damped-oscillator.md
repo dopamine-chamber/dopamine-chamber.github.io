@@ -30,6 +30,8 @@ In the [previous post](/2026/10/20/an-energy-perspective.html) we saw that, in o
 </details>
 <br>
 
+## The linear Proportional-Derivative (PD) control law
+
 To illustrate this control mechanism, consider a linear Proportional-Derivative (PD) control law, a type of feedback control that combines proportional and derivative actions to regulate the behavior of a system:
 
 $$
@@ -106,4 +108,4 @@ However, the torque at the wrists is limited by the size of the contact area und
 - [Loughborough University Repository](https://repository.lboro.ac.uk/articles/journal_contribution/Control_strategy_for_a_hand_balance/9630269?file=17279426) - Control strategy for a hand balance
 - [Royal Society Open Science](https://royalsocietypublishing.org/rsos/article/4/7/161018/93310/Balance-control-strategies-during-perturbed-and) - Balance control strategies during perturbed and unperturbed balance in standing and handstand
 - [Philosophical Transactions of the Royal Society A](https://royalsocietypublishing.org/rsta/article-abstract/367/1891/1195/17515/Delay-effects-in-the-human-sensory-system-during?redirectedFrom=fulltext) - Delay effects in the human sensory system during balancing<br>
-Figure 1, Figure 2 - Generated via Python for dopamine-chamber.github.io
+Figure 1 - Generated via Python for dopamine-chamber.github.io
