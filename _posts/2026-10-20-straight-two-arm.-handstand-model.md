@@ -140,6 +140,8 @@ Shortly, in a hanging pendulum, harmonic motion (which is what we want our centr
 
 In other words, *the ability to recover balance depends on the torque we can generate at the wrists*. This is the reason why more experienced athletes, who have greater neuromuscular control, perform better in this specific task and are better able to maintain the position.
 
+Either way, whether you are a hanging pendulum or an inverted one, being a pendulum is what matters: as we will see, this is the simplest configuration to study and define, and therefore the simplest case in which to predict and contain perturbations. Unfortunately, holding the posture that makes the body behave like a pendulum is very hard, and it involves non-trivial muscle activations. As I said at the beginning of the post, the straight handstand was the hardest position for me to learn. Not to understand, but to actually learn. Things improved when I learned the correct **posterior pelvic tilt**. In the next posts we will look at what these activations are and how they affect the model.
+
 Moreover, because of the dependence of $$\tau$$ on $$h$$, this result also suggests that the magnitude of the torque required to recover balance depends on the height of the center of mass, meaning that taller people may struggle more in handstands. In the next posts, we will see that other parameters also play a role and that the wrists can exert only a limited torque, bounded by the size of the contact area under the hands: if $$mgh\sin\theta$$ exceeds that limit, the fall can no longer be stopped.
 
 <figure>
