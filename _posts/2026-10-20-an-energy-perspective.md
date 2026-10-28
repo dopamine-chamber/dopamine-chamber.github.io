@@ -4,7 +4,7 @@ title: "2. An energy perspective: less is more?"
 date: 2026-10-20 12:00:00 +0200
 ---
 
-To effectively restore equilibrium, adjustments must be applied in the right direction, with the appropriate magnitude, and at the right time. Models help us understand the mechanics of a handstand, and mechanics can tell us which joint torques are needed. But learning how to produce them is another discipline that includes training in strength, mobility and coordination. 
+The intrinsic instability of the system can also be explained through the concept of energy. When we are in a handstand, we are intuitively in a state of unstable equilibrium: we are motionless, but because of the unfavorable configuration we occupy within the gravitational field, our potential energy is at its maximum.
 
 <details>
 <summary>Toolbox</summary>
@@ -28,9 +28,7 @@ Chain rule: if y depends on x and x on t, then dy/dt = (dy/dx)(dx/dt).<br>
 
 ## Introducing mechanical power
 
-Let's go back to our SIP: we consider motion in the sagittal plane, where the main handstand sway occur. We have also seen that $$\dot{\theta}$$ as the notation used to represent a derivative. Therefore, $$\dot{\theta}$$ corresponds to the derivative of the angular position $$\theta$$, that is the angular velocity ($$\omega$$), and  $$\ddot{\theta}$$ corresponds to the derivative of the angular velocity $$\dot{\theta}$$, or the second derivative of the angular position $$\theta$$, that is the angular acceleration ($$\dot{\omega}$$). Throughout this article, we assume that positive angles represent a tilt to the right.
-
-The motion we want to recall is the simple harmonic motion, where the center of mass oscillates periodically about its equilibrium position. (Figure 1).
+In the previous post we modelled our handstands this way: an inverted pendulum that want to mask as a hanging pendulum. The motion we want to recall is the simple harmonic motion, where the center of mass oscillates periodically about its equilibrium position. (Figure 1).
 
 Keep in mind that this behaviour is only possible because of **active control at the wrists**. Unlike a hanging pendulum, an inverted pendulum is not governed by simple harmonic motion and cannot remain stable without continuous corrective action.
 
