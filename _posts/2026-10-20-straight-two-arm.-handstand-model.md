@@ -152,13 +152,6 @@ Moreover, because of the dependence of $$\tau$$ on $$h$$, this result also sugge
 
 In the next posts, we will see that other parameters also play a role and that the wrists can exert only a limited torque, bounded by the size of the contact area under the hands: if $$mgh\sin\theta$$ exceeds that limit, the fall can no longer be stopped.
 
-[Next post →](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html)
-
-#### Sources and references
-- [Frontiers](https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1694648/full) - Biomechanical analyses of the handstand: a systematic review
-- Figure 1, 2 - AI-generated illustration created with Claude (Anthropic) for dopamine-chamber.github.io
-- Figure 3, 4, 5 - Generated via Python for dopamine-chamber.github.io
-
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7508630837578903"
      crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
@@ -170,3 +163,10 @@ In the next posts, we will see that other parameters also play a role and that t
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
+[Next post →](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html)
+
+#### Sources and references
+- [Frontiers](https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1694648/full) - Biomechanical analyses of the handstand: a systematic review
+- Figure 1, 2 - AI-generated illustration created with Claude (Anthropic) for dopamine-chamber.github.io
+- Figure 3, 4, 5 - Generated via Python for dopamine-chamber.github.io
