@@ -4,7 +4,7 @@ title: "2. An energy perspective: less is more?"
 date: 2026-10-20 12:00:00 +0200
 ---
 
-The intrinsic instability of the system can also be explained through the concept of energy. When we are in a handstand, we are intuitively in a state of unstable equilibrium: we are motionless, but because of the unfavorable configuration we occupy within the gravitational field, our potential energy is at its maximum.
+The intrinsic instability of the system can also be explained through the concept of energy. When we are in a handstand, we are intuitively in a state of unstable equilibrium: we are almost motionless, but because of the unfavorable configuration we occupy within the gravitational field, our potential energy is at its maximum.
 
 <details>
 <summary>Toolbox</summary>
