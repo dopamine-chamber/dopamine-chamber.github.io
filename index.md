@@ -19,7 +19,7 @@ description: "Models and mechanics explained step by step to understand why the 
 <article>
   <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
   <p><small>{{ post.date | date: "%b %-d, %Y" }}</small></p>
-  <div class="post-excerpt">{{ post.excerpt }}</div>
+  <div class="post-excerpt" style="text-align: justify;">{{ post.excerpt }}</div>
 </article>
 {% endfor %}
 
