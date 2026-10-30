@@ -1,10 +1,18 @@
 title: the handstand dilemma
-description: disassembling the dilemma
+description: The physics of balance upside down. Models, energy and mechanics to understand why the handstand is unstable and how to train it.
+url: "https://dopamine-chamber.github.io"
 theme: minima
 lang: en
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  
 header_pages:
-  - privacy-policy.md
   - about.md
+   - privacy-policy.md
+   
 markdown: kramdown
 kramdown:
   math_engine: mathjax
