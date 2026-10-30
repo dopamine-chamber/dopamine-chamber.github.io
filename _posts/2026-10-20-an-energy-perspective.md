@@ -196,7 +196,7 @@ In the next post we will see in details the control rule that describe this fine
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-This post is part of: *[the handstand balance model](/series/).
+This post is part of *[the handstand balance model](/series/).
 [Next post →](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html)*
 
 #### Source and references
