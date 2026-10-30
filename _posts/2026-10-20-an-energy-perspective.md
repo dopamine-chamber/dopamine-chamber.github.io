@@ -196,8 +196,8 @@ In the next post we will see in details the control rule that describe this fine
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-*This post is part of [the handstand balance model](/series/).*
-[Next post →](https://dopamine-chamber.github.io/2026/10/21/the-damped-oscillator)
+This post is part of: *[the handstand balance model](/series/).
+[Next post →](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html)*
 
 #### Source and references
 - [Loughborough University Repository](https://repository.lboro.ac.uk/articles/journal_contribution/Control_strategy_for_a_hand_balance/9630269?file=17279426) - Control strategy for a hand balance
