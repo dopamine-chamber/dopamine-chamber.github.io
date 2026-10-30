@@ -147,6 +147,7 @@ In the next posts, we will see that other parameters also play a role and that t
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
+*This post is part of [the handstand balance model](/series/).*
 [Next post →](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html)
 
 #### Sources and references
