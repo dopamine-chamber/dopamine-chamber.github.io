@@ -1,14 +1,12 @@
 ---
 layout: default
-title: "The physics of the handstand: why balancing upside down is so hard"
-description: "Models, energy and mechanics explained step by step to understand why the handstand is unstable and what it takes to hold it."
+title: "Handstand balance model: why balancing upside down is so hard"
+description: "Models and mechanics explained step by step to understand why the handstand is unstable and what it takes to hold it."
 ---
 
-<h1>Disassembling the dilemma</h1>
+<h1>disassembling the dilemma</h1>
 
 <p><em>Observe the phenomenon like a physicist. Unpack the phenomenon like an engineer. Experience the phenomenon like a practitioner.</em></p>
-
-<p>If handbalancing is your love language, come down to the handstand rabbit hole</p>
 
 {% assign first_post = site.posts | where: "series_order", 1 | first %}
 {% if first_post %}
@@ -21,7 +19,7 @@ description: "Models, energy and mechanics explained step by step to understand 
 <article>
   <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
   <p><small>{{ post.date | date: "%b %-d, %Y" }}</small></p>
-  <p>{{ post.description | default: post.excerpt | strip_html | truncate: 200 }}</p>
+  <div class="post-excerpt">{{ post.excerpt }}</div>
 </article>
 {% endfor %}
 
