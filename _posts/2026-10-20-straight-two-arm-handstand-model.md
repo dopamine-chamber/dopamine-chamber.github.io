@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "1. The straight two-arm model and why it is important to fit it"
+description: "The physics behind handstands: use a simplified model to start understanding why handstands are intrinsically unstable."
 date: 2026-10-20
 ---
 
