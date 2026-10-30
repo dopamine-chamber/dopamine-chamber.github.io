@@ -11,7 +11,8 @@ plugins:
   
 header_pages:
   - about.md
-   - privacy-policy.md
+  - series.md
+  - privacy-policy.md
    
 markdown: kramdown
 kramdown:
