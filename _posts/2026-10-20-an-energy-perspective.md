@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "2. An energy perspective: less is more?"
+description: "The physics behind handstands: we are intuitively in a state of unstable equilibrium. We are almost motionless, but because of the configuration we occupy within the gravitational field, our potential energy is at its maximum."
 date: 2026-10-20 12:00:00 +0200
 ---
 
