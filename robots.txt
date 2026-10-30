@@ -1,0 +1,3 @@
+  User-agent: *
+  Allow: /
+  Sitemap: https://dopamine-chamber.github.io/sitemap.xml
