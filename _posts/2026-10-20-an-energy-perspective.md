@@ -196,6 +196,7 @@ In the next post we will see in details the control rule that describe this fine
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
+*This post is part of [the handstand dilemma series](/series/).*
 [Next post →](https://dopamine-chamber.github.io/2026/10/21/the-damped-oscillator)
 
 #### Source and references
