@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Handstand balance model: why balancing upside down is so hard"
+title: "Handstand balance model: deep dive into why balancing upside down is so hard"
 description: "Models and mechanics explained step by step to understand why the handstand is unstable and what it takes to hold it."
 ---
 
