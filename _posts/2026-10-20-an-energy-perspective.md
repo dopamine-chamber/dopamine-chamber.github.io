@@ -3,6 +3,7 @@ layout: post
 title: "Why a handstand is unstable: an energy perspective"
 description: "Handstand physics: we are intuitively in a state of unstable equilibrium. We are almost motionless, but because of the configuration we occupy within the gravitational field, our potential energy is at its maximum."
 date: 2026-10-20 12:00:00 +0200
+series_order: 3
 ---
 
 The intrinsic instability of the system can also be explained through the concept of energy. When we are in a handstand, we are intuitively in a state of unstable equilibrium: we are almost motionless, but because of the unfavorable configuration we occupy within the gravitational field, our potential energy is at its maximum.
