@@ -17,7 +17,7 @@ description: "Models and mechanics explained step by step to understand why the 
 
 {% for post in site.posts limit:5 %}
 <article>
-  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+  <h3 style="font-size: 1.6rem;"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
   <p><small>{{ post.date | date: "%b %-d, %Y" }}</small></p>
   <div class="post-excerpt" style="text-align: justify;">{{ post.excerpt }}</div>
 </article>
