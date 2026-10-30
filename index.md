@@ -6,7 +6,7 @@ description: "Models and mechanics explained step by step to understand why the 
 
 <h1>disassembling the dilemma</h1>
 
-<p style="font-weight: 500;">Observe the phenomenon like a physicist. Unpack the phenomenon like an engineer. Experience the phenomenon like a practitioner.</p>
+<p style="font-weight: 500;">Observe the phenomenon like a physicist.<br>Unpack the phenomenon like an engineer.<br>Experience the phenomenon like a practitioner.</p>
 
 {% assign first_post = site.posts | where: "series_order", 1 | first %}
 {% if first_post %}
