@@ -10,8 +10,8 @@ plugins:
   - jekyll-sitemap
   
 header_pages:
-  - about.md
   - series.md
+  - about.md
   - privacy-policy.md
    
 markdown: kramdown
