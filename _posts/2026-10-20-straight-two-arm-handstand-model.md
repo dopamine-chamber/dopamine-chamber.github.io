@@ -3,6 +3,7 @@ layout: post
 title: "The straight two-arm model and why it is important to fit it"
 description: "The physics behind handstands: use a simplified handstand balance model to start understanding why handstands are intrinsically unstable."
 date: 2026-10-20
+series_order: 2
 ---
 
 In this post we will use a simplified model to start understanding why handstands are intrinsically unstable. *Only the model is simple, because, to me, the straight handstand is anything but simple.*
