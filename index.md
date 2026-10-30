@@ -10,7 +10,7 @@ description: "Models and mechanics explained step by step to understand why the 
 
 {% assign first_post = site.posts | where: "series_order", 1 | first %}
 {% if first_post %}
-<p><strong>New here?</strong> Start with *<a href="{{ first_post.url | relative_url }}">{{ first_post.title }}</a>*, or browse *<a href="{{ '/series/' | relative_url }}">the complete series</a>*.</p>
+<p><strong>New here?</strong><br> Start with <em><a href="{{ first_post.url | relative_url }}">{{ first_post.title }}</a></em>, or browse <em><a href="{{ '/series/' | relative_url }}">the complete series</a></em>.</p>
 {% endif %}
 
 <h2>Latest posts</h2>
