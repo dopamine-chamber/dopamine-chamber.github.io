@@ -1,8 +1,15 @@
 ---
 layout: post
 title: "The straight two-arm model and why it is important to fit it"
+image:
+  path: /assets/img/og/inverted_pendulum_handstand_model_r1.png
+  width: 1200
+  height: 630
+  alt: "Single rigid-body model of a handstand, seen from the sagittal plane"
 description: "The physics behind handstands: use a simplified handstand balance model to start understanding why handstands are intrinsically unstable."
+author: Benedetta Giglio
 date: 2026-10-20
+last_modified_at: 2026-11-01
 series_order: 2
 ---
 
