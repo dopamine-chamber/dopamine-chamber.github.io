@@ -31,10 +31,10 @@ In practice the wrist torque of the model shows up as pressure shifting between 
 
 *Editorial note: Models are elegant, and coming across the different model scientist have provided to formalize the handstand balance is fascinating me very hard. However, models are models, and they only help us understand the mechanics of a handstand, and mechanics tells us which joint torques are needed. Learning to produce them is another matter: it takes strength, mobility and coordination.*
 
-*Technical note: The model we are going to explore mantains the assumptions of the previous posts of the [series](https://dopamine-chamber.github.io/series/):
-- the body is a single rigid segment pivoting about the wrists
-- it moves only in the sagittal plane
-- the tilt angles are small*
+*Technical note: The model we are going to explore mantains the assumptions of the previous posts of the [series](https://dopamine-chamber.github.io/series/):*
+*- the body is a single rigid segment pivoting about the wrists*
+*- it moves only in the sagittal plane*
+*- the tilt angles are small**
 
 ## PD control law
 
@@ -86,7 +86,8 @@ $$E_c \approx \tfrac{1}{2} I \omega^2 + \tfrac{1}{2}\,(k_p - mgh)\,\theta^2$$
 which is positive definite exactly when $$k_p > mgh$$. Since $$E_c$$ cannot increase, the body stays close to the vertical. To show that it actually settles, note that $$dE_c/dt = 0$$ only when $$\omega = 0$$; if $$\omega$$ stayed zero, the equation of motion would force $$(k_p - mgh)\theta = 0$$, that is $$\theta = 0$$. LaSalle's invariance principle then gives asymptotic stability. For the linearised equation this is also immediate: a second-order polynomial with positive coefficients has roots with negative real part.
 
 <figure> <!-- SEO: rename the file to damped-inverted-pendulum-pd-control.gif, update src, and add width/height attributes --> <img src="/assets/img/fig2_damped.gif" alt="Simulation of a handstand modelled as an inverted pendulum with PD control, returning to vertical as energy decays" loading="lazy"> <figcaption markdown="span">Figure 1. Handstand modelled as an inverted pendulum with PD control and damping ($$k_p > mgh$$, $$k_d > 0$$). The body returns to the vertical (left). The mechanical energy $$E$$ rises and falls as the torque alternately adds and removes energy ($$dE/dt = \tau\omega$$), while $$E_c$$ is non-increasing ($$dE_c/dt = -k_d\omega^2 \le 0$$). Both tend to zero, the energy of the upright equilibrium.</figcaption> </figure>
-Why delay matters in a handstand
+
+# Why delay matters in a handstand
 
 Without delay, any $$k_p > mgh$$ and $$k_d > 0$$ would be stable, however large. In reality the sensorimotor loop is slow. Yeadon and Trewartha (2003) studied four male gymnasts and estimated delays of 160 to 240 ms by regressing wrist torque against earlier values of the centre-of-mass position and velocity. These are statistical estimates from a small sample, not direct measurements, so they should be read as an order of magnitude, but they are consistent with long-latency reflexes.
 
@@ -96,7 +97,7 @@ With a delay, the region of stable gains in the $$(k_p, k_d)$$ plane becomes bou
 
 To get a feel for the numbers, take illustrative values $$m = 70$$ kg and a centre of mass 1 m above the wrists. Then $$mgh \approx 690$$ N·m/rad: the wrists must supply at least that torque per radian of tilt just to cancel gravity. Treating the body as a uniform rod pivoting at one end, the uncontrolled fall has a time constant of about 0.4 s, only roughly twice the delay. That narrow margin is one reason the handstand is hard. (This is a back-of-the-envelope estimate, not a result from the studies cited.)
 
-A model, not a law
+# A model, not a law
 
 The PD law is a model of what the nervous system does, and estimates such as the delay depend on the model used: the two Blenkinsop et al. (2016) values above come from two different models of the same data.
 
