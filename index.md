@@ -5,7 +5,8 @@ last title: disassembling the dilemma
 description: "Models and mechanics explained step by step to understand why the handstand is unstable and what it takes to hold it."
 ---
 
-<h2>disassembling the dilemma: deep dive into why balancing upside down is so hard</h2>
+<h2>disassembling the dilemma</h2>
+Deep dive into why balancing upside down is so hard.
 
 <p style="font-weight: 500">
   Observe like a physicist.<br>
