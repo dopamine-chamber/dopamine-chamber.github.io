@@ -120,5 +120,4 @@ This post is part of *[the handstand balance model](/series/).
 - Medicine & Science in Sports & Exercise - [*Strategies for maintaining a handstand in the anterior-posterior direction*](https://pubmed.ncbi.nlm.nih.gov/11445766/){:target="_blank" rel="noopener noreferrer"}
 - Loughborough repository - [*Control strategy for a hand balance*](https://repository.lboro.ac.uk/articles/journal_contribution/Control_strategy_for_a_hand_balance/9630269){:target="_blank" rel="noopener noreferrer"}
 - Gait & Posture - [*Human balance and posture control during standing and walking*](https://doi.org/10.1016/0966-6362(96)82849-9){:target="_blank" rel="noopener noreferrer"}
-
 - Figures 1, 2: AI-generated illustration created with Claude (Anthropic) for [dopamine-chamber.github.io](https://dopamine-chamber.github.io/){:target="_blank" rel="noopener noreferrer"}
