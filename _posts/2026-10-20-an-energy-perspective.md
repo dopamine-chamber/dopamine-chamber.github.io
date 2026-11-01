@@ -38,7 +38,7 @@ The intrinsic instability of the system can also be explained through the concep
 
 * **Unstable equilibrium**: an equilibrium that a small disturbance makes the system leave. In the inverted pendulum it is a maximum of the potential energy (Eₚ).
 
-</details>ù
+</details>
 
 ---
 
