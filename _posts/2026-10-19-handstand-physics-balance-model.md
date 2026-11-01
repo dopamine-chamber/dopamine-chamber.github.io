@@ -114,9 +114,9 @@ This post is part of *[the handstand balance model](/series/).
 
 #### Sources and references
 
-1. Blenkinsop, G. M., Pain, M. T. G., & Hiley, M. J. (2017). *Balance control strategies during perturbed and unperturbed balance in standing and handstand*. Royal Society Open Science, 4(7), 161018. [doi:10.1098/rsos.161018](https://doi.org/10.1098/rsos.161018){:target="_blank" rel="noopener noreferrer"} ([open access](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5541526/){:target="_blank" rel="noopener noreferrer"})
-2. Kerwin, D. G., & Trewartha, G. (2001). *Strategies for maintaining a handstand in the anterior-posterior direction*. Medicine & Science in Sports & Exercise, 33(7), 1182–1188. [PubMed](https://pubmed.ncbi.nlm.nih.gov/11445766/){:target="_blank" rel="noopener noreferrer"}
-3. Yeadon, M. R., & Trewartha, G. (2003). *Control strategy for a hand balance*. Motor Control, 7(4). [Loughborough repository](https://repository.lboro.ac.uk/articles/journal_contribution/Control_strategy_for_a_hand_balance/9630269){:target="_blank" rel="noopener noreferrer"}
-4. Winter, D. A. (1995). *Human balance and posture control during standing and walking*. Gait & Posture, 3(4), 193–214. [doi:10.1016/0966-6362(96)82849-9](https://doi.org/10.1016/0966-6362(96)82849-9){:target="_blank" rel="noopener noreferrer"}
+- Royal Society Open Science - [*Balance control strategies during perturbed and unperturbed balance in standing and handstand*](https://doi.org/10.1098/rsos.161018){:target="_blank" rel="noopener noreferrer"} ([open access](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5541526/){:target="_blank" rel="noopener noreferrer"})
+- Medicine & Science in Sports & Exercise - [*Strategies for maintaining a handstand in the anterior-posterior direction*](https://pubmed.ncbi.nlm.nih.gov/11445766/){:target="_blank" rel="noopener noreferrer"}
+- Loughborough repository - [*Control strategy for a hand balance*](https://repository.lboro.ac.uk/articles/journal_contribution/Control_strategy_for_a_hand_balance/9630269){:target="_blank" rel="noopener noreferrer"}
+- Gait & Posture - [*Human balance and posture control during standing and walking*](https://doi.org/10.1016/0966-6362(96)82849-9){:target="_blank" rel="noopener noreferrer"}
 
-Figures 1, 2: AI-generated illustration created with Claude (Anthropic) for dopamine-chamber.github.io
+- Figures 1, 2: AI-generated illustration created with Claude (Anthropic) for dopamine-chamber.github.io
