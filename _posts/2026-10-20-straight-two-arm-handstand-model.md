@@ -158,7 +158,7 @@ This post is part of *[the handstand balance model](/series/).
 [Next: an energy perspective on handstands balance →](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html)*
 
 #### Sources and references
-* Frontiers - [Biomechanical analyses of the handstand: a systematic review](https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1694648/full){:target="_blank" rel="noopener noreferrer"}
-
-* Figures 1 and 2 - AI-generated illustration created with Claude (Anthropic) for dopamine-chamber.github.io
+* Frontiers - [Biomechanical analyses of the handstand: a systematic review](https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1694648/full) {:target="_blank" rel="noopener noreferrer"}
+* Figures 1 and 2 - AI-generated illustration created with Claude (Anthropic) for [dopamine-chamber.github.io](https://dopamine-chamber.github.io/) {:target="_blank" rel="noopener noreferrer"}
+  
 * Figures 3, 4 and 5 - Generated via Python for dopamine-chamber.github.io
