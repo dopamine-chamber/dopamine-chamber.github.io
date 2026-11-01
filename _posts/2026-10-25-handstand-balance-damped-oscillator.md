@@ -1,3 +1,4 @@
+---
 layout: post
 title: "The damped oscillator: how good are your fingers?"
 description: "How the wrists keep a handstand upright: a damped-oscillator model with PD control, stability conditions, energy analysis and the effect of delay."
