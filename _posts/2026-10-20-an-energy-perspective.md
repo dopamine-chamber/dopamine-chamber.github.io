@@ -20,23 +20,24 @@ The intrinsic instability of the system can also be explained through the concep
 
 <div style="text-align: left;" markdown="1">
 
-* **Dot notation**: $\dot{\theta}$ and $\ddot{\theta}$ are the first and second time derivatives of the tilt angle. $(\dot{\theta} = \omega)$ is the angular velocity [rad/s]; $(\ddot{\theta} = \alpha)$ is the angular acceleration [rad/s²].
-
-* **Small-angle approximation**: for $\theta \ll 1$ rad, $(\sin\theta \approx \theta)$ and $(\cos\theta \approx 1 - \theta^2/2)$. It turns the nonlinear equations into linear ones.
-
-* **Mechanical power**: the rate at which a force or torque transfers energy. For a torque about a fixed axis, $(P = \tau\omega)$ [W].
-
-* **Rotational kinetic energy**: the energy of rotation, $(E_k = \tfrac{1}{2}I_O\omega^2)$.
-
+<br aria-hidden="true">
+* **Dot notation**: $\dot{\theta}$ and $\ddot{\theta}$ are the first and second time derivatives of the tilt angle. ($\dot{\theta} = \omega$) is the angular velocity [rad/s]; ($\ddot{\theta} = \alpha$) is the angular acceleration [rad/s²].
+<br>
+* **Small-angle approximation**: for $\theta \ll 1$ rad, ($\sin\theta \approx \theta$) and ($\cos\theta \approx 1 - \theta^2/2$). It turns the nonlinear equations into linear ones.
+<br>
+* **Mechanical power**: the rate at which a force or torque transfers energy. For a torque about a fixed axis, ($P = \tau\omega$) [W].
+<br>
+* **Rotational kinetic energy**: the energy of rotation, ($E_k = \tfrac{1}{2}I_O\omega^2$).
+<br>
 * **Conservative force**: a force whose work depends only on the start and end positions, so it can be described by a potential energy. Gravity is one.
-
+<br>
 * **Gravitational potential energy and reference level**: the energy stored by position. For the pendulum it is $mg$ times the height of the CoM above the wrists, $h\cos\theta$. Only changes matter, so the zero can be chosen freely; here it is the upright position.
-
-* **Mechanical energy and work–energy theorem**: $(E = E_k + E_p)$. Its rate of change equals the power of the non-conservative torques: $(dE/dt = \tau\omega)$.
-
-* **Chain rule**: if $y$ depends on $x$ and $x$ on $t$, then $(dy/dt = (dy/dx)(dx/dt))$.
-
-* **Unstable equilibrium**: an equilibrium that a small disturbance makes the system leave. In the inverted pendulum it is a maximum of the potential energy $(E_p)$.
+<br>
+* **Mechanical energy and work–energy theorem**: ($E = E_k + E_p$). Its rate of change equals the power of the non-conservative torques: ($dE/dt = \tau\omega$).
+<br>
+* **Chain rule**: if $y$ depends on $x$ and $x$ on $t$, then ($dy/dt = (dy/dx)(dx/dt)$).
+<br>
+* **Unstable equilibrium**: an equilibrium that a small disturbance makes the system leave. In the inverted pendulum it is a maximum of the potential energy ($E_p$).
 
 </div>
 
