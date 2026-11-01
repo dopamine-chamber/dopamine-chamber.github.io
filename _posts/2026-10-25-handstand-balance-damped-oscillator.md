@@ -53,7 +53,7 @@ This is the equation of a damped harmonic oscillator with effective stiffness $$
 $$\omega_n = \sqrt{\frac{k_p - mgh}{I}}, \qquad \zeta = \frac{k_d}{2\sqrt{I\,(k_p - mgh)}}$$
 
 <figure>
-  <img src="/assets/img/damped-oscillator-damping-ratio.gif" alt="Animation of three handstand-like inverted pendulums with the same natural frequency but damping ratios 0.2, 1 and 2, with their tilt angle plotted over time" loading="lazy">
+  <img src="/assets/img/damped-oscillator-ratio.gif" alt="Animation of three handstand-like inverted pendulums with the same natural frequency but damping ratios 0.2, 1 and 2, with their tilt angle plotted over time" loading="lazy">
   <figcaption markdown="span">Figure 1. Same natural frequency $$\omega_n$$, three damping ratios $$\zeta$$: underdamped ($$\zeta < 1$$) the body swings while returning to the vertical; critically damped ($$\zeta = 1$$) it returns as fast as possible without swinging; overdamped ($$\zeta > 1$$) it returns slowly without swinging.</figcaption>
 </figure>
 
@@ -85,7 +85,7 @@ $$E_c \approx \tfrac{1}{2} I \omega^2 + \tfrac{1}{2}\,(k_p - mgh)\,\theta^2$$
 
 which is positive definite exactly when $$k_p > mgh$$. Since $$E_c$$ cannot increase, the body stays close to the vertical. To show that it actually settles, note that $$dE_c/dt = 0$$ only when $$\omega = 0$$; if $$\omega$$ stayed zero, the equation of motion would force $$(k_p - mgh)\theta = 0$$, that is $$\theta = 0$$. LaSalle's invariance principle then gives asymptotic stability. For the linearised equation this is also immediate: a second-order polynomial with positive coefficients has roots with negative real part.
 
-<figure> <!-- SEO: rename the file to damped-inverted-pendulum-pd-control.gif, update src, and add width/height attributes --> <img src="/assets/img/fig2_damped.gif" alt="Simulation of a handstand modelled as an inverted pendulum with PD control, returning to vertical as energy decays" loading="lazy"> <figcaption markdown="span">Figure 1. Handstand modelled as an inverted pendulum with PD control and damping ($$k_p > mgh$$, $$k_d > 0$$). The body returns to the vertical (left). The mechanical energy $$E$$ rises and falls as the torque alternately adds and removes energy ($$dE/dt = \tau\omega$$), while $$E_c$$ is non-increasing ($$dE_c/dt = -k_d\omega^2 \le 0$$). Both tend to zero, the energy of the upright equilibrium.</figcaption> </figure>
+<figure> <!-- SEO: rename the file to damped-inverted-pendulum-pd-control.gif, update src, and add width/height attributes --> <img src="/assets/img/fig2_damped.gif" alt="Simulation of a handstand modelled as an inverted pendulum with PD control, returning to vertical as energy decays" loading="lazy"> <figcaption markdown="span">Figure 2. Handstand modelled as an inverted pendulum with PD control and damping ($$k_p > mgh$$, $$k_d > 0$$). The body returns to the vertical (left). The mechanical energy $$E$$ rises and falls as the torque alternately adds and removes energy ($$dE/dt = \tau\omega$$), while $$E_c$$ is non-increasing ($$dE_c/dt = -k_d\omega^2 \le 0$$). Both tend to zero, the energy of the upright equilibrium.</figcaption> </figure>
 
 # Why delay matters in a handstand
 
