@@ -50,7 +50,7 @@ In the previous post we modelled our handstand as an inverted pendulum that want
 Keep in mind that this behaviour is only possible because of **active control at the wrists**. Unlike a hanging pendulum, an inverted pendulum is not governed by simple harmonic motion and cannot remain stable without continuous corrective action.
 
 <figure>
-  <img src="/assets/img/fig1_undamped.gif" alt="Inverted pendulum with PD control and no damping oscillating about the vertical, with E_c constant">
+  <img src="/assets/img/fig1_undamped.gif" alt="Inverted pendulum with PD control and no damping oscillating about the vertical, with E_k constant">
   <figcaption markdown="span">Figure 1. Inverted pendulum with torque control.</figcaption>
 </figure>
 
@@ -120,7 +120,7 @@ $$
 E_p \approx -\tfrac{1}{2}mgh\,\theta^2
 $$
 
-which is an upside-down parabola (Figure 1).
+which is an upside-down parabola (Figure 2).
 
 A torque is the negative slope of the energy. 
 Differentiating $$E_p$$ with respect to $$\theta$$, the gravitational torque is
@@ -154,7 +154,7 @@ $$
 \frac{dE}{dt} = \tau\omega
 $$
 
-## Conservation of mechanical energy in SIP
+## Conservation of mechanical energy in the single inverted pendulum
 
 One way to understand how the wrists must work against gravity is to think in terms of power and energy. In our single-segment model, the body has a kinetic energy (it is moving) and a gravitational potential energy (how high its centre of mass is), which give the total mechanical energy of the system:
 
@@ -172,9 +172,9 @@ The gravitational term cancels out: gravity only exchanges energy between its ki
 
 The upright position is where the centre of mass is highest, and *we take it as the zero of potential energy* (which in our model is the maximum): any tilt lowers the centre of mass, so gravity releases energy and the body speeds up as it falls, like a ball rolling off the top of a hill. Left to itself, the total energy stays constant, and the body falls away from the vertical (Figure 2).
 
-With $$E < 0$$, the body does not have enough energy to reach the vertical. As it approaches the upright position its potential energy rises towards zero while its kinetic energy drops, until it vanishes at a tilt \\( \theta_s \\) given by \\( \cos\theta_s = 1 + E/(mgh) \\). There the body stops for an instant, and then gravity pulls it back: it falls away from the vertical on the same side it came from.
+* With $$E < 0$$, the body does not have enough energy to reach the vertical. As it approaches the upright position its potential energy rises towards zero while its kinetic energy drops, until it vanishes at a tilt \\( \theta_s \\) given by \\( \cos\theta_s = 1 + E/(mgh) \\). There the body stops for an instant, and then gravity pulls it back: it falls away from the vertical on the same side it came from.
 * With $$E > 0$$, the body reaches the vertical with kinetic energy to spare, \\( \tfrac{1}{2}I_O\omega^2 = E \\). It crosses the upright position without stopping and keeps going: it overshoots, and then falls to the other side.
-* With $$E = 0$$, we have the borderline case between the two behaviours: the body would balance on the top of the hill, but any tiny disturbance makes it fall to one side or the other.
+* With $$E = 0$$, we have the borderline case between the two behaviors: the body would balance on the top of the hill, but any tiny disturbance makes it fall to one side or the other.
 
 <figure>
   <img src="/assets/img/fig_hilltop.gif" alt="Conservation of energy for the inverted pendulum with no control torque">
@@ -204,7 +204,7 @@ In the next post we will see in detail the control rule that describe this fine 
 </script>
 
 This post is part of *[the handstand balance model](/series/).
-[Next post →](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html)*
+[Next post: cooming soon →](https://dopamine-chamber.github.io/2026-10-25-handstand-balance-damped-oscillator.html)*
 
 #### Sources and references
 - Loughborough University Repository - [Control strategy for a hand balance](https://repository.lboro.ac.uk/articles/journal_contribution/Control_strategy_for_a_hand_balance/9630269?file=17279426) {:target="_blank" rel="noopener noreferrer"}
