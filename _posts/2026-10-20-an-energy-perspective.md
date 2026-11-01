@@ -1,4 +1,4 @@
----
+<img width="3322" height="2268" alt="image" src="https://github.com/user-attachments/assets/4069cc5d-b964-42fb-9def-7e347ae06239" />---
 layout: post
 title: "Why a handstand is unstable: an energy perspective"
 image:
@@ -17,79 +17,23 @@ The intrinsic instability of the system can also be explained through the concep
 
 ---
 
-<br>
+* **Dot notation**: $\dot{\theta}$ and $\ddot{\theta}$ are the first and second time derivatives of the tilt angle. ($\dot{\theta} = \omega$) is the angular velocity [rad/s]; ($\ddot{\theta} = \alpha$) is the angular acceleration [rad/s²].
 
-<div style="text-align:left;">
+* **Small-angle approximation**: for $\theta \ll 1$ rad, ($\sin\theta \approx \theta$) and ($\cos\theta \approx 1 - \theta^2/2$). It turns the nonlinear equations into linear ones.
 
-<ul>
+* **Mechanical power**: the rate at which a force or torque transfers energy. For a torque about a fixed axis, ($P = \tau\omega$) [W].
 
-<li>
-<strong>Dot notation</strong>: $\dot{\theta}$ and $\ddot{\theta}$ are the first and second time derivatives of the tilt angle.
-($\dot{\theta} = \omega$) is the angular velocity [rad/s];
-($\ddot{\theta} = \alpha$) is the angular acceleration [rad/s²].
-</li>
+* **Rotational kinetic energy**: the energy of rotation, ($E_k = \tfrac{1}{2}I_O\omega^2$).
 
-<br>
+* **Conservative force**: a force whose work depends only on the start and end positions, so it can be described by a potential energy. Gravity is one.
 
-<li>
-<strong>Small-angle approximation</strong>: for $\theta \ll 1$ rad,
-($\sin\theta \approx \theta$) and
-($\cos\theta \approx 1 - \theta^2/2$).
-It turns the nonlinear equations into linear ones.
-</li>
+* **Gravitational potential energy and reference level**: the energy stored by position. For the pendulum it is $mg$ times the height of the CoM above the wrists, $h\cos\theta$. Only changes matter, so the zero can be chosen freely; here it is the upright position.
 
-<br>
+* **Mechanical energy and work–energy theorem**: ($E = E_k + E_p$). Its rate of change equals the power of the non-conservative torques: ($dE/dt = \tau\omega$).
 
-<li>
-<strong>Mechanical power</strong>: the rate at which a force or torque transfers energy.
-For a torque about a fixed axis, ($P = \tau\omega$) [W].
-</li>
+* **Chain rule**: if $y$ depends on $x$ and $x$ on $t$, then ($dy/dt = (dy/dx)(dx/dt)$).
 
-<br>
-
-<li>
-<strong>Rotational kinetic energy</strong>: the energy of rotation,
-($E_k = \tfrac{1}{2}I_O\omega^2$).
-</li>
-
-<br>
-
-<li>
-<strong>Conservative force</strong>: a force whose work depends only on the start and end positions, so it can be described by a potential energy. Gravity is one.
-</li>
-
-<br>
-
-<li>
-<strong>Gravitational potential energy and reference level</strong>: the energy stored by position.
-For the pendulum it is $mg$ times the height of the CoM above the wrists, $h\cos\theta$.
-Only changes matter, so the zero can be chosen freely; here it is the upright position.
-</li>
-
-<br>
-
-<li>
-<strong>Mechanical energy and work–energy theorem</strong>:
-($E = E_k + E_p$).
-Its rate of change equals the power of the non-conservative torques:
-($dE/dt = \tau\omega$).
-</li>
-
-<br>
-
-<li>
-<strong>Chain rule</strong>: if $y$ depends on $x$ and $x$ on $t$, then
-($dy/dt = (dy/dx)(dx/dt)$).
-</li>
-
-<br>
-
-<li>
-<strong>Unstable equilibrium</strong>: an equilibrium that a small disturbance makes the system leave.
-In the inverted pendulum it is a maximum of the potential energy ($E_p$).
-</li>
-
-</ul>
+* **Unstable equilibrium**: an equilibrium that a small disturbance makes the system leave. In the inverted pendulum it is a maximum of the potential energy ($E_p$).
 
 ---
 
