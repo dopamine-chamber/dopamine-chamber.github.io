@@ -94,8 +94,6 @@ In the inverted pendulum it is a maximum of the potential energy ($E_p$).
 
 </div>
 
-<br>
-
 </details>
 
 <br>
