@@ -210,4 +210,4 @@ This post is part of *[the handstand balance model](/series/).
 - Loughborough University Repository - [Control strategy for a hand balance](https://repository.lboro.ac.uk/articles/journal_contribution/Control_strategy_for_a_hand_balance/9630269?file=17279426) {:target="_blank" rel="noopener noreferrer"}
 - Royal Society Open Science - [Balance control strategies during perturbed and unperturbed balance in standing and handstand](https://royalsocietypublishing.org/rsos/article/4/7/161018/93310/Balance-control-strategies-during-perturbed-and) {:target="_blank" rel="noopener noreferrer"}
   
-- Figures 1 and 2 - Generated via Python for dopamine-chamber.github.io
+- Figures 1 and 2 - Generated via Python for [dopamine-chamber.github.io](https://dopamine-chamber.github.io/) {:target="_blank" rel="noopener noreferrer"}
