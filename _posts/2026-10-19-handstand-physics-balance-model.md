@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to do a handstand? Modelling the problem"
+title: "Handstand balance: modelling the problem"
 image:
   path: /assets/img/og/handstand-physics-balance-model.png
   width: 1200
