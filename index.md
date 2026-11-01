@@ -8,15 +8,13 @@ description: "Models and mechanics explained step by step to understand why the 
 <h2>disassembling the dilemma</h2>
 Deep dive into why balancing upside down is so hard.
 
-<p style="font-weight: 500">
-  Observe like a physicist.<br>
-  Unpack like an engineer.<br>
-  Experience like a practitioner.
-</p>
-
 <img src="{{ '/assets/img/handstand-home_minimal.svg' | relative_url }}"
      alt="Stick figure going from a straight handstand to a tuck handstand and back"
      width="200" class="home-handstand">
+     
+<p style="font-weight: 100">
+  Observe like a physicist. Unpack like an engineer. Experience like a practitioner.
+</p>
 
 {% assign first_post = site.posts | where: "series_order", 1 | first %}
 {% if first_post %}
