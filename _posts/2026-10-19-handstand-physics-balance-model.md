@@ -112,7 +112,7 @@ In a real handstand, however, the body is never perfectly stationary and perpend
 </script>
 
 This post is part of *[the handstand balance model](/series/).
-[Next: a more accurate handstand balance model →](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html)* 
+[Next: a more accurate handstand balance model →](https://dopamine-chamber.github.io/2026/10/20/straight-two-arm-handstand-model.html)* 
 
 #### Sources and references
 
