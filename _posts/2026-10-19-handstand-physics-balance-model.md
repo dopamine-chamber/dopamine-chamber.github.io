@@ -1,12 +1,17 @@
 ---
 layout: post
 title: "How to do a handstand? Modelling the problem"
-description: "Why is a handstand so hard to hold? We model the body as a single rigid stick and use centre of mass and wrist torque to explain balance."
+image:
+  path: /assets/img/og/handstand-physics-balance-model.png
+  width: 1200
+  height: 630
+  alt: "Single rigid-body model of a handstand, seen from the sagittal plane"
+description: "Beneath the apparent absence of motion, handstands are far from stationary: we start to explore the handstand balance model that explains why holding a handstand is hard."
 date: 2026-10-19
 series_order: 1
 ---
 
-There is a simple physical truth behind the ability to hold a handstand: the constant, *inevitable* pull of gravity. In fact, beneath the apparent absence of motion, a vibrant orchestra of variables contribute to the balance. To attempt to barely understand them and how they play their role in the symphony, we need to seize a model that capture the real situation. This will be the research that, starting from there, will take place here.
+There is a simple physical truth behind the ability to hold a handstand: the constant, *inevitable* pull of gravity. In fact, beneath the apparent absence of motion, a vibrant orchestra of variables contribute to the balance. To attempt to barely understand them and how they play their role in the symphony, we need a model that captures the real situation. This will be the research that, starting from there, will take place here.
 
 *A friendly disclaimer: I am not a professional hand balancer, and the aim of this project is neither to provide a method for practicing handstands nor to teach how to perform them. Its purpose is to observe the phenomenon and describe the underlying principles that make it possible. What follows is a summary of the conceptual rabbit hole I have been exploring so far.*
 
@@ -18,10 +23,10 @@ For a long time, my engineering background led me to think of handbalancing as a
 *Which is the most important? (Which is the key variable?)*<br>
 *How can I engage the strongest and most natural kinetic chain without introducing compensations? (Which method is the most effective?)*
 
-And yet, what people generally say about handstands sound similar to what my Physics I professor did on the first day of the course:
-"Sorry if this first lecture may sound complicated. Physics has not beginner level. So it's going to be a complicated lecture."
+And yet, what people generally say about handstands sound similar to what my Physics I professor said on the first day of the course:
+"Sorry if this first lecture may sound complicated. Physics has no beginner level. So it's going to be a complicated lecture."
 
-Talking of handstands, it's undeniable that the human body is literally not designed to balance himself on hands, nor for holding handstands for that long. Being upside down is not exactly what we evolved for. Anyway, I'm still fascinated by its ability to reorganize and adapt, even when faced with such an unusual, functionally useless, mentally draining and frustrating task. 
+Talking of handstands, it's undeniable that the human body is literally not designed to balance itself on hands, nor for holding handstands for that long. Being upside down is not exactly what we evolved for. Anyway, I'm still fascinated by its ability to reorganize and adapt, even when faced with such an unusual, functionally useless, mentally draining and frustrating task. 
 But it's important to go across this journey with the right amount of self-denial.
 And a bit of rage.
 
@@ -30,7 +35,7 @@ And a bit of rage.
 To understand how these beautiful things (these that happen on hands) happens, we need a **model** that can be grasped on the cognitive level. Therefore, over the years, my all-consuming side project has been refining this model to make it fit the handstand dilemma, and ultimately to find the perfect solution to the system. <br>
 **And practicing handstands, of course**. 
 
-*Editorial note: in this blog there will be a discrete amount of maths. Besides they're very elegant, my mind doesn't love formulas. But they help a lot to support and clarify what often it's only in our mind as a confused cloud. Maths can also be remarkably relaxing at times. I tend to be an anxious person, and when irrational fears creep into my mind, I like to keep them in check by using numbers to anchor myself in reality. Almost always, I find that the anxiety was only in my head, not in the facts.*
+*Editorial note: in this blog there will be a fair amount of maths. Although they're very elegant, my mind doesn't love formulas. But they help a lot to support and clarify what often it's only in our mind as a confused cloud. Maths can also be remarkably relaxing at times. I tend to be an anxious person, and when irrational fears creep into my mind, I like to keep them in check by using numbers to anchor myself in reality. Almost always, I find that the anxiety was only in my head, not in the facts.*
      
 Let's then use maths to prove that handstands can be held, but even why it's that difficult. And for the scope, we will give a *little* definition of what a model is.
 
@@ -39,11 +44,11 @@ A model is a simplified formalization of a real phenomenon or problem, expressed
 Therefore, if someone asked you: *“What is the best model for mathematically describing how to do a handstand?”*, the first answer would be: *“Which type of handstand?”*<br>
 And even before that: *what actually is a handstand?* 
 
-While we were able to give a clear and agreeable definition for the model, the same cannot be done for the handstand. Not only because there are many different handstand variations (even if this must be considered in the model, of course), but because it is hard to define the problem itself without relying on personal experience.
+While we were able to give a clear, agreed-upon definition definition for the model, the same cannot be done for the handstand. Not only because there are many different handstand variations (even if this must be considered in the model, of course), but because it is hard to define the problem itself without relying on personal experience.
 *Handbalancing is deeply experiential, not spelled out. And complexity is part of the game.*
 
 Therefore, modelling something that is hard to describe in explicit terms is no walk in the park. 
-Regarding the level of abstraction, actually, I have problem to leave out not relevant aspects. I have a mind that tends to dwell on everything, analyzing it for so long that the rest of the world starts to flow past behind it while I end up *down the rabbit hole*, carrying along everything I found on the way. In short, for me, it calls for an in-depth study.
+Regarding the level of abstraction, actually, I have trouble leaving out not relevant aspects. I have a mind that tends to dwell on everything, analyzing it for so long that the rest of the world starts to flow past behind it while I end up *down the rabbit hole*, carrying along everything I found on the way. In short, for me, it calls for an in-depth study.
 
 Anyway, from now on, trying to model the problem will happen on the **three anatomical planes** onto which human movement can be projected: the frontal (or coronal) plane, the transverse (or horizontal) plane, and the sagittal (or median) plane (Figure 1).
 
@@ -57,13 +62,13 @@ Anyway, from now on, trying to model the problem will happen on the **three anat
 
 ## A pinch of assumptions and a first model: the body is a stick
 
-Let's start with a first extremely simplified model. First, we have to make our boring but necessary assumptions: don't worry, these are the most relevant and we will consider them as a statement even for the next posts.
+Let's start with a first extremely simplified model. First, we have to make our boring but necessary assumptions: don't worry, these are the most relevant and we will treat them as given in the next posts.
 
 - First, we suppose that the handstand system is perfectly symmetrical, with two arms pushing with the same force and in the same direction.<br>
 - We assume zero inclination in the frontal plane, and consider only the inclination that occurs in the sagittal plane when we push with both fingers and palms to adjust the balance.<br>
 - We also assume that arms, shoulders, hips and legs work identically and do not generate twists. 
 - We initially treat the human body as a **single rigid body**, so that we can describe its motion through the position of its **centre of mass**.<br>
-- We see its motion from the sagittal plane, that divides the encephalus and the rest of the body into right and left sections (Figure 2):
+- We see its motion from the sagittal plane, which divides the head (o brain) from the rest of the body into right and left sections (Figure 2):
 
 
 <figure>
@@ -78,19 +83,19 @@ $$
 \sum \mathbf{F} = m\mathbf{a}_{CM}
 $$
 
-When the centre of mass translate on the sagittal plane due to physiological handstand revocery swings, gravity will produce a moment about the wrists we can write this way: 
+When the centre of mass translates in the sagittal plane due to physiological handstand revocery swings, gravity will produce a moment about the wrists we can write this way: 
 
 $$
 \sum M_{O} = I_{O}\,\alpha = mgh+\tau
 $$
 
-When we hold a handstand, the net moment must be zero, meaning there are no accelerations and the moment generated by gravity is perfectly contrasted by the torque generated by the wrists:
+When we hold a handstand, the net moment must be zero, meaning there are no accelerations and the moment generated by gravity is perfectly counteracted by the torque generated by the wrists:
 
 $$
-mgh+\tau = 0 -> mgh = - \tau 
+mgh+\tau = 0 \Rightarrow mgh = - \tau 
 $$
 
-In a real handstand, however, body is never perfectly stationary and perpendicular to the floor. Small adjustments are performed at the hand level meaning the acceleration is not zero. In the next post, we will introduce dynamics and analyze the torques that keep the body (barely) upright.
+In a real handstand, however, body is never perfectly stationary and perpendicular to the floor. Small adjustments are performed at the hand level, which means the acceleration is not zero. In the next post, we will introduce dynamics and analyze the torques that keep the body (barely) upright.
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7508630837578903"
      crossorigin="anonymous"></script>
@@ -108,5 +113,10 @@ This post is part of *[the handstand balance model](/series/).
 [Next post →](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html)*
 
 #### Sources and references
-Figure 1, 2: AI-generated illustration created with Claude (Anthropic) for dopamine-chamber.github.io
 
+1. Blenkinsop, G. M., Pain, M. T. G., & Hiley, M. J. (2017). *Balance control strategies during perturbed and unperturbed balance in standing and handstand*. Royal Society Open Science, 4(7), 161018. [doi:10.1098/rsos.161018](https://doi.org/10.1098/rsos.161018){:target="_blank" rel="noopener noreferrer"} ([open access](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5541526/){:target="_blank" rel="noopener noreferrer"})
+2. Kerwin, D. G., & Trewartha, G. (2001). *Strategies for maintaining a handstand in the anterior-posterior direction*. Medicine & Science in Sports & Exercise, 33(7), 1182–1188. [PubMed](https://pubmed.ncbi.nlm.nih.gov/11445766/){:target="_blank" rel="noopener noreferrer"}
+3. Yeadon, M. R., & Trewartha, G. (2003). *Control strategy for a hand balance*. Motor Control, 7(4). [Loughborough repository](https://repository.lboro.ac.uk/articles/journal_contribution/Control_strategy_for_a_hand_balance/9630269){:target="_blank" rel="noopener noreferrer"}
+4. Winter, D. A. (1995). *Human balance and posture control during standing and walking*. Gait & Posture, 3(4), 193–214. [doi:10.1016/0966-6362(96)82849-9](https://doi.org/10.1016/0966-6362(96)82849-9){:target="_blank" rel="noopener noreferrer"}
+
+Figures 1, 2: AI-generated illustration created with Claude (Anthropic) for dopamine-chamber.github.io
