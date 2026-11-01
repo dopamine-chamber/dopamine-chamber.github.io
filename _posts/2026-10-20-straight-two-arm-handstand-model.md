@@ -15,7 +15,7 @@ series_order: 2
 
 In this post we will use a simplified model to start understanding why handstands are intrinsically unstable. *Only the model is simple, because, to me, the straight handstand is anything but simple.*
 
-<details>
+<details markdown="1">
 <summary>Toolbox</summary>
   
 * **Rigid body**: an idealisation in which the distance between any two points of the body stays constant: the body does not deform and can only translate and rotate. In biomechanics, the human body is often represented as a rigid-body model
