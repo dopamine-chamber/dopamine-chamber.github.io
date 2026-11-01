@@ -159,5 +159,6 @@ This post is part of *[the handstand balance model](/series/).
 
 #### Sources and references
 - [Frontiers](https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1694648/full) - Biomechanical analyses of the handstand: a systematic review {:target="_blank" rel="noopener noreferrer"}
+  
 - Figure 1, 2 - AI-generated illustration created with Claude (Anthropic) for dopamine-chamber.github.io
 - Figure 3, 4, 5 - Generated via Python for dopamine-chamber.github.io
