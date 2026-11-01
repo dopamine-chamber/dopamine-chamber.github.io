@@ -1,11 +1,12 @@
 ---
 layout: default
-title: "Handstand balance model: deep dive into why balancing upside down is so hard"
+title: "The handstand dilemma"
 last title: disassembling the dilemma
 description: "Models and mechanics explained step by step to understand why the handstand is unstable and what it takes to hold it."
 ---
 
 <h1>disassembling the dilemma</h1>
+<h6></h1>Handstand balance model: deep dive into why balancing upside down is so hard</h6>
 
 <p style="font-weight: 500">
   Observe like a physicist.<br>
