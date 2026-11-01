@@ -1,8 +1,15 @@
 ---
 layout: post
 title: "Why a handstand is unstable: an energy perspective"
+image:
+  path: /assets/img/og/fig1_undamped.gif
+  width: 1200
+  height: 630
+  alt: "Single rigid-body model of a handstand, seen from the sagittal plane"
 description: "Handstand physics: we are intuitively in a state of unstable equilibrium. We are almost motionless, but because of the configuration we occupy within the gravitational field, our potential energy is at its maximum."
+author: Benedetta Giglio
 date: 2026-10-20 12:00:00 +0200
+last_modified_at: 2026-11-01
 series_order: 3
 ---
 
@@ -200,6 +207,6 @@ This post is part of *[the handstand balance model](/series/).
 [Next post →](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html)*
 
 #### Source and references
-- [Loughborough University Repository](https://repository.lboro.ac.uk/articles/journal_contribution/Control_strategy_for_a_hand_balance/9630269?file=17279426) - Control strategy for a hand balance
-- [Royal Society Open Science](https://royalsocietypublishing.org/rsos/article/4/7/161018/93310/Balance-control-strategies-during-perturbed-and) - Balance control strategies during perturbed and unperturbed balance in standing and handstand
+- [Loughborough University Repository](https://repository.lboro.ac.uk/articles/journal_contribution/Control_strategy_for_a_hand_balance/9630269?file=17279426) - Control strategy for a hand balance {:target="_blank" rel="noopener noreferrer"}
+- [Royal Society Open Science](https://royalsocietypublishing.org/rsos/article/4/7/161018/93310/Balance-control-strategies-during-perturbed-and) - Balance control strategies during perturbed and unperturbed balance in standing and handstand {:target="_blank" rel="noopener noreferrer"}
 Figure 1, Figure 2 - Generated via Python for dopamine-chamber.github.io
