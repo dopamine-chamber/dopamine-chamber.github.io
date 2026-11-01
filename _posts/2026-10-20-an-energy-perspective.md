@@ -15,7 +15,7 @@ series_order: 3
 
 The intrinsic instability of the system can also be explained through the concept of energy. When we are in a handstand, we are intuitively in a state of unstable equilibrium: we are almost motionless, but because of the unfavorable configuration we occupy within the gravitational field, our potential energy is at its maximum.
 
-<details>
+<details kramdown='1'>
 <summary>Toolbox</summary>
 
 <br>
