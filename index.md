@@ -14,6 +14,10 @@ Deep dive into why balancing upside down is so hard.
   Experience like a practitioner.
 </p>
 
+<img src="{{ '/assets/img/handstand-home_minimal.svg' | relative_url }}"
+     alt="Stick figure going from a straight handstand to a tuck handstand and back"
+     width="200" class="home-handstand">
+
 {% assign first_post = site.posts | where: "series_order", 1 | first %}
 {% if first_post %}
 <p><strong>New here?</strong><br> Start with <em><a href="{{ first_post.url | relative_url }}">{{ first_post.title }}</a></em>, or browse <em><a href="{{ '/series/' | relative_url }}">the complete series</a></em>.</p>
