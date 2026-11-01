@@ -20,7 +20,7 @@ The intrinsic instability of the system can also be explained through the concep
 <details markdown="1">
 <summary><strong>Toolbox</strong></summary>
 
-* **Dot notation**: $\dot{\theta}$ and $\ddot{\theta}$ are the first and second time derivatives of the tilt angle. ($\dot{\theta} = \omega$) is the angular velocity [rad/s]; ($\ddot{\theta} = \alpha$) is the angular acceleration [rad/s²].
+* **Dot notation**: ($\dot{\theta}$) and $\ddot{\theta}$ are the first and second time derivatives of the tilt angle. ($\dot{\theta} = \omega$) is the angular velocity [rad/s]; ($\ddot{\theta} = \alpha$) is the angular acceleration [rad/s²].
 
 * **Small-angle approximation**: for $\theta \ll 1$ rad, ($\sin\theta \approx \theta$) and ($\cos\theta \approx 1 - \theta^2/2$). It turns the nonlinear equations into linear ones.
 
