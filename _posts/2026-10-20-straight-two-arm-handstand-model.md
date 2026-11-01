@@ -20,8 +20,6 @@ In this post we will use a simplified model to start understanding why handstand
 
 <br>
 
-<div style="text-align: left;">
-
 <ul>
 
 <li>
@@ -85,8 +83,6 @@ In this post we will use a simplified model to start understanding why handstand
 </li>
 
 </ul>
-
-</div>
 
 <br>
 
