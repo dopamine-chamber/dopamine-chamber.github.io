@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to do a handstand? Modelling the problem"
-description: "Beneath the apparent absence of motion, handstands are far from being stationary: we start to explore the handstand balance model that explain why hold a handstand is hard."
+description: "Why is a handstand so hard to hold? We model the body as a single rigid stick and use centre of mass and wrist torque to explain balance."
 date: 2026-10-19
 series_order: 1
 ---
@@ -19,27 +19,27 @@ For a long time, my engineering background led me to think of handbalancing as a
 *How can I engage the strongest and most natural kinetic chain without introducing compensations? (Which method is the most effective?)*
 
 And yet, what people generally say about handstands sound similar to what my Physics I professor did on the first day of the course:
-"Sorry if this first lecture may sound complicated. Physics has not beginner level. So it's going to be a complicate lecture."
+"Sorry if this first lecture may sound complicated. Physics has not beginner level. So it's going to be a complicated lecture."
 
 Talking of handstands, it's undeniable that the human body is literally not designed to balance himself on hands, nor for holding handstands for that long. Being upside down is not exactly what we evolved for. Anyway, I'm still fascinated by its ability to reorganize and adapt, even when faced with such an unusual, functionally useless, mentally draining and frustrating task. 
-But it's important to go across this journey with the right amount of self-deny.
+But it's important to go across this journey with the right amount of self-denial.
 And a bit of rage.
 
 ## Understanding models (understanding handstands?)
 
-To undestand how these beautiful things (these that happen on hands) happens, we need a **model** that can be unrevealed on the cognitive level. Therefore, over the years, my all-consuming side project has been refining this model to make it fit the handstand dilemma, and ultimately to find the perfect solution to the system. <br>
+To understand how these beautiful things (these that happen on hands) happens, we need a **model** that can be grasped on the cognitive level. Therefore, over the years, my all-consuming side project has been refining this model to make it fit the handstand dilemma, and ultimately to find the perfect solution to the system. <br>
 **And practicing handstands, of course**. 
 
-*Editorial note: in this blog there will be a discrete amount of maths. Besides they're very elegant, my mind doesn't love formulas. But they help a lot to support and clarify what often it's only in our mind as a confuse cloud. Maths can also be remarkably relaxing at times. I tend to be an anxious person, and when irrational fears creep into my mind, I like to keep them in check by using numbers to anchor myself in reality. Almost always, I find that the anxiety was only in my head, not in the facts.*
+*Editorial note: in this blog there will be a discrete amount of maths. Besides they're very elegant, my mind doesn't love formulas. But they help a lot to support and clarify what often it's only in our mind as a confused cloud. Maths can also be remarkably relaxing at times. I tend to be an anxious person, and when irrational fears creep into my mind, I like to keep them in check by using numbers to anchor myself in reality. Almost always, I find that the anxiety was only in my head, not in the facts.*
      
-Let's then use maths to proof that handstands can be held, but even why it's that difficult. And for the scope, we will give a *little* definition of what a model is.
+Let's then use maths to prove that handstands can be held, but even why it's that difficult. And for the scope, we will give a *little* definition of what a model is.
 
 A model is a simplified formalization of a real phenomenon or problem, expressed in a language that can be analyzed and that retains only the relevant variables. The first step is therefore choosing the **level of abstraction**: we need to determine which variables are relevant. Then we have to represent them in a language that allows precise treatment (e.g. equations). On the other hand, models are valid *only within the domain they were built for*, and if reality departs from their assumptions, the model must be revised.
 
 Therefore, if someone asked you: *“What is the best model for mathematically describing how to do a handstand?”*, the first answer would be: *“Which type of handstand?”*<br>
 And even before that: *what actually is a handstand?* 
 
-While we were able to give a clear and agreeable definition for the model, the same cannot be done for the handstand. Not only because there are many different handstand variations (even if this must be considered in the model, of course), but because it is hard to define the problem itself without without relying on personal experience.
+While we were able to give a clear and agreeable definition for the model, the same cannot be done for the handstand. Not only because there are many different handstand variations (even if this must be considered in the model, of course), but because it is hard to define the problem itself without relying on personal experience.
 *Handbalancing is deeply experiential, not spelled out. And complexity is part of the game.*
 
 Therefore, modelling something that is hard to describe in explicit terms is no walk in the park. 
