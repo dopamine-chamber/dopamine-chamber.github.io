@@ -1,4 +1,4 @@
-<img width="3322" height="2268" alt="image" src="https://github.com/user-attachments/assets/b2250659-4743-4c72-af83-66df51fa88dd" />---
+---
 layout: post
 title: "Why a handstand is unstable: an energy perspective"
 image:
