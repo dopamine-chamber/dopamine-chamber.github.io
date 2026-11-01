@@ -6,7 +6,7 @@ tags: [handstand, biomechanics, inverted pendulum, control theory]
 image: /assets/img/damped-inverted-pendulum.png
 date: 2026-10-25 12:00:00 +0200
 series_order: 4
-published: true
+published: false
 ---
 
 Is a handstand a simple harmonic oscillator? No: left alone, the body simply falls. We need to add to our model *a feedback rule*: in the real world, the feedback comes from the wrists.
