@@ -7,7 +7,9 @@ image:
   height: 630
   alt: "Single rigid-body model of a handstand, seen from the sagittal plane"
 description: "Beneath the apparent absence of motion, handstands are far from stationary: we start to explore the handstand balance model that explains why holding a handstand is hard."
+author: Benedetta Giglio
 date: 2026-10-19
+last_modified_at: 2026-11-01
 series_order: 1
 ---
 
@@ -32,23 +34,23 @@ And a bit of rage.
 
 ## Understanding models (understanding handstands?)
 
-To understand how these beautiful things (these that happen on hands) happens, we need a **model** that can be grasped on the cognitive level. Therefore, over the years, my all-consuming side project has been refining this model to make it fit the handstand dilemma, and ultimately to find the perfect solution to the system. <br>
+To understand how these beautiful things (these that happen on hands) happen, we need a **model** that can be grasped on the cognitive level. Therefore, over the years, my all-consuming side project has been refining this model to make it fit the handstand dilemma, and ultimately to find the perfect solution to the system. <br>
 **And practicing handstands, of course**. 
 
-*Editorial note: in this blog there will be a fair amount of maths. Although they're very elegant, my mind doesn't love formulas. But they help a lot to support and clarify what often it's only in our mind as a confused cloud. Maths can also be remarkably relaxing at times. I tend to be an anxious person, and when irrational fears creep into my mind, I like to keep them in check by using numbers to anchor myself in reality. Almost always, I find that the anxiety was only in my head, not in the facts.*
+*Editorial note: in this blog there will be a fair amount of maths. Although they're very elegant, my mind doesn't love formulas. But they help a lot to support and clarify what often exists only in our mind as a confused cloud. Maths can also be remarkably relaxing at times. I tend to be an anxious person, and when irrational fears creep into my mind, I like to keep them in check by using numbers to anchor myself in reality. Almost always, I find that the anxiety was only in my head, not in the facts.*
      
-Let's then use maths to prove that handstands can be held, but even why it's that difficult. And for the scope, we will give a *little* definition of what a model is.
+Let's then use maths to prove that handstands can be held, and also why they are so difficult. And for the scope, we will give a *little* definition of what a model is.
 
 A model is a simplified formalization of a real phenomenon or problem, expressed in a language that can be analyzed and that retains only the relevant variables. The first step is therefore choosing the **level of abstraction**: we need to determine which variables are relevant. Then we have to represent them in a language that allows precise treatment (e.g. equations). On the other hand, models are valid *only within the domain they were built for*, and if reality departs from their assumptions, the model must be revised.
 
 Therefore, if someone asked you: *“What is the best model for mathematically describing how to do a handstand?”*, the first answer would be: *“Which type of handstand?”*<br>
 And even before that: *what actually is a handstand?* 
 
-While we were able to give a clear, agreed-upon definition definition for the model, the same cannot be done for the handstand. Not only because there are many different handstand variations (even if this must be considered in the model, of course), but because it is hard to define the problem itself without relying on personal experience.
+While we were able to give a clear, agreed-upon definition for the model, the same cannot be done for the handstand. Not only because there are many different handstand variations (even if this must be considered in the model, of course), but because it is hard to define the problem itself without relying on personal experience.
 *Handbalancing is deeply experiential, not spelled out. And complexity is part of the game.*
 
 Therefore, modelling something that is hard to describe in explicit terms is no walk in the park. 
-Regarding the level of abstraction, actually, I have trouble leaving out not relevant aspects. I have a mind that tends to dwell on everything, analyzing it for so long that the rest of the world starts to flow past behind it while I end up *down the rabbit hole*, carrying along everything I found on the way. In short, for me, it calls for an in-depth study.
+Regarding the level of abstraction, actually, I have trouble leaving out irrelevant aspects. I have a mind that tends to dwell on everything, analyzing it for so long that the rest of the world starts to flow past behind it while I end up *down the rabbit hole*, carrying along everything I found on the way. In short, for me, it calls for an in-depth study.
 
 Anyway, from now on, trying to model the problem will happen on the **three anatomical planes** onto which human movement can be projected: the frontal (or coronal) plane, the transverse (or horizontal) plane, and the sagittal (or median) plane (Figure 1).
 
@@ -68,12 +70,12 @@ Let's start with a first extremely simplified model. First, we have to make our 
 - We assume zero inclination in the frontal plane, and consider only the inclination that occurs in the sagittal plane when we push with both fingers and palms to adjust the balance.<br>
 - We also assume that arms, shoulders, hips and legs work identically and do not generate twists. 
 - We initially treat the human body as a **single rigid body**, so that we can describe its motion through the position of its **centre of mass**.<br>
-- We see its motion from the sagittal plane, which divides the head (o brain) from the rest of the body into right and left sections (Figure 2):
+- We see its motion from the sagittal plane, which divides the head (or brain) from the rest of the body into right and left sections (Figure 2):
 
 
 <figure>
   <img src="{{ '/assets/img/single_segment_handstand_pendulum_model.png' | relative_url }}"
-       alt="Single segment handstand">
+       alt="Handstand modelled as a single rigid segment pivoting about the wrists, with the centre of mass marked">
   <figcaption>Figure 2. The body modelled as a single element described by its center of mass.</figcaption>
 </figure>
 
@@ -95,7 +97,7 @@ $$
 mgh+\tau = 0 \Rightarrow mgh = - \tau 
 $$
 
-In a real handstand, however, body is never perfectly stationary and perpendicular to the floor. Small adjustments are performed at the hand level, which means the acceleration is not zero. In the next post, we will introduce dynamics and analyze the torques that keep the body (barely) upright.
+In a real handstand, however, the body is never perfectly stationary and perpendicular to the floor. Small adjustments are performed at the hand level, which means the acceleration is not zero. In the next post, we will introduce dynamics and analyze the torques that keep the body (barely) upright.
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7508630837578903"
      crossorigin="anonymous"></script>
@@ -110,7 +112,7 @@ In a real handstand, however, body is never perfectly stationary and perpendicul
 </script>
 
 This post is part of *[the handstand balance model](/series/).
-[Next post →](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html)*
+[Next: an energy perspective on handstand balance →](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html)* 
 
 #### Sources and references
 
