@@ -21,17 +21,23 @@ window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['$$', '$$
 
 <p>Have you ever felt more frustrated learning to <em>get up</em> into a handstand than to <em>stay</em> in one? In this post we explain the energy cost of kicking up into a handstand.</p>
 
+<h2>Struggling for balance</h2>
+
 <p>You've trained hard: alignment, resistance, belly to the wall... and the first seconds of balance finally show up. <i>Yeeee!</i> But when it comes to the kick-up, you can't make it stick. It's frustrating, and it's hard to be present in the kick when all you're thinking about is <b>balancing on hands.</b></p>
 
-<p>The point is that the kick-up comes with a <em>transition</em>, and a transition is what happens when energy changes.</p>
+<p>The kick-up comes with a <em>transition</em>, and the transition introduces dynamics, and yes, we have already said that handstands are far from stationary. But with transitions, I mean <i>more dynamic dynamics</i>. It's not only that the energy changes. The point is that it changes... a lot.</p>
+
+<h2>Remember the energy explaination?</h2>
+
+<p></p>We have discuss how energy behaves when we are upside down, trying to hold a straight two arm handstand: we have modelled that we are on the top on a hill, unstables by construction of the system.</p>
 
 <p>Consider the case of the start from a lunge with hands on the floor: we go from one stationary posture to another. Unlike the small oscillations in the handstand sways, here the legs have to travel a long way.</p>
 
-<h2>Setting up the energy</h2>
-
 <p>Model the body as an inverted pendulum pivoting at the wrists, with the centre of mass at distance \(h\) and \(\theta\) the lean from vertical. Choose the handstand as the zero of potential energy:</p>
 
-$$U(\theta)=mgh(\cos\theta-1)\le 0,\qquad K=\tfrac12 I\dot\theta^{2},\qquad E=K+U,\qquad I\approx mh^{2}$$</p>
+<p>$$U(\theta)=mgh(\cos\theta-1)\le 0,\qquad K=\tfrac12$$</p>
+
+<p>$$I\dot\theta^{2},\qquad E=K+U,\qquad I\approx mh^{2}$$</p>
 
 <p>In the lunge we are at rest, so both potential and kinetic energy are zero: \(K=0\) and \(U_0=-mgh(1-\cos\theta_0)\). 
 
@@ -53,9 +59,11 @@ $$W_{\text{muscles}}-W_{\text{lost}}=\Delta E\;\;\Rightarrow\;\; W_{\text{req}}=
 </iframe>
 
 <figcaption>
-    Figure 3. Interactive model of the inverted pendulum. Move the slider to explore how the body angle affects stability.
+    Figure 1. Interactive model of the inverted pendulum. Move the slider to explore how the body angle affects stability.
   </figcaption>
 </figure>
+
+<h2>Geometry, coordination and... luck</h2>
 
 <p>During the kick-up, our goal is to transfer energy into the system and raise the body's center of mass toward the handstand position. The placement of the support leg plays an important role in this process: moving it farther from the center of mass changes the system's geometry, affecting both the work the muscles must perform and the overall energy balance.</p>
 
@@ -69,14 +77,15 @@ $$\frac{dE}{dt}=\tau\dot\theta,\qquad I\ddot\theta=mgh\sin\theta+\tau$$
 
 <figure>
   <img src="{{ '/assets/img/fig1-energy-vs-time.svg' | relative_url }}" alt="Line chart of kinetic, potential and total energy against time during a kick-up. Total energy rises from about minus 293 joules to zero during the 0.35 second kick; kinetic energy peaks near 130 joules and then fades to zero as potential energy approaches zero.">
-  <figcaption>Figure 1. Energy during a kick-up from a lunge. The kick (shaded) raises the total energy from −293 J to about 0; afterwards gravity converts K into U.</figcaption>
+  <figcaption>Figure 2. Energy during a kick-up from a lunge. The kick (shaded) raises the total energy from −293 J to about 0; afterwards gravity converts K into U.</figcaption>
 </figure>
 
 <figure>
   <img src="{{ '/assets/img/fig2-energy-landscape.svg' | relative_url }}" alt="Energy against lean angle. The potential energy curve forms a hill whose top is the handstand at zero degrees. The total energy line climbs from the lunge start to the level of the hilltop, and a green band marks the catch zone around vertical.">
-  <figcaption>Figure 2. The handstand sits on top of an energy hill. The kick must lift the total energy exactly to the height of the hilltop; the green band is the range of error the hands can still absorb.</figcaption>
+  <figcaption>Figure 3. The handstand sits on top of an energy hill. The kick must lift the total energy exactly to the height of the hilltop; the green band is the range of error the hands can still absorb.</figcaption>
 </figure>
 
+<p>Along the journey, sometimes you suddenly find yourself balancing without even understanding why.</p>
 
 <p>The final state is determined by the energy error \(\Delta E=E_{\text{final}}\):</p>
 
@@ -105,4 +114,4 @@ $$\ddot\theta\approx\frac{g}{h}\,\theta\;\Rightarrow\;\theta(t)=\theta_0e^{\lamb
 
 <h2>Sources and references</h2>
 
-Images 1, 2, 3 and 4: <i>AI-generated illustrations and animation created with Claude (Anthropic) for dopamine-chamber.github.io</i>
+Figures 1, 2, 3 and 4: <i>AI-generated illustrations and animation created with Claude (Anthropic) for dopamine-chamber.github.io</i>
