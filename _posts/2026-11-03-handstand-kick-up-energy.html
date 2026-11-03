@@ -31,17 +31,19 @@ window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['$$', '$$
 
 <p>Model the body as an inverted pendulum pivoting at the wrists, with the centre of mass at distance \(h\) and \(\theta\) the lean from vertical. Choose the handstand as the zero of potential energy:</p>
 
-$$U(\theta)=mgL(\cos\theta-1)\le 0,\qquad K=\tfrac12 I\dot\theta^{2},\qquad E=K+U,\qquad I\approx mh^{2}$$</p>
+$$U(\theta)=mgh(\cos\theta-1)\le 0,\qquad K=\tfrac12 I\dot\theta^{2},\qquad E=K+U,\qquad I\approx mh^{2}$$</p>
 
 <p>In the lunge we are at rest, so both potential and kinetic energy are zero: \(K=0\) and \(U_0=-mgh(1-\cos\theta_0)\). 
 
 <p>The handstand requires still \(K=0\) and \(U=0\), so \(E=0\).</p>
   
-<p><b>Our energy budget starts negative, and the muscles must pay the debt:</b></p>
+<p><b>Our energy budget starts negative, and the muscles must pay the debt.</b></p>
+
+<p>We assume that a small portion of the energy is dissipated along the way. As a result, the energy delivered by the muscles, minus the energy lost through inefficiencies and dissipation, must match the change in the system's mechanical energy:</p>
 
 $$W_{\text{muscles}}-W_{\text{lost}}=\Delta E\;\;\Rightarrow\;\; W_{\text{req}}=-U_0=mgh(1-\cos\theta_0)$$
 
-<p>With \(m=70\) kg, \(L=1\) m and \(\theta_0=55^\circ\), that is about 293 J, delivered in roughly 0.35 s (around 0.8 kW on average).</p>
+<p>With \(m=70\) kg, \(h=1\) m and \(\theta_0=55^\circ\), that is about 293 J, delivered in roughly 0.35 s (around 0.8 kW on average).</p>
 
 <iframe
     src="/assets/interactive/kick-up-animation.html"
@@ -50,11 +52,16 @@ $$W_{\text{muscles}}-W_{\text{lost}}=\Delta E\;\;\Rightarrow\;\; W_{\text{req}}=
     style="border:none;">
 </iframe>
 
+<figcaption>
+    Figure 3. Interactive model of the inverted pendulum. Move the slider to explore how the body angle affects stability.
+  </figcaption>
+</figure>
+
 <h2>What happens during the kick</h2>
 
-<p>Loading the leg stores energy in muscles and tendons, not as gravitational potential. When the kick fires, the muscles do work at a rate \(P=\tau\dot\theta\) and the total energy rises:</p>
+<p>Loading the leg stores energy in muscles and tendons. When the kick fires, the muscles do work at a rate \(P=\tau\dot\theta\) and the total energy rises:</p>
 
-$$\frac{dE}{dt}=\tau\dot\theta,\qquad I\ddot\theta=mgL\sin\theta+\tau$$
+$$\frac{dE}{dt}=\tau\dot\theta,\qquad I\ddot\theta=mgh\sin\theta+\tau$$
 
 <p>Once the kick ends, \(\tau\approx0\) and gravity takes over. The body decelerates as it rises, so \(K\) turns into \(U\) and moves back toward zero. It is exactly like throwing a ball upward so that its apex lands on a target height.</p>
 
