@@ -23,21 +23,32 @@ window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['$$', '$$
 
 <p>You've trained hard: alignment, resistance, belly to the wall... and the first seconds of balance finally show up. <i>Yeeee!</i> But when it comes to the kick-up, you can't make it stick. It's frustrating, and it's hard to be present in the kick when all you're thinking about is <b>balancing on hands.</b></p>
 
-<p>The point is that the kick-up is a <em>transition</em>, and a transition is what happens when energy changes.</p>
+<p>The point is that the kick-up comes with a <em>transition</em>, and a transition is what happens when energy changes.</p>
 
-<p>Consider the case of the start from a lunge with hands on the floor: we go from one stationary posture to another. Unlike the small oscillations in the twist, here the legs have to travel a long way.</p>
+<p>Consider the case of the start from a lunge with hands on the floor: we go from one stationary posture to another. Unlike the small oscillations in the handstand sways, here the legs have to travel a long way.</p>
 
 <h2>Setting up the energy</h2>
 
-<p>Model the body as an inverted pendulum pivoting at the wrists, with the centre of mass at distance \(L\) and \(\theta\) the lean from vertical. Choose the handstand as the zero of potential energy:</p>
+<p>Model the body as an inverted pendulum pivoting at the wrists, with the centre of mass at distance \(h\) and \(\theta\) the lean from vertical. Choose the handstand as the zero of potential energy:</p>
 
-$$U(\theta)=mgL(\cos\theta-1)\le 0,\qquad K=\tfrac12 I\dot\theta^{2},\qquad E=K+U,\qquad I\approx mL^{2}$$
+$$U(\theta)=mgL(\cos\theta-1)\le 0,\qquad K=\tfrac12 I\dot\theta^{2},\qquad E=K+U,\qquad I\approx mh^{2}$$</p>
 
-<p>In the lunge we are at rest, so \(K=0\) and \(U_0=-mgL(1-\cos\theta_0)\). The handstand requires \(K=0\) and \(U=0\), so \(E=0\). Our energy budget starts negative, and the muscles must pay the debt:</p>
+<p>In the lunge we are at rest, so both potential and kinetic energy are zero: \(K=0\) and \(U_0=-mgh(1-\cos\theta_0)\). 
 
-$$W_{\text{muscles}}-W_{\text{lost}}=\Delta E\;\;\Rightarrow\;\; W_{\text{req}}=-U_0=mgL(1-\cos\theta_0)$$
+<p>The handstand requires still \(K=0\) and \(U=0\), so \(E=0\).</p>
+  
+<p><b>Our energy budget starts negative, and the muscles must pay the debt:</b></p>
+
+$$W_{\text{muscles}}-W_{\text{lost}}=\Delta E\;\;\Rightarrow\;\; W_{\text{req}}=-U_0=mgh(1-\cos\theta_0)$$
 
 <p>With \(m=70\) kg, \(L=1\) m and \(\theta_0=55^\circ\), that is about 293 J, delivered in roughly 0.35 s (around 0.8 kW on average).</p>
+
+<iframe
+    src="/assets/interactive/kick-up-animation.html"
+    width="100%"
+    height="600"
+    style="border:none;">
+</iframe>
 
 <h2>What happens during the kick</h2>
 
