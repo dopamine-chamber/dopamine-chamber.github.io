@@ -63,7 +63,7 @@ $$W_{\text{muscles}}-W_{\text{lost}}=\Delta E\;\;\Rightarrow\;\; W_{\text{req}}=
 
 $$\frac{dE}{dt}=\tau\dot\theta,\qquad I\ddot\theta=mgh\sin\theta+\tau$$
 
-<p>Once the kick ends, \(\tau\approx0\) and gravity takes over. The body decelerates as it rises, so \(K\) turns into \(U\) and moves back toward zero. It is exactly like throwing a ball upward so that its apex lands on a target height.</p>
+<p>Once the kick ends, \(\tau\approx0\) and gravity takes over. The body decelerates as it rises, so \(K\) turns into \(U\) and moves back toward zero.</p>
 
 <figure>
   <img src="{{ '/assets/img/fig1-energy-vs-time.svg' | relative_url }}" alt="Line chart of kinetic, potential and total energy against time during a kick-up. Total energy rises from about minus 293 joules to zero during the 0.35 second kick; kinetic energy peaks near 130 joules and then fades to zero as potential energy approaches zero.">
@@ -75,11 +75,11 @@ $$\frac{dE}{dt}=\tau\dot\theta,\qquad I\ddot\theta=mgh\sin\theta+\tau$$
   <figcaption>Figure 2. The handstand sits on top of an energy hill. The kick must lift the total energy exactly to the height of the hilltop; the green band is the range of error the hands can still absorb.</figcaption>
 </figure>
 
-<h2>Why it's so hard</h2>
-
 <p>The final state is determined by the energy error \(\Delta E=E_{\text{final}}\):</p>
 
-$$\Delta E>0:\;\;\dot\theta_{\text{top}}=\sqrt{\frac{2\Delta E}{I}}\;\;(\text{overbalance}),\qquad \Delta E<0:\;\;\theta_{\max}=\arccos\!\Big(1+\frac{\Delta E}{mgL}\Big)\approx\sqrt{\frac{2|\Delta E|}{mgL}}\;\;(\text{falls back})$$
+$$\Delta E>0:\;\;\dot\theta_{\text{top}}=\sqrt{\frac{2\Delta E}{I}}\;\;(\text{overbalance})$$
+
+$$\qquad \Delta E<0:\;\;\theta_{\max}=\arccos\!\Big(1+\frac{\Delta E}{mgL}\Big)\approx\sqrt{\frac{2|\Delta E|}{mgL}}\;\;(\text{falls back})$$
 
 <p>Your hands can only absorb a small error, a degree or three of lean. In this model that is \(|\Delta E|\lesssim1.5\) J, about 0.5% of the 293 J. The kick lasts about 0.35 s, shorter than typical reaction times, so you can't correct it with feedback mid-flight. You have to get it right in advance.</p>
 
@@ -92,10 +92,10 @@ $$\Delta E>0:\;\;\dot\theta_{\text{top}}=\sqrt{\frac{2\Delta E}{I}}\;\;(\text{ov
 
 <p>Near the top, the pendulum equation linearises to</p>
 
-$$\ddot\theta\approx\frac{g}{L}\,\theta\;\Rightarrow\;\theta(t)=\theta_0e^{\lambda t},\qquad \lambda=\sqrt{g/L}\approx3.1\ \text{s}^{-1}$$
+$$\ddot\theta\approx\frac{g}{h}\,\theta\;\Rightarrow\;\theta(t)=\theta_0e^{\lambda t},\qquad \lambda=\sqrt{g/h}\approx3.1\ \text{s}^{-1}$$
 
 <p>A tilt doubles in about 0.2 s. That sounds fast, but the energy involved is tiny, so small finger and wrist corrections are enough.</p>
 
 <p>In short, holding is a feedback task at almost zero energy, while the kick-up is a feedforward task that moves hundreds of joules and must land within about half a percent. Coordination matters because it controls how much energy the muscles deliver and when.</p>
 
-<p class="note">About the numbers: they come from a deliberately simple model (a single rigid pendulum, 70 kg, \(L=1\) m, starting at 55° from vertical). In a real body \(I\) and \(L\) change during the kick as hips and legs move, and the arms absorb part of the error. The logic is the same, but the exact figures are illustrative.</p>
+<p class="note">About the numbers: they come from a deliberately simple model (a single rigid pendulum, 70 kg, \(h=1\) m, starting at 55° from vertical). In a real body \(I\) and \(h\) change during the kick as hips and legs move, and the arms absorb part of the error. The logic is the same, but the exact figures are illustrative.</p>
