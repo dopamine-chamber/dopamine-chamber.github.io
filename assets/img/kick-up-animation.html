@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kick-up energy animation</title>
+<style>
+html,body{margin:0;background:#fff;color:#222;font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+#app{max-width:820px;margin:0 auto;padding:12px}
+.row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 10px}
+.row label{color:#555;white-space:nowrap}
+#sc{flex:1;min-width:160px}
+button{font:inherit;padding:6px 14px;border:1px solid #bbb;border-radius:8px;background:#f6f6f6;cursor:pointer}
+button:hover{background:#eee}
+#grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:12px;align-items:stretch}
+@media(max-width:560px){#grid{grid-template-columns:1fr}}
+canvas{width:100%;display:block;border:1px solid #e3e3e3;border-radius:8px;background:#fff}
+#cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:10px 0 0}
+@media(max-width:560px){#cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.card{background:#f6f6f6;border-radius:8px;padding:8px 10px}
+.card small{display:block;color:#666;font-size:12px}
+.card b{font-size:18px;font-weight:600}
+.k{color:#2a78d6}.u{color:#eb6834}.e{color:#6b6a65}
+#msg{margin:8px 0 0;min-height:1.5em;font-weight:600}
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="row">
+    <button id="play" type="button">Replay</button>
+    <label for="sc">Energy delivered by the kick</label>
+    <input id="sc" type="range" min="90" max="110" step="0.1" value="99.7">
+    <span id="scv" style="min-width:52px;text-align:right;font-weight:600"></span>
+  </div>
+  <div id="grid">
+    <canvas id="c1" width="500" height="560" role="img" aria-label="Stick figure kicking up from a lunge into a handstand"></canvas>
+    <canvas id="c2" width="700" height="560" role="img" aria-label="Kinetic, potential and total energy against time, drawn as the movement plays"></canvas>
+  </div>
+  <div id="cards">
+    <div class="card"><small>Kinetic K</small><b class="k" id="vk">0 J</b></div>
+    <div class="card"><small>Potential U</small><b class="u" id="vu">0 J</b></div>
+    <div class="card"><small>Total E = K + U</small><b class="e" id="ve">0 J</b></div>
+    <div class="card"><small>Energy needed</small><b id="vr"></b></div>
+  </div>
+  <p id="msg"></p>
+</div>
+<script>
+const M=70,G=9.81,LP=1,I=M*LP*LP,DEG=Math.PI/180,KICK=0.35,DT=0.001;
+const SEG={arm:0.62,trunk:0.5,thigh:0.5,shank:0.5,foot:0.11,head:0.22};
+const lerp=(a,b,t)=>a+(b-a)*t;
+const ease=t=>t*t*(3-2*t);
+const KEY={trunk:[[0,167.4],[1,90]],back:[[0,220],[0.5,142],[1,90]],head:[[0,20],[1,25]]};
+const keyAt=(arr,p)=>{for(let i=1;i<arr.length;i++){if(p<=arr[i][0]||i===arr.length-1){const q=(p-arr[i-1][0])/(arr[i][0]-arr[i-1][0]);return lerp(arr[i-1][1],arr[i][1],Math.min(1,Math.max(0,q)))}}};
+const AN={x:-0.14,y:0.03};
+function upper(p,k){
+  const S=SEG,r=d=>d*DEG;
+  const sh={x:0,y:S.arm*k};
+  const tr=r(keyAt(KEY.trunk,p));
+  const hip={x:sh.x+S.trunk*k*Math.cos(tr),y:sh.y+S.trunk*k*Math.sin(tr)};
+  return {sh,hip,tr};
+}
+const PLO=0.24;
+function ikAt(p,k){
+  const S=SEG,hip=upper(p,k).hip,A={x:AN.x*k,y:AN.y};
+  const dx=A.x-hip.x,dy=A.y-hip.y,d=Math.hypot(dx,dy);
+  const al=Math.acos(Math.min(1,d/(2*S.thigh*k))),pt=Math.atan2(dy,dx)+al;
+  const kn={x:hip.x+S.thigh*k*Math.cos(pt),y:hip.y+S.thigh*k*Math.sin(pt)};
+  return {pt,ps:Math.atan2(A.y-kn.y,A.x-kn.x),A};
+}
+function poseRaw(p,k){
+  const S=SEG,r=d=>d*DEG;
+  const hand={x:0,y:0};
+  const {sh,hip,tr}=upper(p,k);
+  const hd=r(keyAt(KEY.trunk,p)-180+keyAt(KEY.head,p));
+  const head={x:sh.x+S.head*k*Math.cos(hd),y:sh.y+S.head*k*Math.sin(hd)};
+  const bk=r(keyAt(KEY.back,p)),LB=(S.thigh+S.shank)*k;
+  const bknee={x:hip.x+S.thigh*k*Math.cos(bk),y:hip.y+S.thigh*k*Math.sin(bk)};
+  const bank={x:hip.x+LB*Math.cos(bk),y:hip.y+LB*Math.sin(bk)};
+  const btoe={x:bank.x+S.foot*k*Math.cos(bk),y:bank.y+S.foot*k*Math.sin(bk)};
+  const plo=PLO,lo=ikAt(plo,k);
+  let fknee,fank,ff;
+  if(p<plo){
+    const q=ikAt(p,k);
+    fknee={x:hip.x+S.thigh*k*Math.cos(q.pt),y:hip.y+S.thigh*k*Math.sin(q.pt)};
+    fank={x:hip.x+S.thigh*k*Math.cos(q.pt)+S.shank*k*Math.cos(q.ps),y:hip.y+S.thigh*k*Math.sin(q.pt)+S.shank*k*Math.sin(q.ps)};
+    ff=0;
+  }else{
+    const e=ease((p-plo)/(1-plo)),pt=lerp(lo.pt,r(-270),e),bend=(lo.ps-lo.pt)*(1-ease(Math.min(1,(p-plo)/0.7))),ps=pt+bend;
+    fknee={x:hip.x+S.thigh*k*Math.cos(pt),y:hip.y+S.thigh*k*Math.sin(pt)};
+    fank={x:fknee.x+S.shank*k*Math.cos(ps),y:fknee.y+S.shank*k*Math.sin(ps)};
+    ff=lerp(0,ps,ease(Math.min(1,(p-plo)/0.7)));
+  }
+  const ftoe={x:fank.x+S.foot*k*Math.cos(ff),y:fank.y+S.foot*k*Math.sin(ff)};
+  return {hand,sh,hip,head,bknee,bank,btoe,fknee,fank,ftoe};
+}
+function comOf(j){
+  const mid=(a,b)=>({x:(a.x+b.x)/2,y:(a.y+b.y)/2});
+  const parts=[[0.08,j.head],[0.5,mid(j.sh,j.hip)],[0.1,mid(j.hand,j.sh)],[0.1,mid(j.hip,j.bknee)],[0.1,mid(j.hip,j.fknee)],[0.06,mid(j.bknee,j.bank)],[0.06,mid(j.fknee,j.fank)]];
+  let x=0,y=0;parts.forEach(([w,q])=>{x+=w*q.x;y+=w*q.y});return {x,y};
+}
+const K1=1/comOf(poseRaw(1,1)).y;
+const pose=p=>poseRaw(p,K1);
+const NT=400,HT=[];
+for(let i=0;i<=NT;i++){HT.push(comOf(pose(i/NT)).y);}
+for(let i=1;i<=NT;i++)HT[i]=Math.max(HT[i],HT[i-1]+1e-9);
+const H0=HT[0],TH0=Math.acos(H0),ER=M*G*LP*(1-H0);
+function pForH(h){
+  if(h<=HT[0])return 0;if(h>=HT[NT])return 1;
+  let lo=0,hi=NT;while(hi-lo>1){const mid=(lo+hi)>>1;if(HT[mid]<=h)lo=mid;else hi=mid}
+  return (lo+(h-HT[lo])/(HT[hi]-HT[lo]))/NT;
+}
+const U=th=>M*G*LP*(Math.cos(th)-1);
+function rotate(j,R){
+  const c=Math.cos(R),s=Math.sin(R),o={};
+  for(const k in j){const q=j[k];o[k]={x:q.x*c-q.y*s,y:q.x*s+q.y*c}}return o;
+}
+function figure(th){
+  let p,R;
+  if(th<0){p=1;R=th}
+  else{p=pForH(Math.cos(th));const w=Math.min(1,Math.max(0,(p-0.9)/0.1));R=th*w}
+  return rotate(pose(p),R);
+}
+function sim(s,tmax){
+  tmax=tmax||2.6;
+  const W=s*ER,P0=2*W/KICK,out=[];let th=TH0,w=0,t=0,out_state='';
+  while(t<KICK){
+    const Wt=P0*(t/2-KICK/(4*Math.PI)*Math.sin(2*Math.PI*t/KICK));
+    const u=U(th),K=Math.max(U(TH0)+Wt-u,0);w=-Math.sqrt(2*K/I);
+    out.push({t,th,w,K,U:u,E:u+K});th+=w*DT;t+=DT;
+  }
+  const Ef=W-ER,catchable=Math.abs(Ef)<=1.5;
+  let a=G/LP*Math.sin(th),capIdx=-1;
+  while(t<tmax){
+    th+=w*DT+0.5*a*DT*DT;const a2=G/LP*Math.sin(th);w+=0.5*(a+a2)*DT;a=a2;t+=DT;
+    if(catchable&&th<5*DEG&&Math.abs(w)<0.3){capIdx=out.length;
+      const u=U(th);out.push({t,th,w:0,K:0,U:u,E:u});break}
+    const K=0.5*I*w*w,u=U(th);out.push({t,th,w,K,U:u,E:u+K});
+    if(th<-22*DEG||th>TH0)break;
+  }
+  const outcome=catchable?'catch':(Ef<0?'back':'over');
+  return {o:out,capIdx,outcome,Ef,W};
+}
+
+const SLOW=0.4,HOLD=1.2;
+const $=id=>document.getElementById(id);
+const c1=$('c1'),c2=$('c2'),x1=c1.getContext('2d'),x2=c2.getContext('2d');
+const CK='#2a78d6',CU='#eb6834',CE='#6b6a65',INK='#222',MUT='#777',GRID='#e6e6e6';
+let R=null,tStart=0,raf=0,playing=false;
+function setup(){
+  const s=+$('sc').value/100;$('scv').textContent=(s*100).toFixed(1)+'%';
+  $('vr').textContent=ER.toFixed(0)+' J';
+  R=sim(s,2.6);
+  const last=R.o[R.o.length-1];
+  R.tEnd=Math.max(last.t+0.15,0.9);
+  R.ymax=Math.max(60,Math.max(...R.o.map(p=>p.K))*1.1);
+  tStart=performance.now();playing=true;
+  cancelAnimationFrame(raf);raf=requestAnimationFrame(loop);
+}
+function idxAt(t){const o=R.o;let lo=0,hi=o.length-1;while(hi-lo>1){const m=(lo+hi)>>1;if(o[m].t<=t)lo=m;else hi=m}return t>=o[hi].t?hi:lo}
+function loop(now){
+  const el=(now-tStart)/1000*SLOW;
+  const endT=R.o[R.o.length-1].t;
+  const i=idxAt(Math.min(el,endT));
+  draw(i,Math.min(el,R.tEnd));
+  if(el<endT+HOLD*SLOW){raf=requestAnimationFrame(loop)}else{playing=false}
+}
+function stick(ctx,W,H,i){
+  ctx.setTransform(2,0,0,2,0,0);ctx.clearRect(0,0,W,H);
+  const p=R.o[i],j=figure(p.th);
+  const sc=H/2.75,ox=W*0.6,oy=H-34;
+  const X=q=>ox+q.x*sc,Y=q=>oy-q.y*sc;
+  ctx.lineCap='round';ctx.lineJoin='round';
+  ctx.strokeStyle='#bbb';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(10,oy);ctx.lineTo(W-10,oy);ctx.stroke();
+  const line=(pts,col,w)=>{ctx.strokeStyle=col;ctx.lineWidth=w;ctx.beginPath();pts.forEach((q,n)=>n?ctx.lineTo(X(q),Y(q)):ctx.moveTo(X(q),Y(q)));ctx.stroke()};
+  const hb=comOf(j).y;
+  ctx.setLineDash([5,5]);ctx.strokeStyle='#c9c9c9';ctx.lineWidth=1.5;
+  ctx.beginPath();ctx.moveTo(10,oy-1*sc);ctx.lineTo(W-10,oy-1*sc);ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle=MUT;ctx.font='12px system-ui,sans-serif';ctx.textAlign='left';
+  ctx.textAlign='right';ctx.fillText('handstand height of the centre of mass',W-12,oy-1*sc-8);ctx.textAlign='left';
+  line([j.ftoe,j.fank,j.fknee,j.hip],'#8a8a8a',7);
+  line([j.btoe,j.bank,j.bknee,j.hip],'#3a3a3a',7);
+  line([j.sh,j.head],'#111',5);
+  line([j.hip,j.sh],'#111',9);
+  line([j.sh,j.hand],'#111',7);
+  ctx.fillStyle='#111';ctx.beginPath();ctx.arc(X(j.head),Y(j.head),14,0,7);ctx.fill();
+  const cm=comOf(j);
+  ctx.fillStyle=CU;ctx.strokeStyle='#fff';ctx.lineWidth=3;ctx.beginPath();ctx.arc(X(cm),Y(cm),8,0,7);ctx.fill();ctx.stroke();
+  ctx.textAlign='left';ctx.font='12px system-ui,sans-serif';ctx.lineWidth=4;ctx.strokeStyle='#fff';const lx=X(cm)>W*0.62?X(cm)-14:X(cm)+14;ctx.textAlign=X(cm)>W*0.62?'right':'left';ctx.strokeText('centre of mass',lx,Y(cm)+4);ctx.fillStyle=CU;ctx.fillText('centre of mass',lx,Y(cm)+4);
+  ctx.strokeStyle=CU;ctx.lineWidth=2;ctx.setLineDash([3,4]);ctx.beginPath();ctx.moveTo(X(cm),Y(cm));ctx.lineTo(X(cm),oy);ctx.stroke();ctx.setLineDash([]);
+  ctx.fillStyle=INK;ctx.beginPath();ctx.arc(X(j.hand),oy,6,0,7);ctx.fill();
+}
+function chart(ctx,W,H,i,tNow){
+  ctx.setTransform(2,0,0,2,0,0);ctx.clearRect(0,0,W,H);
+  const l=52,r=12,tp=34,b=44,pw=W-l-r,ph=H-tp-b,o=R.o;
+  const yMin=-320,yMax=R.ymax,tE=R.tEnd;
+  const fx=t=>l+t/tE*pw,fy=v=>tp+(yMax-v)/(yMax-yMin)*ph;
+  ctx.font='12px system-ui,sans-serif';ctx.textAlign='right';ctx.fillStyle=MUT;
+  for(let v=-300;v<=yMax;v+=100){ctx.strokeStyle=v===0?'#aaa':GRID;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(l,fy(v));ctx.lineTo(l+pw,fy(v));ctx.stroke();ctx.fillText(v,l-8,fy(v)+5)}
+  ctx.textAlign='center';const st=tE>1.6?0.5:0.25;
+  for(let v=0;v<=tE+1e-9;v+=st)ctx.fillText(+v.toFixed(2),fx(v),H-b+20);
+  ctx.fillText('time (s, slow motion)',l+pw/2,H-6);
+  ctx.textAlign='left';ctx.fillText('energy (J)',4,tp-12);
+  ctx.fillStyle='rgba(42,120,214,0.08)';ctx.fillRect(l,tp,KICK/tE*pw,ph);
+  ctx.fillStyle='#185fa5';ctx.fillText('kick',l+6,tp+16);
+  ctx.fillStyle=MUT;ctx.fillText('free flight',l+KICK/tE*pw+8,tp+16);
+  const trace=(key,col,w,dash)=>{ctx.strokeStyle=col;ctx.lineWidth=w;ctx.setLineDash(dash||[]);ctx.beginPath();
+    for(let n=0;n<=i;n+=3){const q=o[n];n?ctx.lineTo(fx(q.t),fy(q[key])):ctx.moveTo(fx(q.t),fy(q[key]))}
+    const q=o[i];ctx.lineTo(fx(q.t),fy(q[key]));ctx.stroke();ctx.setLineDash([]);
+    ctx.fillStyle=col;ctx.strokeStyle='#fff';ctx.lineWidth=2;ctx.beginPath();ctx.arc(fx(q.t),fy(q[key]),5,0,7);ctx.fill();ctx.stroke()};
+  trace('U',CU,3);trace('K',CK,3);trace('E',CE,3,[7,5]);
+  const q=o[i];
+  ctx.strokeStyle='#999';ctx.lineWidth=1;ctx.setLineDash([2,3]);ctx.beginPath();ctx.moveTo(fx(q.t),tp);ctx.lineTo(fx(q.t),tp+ph);ctx.stroke();ctx.setLineDash([]);
+  ctx.textAlign='left';ctx.font='12px system-ui,sans-serif';
+  [['K',CK,CK],['U',CU,CU],['E',CE,CE]].forEach(([n,col],k)=>{const x=l+pw-150+k*50;ctx.fillStyle=col;ctx.fillRect(x,tp-22,10,10);ctx.fillStyle=MUT;ctx.fillText(n,x+15,tp-12)});
+}
+function draw(i,tNow){
+  const q=R.o[i];
+  stick(x1,c1.width/2,c1.height/2,i);
+  chart(x2,c2.width/2,c2.height/2,i,tNow);
+  $('vk').textContent=q.K.toFixed(0)+' J';$('vu').textContent=q.U.toFixed(0)+' J';$('ve').textContent=q.E.toFixed(0)+' J';
+  const done=i>=R.o.length-1;
+  const m=$('msg');
+  if(!done){m.textContent=q.t<KICK?'Kick: the muscles add energy.':'Free flight: gravity turns kinetic energy into potential energy.';m.style.color=INK}
+  else if(R.outcome==='catch'){m.textContent='Reaches the top: the hands take over and the handstand begins.';m.style.color='#3b6d11'}
+  else if(R.outcome==='back'){m.textContent='Too little energy: the body stops short and falls back.';m.style.color='#a32d2d'}
+  else{m.textContent='Too much energy: the body arrives with speed left and overbalances.';m.style.color='#a32d2d'}
+}
+function fit(){
+  const a=c1.getBoundingClientRect().width;
+  c1.width=Math.round(a*2);c1.height=Math.round(a*2*1.12);
+  const b=c2.getBoundingClientRect().width;
+  c2.width=Math.round(b*2);c2.height=c1.height;
+  c1.style.height=(c1.height/2)+'px';c2.style.height=(c2.height/2)+'px';
+}
+$('sc').addEventListener('input',()=>{fit();setup()});
+$('play').addEventListener('click',()=>{fit();setup()});
+addEventListener('resize',()=>{fit();if(R){draw(Math.min(idxAt((performance.now()-tStart)/1000*SLOW),R.o.length-1),0)}});
+function report(){try{parent.postMessage({kickupHeight:$('app').offsetHeight+24},'*')}catch(e){}}
+report();addEventListener('resize',report);setTimeout(report,300);
+fit();setup();report();
+</script>
+</body>
+</html>
