@@ -1,0 +1,7 @@
+   ---
+   ---
+   @import "minima";
+
+   .post-list > li {
+     margin-bottom: 3rem;
+   }
