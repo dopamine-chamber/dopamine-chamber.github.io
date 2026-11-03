@@ -1,0 +1,78 @@
+---
+layout: post
+title: "Why jumping up into a handstand is harder than holding one"
+date: 2026-11-03 00:00:00 +0000
+description: "An energy-based explanation of why the kick-up to a handstand is harder than the handstand itself."
+---
+<script>
+window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['$$', '$$']] } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+<style>
+.post-content figure { margin: 2rem 0; }
+.post-content figure img { width: 100%; height: auto; border: 1px solid #e8e8e8; border-radius: 6px; }
+.post-content figcaption { color: #828282; font-size: 0.85em; line-height: 1.5; margin-top: .5rem; }
+.post-content mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
+.post-content .note { background: #f6f6f6; border-radius: 6px; padding: 1rem 1.25rem; font-size: 0.9em; color: #555; }
+</style>
+
+<p>Have you ever felt more frustrated learning to <em>get up</em> into a handstand than to <em>stay</em> in one? I did. You've trained hard (alignment, belly to the wall) and the first seconds of balance finally show up. Yeeee! But when it comes to the kick-up, you can't make it stick. It's frustrating, and it's hard to be present in the kick when all you're thinking about is the handstand.</p>
+
+<p>The point is that the kick-up is a <em>transition</em>, and a transition is what happens when energy changes.</p>
+
+<p>Take the start from a lunge with hands on the floor: we go from one stationary posture to another. Unlike the small oscillations in the twist, here the legs have to travel a long way.</p>
+
+<h2>Setting up the energy</h2>
+
+<p>Model the body as an inverted pendulum pivoting at the wrists, with the centre of mass at distance \(L\) and \(\theta\) the lean from vertical. Choose the handstand as the zero of potential energy:</p>
+
+$$U(\theta)=mgL(\cos\theta-1)\le 0,\qquad K=\tfrac12 I\dot\theta^{2},\qquad E=K+U,\qquad I\approx mL^{2}$$
+
+<p>In the lunge we are at rest, so \(K=0\) and \(U_0=-mgL(1-\cos\theta_0)\). The handstand requires \(K=0\) and \(U=0\), so \(E=0\). Our energy budget starts negative, and the muscles must pay the debt:</p>
+
+$$W_{\text{muscles}}-W_{\text{lost}}=\Delta E\;\;\Rightarrow\;\; W_{\text{req}}=-U_0=mgL(1-\cos\theta_0)$$
+
+<p>With \(m=70\) kg, \(L=1\) m and \(\theta_0=55^\circ\), that is about 293 J, delivered in roughly 0.35 s (around 0.8 kW on average).</p>
+
+<h2>What happens during the kick</h2>
+
+<p>Loading the leg stores energy in muscles and tendons, not as gravitational potential. When the kick fires, the muscles do work at a rate \(P=\tau\dot\theta\) and the total energy rises:</p>
+
+$$\frac{dE}{dt}=\tau\dot\theta,\qquad I\ddot\theta=mgL\sin\theta+\tau$$
+
+<p>Once the kick ends, \(\tau\approx0\) and gravity takes over. The body decelerates as it rises, so \(K\) turns into \(U\) and moves back toward zero. It is exactly like throwing a ball upward so that its apex lands on a target height.</p>
+
+<figure>
+  <img src="{{ '/assets/images/handstand-kick-up/fig1-energy-vs-time.svg' | relative_url }}" alt="Line chart of kinetic, potential and total energy against time during a kick-up. Total energy rises from about minus 293 joules to zero during the 0.35 second kick; kinetic energy peaks near 130 joules and then fades to zero as potential energy approaches zero.">
+  <figcaption>Figure 1. Energy during a kick-up from a lunge. The kick (shaded) raises the total energy from −293 J to about 0; afterwards gravity converts K into U.</figcaption>
+</figure>
+
+<figure>
+  <img src="{{ '/assets/images/handstand-kick-up/fig2-energy-landscape.svg' | relative_url }}" alt="Energy against lean angle. The potential energy curve forms a hill whose top is the handstand at zero degrees. The total energy line climbs from the lunge start to the level of the hilltop, and a green band marks the catch zone around vertical.">
+  <figcaption>Figure 2. The handstand sits on top of an energy hill. The kick must lift the total energy exactly to the height of the hilltop; the green band is the range of error the hands can still absorb.</figcaption>
+</figure>
+
+<h2>Why it's so hard</h2>
+
+<p>The final state is determined by the energy error \(\Delta E=E_{\text{final}}\):</p>
+
+$$\Delta E>0:\;\;\dot\theta_{\text{top}}=\sqrt{\frac{2\Delta E}{I}}\;\;(\text{overbalance}),\qquad \Delta E<0:\;\;\theta_{\max}=\arccos\!\Big(1+\frac{\Delta E}{mgL}\Big)\approx\sqrt{\frac{2|\Delta E|}{mgL}}\;\;(\text{falls back})$$
+
+<p>Your hands can only absorb a small error, a degree or three of lean. In this model that is \(|\Delta E|\lesssim1.5\) J, about 0.5% of the 293 J. The kick lasts about 0.35 s, shorter than typical reaction times, so you can't correct it with feedback mid-flight. You have to get it right in advance.</p>
+
+<figure>
+  <img src="{{ '/assets/images/handstand-kick-up/fig3-three-outcomes.svg' | relative_url }}" alt="Three side-by-side charts of energy against time. With 97 percent of the required energy the body falls back; with 99.7 percent it reaches the top; with 103 percent it arrives with leftover kinetic energy and overbalances.">
+  <figcaption>Figure 3. Same kick, three energy budgets. A few joules too little and you fall back; a few too many and you overbalance.</figcaption>
+</figure>
+
+<h2>Why holding is different</h2>
+
+<p>Near the top, the pendulum equation linearises to</p>
+
+$$\ddot\theta\approx\frac{g}{L}\,\theta\;\Rightarrow\;\theta(t)=\theta_0e^{\lambda t},\qquad \lambda=\sqrt{g/L}\approx3.1\ \text{s}^{-1}$$
+
+<p>A tilt doubles in about 0.2 s. That sounds fast, but the energy involved is tiny, so small finger and wrist corrections are enough.</p>
+
+<p>In short, holding is a feedback task at almost zero energy, while the kick-up is a feedforward task that moves hundreds of joules and must land within about half a percent. Coordination matters because it controls how much energy the muscles deliver and when.</p>
+
+<p class="note">About the numbers: they come from a deliberately simple model (a single rigid pendulum, 70 kg, \(L=1\) m, starting at 55° from vertical). In a real body \(I\) and \(L\) change during the kick as hips and legs move, and the arms absorb part of the error. The logic is the same, but the exact figures are illustrative.</p>
