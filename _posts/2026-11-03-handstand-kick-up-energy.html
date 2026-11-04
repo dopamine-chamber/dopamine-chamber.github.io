@@ -38,7 +38,7 @@ window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['$$', '$$
 
 <h2>Remember the energy explanation?</h2>
 
-<p></p>We have discussed how energy behaves when we are upside down, trying to hold a straight two arm handstand: we have modelled that we are <i>on the top on a hill</i>, unstable by construction of the system.</p>
+<p>We have <a href="https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html">discussed how energy behaves</a> when we are upside down, trying to hold a straight two-arm handstand: we modelled the body as sitting on top of a hill, unstable by construction.</p>
 
 <p>Consider the case of the start from a lunge with hands on the floor: we go from one stationary posture to another. Unlike the small oscillations in the handstand sways, here the legs have to travel a long way.</p>
 
@@ -96,29 +96,31 @@ $$E=K+U,\qquad I\approx mh^{2}$$</p>
 
 <p>We are in a lunge. The placement of the support leg plays an important role in this process: moving it farther from the center of mass changes the system's geometry, affecting both the work the muscles must perform and the overall energy balance.</p>
 
-<p>Let \(x\) be the horizontal distance between the wrists and the centre of mass at the start. For a pendulum of length \(h\) leaning by \(\theta_0\):</p>
+<div class="note">
+  <p>Let \(x\) be the horizontal distance between the wrists and the centre of mass at the start. For a pendulum of length \(h\) leaning by \(\theta_0\):</p>
 
-<p>$$x=h\sin\theta_0,\qquad x=\alpha d$$</p>
+  <p>$$x=h\sin\theta_0,\qquad x=\alpha d$$</p>
 
-<p>where \(d\) is the distance between the hands and the front foot, and \(\alpha\) (between 0 and 1) tells us where along that line the centre of mass sits. Putting this into the energy debt we found before:</p>
+  <p>where \(d\) is the distance between the hands and the front foot, and \(\alpha\) (between 0 and 1) tells us where along that line the centre of mass sits. Putting this into the energy debt we found before:</p>
 
-<p>$$W_{\text{req}}=mgh(1-\cos\theta_0)=mgh\left(1-\sqrt{1-\frac{\alpha^{2}d^{2}}{h^{2}}}\right)$$</p>
+  <p>$$W_{\text{req}}=mgh(1-\cos\theta_0)=mgh\left(1-\sqrt{1-\frac{\alpha^{2}d^{2}}{h^{2}}}\right)$$</p>
 
-<p>For small leans this behaves like \(W_{\text{req}}\approx mg\,\alpha^{2}d^{2}/(2h)\): the energy grows roughly with the square of the distance. The torque needed just to start rising, to beat gravity at the lunge, grows linearly:</p>
+  <p>For small leans this behaves like \(W_{\text{req}}\approx mg\,\alpha^{2}d^{2}/(2h)\): the energy grows roughly with the square of the distance. The torque needed just to start rising, to beat gravity at the lunge, grows linearly:</p>
 
-<p>$$\tau_0=mgh\sin\theta_0=mg\,\alpha d$$</p>
+  <p>$$\tau_0=mgh\sin\theta_0=mg\,\alpha d$$</p>
 
-<p>How sensitive is the kick to the starting position? Differentiating gives:</p>
+  <p>How sensitive is the kick to the starting position? Differentiating gives:</p>
 
-<p>$$\frac{dW_{\text{req}}}{dx}=mg\tan\theta_0$$</p>
+  <p>$$\frac{dW_{\text{req}}}{dx}=mg\tan\theta_0$$</p>
 
-<p>With \(m=70\) kg, \(h=1\) m and \(\theta_0=55^\circ\), that is about 980 J per metre, or roughly 10 J per centimetre. Some numbers from the same model:</p>
+  <p>With \(m=70\) kg, \(h=1\) m and \(\theta_0=55^\circ\), that is about 980 J per metre, or roughly 10 J per centimetre. Some numbers from the same model:</p>
 
-<ul>
-  <li>\(\theta_0=45^\circ\): \(x\approx0.71\) m, \(W_{\text{req}}\approx201\) J</li>
-  <li>\(\theta_0=55^\circ\): \(x\approx0.82\) m, \(W_{\text{req}}\approx293\) J</li>
-  <li>\(\theta_0=65^\circ\): \(x\approx0.91\) m, \(W_{\text{req}}\approx396\) J</li>
-</ul>
+  <ul>
+    <li>\(\theta_0=45^\circ\): \(x\approx0.71\) m, \(W_{\text{req}}\approx201\) J</li>
+    <li>\(\theta_0=55^\circ\): \(x\approx0.82\) m, \(W_{\text{req}}\approx293\) J</li>
+    <li>\(\theta_0=65^\circ\): \(x\approx0.91\) m, \(W_{\text{req}}\approx396\) J</li>
+  </ul>
+</div>
 
 <p>Moving the centre of mass about 9 cm farther back means roughly 35% more energy to deliver. And since the hands can only absorb an error of about 1.5 J, a starting position that differs by just 1.5 mm already uses up the whole margin. This is why a consistent foot placement matters more than it seems: the kick has to be calibrated to a specific starting geometry.</p>
 
