@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "The handstand dilemma"
-last title: disassembling the dilemma
 description: "Models and mechanics explained step by step to understand why the handstand is unstable and what it takes to hold it."
 ---
 
