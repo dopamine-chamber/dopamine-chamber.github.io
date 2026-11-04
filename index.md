@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "The handstand dilemma"
+title: "The physics of handbalancing"
 description: "Models and mechanics explained step by step to understand why the handstand is unstable and what it takes to hold it."
 ---
 
