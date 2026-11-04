@@ -185,7 +185,41 @@ $$\frac{dE}{dt}=\tau\dot\theta,\qquad I\ddot\theta=mgh\sin\theta+\tau$$
   <figcaption>Figure 4. Same kick, three energy budgets. A few joules too little and you fall back; a few too many and you overbalance.</figcaption>
 </figure>
 
-<p>Near the top, the pendulum equation linearises to</p>
+<h2>In the top of the hill</h2>
+
+<p>Near the top, the further you lean, the harder gravity pulls you further. A small tilt feeds itself, so it grows exponentially: with the numbers of our model, it doubles about every fifth of a second. That is quick, but not too quick: tiny corrections at the fingers and wrists are enough to stop it.</p>
+
+<p>With no muscle torque (\(\tau=0\)), gravity is the only torque acting on the body:</p>
+
+<p>$$I\ddot\theta=mgh\sin\theta,\qquad I\approx mh^{2}$$</p>
+
+<p>Dividing both sides by \(I=mh^{2}\):</p>
+
+<p>$$\ddot\theta=\frac{g}{h}\sin\theta$$</p>
+
+<p>Close to vertical the angle is small, and for small angles \(\sin\theta\approx\theta\) (for example, at \(5^\circ\) the two differ by less than 0.2%). So the equation becomes linear:</p>
+
+<p>$$\ddot\theta\approx\frac{g}{h}\,\theta$$</p>
+
+<p>To solve it, we look for a solution of the form \(\theta(t)=e^{st}\). Then \(\ddot\theta=s^{2}e^{st}\), and substituting:</p>
+
+<p>$$s^{2}e^{st}=\frac{g}{h}\,e^{st}\;\Rightarrow\;s^{2}=\frac{g}{h}\;\Rightarrow\;s=\pm\lambda,\qquad \lambda=\sqrt{\frac{g}{h}}$$</p>
+
+<p>There are two solutions: \(e^{-\lambda t}\), which fades away, and \(e^{+\lambda t}\), which grows. The general solution is a mix of the two:</p>
+
+<p>$$\theta(t)=A\,e^{\lambda t}+B\,e^{-\lambda t}$$</p>
+
+<p>After a short time the fading term is negligible, and only the growing one matters:</p>
+
+<p>$$\theta(t)\approx\theta_0\,e^{\lambda t}$$</p>
+
+<p>With \(g=9.81\) m/s² and \(h=1\) m:</p>
+
+<p>$$\lambda=\sqrt{\frac{9.81}{1}}\approx 3.1\ \text{s}^{-1}$$</p>
+
+<p>The tilt doubles when \(e^{\lambda t}=2\), that is after:</p>
+
+<p>$$t_{2}=\frac{\ln 2}{\lambda}=\frac{0.693}{3.13}\approx 0.22\ \text{s}$$</p>
 
 $$\ddot\theta\approx\frac{g}{h}\,\theta\;\Rightarrow\;\theta(t)=\theta_0e^{\lambda t},\qquad \lambda=\sqrt{g/h}\approx3.1\ \text{s}^{-1}$$
 
