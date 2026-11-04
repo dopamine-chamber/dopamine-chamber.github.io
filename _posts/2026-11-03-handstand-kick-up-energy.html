@@ -90,7 +90,9 @@ $$E=K+U,\qquad I\approx mh^{2}$$</p>
 
 <h2>Geometry, technique and... luck</h2>
 
-<p>During the kick-up, our goal is to transfer energy into the system and raise the body's center of mass toward the handstand position. The placement of the support leg plays an important role in this process: moving it farther from the center of mass changes the system's geometry, affecting both the work the muscles must perform and the overall energy balance.</p>
+<p>During the kick-up, our goal is to transfer energy into the system and raise the body's center of mass toward the handstand position.</p>
+  
+<p>The placement of the support leg plays an important role in this process: moving it farther from the center of mass changes the system's geometry, affecting both the work the muscles must perform and the overall energy balance.</p>
 
 <p>The distance between the hands and the front foot enters the model through the starting angle. Let \(x\) be the horizontal distance between the wrists and the centre of mass at the start. For a pendulum of length \(h\) leaning by \(\theta_0\):</p>
 
@@ -118,11 +120,15 @@ $$E=K+U,\qquad I\approx mh^{2}$$</p>
 
 <p>Moving the centre of mass about 9 cm farther back means roughly 35% more energy to deliver. And since the hands can only absorb an error of about 1.5 J, a starting position that differs by just 1.5 mm already uses up the whole margin. This is why a consistent foot placement matters more than it seems: the kick has to be calibrated to a specific starting geometry.</p>
 
-<p>Loading the leg stores energy in muscles and tendons. When the kick fires, the muscles do work at a rate \(P=\tau\dot\theta\) and the total energy rises:</p>
+<p>Loading the leg stores energy in muscles and tendons. When the kick fires, the muscles do work at a rate \(P=\tau\dot\theta\) and the total energy rises (both potential and kinetic energy grow):</p>
 
 $$\frac{dE}{dt}=\tau\dot\theta,\qquad I\ddot\theta=mgh\sin\theta+\tau$$
 
-<p>Once the kick ends, \(\tau\approx0\) and gravity takes over. The body decelerates as it rises, so \(K\) turns into \(U\) and moves back toward zero.</p>
+<p>Once the kick ends, the legs have done their job: they no longer push, they only hold the body in line with an isometric contraction. In our model the muscles add no more energy, because a contraction without movement does no mechanical work ($$W=F\cdot d=0$$ when $$d=0$$).</p>
+  
+<p>Gravity takes over: the body decelerates as it rises, so \(K\) turns into \(U\) and moves back toward zero.</p>
+
+<p>Without a proper technique, along the journey, sometimes you suddenly find yourself balancing without even understanding why.</p>
 
 <figure>
   <img src="{{ '/assets/img/fig1-energy-vs-time.svg' | relative_url }}" alt="Line chart of kinetic, potential and total energy against time during a kick-up. Total energy rises from about minus 293 joules to zero during the 0.35 second kick; kinetic energy peaks near 130 joules and then fades to zero as potential energy approaches zero.">
@@ -133,8 +139,6 @@ $$\frac{dE}{dt}=\tau\dot\theta,\qquad I\ddot\theta=mgh\sin\theta+\tau$$
   <img src="{{ '/assets/img/fig2-energy-landscape.svg' | relative_url }}" alt="Energy against lean angle. The potential energy curve forms a hill whose top is the handstand at zero degrees. The total energy line climbs from the lunge start to the level of the hilltop, and a green band marks the catch zone around vertical.">
   <figcaption>Figure 3. The handstand sits on top of an energy hill. The kick must lift the total energy exactly to the height of the hilltop; the green band is the range of error the hands can still absorb.</figcaption>
 </figure>
-
-<p>Along the journey, sometimes you suddenly find yourself balancing without even understanding why.</p>
 
 <p>The final state is determined by the energy error \(\Delta E=E_{\text{final}}\):</p>
 
