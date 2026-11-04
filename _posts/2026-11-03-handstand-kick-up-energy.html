@@ -1,10 +1,15 @@
 ---
 layout: post
-title: "Why jumping up into a handstand is harder than holding one"
+title: "Focus: is kicking up into a handstand harder than holding it for a few seconds?"
+image:
+  path: /assets/img/og-handstand-kick-up.png
+  alt: "Energy hill diagram of the handstand kick-up"
+description: "Why is the handstand kick-up harder than the handstand itself? A simple energy model shows how much work the kick needs and why precision matters."
+excerpt: "Have you ever felt more frustrated learning to get up into a handstand than to stay in one? How much energy does it take to get into a handstand? In this post we explore the kick-up and why it can be considered a stand-alone training skill."
 date: 2026-11-02 00:00:00 +0000
 author: Benedetta Giglio
-description: "An energy-based explanation of why the kick-up to a handstand is harder than the handstand itself."
-excerpt: "Have you ever felt more frustrated learning to get up into a handstand than to stay in one? In this post we explain the energy cost of kicking up into a handstand."
+last_modified_at: 2026-11-04
+tags: [handstand, kick-up, handstand physics, inverted pendulum, balance]
 ---
 
 <script>
@@ -25,31 +30,51 @@ window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['$$', '$$
 
 <p>You've trained hard: alignment, resistance, belly to the wall... and the first seconds of balance finally show up. <i>Yeeee!</i> But when it comes to the kick-up, you can't make it stick. It's frustrating, and it's hard to be present in the kick when all you're thinking about is <b>balancing on hands.</b></p>
 
-<p>The kick-up comes with a <em>transition</em>, and the transition introduces dynamics, and yes, we have already said that handstands are far from stationary. But with transitions, I mean <i>more dynamic dynamics</i>. It's not only that the energy changes. The point is that it changes... a lot.</p>
+<p>Why does this happen?</p>
 
-<h2>Remember the energy explaination?</h2>
+<p>Well...The kick-up comes with a <em>transition</em>, and the transition introduces dynamics, and yes, we have already said that handstands are far from stationary. But with transitions, I mean <i>more dynamic dynamics</i>. It's not only that the energy changes. The point is that it changes... a lot.</p>
 
-<p></p>We have discuss how energy behaves when we are upside down, trying to hold a straight two arm handstand: we have modelled that we are on the top on a hill, unstables by construction of the system.</p>
+<p>In practice, for me, transitions are harder than a hold. Holding requires isometric control, certainly a lot of neuromuscular activation, the right muscle activations, the right posture. The kick-up, on the other hand, is a dynamic exercise that requires coordination, timing, and a technique that is very different to learn. It involves a motor pattern to memorize: not just proprioception, a sense of oneself in space, but knowing the starting point, the end point, and managing what happens in between. I think, It's much more "gymnast-like", and it could really be the first thing that divides people approaching the handstand into those who have done gymnastics and those who haven't. There are certainly other ways to train coordination, but I'm simplifying...</p>
+
+<h2>Remember the energy explanation?</h2>
+
+<p>We have <a href="https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html">discussed how energy behaves</a> when we are upside down, trying to hold a straight two-arm handstand: we modelled the body as sitting on top of a hill, unstable by construction.</p>
 
 <p>Consider the case of the start from a lunge with hands on the floor: we go from one stationary posture to another. Unlike the small oscillations in the handstand sways, here the legs have to travel a long way.</p>
 
-<p>Model the body as an inverted pendulum pivoting at the wrists, with the centre of mass at distance \(h\) and \(\theta\) the lean from vertical. Choose the handstand as the zero of potential energy:</p>
+<p>Model the body as an inverted pendulum pivoting at the wrists, with the centre of mass at distance \(h\) and \(\theta\) the lean from vertical.</p>
 
-<p>$$U(\theta)=mgh(\cos\theta-1)\le 0,\qquad K=\tfrac12$$</p>
+<p>We chose the handstand as the zero of potential energy, and it is also the maximum (the top of the hill), so any lean away from vertical lowers it, making it negative. The energy of motion depends on how fast the body rotates and how hard it is to rotate, and adding the two gives the total energy we track during a kick-up.</p>
 
-<p>$$I\dot\theta^{2},\qquad E=K+U,\qquad I\approx mh^{2}$$</p>
+<p>In formulas:</p>
+  
+<p class="note">$$U(\theta)=mgh(\cos\theta-1)\le 0,\qquad K=\tfrac12I\dot\theta^{2}$$
 
-<p>In the lunge we are at rest, so both potential and kinetic energy are zero: \(K=0\) and \(U_0=-mgh(1-\cos\theta_0)\). 
+$$E=K+U,\qquad I\approx mh^{2}$$</p>
+
+<p>In the lunge we are at rest, so the kinetic energy is zero, \(K=0\). The potential energy, however, is negative: since we chose the handstand as our zero, the lunge sits lower on the energy hill, at \(U_0=-mgh(1-\cos\theta_0)\).</p>
+
+<p class="note">\(K=0\) and \(U_0=-mgh(1-\cos\theta_0)\)</p>
+
+<p>The total energy is therefore $$E_0=U_0<0$$</p>
 
 <p>The handstand requires still \(K=0\) and \(U=0\), so \(E=0\).</p>
   
-<p><b>Our energy budget starts negative, and the muscles must pay the debt.</b></p>
+<p><i>Conceptually, our energy budget starts negative, and the muscles must pay the debt.</i></p>
 
 <p>We assume that a small portion of the energy is dissipated along the way. As a result, the energy delivered by the muscles, minus the energy lost through inefficiencies and dissipation, must match the change in the system's mechanical energy:</p>
 
-$$W_{\text{muscles}}-W_{\text{lost}}=\Delta E\;\;\Rightarrow\;\; W_{\text{req}}=-U_0=mgh(1-\cos\theta_0)$$
+<p>Note that in this case, muscular work is not limited to the wrists. The kick-up is a whole-body movement involving the coordinated action of the legs, hips, trunk, shoulders, and hands. The body behaves as an integrated system, with each segment contributing to the generation and transfer of mechanical energy.</p>
 
-<p>With \(m=70\) kg, \(h=1\) m and \(\theta_0=55^\circ\), that is about 293 J, delivered in roughly 0.35 s (around 0.8 kW on average).</p>
+<p class="note">$$W_{\text{muscles}}-W_{\text{lost}}=\Delta E\;\;\Rightarrow\;\; W_{\text{req}}=-U_0=mgh(1-\cos\theta_0)$$</p>
+
+<p>With \(m=70\) kg, \(h=1\) m, \(g=9.81\) m/s² and \(\theta_0=55^\circ\), the energy required is:</p>
+
+<p>$$W_{\text{req}}=mgh(1-\cos\theta_0)=70\cdot 9.81\cdot 1\cdot(1-\cos 55^\circ)\approx 687\cdot 0.426\approx 293\ \text{J}$$</p>
+
+<p>This energy is delivered in roughly 0.35 s, so the average power is:</p>
+
+<p>$$P=\frac{W_{\text{req}}}{\Delta t}=\frac{293\ \text{J}}{0.35\ \text{s}}\approx 840\ \text{W}\approx 0.8\ \text{kW}$$</p>
 
 <iframe
     src="/assets/interactive/kick-up-animation.html"
@@ -63,17 +88,55 @@ $$W_{\text{muscles}}-W_{\text{lost}}=\Delta E\;\;\Rightarrow\;\; W_{\text{req}}=
   </figcaption>
 </figure>
 
-<h2>Geometry, coordination and... luck</h2>
+<h2>Geometry, technique and... luck</h2>
 
-<p>During the kick-up, our goal is to transfer energy into the system and raise the body's center of mass toward the handstand position. The placement of the support leg plays an important role in this process: moving it farther from the center of mass changes the system's geometry, affecting both the work the muscles must perform and the overall energy balance.</p>
+<p>During the kick-up, our goal is to transfer energy into the system and raise the body's center of mass toward the handstand position Let's analyse three phases: the starting geometry, the shape of the transition, and the final geometry.</p>
 
-<p>Note that in this case, muscular work is not limited to the wrists. The kick-up is a whole-body movement involving the coordinated action of the legs, hips, trunk, shoulders, and hands. The body behaves as an integrated system, with each segment contributing to the generation and transfer of mechanical energy.</p>
+<h3>Starting shape</h3>
 
-<p>Loading the leg stores energy in muscles and tendons. When the kick fires, the muscles do work at a rate \(P=\tau\dot\theta\) and the total energy rises:</p>
+<p>We are in a lunge. The placement of the support leg plays an important role in this process: moving it farther from the center of mass changes the system's geometry, affecting both the work the muscles must perform and the overall energy balance.</p>
+
+<div class="note">
+  <p>Let \(x\) be the horizontal distance between the wrists and the centre of mass at the start. For a pendulum of length \(h\) leaning by \(\theta_0\):</p>
+
+  <p>$$x=h\sin\theta_0,\qquad x=\alpha d$$</p>
+
+  <p>where \(d\) is the distance between the hands and the front foot, and \(\alpha\) (between 0 and 1) tells us where along that line the centre of mass sits. Putting this into the energy debt we found before:</p>
+
+  <p>$$W_{\text{req}}=mgh(1-\cos\theta_0)=mgh\left(1-\sqrt{1-\frac{\alpha^{2}d^{2}}{h^{2}}}\right)$$</p>
+
+  <p>For small leans this behaves like \(W_{\text{req}}\approx mg\,\alpha^{2}d^{2}/(2h)\): the energy grows roughly with the square of the distance. The torque needed just to start rising, to beat gravity at the lunge, grows linearly:</p>
+
+  <p>$$\tau_0=mgh\sin\theta_0=mg\,\alpha d$$</p>
+
+  <p>How sensitive is the kick to the starting position? Differentiating gives:</p>
+
+  <p>$$\frac{dW_{\text{req}}}{dx}=mg\tan\theta_0$$</p>
+
+  <p>With \(m=70\) kg, \(h=1\) m and \(\theta_0=55^\circ\), that is about 980 J per metre, or roughly 10 J per centimetre. Some numbers from the same model:</p>
+
+  <ul>
+    <li>\(\theta_0=45^\circ\): \(x\approx0.71\) m, \(W_{\text{req}}\approx201\) J</li>
+    <li>\(\theta_0=55^\circ\): \(x\approx0.82\) m, \(W_{\text{req}}\approx293\) J</li>
+    <li>\(\theta_0=65^\circ\): \(x\approx0.91\) m, \(W_{\text{req}}\approx396\) J</li>
+  </ul>
+</div>
+<br>
+<p>Moving the centre of mass about 9 cm farther back means roughly 35% more energy to deliver. And since the hands can only absorb an error of about 1.5 J, a starting position that differs by just 1.5 mm already uses up the whole margin. This is why a consistent foot placement matters more than it seems: the kick has to be calibrated to a specific starting geometry.</p>
+
+<h3>Ready for the kick? See what happen in the transition</h3>
+
+<p>Loading the leg stores energy in muscles and tendons. When the kick fires, the muscles do work at a rate \(P=\tau\dot\theta\) and the total energy rises (both potential and kinetic energy grow):</p>
 
 $$\frac{dE}{dt}=\tau\dot\theta,\qquad I\ddot\theta=mgh\sin\theta+\tau$$
 
-<p>Once the kick ends, \(\tau\approx0\) and gravity takes over. The body decelerates as it rises, so \(K\) turns into \(U\) and moves back toward zero.</p>
+<p>Once the kick ends, the legs have done their job: they no longer push, they only hold the body in line with an isometric contraction. In our model the muscles add no more energy, because a contraction without movement does no mechanical work (\(W=F\cdot d=0\) when \(d=0\)).</p>
+  
+<p>Gravity takes over: the body decelerates as it rises, so \(K\) turns into \(U\) and moves back toward zero.</p>
+
+<p>In the practice, the position you start from affects the amount of energy you have to supply to the system (how demanding is it for your muscles). Setting comparable conditions helps you memorize the motor pattern. Stepping outside those conditions and exploring what happens in different corners of the configuration puts us in a position to explore the pattern, become aware of the movement and become more versatile.</p>
+
+<p>Without being aware of all these parameters, our attempts can lead to a lucky handstand, without our having made sense of what happened. We don't want to end up in a handstand by luck, without having understood why: <i>we want to take control of what is happening</i>. The basic idea, in any case, is movement efficiency. It therefore makes sense to start from the position that requires the least initial energy... especially if we will then spend more of it (neurally) to hold the handstand.</p>
 
 <figure>
   <img src="{{ '/assets/img/fig1-energy-vs-time.svg' | relative_url }}" alt="Line chart of kinetic, potential and total energy against time during a kick-up. Total energy rises from about minus 293 joules to zero during the 0.35 second kick; kinetic energy peaks near 130 joules and then fades to zero as potential energy approaches zero.">
@@ -85,28 +148,76 @@ $$\frac{dE}{dt}=\tau\dot\theta,\qquad I\ddot\theta=mgh\sin\theta+\tau$$
   <figcaption>Figure 3. The handstand sits on top of an energy hill. The kick must lift the total energy exactly to the height of the hilltop; the green band is the range of error the hands can still absorb.</figcaption>
 </figure>
 
-<p>Along the journey, sometimes you suddenly find yourself balancing without even understanding why.</p>
+<h3>If the handstand shows up</h3>
 
-<p>The final state is determined by the energy error \(\Delta E=E_{\text{final}}\):</p>
+<p>We can think of the final state in terms of the energy error \(\Delta E=E_{\text{final}}\).</p>
 
-$$\Delta E>0:\;\;\dot\theta_{\text{top}}=\sqrt{\frac{2\Delta E}{I}}\;\;(\text{overbalance})$$
+<p>All three cases share the same starting values: \(m=70\) kg, \(h=1\) m, \(g=9.81\) m/s² and \(\theta_0=55^\circ\).</p>
 
-$$\qquad \Delta E<0:\;\;\theta_{\max}=\arccos\!\Big(1+\frac{\Delta E}{mgh}\Big)\approx\sqrt{\frac{2|\Delta E|}{mgh}}\;\;(\text{falls back})$$
+<div class="note">
+  $$mgh=70\cdot 9.81\cdot 1\approx 687\ \text{J},\qquad I\approx mh^{2}=70\cdot 1^{2}=70\ \text{kg m}^{2}$$
+
+  $$W_{\text{req}}=mgh(1-\cos\theta_0)=687\cdot(1-\cos 55^\circ)=687\cdot 0.4264\approx 293\ \text{J}$$
+</div>
+
+<p>If the kick delivers a fraction \(p\) of the required energy, the final energy error is:</p>
+
+<p>$$\Delta E=(p-1)\,W_{\text{req}}$$</p>
+
+<div class="note">
+  <ul>
+    <li>
+      <strong>Too little (97%)</strong>
+
+      $$\Delta E=(0.97-1)\cdot 293\approx -8.8\ \text{J}$$
+
+      $$\theta_{\max}=\arccos\!\Big(1+\frac{\Delta E}{mgh}\Big)=\arccos\!\Big(1-\frac{8.8}{687}\Big)=\arccos(0.9872)\approx 9.2^\circ$$
+
+      The body stops about 9° short of vertical and falls back.<br>
+    </li>
+
+    <li>
+      <strong>Just right (99.7%)</strong>
+
+      $$\Delta E=(0.997-1)\cdot 293\approx -0.9\ \text{J}$$
+
+      $$\theta_{\max}=\arccos\!\Big(1-\frac{0.9}{687}\Big)=\arccos(0.9987)\approx 2.9^\circ$$
+
+      The body stops about 3° from vertical, close enough for the hands to take over.<br>
+    </li>
+
+    <li>
+      <strong>Too much (103%)</strong>
+
+      $$\Delta E=(1.03-1)\cdot 293\approx +8.8\ \text{J}$$
+
+      $$\dot\theta_{\text{top}}=\sqrt{\frac{2\Delta E}{I}}=\sqrt{\frac{2\cdot 8.8}{70}}\approx 0.50\ \text{rad/s}\approx 29^\circ/\text{s}$$
+
+      The body reaches the top still rotating at about 29° per second, and overbalances.<br>
+    </li>
+  </ul>
+</div>
+
+<p>An error of 1.5 J is the largest the hands can absorb:</p>
+
+<p>$$\frac{1.5}{293}\approx 0.5\%,\qquad \theta_{\max}\approx\sqrt{\frac{2\cdot 1.5}{687}}\approx 0.066\ \text{rad}\approx 3.8^\circ$$</p>
 
 <p>Your hands can only absorb a small error, a degree or three of lean. In this model that is \(|\Delta E|\lesssim1.5\) J, about 0.5% of the 293 J. The kick lasts about 0.35 s, shorter than typical reaction times, so you can't correct it with feedback mid-flight. You have to get it right in advance.</p>
 
 <figure>
   <img src="{{ '/assets/img/fig3-three-outcomes.svg' | relative_url }}" alt="Three side-by-side charts of energy against time. With 97 percent of the required energy the body falls back; with 99.7 percent it reaches the top; with 103 percent it arrives with leftover kinetic energy and overbalances.">
-  <figcaption>Figure 3. Same kick, three energy budgets. A few joules too little and you fall back; a few too many and you overbalance.</figcaption>
+  <figcaption>Figure 4. Same kick, three energy budgets. A few joules too little and you fall back; a few too many and you overbalance.</figcaption>
 </figure>
 
-<p>Near the top, the pendulum equation linearises to</p>
+<h2>In the top of the hill</h2>
 
-$$\ddot\theta\approx\frac{g}{h}\,\theta\;\Rightarrow\;\theta(t)=\theta_0e^{\lambda t},\qquad \lambda=\sqrt{g/h}\approx3.1\ \text{s}^{-1}$$
+<p>Near the top, the further you lean, the harder gravity pulls you further. A small tilt feeds itself, so it grows exponentially: with the numbers of our model, it doubles about every fifth of a second. That is quick, but not too quick: tiny corrections at the fingers and wrists are enough to stop it.</p>
 
-<p>A tilt doubles in about 0.2 s. That sounds fast, but the energy involved is tiny, so small finger and wrist corrections are enough.</p>
+<p>That sounds fast, but the energy involved is tiny, so small finger and wrist corrections are enough.</p>
 
 <p>In short, holding is a feedback task at almost zero energy, while the kick-up is a feedforward task that moves hundreds of joules and must land within about half a percent. In the kicks-up, coordination matters: it controls <i>how much energy the muscles deliver and when.</i></p>
+
+<p>At this point, you have to shift from the paradigm of explosiveness, power, and muscular energy delivered in a very short time... to that of stillness, small variations of energy, a little energy delivered over a long time. This is one of the things that makes the kick-up difficult. The mind must be ready to welcome this new mode, which comes into play as soon as we have caught the handstand, without being caught off guard. At some point, our inner judge has to tell the prefrontal cortex (which plans, organizes and pursues goals): "Okay, that's enough. Don't change anything anymore. Stay."</p>
 
 <p>For this reason, the kick-up is fundamentally different from balancing in a handstand. During the ascent, the objective is to generate and redirect energy. Once the handstand has been reached, the challenge shifts from energy production to control. Balance becomes a matter of subtle, continuous adjustments performed primarily through the hands and wrists, in a process that feels almost ancient, quiet, and meditative compared with the dynamic effort of the kick-up.</p>
   
@@ -114,4 +225,4 @@ $$\ddot\theta\approx\frac{g}{h}\,\theta\;\Rightarrow\;\theta(t)=\theta_0e^{\lamb
 
 <h2>Sources and references</h2>
 
-Figures 1, 2, 3 and 4: <i>AI-generated illustrations and animation created with Claude (Anthropic) for dopamine-chamber.github.io</i>
+<li>Figures 1, 2, 3 and 4: <i>AI-generated illustrations and animation created with Claude (Anthropic) for dopamine-chamber.github.io</i></li>
