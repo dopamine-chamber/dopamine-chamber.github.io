@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Why is kicking up into a handstand harder than holding it for a few seconds (for beginners)"
-seo_title: "Handstand kick-up: why it's harder than holding one"
 image:
   path: /assets/img/og-handstand-kick-up.png
   alt: "Energy hill diagram of the handstand kick-up"
@@ -31,21 +30,37 @@ window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['$$', '$$
 
 <p>You've trained hard: alignment, resistance, belly to the wall... and the first seconds of balance finally show up. <i>Yeeee!</i> But when it comes to the kick-up, you can't make it stick. It's frustrating, and it's hard to be present in the kick when all you're thinking about is <b>balancing on hands.</b></p>
 
-<p>The kick-up comes with a <em>transition</em>, and the transition introduces dynamics, and yes, we have already said that handstands are far from stationary. But with transitions, I mean <i>more dynamic dynamics</i>. It's not only that the energy changes. The point is that it changes... a lot.</p>
+<p>Why does this happen?</p>
+
+<p>Well...The kick-up comes with a <em>transition</em>, and the transition introduces dynamics, and yes, we have already said that handstands are far from stationary. But with transitions, I mean <i>more dynamic dynamics</i>. It's not only that the energy changes. The point is that it changes... a lot.</p>
+
+<p>In practice, for me, transitions are harder than a hold. Holding requires isometric control, certainly a lot of neuromuscular activation, the right muscle activations, the right posture. The kick-up, on the other hand, is a dynamic exercise that requires coordination, timing, trajectory control and precision. It's much more "gymnast-like", and it could really be the first thing that divides people approaching the handstand into those who have done gymnastics and those who haven't. There are certainly other ways to train coordination, but I'm simplifying...</p>
 
 <h2>Remember the energy explanation?</h2>
 
-<p></p>We have discussed how energy behaves when we are upside down, trying to hold a straight two arm handstand: we have modelled that we are on the top on a hill, unstable by construction of the system.</p>
+<p></p>We have discussed how energy behaves when we are upside down, trying to hold a straight two arm handstand: we have modelled that we are <i>on the top on a hill</i>, unstable by construction of the system.</p>
 
 <p>Consider the case of the start from a lunge with hands on the floor: we go from one stationary posture to another. Unlike the small oscillations in the handstand sways, here the legs have to travel a long way.</p>
 
-<p>Model the body as an inverted pendulum pivoting at the wrists, with the centre of mass at distance \(h\) and \(\theta\) the lean from vertical. Choose the handstand as the zero of potential energy:</p>
+<p>Model the body as an inverted pendulum pivoting at the wrists, with the centre of mass at distance \(h\) and \(\theta\) the lean from vertical.</p>
 
-<p>$$U(\theta)=mgh(\cos\theta-1)\le 0,\qquad K=\tfrac12$$</p>
+<p>We chose the handstand as the zero of potential energy, and it is also the maximum (the top of the hill), so any lean away from vertical lowers it, making it negative. The energy of motion depends on how fast the body rotates and how hard it is to rotate, and adding the two gives the total energy we track during a kick-up.</p>
 
-<p>$$I\dot\theta^{2},\qquad E=K+U,\qquad I\approx mh^{2}$$</p>
+<p>In formulas:</p>
 
-<p>In the lunge we are at rest, so both potential and kinetic energy are zero: \(K=0\) and \(U_0=-mgh(1-\cos\theta_0)\). 
+<blockquote>
+  
+<p>$$U(\theta)=mgh(\cos\theta-1)\le 0,\qquad K=\tfrac12I\dot\theta^{2}$$</p>
+
+<p>$$E=K+U,\qquad I\approx mh^{2}$$</p>
+
+</blockquote>
+
+<p>In the lunge we are at rest, so both potential and kinetic energy are zero. We obtain:
+
+<blockquote></blockquote>
+<p>\(K=0\) and \(U_0=-mgh(1-\cos\theta_0)\).</p>
+</blockquote>
 
 <p>The handstand requires still \(K=0\) and \(U=0\), so \(E=0\).</p>
   
@@ -120,4 +135,4 @@ $$\ddot\theta\approx\frac{g}{h}\,\theta\;\Rightarrow\;\theta(t)=\theta_0e^{\lamb
 
 <h2>Sources and references</h2>
 
-Figures 1, 2, 3 and 4: <i>AI-generated illustrations and animation created with Claude (Anthropic) for dopamine-chamber.github.io</i>
+<li>Figures 1, 2, 3 and 4: <i>AI-generated illustrations and animation created with Claude (Anthropic) for dopamine-chamber.github.io</i></li>
