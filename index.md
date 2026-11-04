@@ -7,9 +7,11 @@ description: "Models and mechanics explained step by step to understand why the 
 
 <h2>disassembling the dilemma</h2>
 
-<img src="{{ '/assets/img/handstand-home_minimal.svg' | relative_url }}"
-     alt="Stick figure going from a straight handstand to a tuck handstand and back"
-     width="200" class="home-handstand">
+<iframe
+  src="assets/img/handstand_home.html"
+  title="Stick figure jumping in handstand"
+  style="width:100%; height:100vh; border:0; display:block;">
+</iframe>
      
 <p style="font-weight: 100">
   Observe like a physicist. Unpack like an engineer. Experience like a practitioner.
