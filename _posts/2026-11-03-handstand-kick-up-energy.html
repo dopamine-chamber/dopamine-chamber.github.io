@@ -88,9 +88,35 @@ $$E=K+U,\qquad I\approx mh^{2}$$</p>
   </figcaption>
 </figure>
 
-<h2>Geometry, coordination and... luck</h2>
+<h2>Geometry, technique and... luck</h2>
 
 <p>During the kick-up, our goal is to transfer energy into the system and raise the body's center of mass toward the handstand position. The placement of the support leg plays an important role in this process: moving it farther from the center of mass changes the system's geometry, affecting both the work the muscles must perform and the overall energy balance.</p>
+
+<p>The distance between the hands and the front foot enters the model through the starting angle. Let \(x\) be the horizontal distance between the wrists and the centre of mass at the start. For a pendulum of length \(h\) leaning by \(\theta_0\):</p>
+
+<p>$$x=h\sin\theta_0,\qquad x=\alpha d$$</p>
+
+<p>where \(d\) is the distance between the hands and the front foot, and \(\alpha\) (between 0 and 1) tells us where along that line the centre of mass sits. Putting this into the energy debt we found before:</p>
+
+<p>$$W_{\text{req}}=mgh(1-\cos\theta_0)=mgh\left(1-\sqrt{1-\frac{\alpha^{2}d^{2}}{h^{2}}}\right)$$</p>
+
+<p>For small leans this behaves like \(W_{\text{req}}\approx mg\,\alpha^{2}d^{2}/(2h)\): the energy grows roughly with the square of the distance. The torque needed just to start rising, to beat gravity at the lunge, grows linearly:</p>
+
+<p>$$\tau_0=mgh\sin\theta_0=mg\,\alpha d$$</p>
+
+<p>How sensitive is the kick to the starting position? Differentiating gives:</p>
+
+<p>$$\frac{dW_{\text{req}}}{dx}=mg\tan\theta_0$$</p>
+
+<p>With \(m=70\) kg, \(h=1\) m and \(\theta_0=55^\circ\), that is about 980 J per metre, or roughly 10 J per centimetre. Some numbers from the same model:</p>
+
+<ul>
+  <li>\(\theta_0=45^\circ\): \(x\approx0.71\) m, \(W_{\text{req}}\approx201\) J</li>
+  <li>\(\theta_0=55^\circ\): \(x\approx0.82\) m, \(W_{\text{req}}\approx293\) J</li>
+  <li>\(\theta_0=65^\circ\): \(x\approx0.91\) m, \(W_{\text{req}}\approx396\) J</li>
+</ul>
+
+<p>Moving the centre of mass about 9 cm farther back means roughly 35% more energy to deliver. And since the hands can only absorb an error of about 1.5 J, a starting position that differs by just 1.5 mm already uses up the whole margin. This is why a consistent foot placement matters more than it seems: the kick has to be calibrated to a specific starting geometry.</p>
 
 <p>Loading the leg stores energy in muscles and tendons. When the kick fires, the muscles do work at a rate \(P=\tau\dot\theta\) and the total energy rises:</p>
 
