@@ -146,45 +146,57 @@ $$\frac{dE}{dt}=\tau\dot\theta,\qquad I\ddot\theta=mgh\sin\theta+\tau$$
 
 <h3>If the handstand shows up</h3>
 
-<p>We can think of the final state in terms of energy error \(\Delta E=E_{\text{final}}\):</p>
+<p>We can think of the final state in terms of the energy error \(\Delta E=E_{\text{final}}\).</p>
 
 <p>All three cases share the same starting values: \(m=70\) kg, \(h=1\) m, \(g=9.81\) m/s² and \(\theta_0=55^\circ\).</p>
 
-<p class="note">$$mgh=70\cdot 9.81\cdot 1\approx 687\ \text{J},\qquad I\approx mh^{2}=70\cdot 1^{2}=70\ \text{kg m}^{2}$$
+<div class="note">
+  $$mgh=70\cdot 9.81\cdot 1\approx 687\ \text{J},\qquad I\approx mh^{2}=70\cdot 1^{2}=70\ \text{kg m}^{2}$$
 
-$$W_{\text{req}}=mgh(1-\cos\theta_0)=687\cdot(1-\cos 55^\circ)=687\cdot 0.4264\approx 293\ \text{J}$$</p>
+  $$W_{\text{req}}=mgh(1-\cos\theta_0)=687\cdot(1-\cos 55^\circ)=687\cdot 0.4264\approx 293\ \text{J}$$
+</div>
 
-<p>If the kick delivers a fraction \(p\) of the required energy, the final energy error is:
-  
-$$\(\Delta E=(p-1)\,W_{\text{req}}\)$$
+<p>If the kick delivers a fraction \(p\) of the required energy, the final energy error is:</p>
 
-<p class="note"><li>Too little (97%):</li>
+<p>$$\Delta E=(p-1)\,W_{\text{req}}$$</p>
 
-$$\Delta E=(0.97-1)\cdot 293\approx -8.8\ \text{J}$$
+<div class="note">
+  <ul>
+    <li>
+      <strong>Too little (97%)</strong>
 
-$$\theta_{\max}=\arccos\!\Big(1+\frac{\Delta E}{mgh}\Big)=\arccos\!\Big(1-\frac{8.8}{687}\Big)=\arccos(0.9872)\approx 9.2^\circ$$
+      $$\Delta E=(0.97-1)\cdot 293\approx -8.8\ \text{J}$$
 
-The body stops about 9° short of vertical and falls back.</p>
+      $$\theta_{\max}=\arccos\!\Big(1+\frac{\Delta E}{mgh}\Big)=\arccos\!\Big(1-\frac{8.8}{687}\Big)=\arccos(0.9872)\approx 9.2^\circ$$
 
-<p class="note"><li>Just right (99.7%):</li>
+      The body stops about 9° short of vertical and falls back.
+    </li>
 
-$$\Delta E=(0.997-1)\cdot 293\approx -0.9\ \text{J}$$
+    <li>
+      <strong>Just right (99.7%)</strong>
 
-$$\theta_{\max}=\arccos\!\Big(1-\frac{0.9}{687}\Big)=\arccos(0.9987)\approx 2.9^\circ$$
+      $$\Delta E=(0.997-1)\cdot 293\approx -0.9\ \text{J}$$
 
-The body stops about 3° from vertical, close enough for the hands to take over.</p>
+      $$\theta_{\max}=\arccos\!\Big(1-\frac{0.9}{687}\Big)=\arccos(0.9987)\approx 2.9^\circ$$
 
-<p class="note"><li>Too much (103%):</li>
+      The body stops about 3° from vertical, close enough for the hands to take over.
+    </li>
 
-$$\Delta E=(1.03-1)\cdot 293\approx +8.8\ \text{J}$$
+    <li>
+      <strong>Too much (103%)</strong>
 
-$$\dot\theta_{\text{top}}=\sqrt{\frac{2\Delta E}{I}}=\sqrt{\frac{2\cdot 8.8}{70}}\approx 0.50\ \text{rad/s}\approx 29^\circ/\text{s}$$
+      $$\Delta E=(1.03-1)\cdot 293\approx +8.8\ \text{J}$$
 
-The body reaches the top still rotating at about 29° per second, and overbalances.
+      $$\dot\theta_{\text{top}}=\sqrt{\frac{2\Delta E}{I}}=\sqrt{\frac{2\cdot 8.8}{70}}\approx 0.50\ \text{rad/s}\approx 29^\circ/\text{s}$$
 
-An error of 1.5 J is the largest the hands can absorb:
+      The body reaches the top still rotating at about 29° per second, and overbalances.
+    </li>
+  </ul>
+</div>
 
-$$\frac{1.5}{293}\approx 0.5\%,\qquad \theta_{\max}\approx\sqrt{\frac{2\cdot 1.5}{687}}\approx 0.066\ \text{rad}\approx 3.8^\circ$$</p>
+<p>An error of 1.5 J is the largest the hands can absorb:</p>
+
+<p>$$\frac{1.5}{293}\approx 0.5\%,\qquad \theta_{\max}\approx\sqrt{\frac{2\cdot 1.5}{687}}\approx 0.066\ \text{rad}\approx 3.8^\circ$$</p>
 
 <p>Your hands can only absorb a small error, a degree or three of lean. In this model that is \(|\Delta E|\lesssim1.5\) J, about 0.5% of the 293 J. The kick lasts about 0.35 s, shorter than typical reaction times, so you can't correct it with feedback mid-flight. You have to get it right in advance.</p>
 
