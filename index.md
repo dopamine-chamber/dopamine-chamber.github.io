@@ -6,6 +6,10 @@ description: "Models and mechanics explained step by step to understand why the 
 
 <h2>disassembling the dilemma</h2>
 
+<p style="font-weight: 100">
+  Observe like a physicist. Unpack like an engineer. Experience like a practitioner.
+</p>
+
 <style>
   .hero-anim {
     margin: 0;
@@ -37,14 +41,6 @@ description: "Models and mechanics explained step by step to understand why the 
     scrolling="no">
   </iframe>
 </figure>
-     
-<p style="font-weight: 100">
-  Observe like a physicist. Unpack like an engineer. Experience like a practitioner.
-</p>
-
-# The physics of the handstand
-
-*Observe like a physicist. Unpack like an engineer. Experience like a practitioner.*
 
 <style>
   .intro {
