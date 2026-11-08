@@ -57,7 +57,7 @@ A handstand looks like stillness. It isn't. Underneath there is a body that keep
 
 <div class="intro" markdown="1">
 
-I’m Benedetta, I’m addicted to handstands, and I like to know why things work, or why they don’t. This blog is where those two habits meet. I start from the simplest model I can build and add one piece at a time: balance, energy, advanced shapes, shape changes. No jargon for its own sake, no magic tricks. I'm not a professional handbalancer, and I have nothing to teach. What I have is curiosity, and what you'll find here are my thoughts on the mechanics of balancing upside down. *[More about the project]*(/about/).
+I’m Benedetta, I’m addicted to handstands, and I like to know why things work, or why they don’t. This blog is where those two habits meet. I start from the simplest model I can build and add one piece at a time: balance, energy, advanced shapes, shape changes. No jargon for its own sake, no magic tricks. I'm not a professional handbalancer, and I have nothing to teach. What I have is curiosity, and what you'll find here are my thoughts on the mechanics of balancing upside down. <em>[More about the project](/about/).</em>
 
 </div>
 
