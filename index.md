@@ -6,11 +6,37 @@ description: "Models and mechanics explained step by step to understand why the 
 
 <h2>disassembling the dilemma</h2>
 
-<iframe
-  src="assets/img/handstand_home.html"
-  title="Stick figure jumping in handstand"
-  style="width:100%; height:100vh; border:0; display:block;">
-</iframe>
+<style>
+  .hero-anim {
+    margin: 0;
+  }
+  .hero-anim iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 20 / 9;
+    max-height: 70vh;
+    border: 0;
+  }
+  @media (max-width: 700px) {
+    .hero-anim iframe {
+      aspect-ratio: 35 / 27;
+    }
+  }
+  .hero-anim figcaption {
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0.75;
+    margin-top: 0.5rem;
+  }
+</style>
+
+<figure class="hero-anim">
+  <iframe
+    src="assets/img/handstand_home.html"
+    title="Animation of a stick figure doing a cartwheel and settling into a handstand, swaying slightly to keep its balance"
+    scrolling="no">
+  </iframe>
+</figure>
      
 <p style="font-weight: 100">
   Observe like a physicist. Unpack like an engineer. Experience like a practitioner.
