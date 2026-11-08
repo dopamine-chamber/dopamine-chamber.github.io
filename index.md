@@ -4,8 +4,8 @@ title: "The physics of handbalancing"
 description: "Models and mechanics explained step by step to understand why the handstand is unstable and what it takes to hold it."
 ---
 
-<p style="font-weight: 100">
-  *Observe like a physicist. Unpack like an engineer. Experience like a practitioner.*
+<p style="font-weight: 600">
+  Observe like a physicist. Unpack like an engineer. Experience like a practitioner.
 </p>
 
 <div class="intro" markdown="1">
