@@ -42,12 +42,21 @@ description: "Models and mechanics explained step by step to understand why the 
   Observe like a physicist. Unpack like an engineer. Experience like a practitioner.
 </p>
 
-{% assign first_post = site.posts | where: "series_order", 1 | first %}
-{% if first_post %}
-<p><strong>New here? Dive deep into the handstand rabbit hole and discover why balancing upside down is so hard. </strong><br> Start with <em><a href="{{ first_post.url | relative_url }}">{{ first_post.title }}</a></em>, or browse <em><a href="{{ '/series/' | relative_url }}">the complete series</a></em>.</p>
-{% endif %}
+# The physics of the handstand
 
-<h2>Latest posts</h2>
+*Observe like a physicist. Unpack like an engineer. Experience like a practitioner.*
+
+A handstand looks like stillness. It isn't. Underneath there is a body that keeps drifting away from balance and keeps being brought back, again and again. This blog is my attempt to understand why: why the handstand is unstable, what gravity is really asking of us, and what it takes to hold the position.
+
+I start from the simplest model I can build and add one piece at a time: balance, energy, advanced shapes, shape changes. No jargon for its own sake, no magic tricks. I’m not a professional handbalancer, and I have nothing to teach. What I have is curiosity, and what you’ll find here are my thoughts on the mechanics of balancing upside down.
+
+## New here? Start here
+
+Dive deep into the handstand rabbit hole: </strong><br> start with <em><a href="{{ first_post.url | relative_url }}">{{ first_post.title }}</a></em>, or browse <em><a href="{{ '/series/' | relative_url }}">the complete series</a></em>.
+
+## Who writes this
+
+I'm Benedetta, [what you do]. I do handstands and I like to know why things work, or why they don't. This blog is where those two habits meet. [More about the project](/about/).
 
 {% for post in site.posts limit:5 %}
 <article>
