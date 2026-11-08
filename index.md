@@ -4,9 +4,7 @@ title: "The physics of handbalancing"
 description: "Models and mechanics explained step by step to understand why the handstand is unstable and what it takes to hold it."
 ---
 
-<p style="font-weight: 400">
-  Observe like a physicist. Unpack like an engineer. Experience like a practitioner.
-</p>
+##### Observe like a physicist. Unpack like an engineer. Experience like a practitioner.
 
 <div class="intro" markdown="1">
 
@@ -53,7 +51,7 @@ A handstand looks like stillness. It isn't. Underneath there is a body that keep
   }
 </style>
 
-## Who writes this
+### Who writes this
 
 <div class="intro" markdown="1">
 
@@ -61,7 +59,7 @@ I’m Benedetta, I’m addicted to handstands, and I like to know why things wor
 
 </div>
 
-## New here?
+### New here?
 
 Dive deep into the handstand rabbit hole: <br>
 Start with <em><a href="/2026/10/19/handstand-physics-balance-model.html">Handstand balance: modelling the problem</a></em>,
