@@ -59,15 +59,16 @@ A handstand looks like stillness. It isn't. Underneath there is a body that keep
 
 <div class="intro" markdown="1">
 
-I'm Benedetta, I am a handstand addicted and I like to know why things work, or why they don't. This blog is where those two habits meet. I start from the simplest model I can build and add one piece at a time: balance, energy, advanced shapes, shape changes. No jargon for its own sake, no magic tricks. I'm not a professional handbalancer, and I have nothing to teach. What I have is curiosity, and what you'll find here are my thoughts on the mechanics of balancing upside down. [More about the project](/about/).
+I'm Benedetta, I am a handstand addicted and I like to know why things work, or why they don't. This blog is where those two habits meet. I start from the simplest model I can build and add one piece at a time: balance, energy, advanced shapes, shape changes. No jargon for its own sake, no magic tricks. I'm not a professional handbalancer, and I have nothing to teach. What I have is curiosity, and what you'll find here are my thoughts on the mechanics of balancing upside down. *[More about the project]*(/about/).
 
 </div>
 
-## New here? Dive deep into the handstand rabbit hole:
+## New here?
 
-Start with <em><a href="{{ first_post.url | relative_url }}">{{ first_post.title }}</a></em>,
+Dive deep into the handstand rabbit hole: <br>
+Start with <em><a href="/2026/10/19/handstand-physics-balance-model.html">Handstand balance: modelling the problem</a></em>,
 follow <em><a href="{{ '/series/' | relative_url }}">the handstand balance series</a></em>,
 or browse <em><a href="{{ '/blog/' | relative_url }}">all the posts</a></em>.
 
 
-<p><small>Want to follow along? <a href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a>. You can also read <a href="{{ '/about/' | relative_url }}">more about this project</a>.</small></p>
+<p><small>Want to follow along? <em><a href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a></em>.</small></p>
