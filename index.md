@@ -46,26 +46,32 @@ description: "Models and mechanics explained step by step to understand why the 
 
 *Observe like a physicist. Unpack like an engineer. Experience like a practitioner.*
 
+<style>
+  .intro {
+    text-align: justify;
+    hyphens: auto;
+  }
+</style>
+
+<div class="intro" markdown="1">
+
 A handstand looks like stillness. It isn't. Underneath there is a body that keeps drifting away from balance and keeps being brought back, again and again. This blog is my attempt to understand why: why the handstand is unstable, what gravity is really asking of us, and what it takes to hold the position.
 
-I start from the simplest model I can build and add one piece at a time: balance, energy, advanced shapes, shape changes. No jargon for its own sake, no magic tricks. I’m not a professional handbalancer, and I have nothing to teach. What I have is curiosity, and what you’ll find here are my thoughts on the mechanics of balancing upside down.
-
-## New here? Start here
-
-Dive deep into the handstand rabbit hole: </strong><br> start with <em><a href="{{ first_post.url | relative_url }}">{{ first_post.title }}</a></em>, or browse <em><a href="{{ '/series/' | relative_url }}">the complete series</a></em>.
+</div>
 
 ## Who writes this
 
-I'm Benedetta, [what you do]. I do handstands and I like to know why things work, or why they don't. This blog is where those two habits meet. [More about the project](/about/).
+<div class="intro" markdown="1">
 
-{% for post in site.posts limit:5 %}
-<article>
-  <h3 style="font-size: 1.6rem;"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-  <p><small>{{ post.date | date: "%b %-d, %Y" }}</small></p>
-  <div class="post-excerpt" style="text-align: justify;">{{ post.excerpt }}</div>
-</article>
-{% endfor %}
+I'm Benedetta, I am a handstand addicted and I like to know why things work, or why they don't. This blog is where those two habits meet. I start from the simplest model I can build and add one piece at a time: balance, energy, advanced shapes, shape changes. No jargon for its own sake, no magic tricks. I'm not a professional handbalancer, and I have nothing to teach. What I have is curiosity, and what you'll find here are my thoughts on the mechanics of balancing upside down. [More about the project](/about/).
 
-<p><a href="{{ '/series/' | relative_url }}">See all posts in the series →</a></p>
+</div>
+
+## New here? Dive deep into the handstand rabbit hole:
+
+Start with <em><a href="{{ first_post.url | relative_url }}">{{ first_post.title }}</a></em>,
+follow <em><a href="{{ '/series/' | relative_url }}">the handstand balance series</a></em>,
+or browse <em><a href="{{ '/blog/' | relative_url }}">all the posts</a></em>.
+
 
 <p><small>Want to follow along? <a href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a>. You can also read <a href="{{ '/about/' | relative_url }}">more about this project</a>.</small></p>
