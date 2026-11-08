@@ -9,6 +9,7 @@ description: All the posts on the physics of the handstand, from newest to oldes
   .post-list li h2 {
     font-size: 1.15rem;
     line-height: 1.3;
+    font-weight: 700;
     margin: 0.2rem 0 0.4rem;
   }
 </style>
