@@ -5,6 +5,14 @@ permalink: /blog/
 description: All the posts on the physics of the handstand, from newest to oldest.
 ---
 
+<style>
+  .post-list li h2 {
+    font-size: 1.15rem;
+    line-height: 1.3;
+    margin: 0.2rem 0 0.4rem;
+  }
+</style>
+
 <ul class="post-list">
 {% for post in site.posts %}
   <li>
