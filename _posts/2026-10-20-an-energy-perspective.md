@@ -10,6 +10,7 @@ description: "Handstand physics: we are intuitively in a state of unstable equil
 author: Benedetta Giglio
 date: 2026-10-20 12:00:00 +0200
 last_modified_at: 2026-11-01
+tags: [handstand, handstand physics, inverted pendulum, balance]
 series_order: 3
 ---
 
