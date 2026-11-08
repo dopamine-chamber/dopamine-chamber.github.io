@@ -29,7 +29,7 @@
 </style>
 </head>
 <body>
-<svg id="stage" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Un omino stilizzato entra con una ruota e resta in verticale sulle mani, a gambe leggermente divaricate. Clicca per rivedere l'animazione.">
+<svg id="stage" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Un omino stilizzato entra con una ruota e resta in verticale sulle mani, a gambe leggermente divaricate. Clicca per rivedere l'animazione.">
   <defs>
     <linearGradient id="fade" gradientUnits="userSpaceOnUse" x1="0" x2="1200" y1="0" y2="0">
       <stop offset="0" stop-color="#888" stop-opacity="0"/>
@@ -37,11 +37,11 @@
       <stop offset=".78" stop-color="#888" stop-opacity="1"/>
       <stop offset="1" stop-color="#888" stop-opacity="0"/>
     </linearGradient>
-    <mask id="floorMask" maskUnits="userSpaceOnUse" x="-2000" y="0" width="5000" height="700">
-      <rect id="floorFade" x="0" y="0" width="1200" height="700" fill="url(#fade)"/>
+    <mask id="floorMask" maskUnits="userSpaceOnUse" x="-2000" y="0" width="5000" height="540">
+      <rect id="floorFade" x="0" y="0" width="1200" height="540" fill="url(#fade)"/>
     </mask>
   </defs>
-  <line id="floor" class="floor" x1="0" y1="620" x2="1200" y2="620" mask="url(#floorMask)"/>
+  <line id="floor" class="floor" x1="0" y1="490" x2="1200" y2="490" mask="url(#floorMask)"/>
   <path id="body" class="line" d=""/>
   <path id="hands" class="hand" d=""/>
   <g id="joints"></g>
@@ -52,7 +52,7 @@
 (function () {
   var svg = document.getElementById('stage');
   var NS = 'http://www.w3.org/2000/svg';
-  var GROUND = 620, K = 140;                       // altezza del suolo, px percorsi per radiante
+  var VH = 540, GROUND = 490, K = 140;             // altezza della scena, altezza del suolo, px percorsi per radiante
   var B = { arm: 95, torso: 125, thigh: 110, shin: 110, sw: 20, hw: 11, neck: 30, headR: 14 };
   var D = 4.6;                                     // durata della ruota (s)
   var PHI1 = 540 * Math.PI / 180;                  // 1,5 giri: finisce capovolto
@@ -74,8 +74,8 @@
 
   function layout() {
     var asp = window.innerWidth / Math.max(window.innerHeight, 1);
-    W = Math.min(1200, Math.max(700, Math.round(700 * asp)));
-    svg.setAttribute('viewBox', '0 0 ' + W + ' 700');
+    W = Math.min(1200, Math.max(700, Math.round(VH * asp)));
+    svg.setAttribute('viewBox', '0 0 ' + W + ' ' + VH);
     cx = W / 2;
     floorEl.setAttribute('x2', W);
     floorFade.setAttribute('width', W);
