@@ -11,6 +11,7 @@ plugins:
   - jekyll-sitemap
   
 header_pages:
+  - blog-index.md
   - series.md
   - about.md
   - privacy-policy.md
