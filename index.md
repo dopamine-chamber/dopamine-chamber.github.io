@@ -7,8 +7,11 @@ description: "Models and mechanics explained step by step to understand why the 
 <style>
   h1, h2, h3, h4 {
     text-align: left;
+    font-weight: 500;
   }
 </style>
+
+### Welcome to the handstand rabbit hole
 
 <div class="intro" markdown="1">
 
@@ -26,6 +29,7 @@ A handstand looks like stillness. It isn’t. Handstand balance is unstable by c
     aspect-ratio: 20 / 9;
     max-height: 70vh;
     border: 0;
+    background: transparent;
   }
   @media (max-width: 700px) {
     .hero-anim iframe {
@@ -54,6 +58,7 @@ A handstand looks like stillness. It isn’t. Handstand balance is unstable by c
     hyphens: auto;
   }
 </style>
+<br>
 
 ### Who writes this
 
