@@ -13,7 +13,7 @@ description: "Models and mechanics explained step by step to understand why the 
 
 ### Unraveling handstand balance
 
-## Observe like a physicist. Unpack like an engineer. Experience like a practitioner.
+#### Observe like a physicist. Unpack like an engineer. Experience like a practitioner.
 
 <div class="intro" markdown="1">
 
