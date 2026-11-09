@@ -15,6 +15,27 @@ tags: [handstand, kick-up, handstand physics, inverted pendulum, balance]
 
 <p>You've trained hard: alignment, resistance, belly to the wall... and the first seconds of balance finally show up. <i>Yeeee!</i> But when it comes to the kick-up, you can't make it stick. It's frustrating, and it's hard to be present in the kick when all you're thinking about is <b>balancing on hands.</b> Why does this happen?</p>
 
+<details markdown="1">
+<summary><strong>Toolbox</strong></summary>
+<br>
+
+* **Small-angle approximation**: for small angles (measured in radians), the cosine function can be approximated as
+
+  $$\cos\theta \approx 1-\frac{\theta^2}{2}.$$
+
+  Substituting this into the potential-energy expression
+
+  $$U(\theta)=mgh(\cos\theta-1),$$
+
+  gives
+
+  $$U(\theta)\approx -\frac{1}{2}mgh\,\theta^2.$$
+
+  This means that the energy debt grows approximately with the square of the lean angle: doubling the lean roughly quadruples the energy required.
+<br>
+
+</details>
+
 <script>
 window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['$$', '$$']] } };
 </script>
@@ -105,11 +126,11 @@ $$
 
 <h2>Geometry, technique and... luck</h2>
 
-<p>During the kick-up, our goal is to transfer energy into the system and raise the body's center of mass toward the handstand position Let's analyse three phases: the starting geometry, the shape of the transition, and the final geometry.</p>
+<p>During the kick-up, our goal is to transfer energy into the system and raise the body's center of mass toward the handstand position Let's analyse three phases: the lunge (the starting position), the transition, and the handstand (the arrive position).</p>
 
-<h3>Starting shape</h3>
+<h3>Initial shape: the lunge position</h3>
 
-<p>We are in a lunge. The placement of the support leg plays an important role in this process: moving it farther from the center of mass changes the system's geometry, affecting both the work the muscles must perform and the overall energy balance.</p>
+<p>In the lunge position, the placement of the support leg plays an important role in this process: moving the pushing leg farther from the centre of mass changes the system's geometry, affecting both the work the muscles must perform and the overall energy balance.</p>
 
 <div class="note">
   <p>Let \(x\) be the horizontal distance between the wrists and the centre of mass at the start. For a pendulum of length \(h\) leaning by \(\theta_0\):</p>
