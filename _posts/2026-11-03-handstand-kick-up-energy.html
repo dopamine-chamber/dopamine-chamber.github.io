@@ -15,11 +15,12 @@ tags: [handstand, kick-up, handstand physics, inverted pendulum, balance]
 
 <p>You've trained hard: alignment, resistance, belly to the wall... and the first seconds of balance finally show up. <i>Yeeee!</i> But when it comes to the kick-up, you can't make it stick. It's frustrating, and it's hard to be present in the kick when all you're thinking about is <b>balancing on hands.</b> Why does this happen?</p>
 
+---
 <details markdown="1">
 <summary><strong>Toolbox</strong></summary>
 <br>
 
-* **Small-angle approximation**: for small angles (measured in radians), the cosine function can be approximated as
+<b>Small-angle approximation</b>: for small angles (measured in radians), the cosine function can be approximated as
 
   $$\cos\theta \approx 1-\frac{\theta^2}{2}.$$
 
@@ -32,9 +33,9 @@ tags: [handstand, kick-up, handstand physics, inverted pendulum, balance]
   $$U(\theta)\approx -\frac{1}{2}mgh\,\theta^2.$$
 
   This means that the energy debt grows approximately with the square of the lean angle: doubling the lean roughly quadruples the energy required.
-<br>
 
 </details>
+---
 
 <script>
 window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['$$', '$$']] } };
@@ -78,7 +79,9 @@ $$E=K+U,\qquad I\approx mh^{2}$$</p>
   
 <p>The potential energy, however, is negative: since we chose the handstand as our zero, the lunge sits lower on the energy hill, at an energy level of \(U_0=-mgh(1-\cos\theta_0)\).</p>
 
-<p class="note" style="background: transparent;">$$\(K=0\) and \(U_0=-mgh(1-\cos\theta_0)\)$$</p>
+<p class="note" style="background: transparent;">
+$$K=0 \qquad \text{and} \qquad U_0=-mgh(1-\cos\theta_0)$$
+</p>
 
 <p>The total energy of the lunge is therefore negative: $$E_0=U_0<0$$</p>
 
@@ -170,7 +173,7 @@ $$\frac{dE}{dt}=\tau\dot\theta,\qquad I\ddot\theta=mgh\sin\theta+\tau$$
 
 <p>Once the kick ends, the legs have done their job: they no longer push, they only hold the body in line with an isometric contraction. In our model the muscles add no more energy, because a contraction without movement does no mechanical work (\(W=F\cdot d=0\) when \(d=0\)).</p>
   
-<p>Gravity takes over: the body decelerates as it rises, so \(K\) turns into \(U\) and moves back toward zero.</p>
+<p>Gravity takes over: the body decelerates as it rises, so \(K\) turns into \(U\) and moves back toward zero (Figures 2 and 3).</p>
 
 <p>In the practice, the position you start from affects the amount of energy you have to supply to the system (how demanding is it for your muscles). Setting comparable conditions helps you memorize the motor pattern. Stepping outside those conditions and exploring what happens in different corners of the configuration puts us in a position to explore the pattern, become aware of the movement and become more versatile.</p>
 
@@ -186,17 +189,17 @@ $$\frac{dE}{dt}=\tau\dot\theta,\qquad I\ddot\theta=mgh\sin\theta+\tau$$
   <figcaption>Figure 3. The handstand sits on top of an energy hill. The kick must lift the total energy exactly to the height of the hilltop; the green band is the range of error the hands can still absorb.</figcaption>
 </figure>
 
-<h3>If the handstand shows up</h3>
+<h3>Final shape (if the handstand shows up)</h3>
 
 <p>We can think of the final state in terms of the energy error \(\Delta E=E_{\text{final}}\).</p>
 
 <p>All three cases share the same starting values: \(m=70\) kg, \(h=1\) m, \(g=9.81\) m/s² and \(\theta_0=55^\circ\).</p>
 
-<div class="note">
+<p class="note" style="background: transparent;">
   $$mgh=70\cdot 9.81\cdot 1\approx 687\ \text{J},\qquad I\approx mh^{2}=70\cdot 1^{2}=70\ \text{kg m}^{2}$$
 
   $$W_{\text{req}}=mgh(1-\cos\theta_0)=687\cdot(1-\cos 55^\circ)=687\cdot 0.4264\approx 293\ \text{J}$$
-</div>
+</p>
 
 <p>If the kick delivers a fraction \(p\) of the required energy, the final energy error is:</p>
 
