@@ -4,11 +4,17 @@ title: "The physics of handbalancing"
 description: "Models and mechanics explained step by step to understand why the handstand is unstable and what it takes to hold it."
 ---
 
+<style>
+  h1, h2, h3, h4 {
+    text-align: left;
+  }
+</style>
+
 ### Observe like a physicist. Unpack like an engineer. Experience like a practitioner.
 
 <div class="intro" markdown="1">
 
-A handstand looks like stillness. It isn't. Underneath there is a body that keeps drifting away from balance and keeps being brought back, again and again. This blog is where my thoughts on *disassembling the dilemma* find their place: why the handstand is unstable, what gravity is really asking of us, and what it takes to hold the position.
+A handstand looks like stillness. It isn’t. Handstand balance is unstable by construction. The human body is not designed to balance on its hands; being upside down is not what we evolved for. And yet humans learn to do it. The Handstand Dilemma exists because that ambivalence is fascinating.
 
 </div>
 
@@ -55,7 +61,7 @@ A handstand looks like stillness. It isn't. Underneath there is a body that keep
 
 <div class="intro" markdown="1">
 
-I’m Benedetta, I’m addicted to handstands, and I like to know why things work, or why they don’t. This blog is where those two habits meet. I start from the simplest model I can build and add one piece at a time: balance, energy, advanced shapes, shape changes. No jargon for its own sake, no magic tricks. I'm not a professional handbalancer, and I have nothing to teach. What I have is curiosity, and what you'll find here are my thoughts on the mechanics of balancing upside down. <em>[More about the project](/about/).</em>
+I'm a biomedical engineer with a long-standing interest in movement, biomechanics and human performance. This project is where handstand practice and analytical reasoning meet. I don't claim to have answers: I'm not a professional handbalancer, I have nothing to teach. The purpose of this project is to document my search for them. <em>[More about the project](/about/).</em>
 
 </div>
 
