@@ -37,7 +37,7 @@ window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['$$', '$$
 
 <p>The kick-up, on the other hand, is a dynamic exercise that requires coordination, timing, and a technique that is very different to learn. It involves a motor pattern to memorize: not just proprioception, a sense of oneself in space, but knowing the starting point, the end point, and managing what happens in between. I think, It's much more "gymnast-like", and it could really be the first thing that divides people approaching the handstand into those who have done gymnastics and those who haven't. There are certainly other ways to train coordination, but I'm simplifying...</p>
 
-<h2>Remember the energy explanation?</h2>
+<h2>How kicks-up work?</h2>
 
 <p>Model the body as an inverted pendulum pivoting at the wrists, with the centre of mass at distance \(h\) and \(\theta\) the lean from vertical.</p>
 
@@ -67,13 +67,25 @@ $$E=K+U,\qquad I\approx mh^{2}$$</p>
 
 <p>We assume that a small portion of the energy is dissipated along the way. As a result, the energy delivered by the muscles, minus the energy lost through inefficiencies and dissipation, must match the change in the system's mechanical energy:</p>
 
-<p>Note that in this case, muscular work is not limited to the wrists. The kick-up is a whole-body movement involving the coordinated action of the legs, hips, trunk, shoulders, and hands. The body behaves as an integrated system, with each segment contributing to the generation and transfer of mechanical energy.</p>
+<p class="note" style="background: transparent;">$$W_{\text{muscles}}-W_{\text{lost}}=\Delta E\;\;\Rightarrow\;\; W_{\text{req}}=-U_0=mgh(1-\cos\theta_0)$$</p>
 
-<p class="note">$$W_{\text{muscles}}-W_{\text{lost}}=\Delta E\;\;\Rightarrow\;\; W_{\text{req}}=-U_0=mgh(1-\cos\theta_0)$$</p>
+<p><i>Note that in this case, muscular work is not limited to the wrists. The kick-up is a whole-body movement involving the coordinated action of the legs, hips, trunk, shoulders, and hands. The body behaves as an integrated system, with each segment contributing to the generation and transfer of mechanical energy.</i></p>
 
-<p>With \(m=70\) kg, \(h=1\) m, \(g=9.81\) m/s² and \(\theta_0=55^\circ\), the energy required is:</p>
 
-<p>$$W_{\text{req}}=mgh(1-\cos\theta_0)=70\cdot 9.81\cdot 1\cdot(1-\cos 55^\circ)\approx 687\cdot 0.426\approx 293\ \text{J}$$</p>
+
+<p>For a 70 kg athlete, a center-of-mass height of 1 m (and Earth's gravitational acceleration g = 9.81 m/s<sup>2</sup>), the required energy is:</p>
+
+<p>
+$$
+\begin{aligned}
+W_{\text{req}}
+&= mgh(1-\cos\theta_0) \\
+&= 70\cdot 9.81\cdot 1\cdot(1-\cos 55^\circ) \\
+&\approx 687\cdot 0.426 \\
+&\approx 293\ \text{J}
+\end{aligned}
+$$
+</p>
 
 <p>This energy is delivered in roughly 0.35 s, so the average power is:</p>
 
