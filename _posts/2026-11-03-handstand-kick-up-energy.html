@@ -13,7 +13,7 @@ last_modified_at: 2026-11-04
 tags: [handstand, kick-up, handstand physics, inverted pendulum, balance]
 ---
 
-<p>Have you ever felt more frustrated learning to get up into a handstand than to stay in one? How much energy does it take to get into a handstand? In this post we explore the kick-up and why it can be considered a stand-alone training skill.</p>
+<p>You've trained hard: alignment, resistance, belly to the wall... and the first seconds of balance finally show up. <i>Yeeee!</i> But when it comes to the kick-up, you can't make it stick. It's frustrating, and it's hard to be present in the kick when all you're thinking about is <b>balancing on hands.</b> Why does this happen?</p>
 
 <script>
 window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['$$', '$$']] } };
@@ -29,39 +29,41 @@ window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['$$', '$$
 
 <h2>Struggling for balance</h2>
 
-<p>You've trained hard: alignment, resistance, belly to the wall... and the first seconds of balance finally show up. <i>Yeeee!</i> But when it comes to the kick-up, you can't make it stick. It's frustrating, and it's hard to be present in the kick when all you're thinking about is <b>balancing on hands.</b></p>
-
 <p>Why does this happen?</p>
 
-<p>The kick-up comes with a <em>transition</em>, and the transition introduces dynamics, and yes, we have already said that handstands are far from stationary. But with transitions, I mean <i>more dynamic dynamics</i>. It's not only that the energy changes. The point is that it changes... a lot.</p>
+<p>The kick-up comes with a <em>transition</em>, and in fact, it's the first real transition we face at the start of the journey. And the transition introduces dynamics, and yes, we have already said that handstands are far from stationary. But with transitions, I mean <i>more dynamic dynamics</i>. It's not only that the energy changes. The point is that it changes... a lot.</p>
 
-<p>In practice, for me, transitions are harder than a hold. Holding requires isometric control, certainly a lot of neuromuscular activation, the right muscle activations, the right posture. The kick-up, on the other hand, is a dynamic exercise that requires coordination, timing, and a technique that is very different to learn. It involves a motor pattern to memorize: not just proprioception, a sense of oneself in space, but knowing the starting point, the end point, and managing what happens in between. I think, It's much more "gymnast-like", and it could really be the first thing that divides people approaching the handstand into those who have done gymnastics and those who haven't. There are certainly other ways to train coordination, but I'm simplifying...</p>
+<p>Holding requires isometric control, certainly a lot of neuromuscular activation, the right muscle activations, the right posture.</p>
+
+<p>The kick-up, on the other hand, is a dynamic exercise that requires coordination, timing, and a technique that is very different to learn. It involves a motor pattern to memorize: not just proprioception, a sense of oneself in space, but knowing the starting point, the end point, and managing what happens in between. I think, It's much more "gymnast-like", and it could really be the first thing that divides people approaching the handstand into those who have done gymnastics and those who haven't. There are certainly other ways to train coordination, but I'm simplifying...</p>
 
 <h2>Remember the energy explanation?</h2>
 
-<p>We have <a href="https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html">discussed how energy behaves</a> when we are upside down, trying to hold a straight two-arm handstand: we modelled the body as sitting on top of a hill, unstable by construction.</p>
+<p>Model the body as an inverted pendulum pivoting at the wrists, with the centre of mass at distance \(h\) and \(\theta\) the lean from vertical.</p>
+
+<p>In the post <b><em>Why a handstand is unstable: an energy perspective</em></b> we have <a href="https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html">discussed how energy behaves</a> when we are upside down, trying to hold a straight two-arm handstand: we modelled the body as sitting on top of a hill, unstable by construction.</p>
 
 <p>Consider the case of the start from a lunge with hands on the floor: we go from one stationary posture to another. Unlike the small oscillations in the handstand sways, here the legs have to travel a long way.</p>
 
-<p>Model the body as an inverted pendulum pivoting at the wrists, with the centre of mass at distance \(h\) and \(\theta\) the lean from vertical.</p>
-
-<p>We chose the handstand as the zero of potential energy, and it is also the maximum (the top of the hill), so any lean away from vertical lowers it, making it negative. The energy of motion depends on how fast the body rotates and how hard it is to rotate, and adding the two gives the total energy we track during a kick-up.</p>
+<p>We chose the <em>handstand as the zero of potential energy, and it is also the maximum</em> (the top of the hill), so <em>any lean away from vertical lowers it</em>, making it negative. The energy of motion depends on how fast the body rotates and how hard it is to rotate, and adding the two gives the total energy we track during a kick-up.</p>
 
 <p>In formulas:</p>
   
-<p class="note">$$U(\theta)=mgh(\cos\theta-1)\le 0,\qquad K=\tfrac12I\dot\theta^{2}$$
+<p class="note" style="background: transparent;">$$U(\theta)=mgh(\cos\theta-1)\le 0,\qquad K=\tfrac12I\dot\theta^{2}$$
 
 $$E=K+U,\qquad I\approx mh^{2}$$</p>
 
-<p>In the lunge we are at rest, so the kinetic energy is zero, \(K=0\). The potential energy, however, is negative: since we chose the handstand as our zero, the lunge sits lower on the energy hill, at \(U_0=-mgh(1-\cos\theta_0)\).</p>
-
-<p class="note">\(K=0\) and \(U_0=-mgh(1-\cos\theta_0)\)</p>
-
-<p>The total energy is therefore $$E_0=U_0<0$$</p>
-
-<p>The handstand requires still \(K=0\) and \(U=0\), so \(E=0\).</p>
+<p>In the lunge we are at rest, so the kinetic energy is zero, \(K=0\).</p>
   
-<p><i>Conceptually, our energy budget starts negative, and the muscles must pay the debt.</i></p>
+<p>The potential energy, however, is negative: since we chose the handstand as our zero, the lunge sits lower on the energy hill, at an energy level of \(U_0=-mgh(1-\cos\theta_0)\).</p>
+
+<p class="note" style="background: transparent;">$$\(K=0\) and \(U_0=-mgh(1-\cos\theta_0)\)$$</p>
+
+<p>The total energy of the lunge is therefore negative: $$E_0=U_0<0$$</p>
+
+<p>The handstand still requires both zero kinetic energy and zero potential energy, \(K=0\) and \(U=0\), so zero total mechanical energy, \(E=0\).</p>
+  
+<p><b>Conceptually, our energy budget starts negative, and the muscles must pay the debt.</b></p>
 
 <p>We assume that a small portion of the energy is dissipated along the way. As a result, the energy delivered by the muscles, minus the energy lost through inefficiencies and dissipation, must match the change in the system's mechanical energy:</p>
 
