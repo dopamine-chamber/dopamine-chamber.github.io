@@ -142,14 +142,4 @@ This website is not directed at children, and I do not knowingly collect their p
 
 I may update this Privacy Policy from time to time. The date of the latest revision is shown at the top of this page.
 
----
-
-### Contact Information
-
-For questions regarding this Privacy Policy or your data, you may contact:
-
-Benedetta Giglio  
-Turin, IT  
-benedettagiglio@gmail.com
-
 </div>
