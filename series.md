@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Handstand balance model"
+title: "Series"
 description: "All the posts of the handstand dilemma series in order: models, energy and mechanics to understand how handbalancing works."
 permalink: /series/
 ---
