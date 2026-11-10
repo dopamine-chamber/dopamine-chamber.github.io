@@ -2,7 +2,7 @@
 layout: page
 title: Newsletter
 permalink: /newsletter/
-description: "A newsletter on the physics of handstand balance is on its way. Tell me if you'd like to hear about it."
+description: "A newsletter on the physics of handstand balance is on its way. Join the list if you'd like to hear about it."
 ---
 
 <style>
@@ -18,12 +18,10 @@ description: "A newsletter on the physics of handstand balance is on its way. Te
 
 I’m thinking about starting a newsletter: new posts on the physics of handstand balance delivered to your inbox, plus the occasional note that doesn’t fit in an article.
 
-It isn’t set up yet, and before building it I’d like to know whether anyone would actually read it. If you’d like to hear about it, send me an email and I’ll write to you once it’s ready.
+It isn’t set up yet, and before building it I’d like to know whether anyone would actually read it. Leave your email address and I’ll write to you once it’s ready.
 
-<a class="btn" href="mailto:thehumanbeinn@gmail.com?subject=Newsletter%20signup&amp;body=Hi%20Benedetta%2C%20please%20add%20me%20to%20the%20newsletter%20list.">Count me in</a>
+<a class="btn" href="[PASTE-YOUR-GOOGLE-FORM-LINK-HERE](https://docs.google.com/forms/d/e/1FAIpQLScUHUH19eT3a6SQB5pTEzOYSEjTDFkXbTV4GtIru3jY2EoDoA/viewform?usp=dialog)" target="_blank" rel="noopener noreferrer">Join the list</a>
 
-If the button doesn’t open your email app, write to benedettagiglio@gmail.com with “Newsletter signup” in the subject.
-
-<small>I’ll use your email address only to tell you when the newsletter launches and to send it afterwards. I won’t share it with anyone, and you can ask me to delete it at any time. Details in the <a href="{{ '/privacy-policy/' | relative_url }}">privacy policy</a>.</small>
+<small>The form is hosted by Google Forms and opens in a new tab. I’ll use your email address only to tell you when the newsletter launches and to send it afterwards. I won’t share it with anyone, and you can ask me to delete it at any time. Details in the <a href="{{ '/privacy-policy/' | relative_url }}">privacy policy</a>. Prefer not to use the form? Write to benedettagiglio@gmail.com with “Newsletter” in the subject.</small>
 
 </div>
