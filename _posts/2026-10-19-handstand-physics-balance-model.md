@@ -99,18 +99,6 @@ $$
 
 In a real handstand, however, the body is never perfectly stationary and perpendicular to the floor. Small adjustments are performed at the hand level, which means the acceleration is not zero. In the next post, we will introduce dynamics and analyze the torques that keep the body (barely) upright.
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7508630837578903"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7508630837578903"
-     data-ad-slot="5117550483"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 This post is part of *[the handstand balance model](/series/).
 [Next: a more accurate handstand balance model →](https://dopamine-chamber.github.io/2026/10/20/straight-two-arm-handstand-model.html)* 
 
