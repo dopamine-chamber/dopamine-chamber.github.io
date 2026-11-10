@@ -52,7 +52,7 @@ I do not ask you to create an account or to provide personal information to read
 - Approximate location (country or city level)
 - Online identifiers stored in analytics cookies, only if you consent
 
-**When you write to me:** your email address, your name if you include it, and the content of your message.
+**When you ask to join the newsletter:** your email address, which you enter in the sign-up form (hosted by Google Forms) or send to me by email.
 
 **When you ask to join the newsletter:** your email address and, if you include it, your name.
 
@@ -90,7 +90,7 @@ This website does not use cookies for advertising or profiling.
 
 ### Newsletter
 
-The newsletter has not been launched yet. If you ask to join the list by emailing me, I collect your email address and, if you include it, your name. I use them only to tell you when the newsletter starts and, afterwards, to send it to you. The list is kept in my personal email account (Gmail) and I do not share it with anyone. If I decide to use a dedicated email service in the future, I will update this policy before doing so.
+The newsletter has not been launched yet. If you ask to join the list, I collect your email address through a sign-up form hosted by Google Forms (or by email, if you prefer to write to me). I use it only to tell you when the newsletter starts and, afterwards, to send it to you. The responses are stored in my personal Google account (Google Forms and Google Sheets) and I do not share them with anyone. This website does not embed the form: it opens on a Google page, where Google may set its own cookies, governed by Google's privacy policy. If I decide to use a dedicated email service in the future, I will update this policy before doing so.
 
 You can withdraw your consent and ask me to delete your address at any time, and every newsletter will explain how to unsubscribe. If the newsletter is never launched, I will delete all the addresses collected.
 
@@ -104,6 +104,7 @@ These services may collect information directly from your browser or device, and
 - **Gmail (Google)**, which hosts the email account I use to receive messages and newsletter requests: [Google Privacy Policy](https://policies.google.com/privacy)
 - **GitHub Pages**, which hosts this website and may log technical data such as IP addresses: [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement)
 - **jsDelivr**, a content delivery network that serves the library used to display equations; it receives your IP address when your browser loads it: [jsDelivr Privacy Policy](https://www.jsdelivr.com/privacy-policy-jsdelivr-net)
+- - **Google Forms and Google Sheets**, which host the newsletter sign-up form and store the list: [Google Privacy Policy](https://policies.google.com/privacy)
 
 ---
 
