@@ -6,74 +6,57 @@ permalink: /privacy-policy/
 
 ---
 
-### Advertising Disclosure
-{: style="text-align: left;"}
+# Privacy policy
 
-This website uses **Google AdSense** to display advertisements. Google and its partners may use cookies and similar tracking technologies to personalize ads and measure performance.
+*Last updated: November 10, 2026*
 
-<div style="text-align: left;" markdown="1">
+This website, **the handstand dilemma**, is a personal blog. It does not display advertising and does not sell or share personal data for marketing purposes.
 
-- For details on how Google uses data, visit: [Google Partner Sites Policy](https://policies.google.com/technologies/partner-sites)
+---
 
-- To manage your ad settings and personalized advertising, visit: [Google Ad Settings](https://adssettings.google.com)
+### Data We Collect
 
-</div>
+We do not ask you to create an account or to provide personal information to read this website. Some data is collected automatically when you visit, through the services listed below:
+
+- IP address
+- Device and browser information
+- Pages visited and time spent on the site
+- Approximate location (country or city level)
+
+If you contact us by email, we will use the information you send only to reply to you.
 
 ---
 
 ### Cookies & Tracking Technologies
-{: style="text-align: left;"}
 
-We use cookies and similar technologies to:
+We use cookies to understand how visitors use this website (for example, which pages are read and from which country visitors come), so that we can improve our content. These analytics cookies are installed only after you give your consent. You can withdraw or change your choice at any time using the website's cookie banner or privacy settings tool.
 
-<div style="text-align: left;" markdown="1">
+| Cookie | Provider | Purpose | Duration |
+|---|---|---|---|
+| `_ga` | Google Analytics | Distinguishes users | 2 years |
+| `_ga_<container-id>` | Google Analytics | Maintains session state | 2 years |
 
-- Display and measure advertisements
-- Understand website traffic and user behavior
-- Improve user experience and site functionality
+You can also delete or block cookies through your browser settings, or install the [Google Analytics opt-out browser add-on](https://tools.google.com/dlpage/gaoptout). Blocking cookies does not prevent you from reading the website.
 
-</div>
-
-*Note:* Where required by law, non-essential cookies and advertising technologies are activated only after obtaining your prior consent.
+This website does not use cookies for advertising or profiling.
 
 ---
 
 ### GDPR Compliance (EEA & UK)
-{: style="text-align: left;"}
 
 If you are located in the European Economic Area (EEA), the United Kingdom, or regions with equivalent laws, data processing is based on your consent or legitimate interest.
-
-Data collected via advertising technologies may include:
-
-<div style="text-align: left;" markdown="1">
-
-- IP address
-- Device and browser information
-- User identifiers
-- Website usage data
-- Approximate location data
-
-</div>
 
 ---
 
 ### Legal Basis for Processing
-{: style="text-align: left;"}
 
-<div style="text-align: left;" markdown="1">
-
-- Your Consent: For non-essential cookies and personalized ads via Google AdSense;
-- Legitimate Interest: To maintain site security, prevent fraud, and analyze technical performance.
-
-</div>
+- Your Consent: For non-essential cookies and analytics;
+- Legitimate Interest: To maintain site security, prevent abuse, and ensure the technical performance of the site.
 
 ---
 
-### Your rights
-{: style="text-align: left;"}
+### Your Rights
 
-<div style="text-align: left;" markdown="1">
-  
 - Access your personal data.
 - Request correction of inaccurate data.
 - Request deletion of your data.
@@ -81,38 +64,29 @@ Data collected via advertising technologies may include:
 - Object to data processing.
 - Lodge a complaint with your local data protection authority.
 
-</div>
-
 ---
 
 ### Third-Party Services
-{: style="text-align: left;"}
 
 We use third-party services that may collect information directly from your browser or device, governed by their respective privacy policies:
 
-<div style="text-align: left;" markdown="1">
+- Google Analytics, to measure website traffic: [Google Privacy Policy](https://policies.google.com/privacy)
+- GitHub Pages, which hosts this website and may log technical data such as IP addresses: [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement)
 
-- Google AdSense & Ad Manager
-- Google Analytics
-- [Google Privacy Policy](https://policies.google.com/privacy)
+Refusing consent will not block access to the site, though it may limit our ability to understand how the site is used.
 
-</div>
+---
 
-Visitors can manage or withdraw their consent at any time using the website's cookie banner or privacy settings tool. Refusing consent will not block access to the site, though it may limit certain features or result in non-personalized ads.
+### Changes to This Policy
+
+We may update this Privacy Policy from time to time. The date of the latest revision is shown at the top of this page.
 
 ---
 
 ### Contact Information
-{: style="text-align: left;"}
 
-For questions regarding this Privacy Notice or your data, you may contact:
+For questions regarding this Privacy Policy or your data, you may contact:
 
-Benedetta Giglio<br>
-Turin, IT<br>
+Benedetta Giglio  
+Turin, IT  
 benedettagiglio@gmail.com
-
----
-
-This website displays advertisements through Google AdSense. Google and its partners may use cookies and similar technologies to personalize ads and measure performance. For more information, please review our [Privacy Policy](https://dopamine-chamber.github.io/privacy-policy/).
-
-{: .footer-disclosure}
