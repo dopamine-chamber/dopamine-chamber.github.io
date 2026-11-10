@@ -2,7 +2,7 @@
 layout: post
 title: "The straight two-arm model and why it is important to fit it"
 image:
-  path: /assets/img/og/inverted_pendulum_handstand_model_r1.png
+  path: /assets/img/handstand_shm.gif
   width: 1200
   height: 630
   alt: "Single rigid-body model of a handstand, seen from the sagittal plane"
