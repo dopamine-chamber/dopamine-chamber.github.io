@@ -51,7 +51,7 @@ description: "Models and mechanics explained step by step to understand why the 
     </iframe>
   </figure>
 
-  <p class="intro">A handstand looks like stillness. It isn’t. Handstand balance is unstable by construction. The human body is not designed to balance on its hands; being upside down is not what we evolved for. And yet humans learn to do it. The Handstand Dilemma exists because that ambivalence is fascinating.</p>
+  <p class="intro">A handstand looks like stillness. It isn’t. Handstand balance is unstable by construction. The human body is not designed to balance on its hands; being upside down is not what we evolved for. And yet humans learn to do it. The Handstand Dilemma exists because that ambivalence is fascinating, and I want to unpack it.</p>
 
   <h2>Follow the series</h2>
   <p>Read the posts in order, or jump to the topic that interests you.</p>
