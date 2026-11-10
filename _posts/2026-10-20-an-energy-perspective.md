@@ -192,18 +192,6 @@ Balancing is therefore not simply “pushing against the fall”: the wrists hav
 
 In the next post we will see in detail the control rule that describe this fine wrist control.
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7508630837578903"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7508630837578903"
-     data-ad-slot="8199221420"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 This post is part of *[the handstand balance model](/series/).
 [Next post: cooming soon →](https://dopamine-chamber.github.io/2026-10-25-handstand-balance-damped-oscillator.html)*
 
