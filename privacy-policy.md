@@ -150,6 +150,6 @@ For questions regarding this Privacy Policy or your data, you may contact:
 
 Benedetta Giglio  
 Turin, IT  
-thehumanbeinn@gmail.com
+benedettagiglio@gmail.com
 
 </div>
