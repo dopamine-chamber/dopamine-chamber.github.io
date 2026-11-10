@@ -1,4 +1,4 @@
-title: the handstand dilemma
+title: © The handstand Dilemma | [Privacy Policy](https://dopamine-chamber.github.io/privacy-policy/)
 tagline: observe like a physicist · unpack like an engineer · experience like a practitioner
 author: Dopamine Chamber. All rights are reserved.
 description: Observe like a physicist. Unpack like an engineer. Experience like a practitioner.
@@ -18,7 +18,6 @@ header_pages:
   - series.md
   - about.md
   - newsletter.md
-  - privacy-policy.md
    
 markdown: kramdown
 kramdown:
