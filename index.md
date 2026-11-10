@@ -66,7 +66,7 @@ A handstand looks like stillness. It isn’t. Handstand balance is unstable by c
 
 <div class="intro" markdown="1">
 
-I'm a biomedical engineer with a long-standing interest in movement, biomechanics and human performance. This project is where handstand practice and analytical reasoning meet. I don't claim to have answers: I'm not a professional handbalancer, I have nothing to teach. The purpose of this project is to document my search for them. <em>[More about the project](/about/).</em>
+I'm a biomedical engineer with a long-standing interest in movement, biomechanics and human performance. This project is where handstand practice and analytical reasoning meet. I don't claim to have answers: the purpose of this project is to document my search for them. <em>[More about the project](/about/).</em>
 
 </div>
 
