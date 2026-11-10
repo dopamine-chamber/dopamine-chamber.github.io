@@ -141,18 +141,6 @@ Moreover, because of the dependence of $$\tau$$ on $$h$$, this result also sugge
 
 In the next posts, we will see that other parameters also play a role and that the wrists can exert only a limited torque, bounded by the size of the contact area under the hands: if $$mgh\sin\theta$$ exceeds that limit, the fall can no longer be stopped.
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7508630837578903"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-7508630837578903"
-     data-ad-slot="6047488771"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 This post is part of *[the handstand balance model](/series/).
 [Next: an energy perspective on handstands balance →](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html)*
 
