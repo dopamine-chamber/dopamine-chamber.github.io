@@ -5,7 +5,24 @@ permalink: /privacy-policy/
 hide_title: true
 ---
 
----
+<style>
+.privacy-policy,
+.privacy-policy h1,
+.privacy-policy h2,
+.privacy-policy h3,
+.privacy-policy p,
+.privacy-policy li,
+.privacy-policy th,
+.privacy-policy td {
+  text-align: left;
+}
+.privacy-policy ul {
+  margin-left: 0;
+  padding-left: 1.2em;
+}
+</style>
+
+<div class="privacy-policy" markdown="1">
 
 # Privacy policy
 
@@ -91,3 +108,5 @@ For questions regarding this Privacy Policy or your data, you may contact:
 Benedetta Giglio  
 Turin, IT  
 benedettagiglio@gmail.com
+
+</div>
