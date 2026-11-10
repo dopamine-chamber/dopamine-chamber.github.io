@@ -5,6 +5,9 @@ permalink: /privacy-policy/
 ---
 
 <style>
+.post-header {
+  display: none;
+}
 .privacy-policy,
 .privacy-policy h1,
 .privacy-policy h2,
@@ -22,6 +25,8 @@ permalink: /privacy-policy/
 </style>
 
 <div class="privacy-policy" markdown="1">
+
+# Privacy policy
 
 *Last updated: November 10, 2026*
 
