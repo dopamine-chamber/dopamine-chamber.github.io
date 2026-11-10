@@ -1,18 +1,20 @@
 <footer class="site-footer h-card">
-  <div class="wrapper">
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <p class="feed-subscribe">
-          {{ site.description | escape }}
-        </p>
-      </div>
-    </div>
+  <div class="wrapper" style="text-align: center;">
 
-    <div class="footer-col-wrapper" style="margin-top: 10px;">
-      <p>
-        {{ site.author | escape }}. All rights are reserved © | 
-        <a href="{{ site.privacy_policy_url }}">Privacy Policy</a>
-      </p>
-    </div>
+    <!-- Prima riga: Titolo -->
+    <h2 class="footer-heading" style="float: none; font-size: 1.125rem; font-weight: normal; margin-bottom: 10px;">
+      {{ site.title | escape }}
+    </h2>
+
+    <!-- Seconda riga: Copyright + Link Cliccabile -->
+    <p style="margin-bottom: 10px; color: #828282;">
+      {{ site.author | escape }} © | <a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a>
+    </p>
+
+    <!-- Terza riga: Descrizione -->
+    <p style="color: #828282; margin-bottom: 0;">
+      {{ site.description | escape }}
+    </p>
+
   </div>
 </footer>
