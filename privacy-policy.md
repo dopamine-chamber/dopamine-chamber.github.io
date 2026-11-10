@@ -2,7 +2,6 @@
 layout: page
 title: Privacy policy
 permalink: /privacy-policy/
-hide_title: true
 ---
 
 <style>
@@ -23,8 +22,6 @@ hide_title: true
 </style>
 
 <div class="privacy-policy" markdown="1">
-
-# Privacy policy
 
 *Last updated: November 10, 2026*
 
