@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The straight two-arm model and why it is important to fit it"
+title: "The straight two-arm model and why to fit it"
 image:
   path: /assets/img/handstand_shm.gif
   width: 1200
