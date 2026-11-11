@@ -2,7 +2,7 @@
 layout: post
 title: "Handstand balance: modelling the problem"
 image:
-  path: /assets/img/og/handstand-physics-balance-model.png
+  path: /assets/img/handstand-physics-balance-model.png
   width: 1200
   height: 630
   alt: "Single rigid-body model of a handstand, seen from the sagittal plane"
