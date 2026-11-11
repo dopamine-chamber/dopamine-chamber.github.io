@@ -75,7 +75,7 @@ Legitimate interest here means keeping the website secure and working properly, 
 
 ### Cookies
 
-This website uses analytics cookies to understand how visitors use it (for example, which pages are read and from which country visitors come), so that I can improve its content. These cookies are installed only after you give your consent through the cookie banner. You can change or withdraw your choice at any time using the cookie settings on this website. Your choice is stored on your device so that you are not asked again every time.
+This website uses analytics cookies to understand how visitors use it (for example, which pages are read and from which country visitors come), so that I can improve its content. These cookies are installed only after you give your consent through the cookie banner. You can change or withdraw your choice at any time using the "Cookie settings" link at the bottom of every page. Your choice is stored in your browser's local storage (not as a cookie) so that you are not asked again every time, and I will ask you again after 12 months.
 
 | Cookie | Provider | Purpose | Duration |
 |---|---|---|---|
