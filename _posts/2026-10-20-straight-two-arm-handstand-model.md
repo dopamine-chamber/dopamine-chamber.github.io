@@ -97,13 +97,13 @@ I understand this may sound tedious and long-winded, but there is a reason why u
 
 Under this regime, its velocity continuously changes direction at the oscillation limits and varies in magnitude, reaching its maximum as the system crosses the vertical reference line.
 
-This is what happens, more or less, to your centre of mass when you use the control torque to recover balance. The common wisdom about controlling a handstand revolves, in fact, around this idea: if you are falling forward, push with your fingers; if you are falling backward, push with your palms. What you are being asked to do is behave like a **harmonic oscillator**.
+This is what happens, more or less, to your centre of mass when you use you fingers to recover balance. In fact, the common wisdom about controlling a handstand revolves around this idea: if you are falling forward, push with your fingers; if you are falling backward, push with your palms. What you are being asked to do is behave like a **harmonic oscillator**.
 
 Unfortunately for those who who genuinely approach handbalancing, as we have seen from the equation above, this result cannot be achieved without active control at the wrists ($$\tau$$).
 
 Yet, an ideal inverted pendulum cannot be mathematically described by simple harmonic motion: it diverges exponentially from the vertical (for small angles). In other words, what we would like to obtain is simply not supported by the underlying physics of the system. 
 
-This is due to the unfavorable configuration we occupy within the gravitational field: our pivot point is located at ground level, while the entire weight of our body is distributed above and rotates around it.
+This is due to the **unfavorable configuration we occupy within the gravitational field**: our pivot point is located at ground level, while the entire weight of our body is distributed above and rotates around it.
 
 When balancing on hands, you (the inverted pendulum) are being asked to behave like a simple pendulum, turning an unstable system into one that oscillates about the vertical (our handstand). 
 
