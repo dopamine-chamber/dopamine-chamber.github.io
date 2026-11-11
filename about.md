@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+description: "A blog on the physics of handstand balance, where six years of practice meet the scientific literature."
 ---
 
 I’ve been practicing handstands for about six years, and in that time I’ve come to realize how good it feels to channel my thinking into something so all-consuming. The Handstand Dilemma was born because my practice had grown too intricate for these thoughts to stay inside my head. I wanted to share them and build something out of them.
