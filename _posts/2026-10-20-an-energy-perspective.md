@@ -2,7 +2,7 @@
 layout: post
 title: "Why a handstand is unstable: an energy perspective"
 image:
-  path: /assets/img/og/fig1_undamped.gif
+  path: /assets/img/fig1_undamped.gif
   width: 1200
   height: 630
   alt: "Single rigid-body model of a handstand, seen from the sagittal plane"
