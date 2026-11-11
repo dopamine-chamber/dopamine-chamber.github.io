@@ -6,7 +6,7 @@ image:
   width: 1200
   height: 630
   alt: "Single rigid-body model of a handstand, seen from the sagittal plane"
-description: "Beneath the apparent absence of motion, handstands are far from stationary: we start to explore the handstand balance model that explains why holding a handstand is hard."
+description: "Handstands are far from stationary. A first physical model of handstand balance, and why holding one is so hard."
 tags: [handstand, biomechanics, inverted pendulum, movement, handbalancing, balance, human movement, model]
 author: Benedetta Giglio
 date: 2026-10-19
