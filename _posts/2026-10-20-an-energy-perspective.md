@@ -55,9 +55,9 @@ Keep in mind that this behaviour is only possible because of **active control at
   <figcaption markdown="span">Figure 1. Inverted pendulum with torque control.</figcaption>
 </figure>
 
-Conceptually, I have always liked to think of these adjustments in terms of energy, because the importance of giving the right angular impulse (torque times duration) is something you learn from experience. 
+Conceptually, I have always liked to think of these adjustments **in terms of energy**, because the importance of giving the right angular impulse (torque times duration) is something you learn from experience. 
 
-In fact, $$\frac{dE}{dt} = \tau\omega$$, meaning the "power of the force" is the rate at which that force transfers energy to the system. The energy changes only through the work done by the wrists, so it is intuitive to aim at keeping it constant, but at the right value. In the following, we verify how maths supports our intuition.
+In fact, $$\frac{dE}{dt} = \tau\omega$$, meaning the "power of the force" is **the rate at which that force transfers energy to the system**. The energy changes only through the work done by the wrists, so it is intuitive to aim at keeping it constant, but at the right value. In the following, we verify how maths supports our intuition.
 
 *Editorial note: the following part contains a lot of maths, which may make the notation a bit heavy. If you want to skip the whole mathematical treatment and go directly to what interests you most, please jump straight to the section: “Conservation of mechanical energy in SIP”. The whole picture will not change.*
 
@@ -163,7 +163,7 @@ $$
 E = E_k + E_p = \tfrac{1}{2}I_O\omega^2 + mgh\,(\cos\theta - 1)
 $$
 
-How does this energy change in time? Using the equation of motion gives the **energy rate equation**:
+To evaluate how it changes over time, we take its derivative with respect to time. Using the equation of motion gives the **energy rate equation**:
 
 $$
 \frac{dE}{dt} = I_O\omega\dot{\omega} - mgh\sin\theta\,\omega = \omega\,(I_O\ddot{\theta} - mgh\sin\theta) = \tau\omega
@@ -171,22 +171,28 @@ $$
 
 The gravitational term cancels out: gravity only exchanges energy between its kinetic and potential forms, and the total energy changes only through the power $$\tau\omega$$ delivered by the control torque. This is why the wrists have to supply power to work against gravity.
 
-The upright position is where the centre of mass is highest, and *we take it as the zero of potential energy* (which in our model is the maximum): any tilt lowers the centre of mass, so gravity releases energy and the body speeds up as it falls, like a ball rolling off the top of a hill. Left to itself, the total energy stays constant, and the body falls away from the vertical (Figure 2).
+**The upright position is where the centre of mass is highest**, and **we take it as the zero of potential energy (which in our model is the maximum)**: any tilt lowers the centre of mass, so gravity releases energy and the body speeds up as it falls. Intuitively, we're balanced at the top of a hill: any small lean converts potential energy into kinetic energy and sends us rolling downhill. 
 
-* With $$E < 0$$, the body does not have enough energy to reach the vertical. As it approaches the upright position its potential energy rises towards zero while its kinetic energy drops, until it vanishes at a tilt \\( \theta_s \\) given by \\( \cos\theta_s = 1 + E/(mgh) \\). There the body stops for an instant, and then gravity pulls it back: it falls away from the vertical on the same side it came from.
-* With $$E > 0$$, the body reaches the vertical with kinetic energy to spare, \\( \tfrac{1}{2}I_O\omega^2 = E \\). It crosses the upright position without stopping and keeps going: it overshoots, and then falls to the other side.
-* With $$E = 0$$, we have the borderline case between the two behaviors: the body would balance on the top of the hill, but any tiny disturbance makes it fall to one side or the other.
+As we have seen, for this to happen it is enough for the wrists to stop providing active control. In the absence of external input, left to itself, the total energy stays constant, and the body falls away from the vertical (Figure 2).
 
 <figure>
   <img src="/assets/img/fig_hilltop.gif" alt="Conservation of energy for the inverted pendulum with no control torque">
   <figcaption markdown="span">Figure 2. Conservation of energy for the inverted pendulum with no control torque ($$\tau = 0$$). The upright position is a maximum of $$E_p$$, so the body falls away from it: kinetic and potential energy are exchanged while their sum $$E$$ stays constant.</figcaption>
 </figure>
 
+## Balance is negotiated
+
+By examining this correction qualitatively, we observe that:
+
+* With $$E < 0$$, the body does not have enough energy to reach the vertical. As it approaches the upright position its potential energy rises towards zero while its kinetic energy drops, until it vanishes at a tilt \\( \theta_s \\) given by \\( \cos\theta_s = 1 + E/(mgh) \\). There the body stops for an instant, and then gravity pulls it back: it falls away from the vertical on the same side it came from.
+* With $$E > 0$$, the body reaches the vertical with kinetic energy to spare, \\( \tfrac{1}{2}I_O\omega^2 = E \\). It crosses the upright position without stopping and keeps going: it overshoots, and then falls to the other side.
+* With $$E = 0$$, we have the borderline case between the two behaviors: the body would balance on the top of the hill, but any tiny disturbance makes it fall to one side or the other.
+
 This is why flailing in response to a loss of balance backfires: a large correction can push $$E$$ well above zero, and the body overshoots. A correction that is too small leaves $$E < 0$$, and the body falls back.
 
 In an ideal world, once $$E = 0$$ with the body moving towards the vertical, the wrists would have nothing left to do: $$\frac{dE}{dt} = \tau\omega = 0$$, and the energy would stay constant at zero. 
 
-In reality, noise, delays and small perturbations keep pushing $$E$$ away from zero, so the muscles never stop working. The energy stays close to zero, with the wrists adding or removing small amounts of it, depending on whether the torque acts along ($$\tau\omega > 0$$) or against ($$\tau\omega < 0$$) the motion.
+In reality, *noise, delays and small perturbations keep pushing $$E$$ away from zero*, so the muscles never stop working. The energy stays close to zero, with the wrists adding or removing small amounts of it, depending on whether the torque acts along ($$\tau\omega > 0$$) or against ($$\tau\omega < 0$$) the motion.
 
 Balancing is therefore not simply “pushing against the fall”: the wrists have to add or remove the right amount of energy at the right moments, until both the tilt and the velocity go to zero. This is why small, well-timed adjustments work better than large, abrupt ones.
 
