@@ -2,6 +2,7 @@
 layout: page
 title: Privacy policy
 permalink: /privacy-policy/
+description: "How the handstand dilemma handles personal data: analytics cookies with your consent, the newsletter list, third-party services and your rights."
 ---
 
 <style>
