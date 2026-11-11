@@ -1,0 +1,156 @@
+{%- comment -%}
+  Cookie banner + Google Analytics, loaded only after the visitor accepts.
+  Included from _includes/head.html. The choice is kept in the browser's
+  local storage for 12 months; the "Cookie settings" link in the footer
+  lets visitors change it at any time.
+{%- endcomment -%}
+<style>
+  #cc-banner {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 1000;
+    background: #fff; color: #222;
+    border-top: 1px solid #222;
+    padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom, 0px));
+    font-size: 0.9rem; line-height: 1.5; text-align: left;
+  }
+  #cc-banner .cc-inner { max-width: 680px; margin: 0 auto; }
+  #cc-banner p { margin: 0 0 0.8rem; text-align: left; }
+  #cc-banner a { color: #222; text-decoration: underline; }
+  #cc-banner .cc-actions { display: flex; gap: 0.6rem; }
+  #cc-banner button {
+    flex: 1; padding: 0.55rem 1rem; font: inherit;
+    color: #fff; background: #222; border: 1px solid #222;
+    border-radius: 6px; cursor: pointer;
+  }
+  #cc-banner button:hover { opacity: 0.85; }
+  #cc-banner button:focus-visible,
+  #cc-banner a:focus-visible { outline: 2px solid #222; outline-offset: 2px; }
+  .cc-settings-link { margin-top: 0.6rem; font-size: 0.85rem; }
+</style>
+<script>
+(function () {
+  var GA_ID = 'G-E1H1K22Z2T';
+  var KEY = 'cookie-consent';
+  var MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000;
+  var POLICY_URL = '{{ "/privacy-policy/" | relative_url }}';
+  var banner = null;
+  var gaLoaded = false;
+
+  function readChoice() {
+    try {
+      var raw = window.localStorage.getItem(KEY);
+      if (!raw) { return null; }
+      var data = JSON.parse(raw);
+      if (!data || typeof data.analytics !== 'boolean') { return null; }
+      if (Date.now() - data.ts > MAX_AGE_MS) { return null; }
+      return data;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function saveChoice(analytics) {
+    try {
+      window.localStorage.setItem(KEY, JSON.stringify({ analytics: analytics, ts: Date.now() }));
+    } catch (e) { /* storage unavailable: the banner will simply ask again */ }
+  }
+
+  function loadAnalytics() {
+    if (gaLoaded) { return; }
+    gaLoaded = true;
+    window['ga-disable-' + GA_ID] = false;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID);
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+  }
+
+  function deleteCookie(name) {
+    var host = window.location.hostname;
+    var parts = host.split('.');
+    var domains = [host, '.' + host];
+    for (var i = 1; i < parts.length - 1; i++) {
+      domains.push('.' + parts.slice(i).join('.'));
+    }
+    var expired = '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+    document.cookie = name + expired;
+    for (var j = 0; j < domains.length; j++) {
+      document.cookie = name + expired + '; domain=' + domains[j];
+    }
+  }
+
+  function clearAnalytics() {
+    window['ga-disable-' + GA_ID] = true;
+    var all = document.cookie ? document.cookie.split(';') : [];
+    for (var i = 0; i < all.length; i++) {
+      var name = all[i].split('=')[0].replace(/^\s+|\s+$/g, '');
+      if (name === '_ga' || name === '_gid' || name.indexOf('_ga_') === 0 || name.indexOf('_gat') === 0) {
+        deleteCookie(name);
+      }
+    }
+  }
+
+  function closeBanner() {
+    if (banner && banner.parentNode) { banner.parentNode.removeChild(banner); }
+    banner = null;
+  }
+
+  function showBanner(moveFocus) {
+    if (banner) { return; }
+    banner = document.createElement('div');
+    banner.id = 'cc-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-modal', 'false');
+    banner.setAttribute('aria-label', 'Cookie settings');
+    banner.innerHTML =
+      '<div class="cc-inner">' +
+        '<p>This site uses Google Analytics cookies to see which pages are read. ' +
+        'They are set only if you accept. There is no advertising. ' +
+        '<a href="' + POLICY_URL + '">Privacy policy</a></p>' +
+        '<div class="cc-actions">' +
+          '<button type="button" data-cc="reject">Reject</button>' +
+          '<button type="button" data-cc="accept">Accept</button>' +
+        '</div>' +
+      '</div>';
+    banner.addEventListener('click', function (e) {
+      var el = e.target;
+      while (el && el !== banner && !(el.getAttribute && el.getAttribute('data-cc'))) { el = el.parentNode; }
+      if (!el || el === banner) { return; }
+      var accepted = el.getAttribute('data-cc') === 'accept';
+      saveChoice(accepted);
+      if (accepted) { loadAnalytics(); } else { clearAnalytics(); }
+      closeBanner();
+    });
+    document.body.appendChild(banner);
+    if (moveFocus) { banner.querySelector('button').focus(); }
+  }
+
+  function addFooterLink() {
+    var host = document.querySelector('.site-footer .wrapper') ||
+               document.querySelector('.site-footer') ||
+               document.body;
+    var p = document.createElement('p');
+    p.className = 'cc-settings-link';
+    var a = document.createElement('a');
+    a.href = '#';
+    a.textContent = 'Cookie settings';
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      showBanner(true);
+    });
+    p.appendChild(a);
+    host.appendChild(p);
+  }
+
+  var choice = readChoice();
+  if (choice && choice.analytics) { loadAnalytics(); }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    addFooterLink();
+    if (!choice) { showBanner(false); }
+  });
+})();
+</script>
