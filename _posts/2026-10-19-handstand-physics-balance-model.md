@@ -7,6 +7,7 @@ image:
   height: 630
   alt: "Single rigid-body model of a handstand, seen from the sagittal plane"
 description: "Beneath the apparent absence of motion, handstands are far from stationary: we start to explore the handstand balance model that explains why holding a handstand is hard."
+tags: [handstand, biomechanics, inverted pendulum, movement, handbalancing, balance, human movement, model]
 author: Benedetta Giglio
 date: 2026-10-19
 last_modified_at: 2026-11-01
@@ -26,16 +27,17 @@ For a long time, my engineering background led me to think of handbalancing as a
 *How can I engage the strongest and most natural kinetic chain without introducing compensations? (Which method is the most effective?)*
 
 And yet, what people generally say about handstands sound similar to what my Physics I professor said on the first day of the course:
-"Sorry if this first lecture may sound complicated. Physics has no beginner level. So it's going to be a complicated lecture."
+*"Sorry if this first lecture may sound complicated. Physics has no beginner level."*
 
-Talking of handstands, it's undeniable that the human body is literally not designed to balance itself on hands, nor for holding handstands for that long. Being upside down is not exactly what we evolved for. Anyway, I'm still fascinated by its ability to reorganize and adapt, even when faced with such an unusual, functionally useless, mentally draining and frustrating task. 
+Talking of handstands, it's undeniable that **the human body is not designed to balance itself on hands**, nor for holding handstands for that long. Being upside down is not exactly what we evolved for. Anyway, I'm still fascinated by its **ability to reorganize and adapt**, even when faced with such an *unusual, functionally useless, mentally draining and frustrating task*. 
+
 But it's important to go across this journey with the right amount of self-denial.
 And a bit of rage.
 
 ## Understanding models (understanding handstands?)
 
 To understand how these beautiful things (these that happen on hands) happen, we need a **model** that can be grasped on the cognitive level. Therefore, over the years, my all-consuming side project has been refining this model to make it fit the handstand dilemma, and ultimately to find the perfect solution to the system. <br>
-**And practicing handstands, of course**. 
+*And practicing handstands, of course*. 
 
 *Editorial note: in this blog there will be a fair amount of maths. Although they're very elegant, my mind doesn't love formulas. But they help a lot to support and clarify what often exists only in our mind as a confused cloud. Maths can also be remarkably relaxing at times. I tend to be an anxious person, and when irrational fears creep into my mind, I like to keep them in check by using numbers to anchor myself in reality. Almost always, I find that the anxiety was only in my head, not in the facts.*
      
@@ -52,7 +54,7 @@ While we were able to give a clear, agreed-upon definition for the model, the sa
 Therefore, modelling something that is hard to describe in explicit terms is no walk in the park. 
 Regarding the level of abstraction, actually, I have trouble leaving out irrelevant aspects. I have a mind that tends to dwell on everything, analyzing it for so long that the rest of the world starts to flow past behind it while I end up *down the rabbit hole*, carrying along everything I found on the way. In short, for me, it calls for an in-depth study.
 
-Anyway, from now on, trying to model the problem will happen on the **three anatomical planes** onto which human movement can be projected: the frontal (or coronal) plane, the transverse (or horizontal) plane, and the sagittal (or median) plane (Figure 1).
+Anyway, from now on, trying to model the problem will happen on the three **anatomical planes** onto which **human movement** can be projected: the frontal (or coronal) plane, the transverse (or horizontal) plane, and the sagittal (or median) plane (Figure 1).
 
 <figure>
   <img src="/assets/img/planes_of_human_movement.png"
