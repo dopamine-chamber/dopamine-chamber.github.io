@@ -11,7 +11,7 @@ A step-by-step exploration of the handstand. Read the posts in order, or jump to
 <ol>
 {% for post in series_posts %}
   <li>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
+    <a href="{{ post.url | relative_url }}"><strong>{{ post.title }}</strong></a><br>
     <small>{{ post.description }}</small>
   </li>
 {% endfor %}
