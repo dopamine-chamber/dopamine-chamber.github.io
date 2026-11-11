@@ -32,6 +32,13 @@ description: "Models and mechanics explained step by step to understand why the 
   .path-list .step { flex: 0 0 2rem; height: 2rem; border: 1px solid #222; border-radius: 50%; text-align: center; line-height: 2rem; font-size: 0.9rem; }
   .path-list a { font-weight: 600; display: block; }
   .path-list small { display: block; margin-top: 0.2rem; color: #6b6b6b; line-height: 1.4; }
+  .page-content .latest-list { display: block; list-style: none; margin: 1rem 0; padding: 0; text-align: left; }
+  .latest-list li { padding: 0.9rem 0; margin: 0; border-top: 1px solid #e5e5e5; }
+  .latest-list li:last-child { border-bottom: 1px solid #e5e5e5; }
+  .latest-list .meta { font-size: 0.85rem; color: #6b6b6b; }
+  .latest-list .tag { margin-left: 0.6rem; padding: 0.05rem 0.5rem; border: 1px solid #222; border-radius: 999px; font-size: 0.75rem; }
+  .latest-list a { display: block; margin-top: 0.2rem; font-weight: 600; }
+  .latest-list small { display: block; margin-top: 0.2rem; color: #6b6b6b; line-height: 1.4; }
 </style>
 
 <div class="home">
@@ -66,6 +73,18 @@ description: "Models and mechanics explained step by step to understand why the 
     </li>
   {% endfor %}
   </ol>
+
+    <h2>Latest posts</h2>
+  <ul class="latest-list">
+  {% for post in site.posts limit: 3 %}
+    <li>
+      <span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span>{% if post.series_order %}<span class="tag">Series, part {{ post.series_order }}</span>{% elsif post.label %}<span class="tag">{{ post.label }}</span>{% endif %}
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <small>{{ post.description | truncatewords: 22 }}</small>
+    </li>
+  {% endfor %}
+  </ul>
+  <p><a href="{{ '/blog/' | relative_url }}">See all posts</a></p>
 
   <h2>Who writes this</h2>
   <p>I’m a biomedical engineer with a long-standing interest in movement, biomechanics and human performance. This project is where handstand practice and analytical reasoning meet. I don’t claim to have answers: the purpose of this project is to document my search for them. <em><a href="{{ '/about/' | relative_url }}">More about the project</a>.</em></p>
