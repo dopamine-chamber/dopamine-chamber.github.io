@@ -39,7 +39,7 @@ For small angles, it behaves like a *damped* oscillator: a system pulled back to
 
 In practice, the feedback rule adds a torque that depends on what the body *senses* in terms of angle and angular velocity. Here, the wrist torque of the model shows up as *pressure* shifting between the fingertips and the heel of the hand, which moves the **centre of pressure** under the body.
 
-What the nervous system actually controls is where the pressure sits under the hands. For a point mass at height h, the horizontal acceleration of the centre of mass is \( \ddot{x} = \frac{g}{h}(x - x_p) \): the body accelerates away from the CoP. Press the fingertips and the CoP moves ahead of the centre of mass, pushing the body back; ease off and it moves behind, letting the body drift forward.
+What the nervous system actually controls is where the pressure sits under the hands. For a point mass at height h, the horizontal acceleration of the centre of mass is $$\ddot{x} = \frac{g}{h}(x - x_p)$$: the body accelerates away from the CoP. Press the fingertips and the CoP moves ahead of the centre of mass, pushing the body back; ease off and it moves behind, letting the body drift forward.
 
 <figure>
   <img src="/assets/img/damped/fig_sagittal_stickman.png" alt="Animation of three handstand-like inverted pendulums with the same natural frequency but damping ratios 0.2, 1 and 2, with their tilt angle plotted over time" loading="lazy">
