@@ -57,8 +57,16 @@ $$\tau = -k_p\theta - k_d\dot{\theta}$$
 The coefficients (gains) $$k_p$$ and $$k_d$$ are tuning parameters (they set how strongly and how quickly the wrists respond to a perturbation: *here lies the trainign and all other jazz!*)
 
 <figure>
-  <img src="/assets/img/damped/fig_feedback_loop.png" alt="Animation of three handstand-like inverted pendulums with the same natural frequency but damping ratios 0.2, 1 and 2, with their tilt angle plotted over time" loading="lazy">
-  <figcaption markdown="span">Figure 2. Same natural frequency $$\omega_n$$, three damping ratios $$\zeta$$: underdamped ($$\zeta < 1$$) the body swings while returning to the vertical; critically damped ($$\zeta = 1$$) it returns as fast as possible without swinging; overdamped ($$\zeta > 1$$) it returns slowly without swinging.</figcaption>
+  <img src="/assets/img/damped/fig_feedback_loop.png"
+       alt="Animation of three handstand-like inverted pendulums with the same natural frequency but damping ratios 0.2, 1 and 2"
+       loading="lazy">
+
+  <figcaption>
+    Figure 2. Same natural frequency \( \omega_n \), three damping ratios \( \zeta \):
+    underdamped (\( \zeta < 1 \)) the body swings while returning to the vertical;
+    critically damped (\( \zeta = 1 \)) it returns as fast as possible without swinging;
+    overdamped (\( \zeta > 1 \)) it returns slowly without swinging.
+  </figcaption>
 </figure>
 
 We know that without control, the linearised equation of motion is $$I\ddot{\theta} = mgh,\theta + \tau$$. With $$\tau = 0$$ the tilt grows exponentially: this is the fall. Substituting the PD law gives:
@@ -70,6 +78,8 @@ This is the equation of a damped harmonic oscillator with effective stiffness $$
 Its *natural frequency* and *damping ratio* are
 
 $$\omega_n = \sqrt{\frac{k_p - mgh}{I}}, \qquad \zeta = \frac{k_d}{2\sqrt{I\,(k_p - mgh)}}$$
+
+* The natural frequency ($$\omega_n$$) is the rate at which the body would sway back and forth on its own if it were nudged away from the vertical and then left alone, with no damping and nobody pushing it. It is the same idea as a mass on a spring, $$\omega_n = \sqrt{k/m}$$ [rad/s], or $$f_n = \omega_n / 2\pi$$ [Hz]: a stiffer spring makes it faster, a heavier mass makes it slower. For a rotation, stiffness becomes a torque per radian and mass becomes the moment of inertia ($$I$$), so in our model $$\omega_n = \sqrt{(k_p - mgh)/I}$$. Gravity subtracts from the stiffness the wrists provide, which is why it is $$k_p - mgh$$, and not $$k_p$$ alone, that sets the rhythm. And the natural frequency exists only if $$k_p > mgh$$: below that threshold there is no swaying at all, only a fall.
 
 * Stiffness ($$k_p$$) describes how strongly the body is pushed back towards the vertical in proportion to how far it has tilted ($$\theta$$). Lean a little and the correction is gentle; lean a lot and it is firm. This is the same rule as a spring: the further you stretch it, the harder it pulls back.
 
@@ -134,7 +144,7 @@ Does it actually settle? Staying close to the vertical does not yet mean coming 
 
 A quick check: for the linearised equation $$I\ddot\theta + k_d\dot\theta + (k_p - mgh)\theta = 0$$, the solutions are combinations of $$e^{st}$$, where $$s$$ solves $$Is^2 + k_d s + (k_p - mgh) = 0$$. When all the coefficients are positive, both roots have a negative real part (their sum is $$-k_d/I < 0$$ and their product is positive), so every solution decays to zero. This gives the same conditions: $$k_p > mgh$$ and $$k_d > 0$$.
 
-<figure> <!-- SEO: rename the file to damped-inverted-pendulum-pd-control.gif, update src, and add width/height attributes --> <img src="/assets/img/fig2_damped.gif" alt="Simulation of a handstand modelled as an inverted pendulum with PD control, returning to vertical as energy decays" loading="lazy"> <figcaption markdown="span">Figure 2. Handstand modelled as an inverted pendulum with PD control and damping ($$k_p > mgh$$, $$k_d > 0$$). The body returns to the vertical (left). The mechanical energy $$E$$ rises and falls as the torque alternately adds and removes energy ($$dE/dt = \tau\omega$$), while $$E_c$$ is non-increasing ($$dE_c/dt = -k_d\omega^2 \le 0$$). Both tend to zero, the energy of the upright equilibrium.</figcaption> </figure>
+<figure> <!-- SEO: rename the file to damped-inverted-pendulum-pd-control.gif, update src, and add width/height attributes --> <img src="/assets/img/fig2_damped.gif" alt="Simulation of a handstand modelled as an inverted pendulum with PD control, returning to vertical as energy decays" loading="lazy"> <figcaption markdown="span">Figure 4. Handstand modelled as an inverted pendulum with PD control and damping ($$k_p > mgh$$, $$k_d > 0$$). The body returns to the vertical (left). The mechanical energy $$E$$ rises and falls as the torque alternately adds and removes energy ($$dE/dt = \tau\omega$$), while $$E_c$$ is non-increasing ($$dE_c/dt = -k_d\omega^2 \le 0$$). Both tend to zero, the energy of the upright equilibrium.</figcaption> </figure>
 
 # Why delay matters in a handstand
 
