@@ -6,10 +6,9 @@ tags: [handstand, biomechanics, inverted pendulum, control theory]
 image: /assets/img/damped-inverted-pendulum.png
 date: 2026-10-25 12:00:00 +0200
 series_order: 4
-published: false
 ---
 
-So far, we have tried to describe the motion of the center of mass of our model, the stick figure with all of its mass concentrated at the centre of mass. As we have seen, for good control of a handstand, we aim for this motion to be fine and very precise. Now, we want to describe this motion mathematically in order to study its components: we have seen that it is not possible to obtain harmonic motion from our stick figure without introducing neuromuscular control, because, left on its own, our stick figure falls. This control is a *feedback rule*, which in the real world is exerted by our wrists. What does this feedback rule look like?
+So far, we have described the motion of the center of mass of our stick figure, where all of its mass concentrated. For good control of a handstand, we aim for this motion to be fine and very precise. We have seen that it is not possible to obtain harmonic motion from our stick figure without introducing neuromuscular control, because, left on its own, our stick figure falls. This control is a *feedback rule*, which in the real world is exerted by our wrists. What does this feedback rule look like?
 
 <details markdown="1"> <summary>Toolbox</summary>
 
@@ -26,11 +25,16 @@ So far, we have tried to describe the motion of the center of mass of our model,
 * Net stiffness. Gravity acts on the inverted pendulum as a destabilising spring of stiffness $$mgh$$. The stiffness that governs the dynamics is therefore $$k_p - mgh$$.
 </details>
 
-# A feedback rule: the wrist torque explained
+# Error is data: the feedback-stabilised SIP
 
-In [the previous post](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html) we saw that, in our model, the wrists are the only way to change the energy of the body: without a control torque the handstand position is *the top of a hill*. To hold the belance effectively, corrections must have the right **direction**, the right **size** and the right **timing**. That is where the damped oscillator comes in.
+In [the previous post](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html) we saw that, in our model, the wrists are the only way to change the energy and the stability of the body: without a control torque the handstand position is unstable (*the top of a hill*) and falls.
 
-With a feedback by the wrists, the body behaves as a *feedback-stabilised inverted pendulum* which, for small angles, behaves like a *damped* oscillator: a system pulled back towards equilibrium by a **spring-like force**, whose swings die out thanks to a **damping term**. Here, stiffness and damping are produced actively by the muscles. It stays upright only if the effective stiffness is positive and there is some damping.
+To hold the balance effectively, corrections must have the right *direction*, the right *size* and the right *timing*: that is where the *damped oscillator* comes in. Introducing wrists feedback, the body behaves as a *feedback-stabilised inverted pendulum*.
+
+For small angles, it behaves like a *damped* oscillator: a system pulled back towards equilibrium by a **spring-like force**, whose swings die out thanks to a **damping term**. Here, *stiffness and damping are produced actively by the muscles*. The body stays upright only if:
+
+* the effective stiffness is positive
+* there is some damping
 
 In practice, the feedback rule adds a torque that depends on what the body *senses* in terms of angle and angular velocity. Here, the wrist torque of the model shows up as **pressure** shifting between the fingertips and the heel of the hand, which moves the *centre of pressure* under the body. And the feedback decides how much to shift, and when. 
 
@@ -43,17 +47,19 @@ In practice, the feedback rule adds a torque that depends on what the body *sens
 
 ## What does the feedback rule look like?
 
-To illustrate the mechanism, consider a linear Proportional-Derivative (PD) control law, a feedback rule that combines a term proportional to the error with a term proportional to its rate of change:
+This mechanism is well described by a linear Proportional-Derivative (PD) control law, a feedback rule that combines a term proportional to the error with a term proportional to its rate of change:
 
 $$\tau = -k_p\theta - k_d\dot{\theta}$$
 
-The coefficients (gains) $$k_p$$ and $$k_d$$ are tuning parameters: they set how strongly and how quickly the wrists respond to a perturbation. 
+The coefficients (gains) $$k_p$$ and $$k_d$$ are tuning parameters (they set how strongly and how quickly the wrists respond to a perturbation: *here lies the trainign and all other jazz!*)
 
 Without control, the linearised equation of motion is $$I\ddot{\theta} = mgh,\theta + \tau$$. With $$\tau = 0$$ the tilt grows exponentially: this is the fall. Substituting the PD law gives:
 
 $$I\ddot{\theta} + k_d\dot{\theta} + (k_p - mgh)\theta = 0$$
 
-This is the equation of a damped harmonic oscillator with effective stiffness $$k_p - mgh$$. Its natural frequency and damping ratio are
+This is the equation of a damped harmonic oscillator with effective stiffness $$k_p - mgh$$. 
+
+Its *natural frequency* and damping ratio are
 
 $$\omega_n = \sqrt{\frac{k_p - mgh}{I}}, \qquad \zeta = \frac{k_d}{2\sqrt{I\,(k_p - mgh)}}$$
 
