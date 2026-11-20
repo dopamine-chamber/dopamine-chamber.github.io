@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The damped oscillator: how good are your fingers?"
+title: "Error is data:the damped oscillator"
 description: "How the wrists keep a handstand upright: a damped-oscillator model with PD control, stability conditions, energy analysis and the effect of delay."
 tags: [handstand, biomechanics, inverted pendulum, control theory]
 image: /assets/img/damped-inverted-pendulum.png
@@ -25,7 +25,7 @@ So far, we have described the motion of the center of mass of our stick figure, 
 * Net stiffness. Gravity acts on the inverted pendulum as a destabilising spring of stiffness $$mgh$$. The stiffness that governs the dynamics is therefore $$k_p - mgh$$.
 </details>
 
-# Error is data: the feedback-stabilised SIP
+# The feedback-stabilised single inverted pendulum
 
 In [the previous post](https://dopamine-chamber.github.io/2026/10/20/an-energy-perspective.html) we saw that, in our model, the wrists are the only way to change the energy and the stability of the body: without a control torque the handstand position is unstable (*the top of a hill*) and falls.
 
