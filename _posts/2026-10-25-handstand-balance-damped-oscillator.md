@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Error is data:the damped oscillator"
+title: "Error is data: the damped oscillator"
 description: "How the wrists keep a handstand upright: a damped-oscillator model with PD control, stability conditions, energy analysis and the effect of delay."
 tags: [handstand, biomechanics, inverted pendulum, control theory]
 image: /assets/img/damped-inverted-pendulum.png
@@ -71,7 +71,6 @@ $$\omega_n = \sqrt{\frac{k_p - mgh}{I}}, \qquad \zeta = \frac{k_d}{2\sqrt{I\,(k_
 * Gravity, on the other hand, acts as a spring with negative stiffness, $$-mgh$$: it pushes the body away from the vertical, and the further it tilts, the harder it pushes. The wrists must therefore provide a spring stiff enough to win this contest, so that the net stiffness $$k_p - mgh$$ stays positive.
 
 * Damping describes a force that opposes how fast the body is moving, whatever its position. It works like a shock absorber: without it, a spring keeps bouncing; with it, the bouncing fades away. In a handstand, damping is what stops the body from swaying back and forth ever more widely as it overcorrects.
-
 Unlike stiffness, damping receives no contribution from gravity: gravity depends on the tilt angle, not on its speed. This is why the equation only needs an effective stiffness, while the damping is simply $$k_d$$.
 
 The body oscillates while returning to the vertical only if $$\zeta < 1$$. For $$\zeta = 1$$ the return is the fastest possible without oscillation, and for $$\zeta > 1$$ it is slower and non-oscillatory. The spring and the damper here are not passive materials: they are the controller, that is, muscles driven by the nervous system.
