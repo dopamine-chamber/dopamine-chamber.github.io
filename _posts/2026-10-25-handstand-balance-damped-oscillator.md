@@ -1,4 +1,4 @@
-<img width="4032" height="614" alt="image" src="https://github.com/user-attachments/assets/ea412a04-3cc9-4ddf-bc35-f4582576733d" />---
+---
 layout: post
 title: "Error is data: the damped oscillator"
 description: "How the wrists keep a handstand upright: a damped-oscillator model with PD control, stability conditions, energy analysis and the effect of delay."
