@@ -1,4 +1,4 @@
----
+<img width="4032" height="614" alt="image" src="https://github.com/user-attachments/assets/ea412a04-3cc9-4ddf-bc35-f4582576733d" />---
 layout: post
 title: "Error is data: the damped oscillator"
 description: "How the wrists keep a handstand upright: a damped-oscillator model with PD control, stability conditions, energy analysis and the effect of delay."
@@ -46,11 +46,15 @@ What the nervous system actually controls is where the pressure sits under the h
   <figcaption markdown="span">Figure 1. Same natural frequency $$\omega_n$$, three damping ratios $$\zeta$$: underdamped ($$\zeta < 1$$) the body swings while returning to the vertical; critically damped ($$\zeta = 1$$) it returns as fast as possible without swinging; overdamped ($$\zeta > 1$$) it returns slowly without swinging.</figcaption>
 </figure>
 
-*Editorial note: Models are elegant, and coming across the different model scientist have provided to formalize the handstand balance is fascinating me very hard. However, models are models, and they only help us understand the mechanics of a handstand, and mechanics tells us which joint torques are needed. Learning to produce them is another matter: it takes strength, mobility and coordination.*
+This is what we saw in [*The straight two-arm model and why to fit it*]({% post_url 2026-10-20-the-straight-two-arm-model-and-why-to-fit-it %}). Figure 3 (top view) illustrates this mechanism: when the centre of mass moves sideways relative to the hands, the hand position creates a restoring effect. By shifting the centre of pressure through the wrists and  that drives the system back toward equilibrium.
 
 ## Error is data: what does the feedback rule look like?
 
-This mechanism is well described by a linear Proportional-Derivative (PD) control law, a feedback rule that combines a term proportional to the error with a term proportional to its rate of change:
+This mechanism is well described by a linear Proportional-Derivative (PD) control law.
+
+*Editorial note: Models are elegant, and coming across the different model scientist have provided to formalize the handstand balance is fascinating me very hard. However, models are models, and they only help us understand the mechanics of a handstand, and mechanics tells us which joint torques are needed. Learning to produce them is another matter: it takes strength, mobility and coordination.*
+
+Anyway, PD control law is a **feedback rule** that combines a term *proportional to the error* with a term *proportional to its rate of change*:
 
 $$\tau = -k_p\theta - k_d\dot{\theta}$$
 
