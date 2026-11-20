@@ -173,4 +173,4 @@ The model also has limits. The torque at the wrists is bounded by the size of th
 - [Royal Society Open Science](https://royalsocietypublishing.org/rsos/article/4/7/161018/93310/Balance-control-strategies-during-perturbed-and){:target="_blank" rel="noopener noreferrer"} - Balance control strategies during perturbed and unperturbed balance in standing and handstand
 - [Teesside University](https://research.tees.ac.uk/en/publications/strategies-for-maintaining-a-handstand-in-the-anterior-posterior-/){:target="_blank" rel="noopener noreferrer"} - Strategies for maintaining a handstand in the anterior-posterior direction
 - [Philosophical Transactions of the Royal Society A](https://royalsocietypublishing.org/rsta/article-abstract/367/1891/1195/17515/Delay-effects-in-the-human-sensory-system-during?redirectedFrom=fulltext){:target="_blank" rel="noopener noreferrer"} - Delay effects in the human sensory system during balancing
-Figure 1 - Generated via Python for dopamine-chamber.github.io
+- Figure 1, 2, 3 and 4 - Generated via Python for dopamine-chamber.github.io
