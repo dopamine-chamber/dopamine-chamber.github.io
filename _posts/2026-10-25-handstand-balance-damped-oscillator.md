@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Error is data:the damped oscillator"
+title: "Error is data: the damped oscillator"
 description: "How the wrists keep a handstand upright: a damped-oscillator model with PD control, stability conditions, energy analysis and the effect of delay."
 tags: [handstand, biomechanics, inverted pendulum, control theory]
 image: /assets/img/damped-inverted-pendulum.png
@@ -35,17 +35,20 @@ For small angles, it behaves like a *damped* oscillator: a system pulled back to
 
 * the effective stiffness is positive
 * there is some damping
+{: style="display: block; margin-left: 30px;"}
 
-In practice, the feedback rule adds a torque that depends on what the body *senses* in terms of angle and angular velocity. Here, the wrist torque of the model shows up as **pressure** shifting between the fingertips and the heel of the hand, which moves the *centre of pressure* under the body. And the feedback decides how much to shift, and when. 
+In practice, the feedback rule adds a torque that depends on what the body *senses* in terms of angle and angular velocity. Here, the wrist torque of the model shows up as **pressure** shifting between the fingertips and the heel of the hand, which moves the *centre of pressure* under the body.
+
+What the nervous system actually controls is where the pressure sits under the hands. For a point mass at height h, the horizontal acceleration of the centre of mass is (ẍ = (g/h)(x − x_p)): the body accelerates away from the CoP. Press the fingertips and the CoP moves ahead of the centre of mass, pushing the body back; ease off and it moves behind, letting the body drift forward.
+
+<figure>
+  <img src="/assets/img/damped/fig_sagittal_stickman.png" alt="Animation of three handstand-like inverted pendulums with the same natural frequency but damping ratios 0.2, 1 and 2, with their tilt angle plotted over time" loading="lazy">
+  <figcaption markdown="span">Figure 1. Same natural frequency $$\omega_n$$, three damping ratios $$\zeta$$: underdamped ($$\zeta < 1$$) the body swings while returning to the vertical; critically damped ($$\zeta = 1$$) it returns as fast as possible without swinging; overdamped ($$\zeta > 1$$) it returns slowly without swinging.</figcaption>
+</figure>
 
 *Editorial note: Models are elegant, and coming across the different model scientist have provided to formalize the handstand balance is fascinating me very hard. However, models are models, and they only help us understand the mechanics of a handstand, and mechanics tells us which joint torques are needed. Learning to produce them is another matter: it takes strength, mobility and coordination.*
 
-*Technical note: The model we are going to explore mantains the assumptions of the previous posts of the [series](https://dopamine-chamber.github.io/series/):*
-*- the body is a single rigid segment pivoting about the wrists*
-*- it moves only in the sagittal plane*
-*- the tilt angles are small**
-
-## What does the feedback rule look like?
+## Error is data: what does the feedback rule look like?
 
 This mechanism is well described by a linear Proportional-Derivative (PD) control law, a feedback rule that combines a term proportional to the error with a term proportional to its rate of change:
 
@@ -53,30 +56,35 @@ $$\tau = -k_p\theta - k_d\dot{\theta}$$
 
 The coefficients (gains) $$k_p$$ and $$k_d$$ are tuning parameters (they set how strongly and how quickly the wrists respond to a perturbation: *here lies the trainign and all other jazz!*)
 
-Without control, the linearised equation of motion is $$I\ddot{\theta} = mgh,\theta + \tau$$. With $$\tau = 0$$ the tilt grows exponentially: this is the fall. Substituting the PD law gives:
+<figure>
+  <img src="/assets/img/damped/fig_feedback_loop.png" alt="Animation of three handstand-like inverted pendulums with the same natural frequency but damping ratios 0.2, 1 and 2, with their tilt angle plotted over time" loading="lazy">
+  <figcaption markdown="span">Figure 2. Same natural frequency $$\omega_n$$, three damping ratios $$\zeta$$: underdamped ($$\zeta < 1$$) the body swings while returning to the vertical; critically damped ($$\zeta = 1$$) it returns as fast as possible without swinging; overdamped ($$\zeta > 1$$) it returns slowly without swinging.</figcaption>
+</figure>
+
+We know that without control, the linearised equation of motion is $$I\ddot{\theta} = mgh,\theta + \tau$$. With $$\tau = 0$$ the tilt grows exponentially: this is the fall. Substituting the PD law gives:
 
 $$I\ddot{\theta} + k_d\dot{\theta} + (k_p - mgh)\theta = 0$$
 
 This is the equation of a damped harmonic oscillator with effective stiffness $$k_p - mgh$$. 
 
-Its *natural frequency* and damping ratio are
+Its *natural frequency* and *damping ratio* are
 
 $$\omega_n = \sqrt{\frac{k_p - mgh}{I}}, \qquad \zeta = \frac{k_d}{2\sqrt{I\,(k_p - mgh)}}$$
 
-<figure>
-  <img src="/assets/img/damped-oscillator-ratio.gif" alt="Animation of three handstand-like inverted pendulums with the same natural frequency but damping ratios 0.2, 1 and 2, with their tilt angle plotted over time" loading="lazy">
-  <figcaption markdown="span">Figure 1. Same natural frequency $$\omega_n$$, three damping ratios $$\zeta$$: underdamped ($$\zeta < 1$$) the body swings while returning to the vertical; critically damped ($$\zeta = 1$$) it returns as fast as possible without swinging; overdamped ($$\zeta > 1$$) it returns slowly without swinging.</figcaption>
-</figure>
+* Stiffness ($$k_p$$) describes how strongly the body is pushed back towards the vertical in proportion to how far it has tilted ($$\theta$$). Lean a little and the correction is gentle; lean a lot and it is firm. This is the same rule as a spring: the further you stretch it, the harder it pulls back.
 
-Stiffness describes how strongly the body is pushed back towards the vertical in proportion to how far it has tilted. Lean a little and the correction is gentle; lean a lot and it is firm. This is the same rule as a spring: the further you stretch it, the harder it pulls back.
+* Gravity, on the other hand, acts as a spring with negative stiffness, $$-mgh$$: it pushes the body away from the vertical, and the further it tilts, the harder it pushes. The wrists must therefore provide a spring ($$k_p$$) stiff enough to win this contest, so that the net stiffness ($$k_p - mgh$$) stays positive.
 
-Gravity, on the other hand, acts as a spring with negative stiffness, $$-mgh$$: it pushes the body away from the vertical, and the further it tilts, the harder it pushes. The wrists must therefore provide a spring stiff enough to win this contest, so that the net stiffness $$k_p - mgh$$ stays positive.
-
-Damping describes a force that opposes how fast the body is moving, whatever its position. It works like a shock absorber: without it, a spring keeps bouncing; with it, the bouncing fades away. In a handstand, damping is what stops the body from swaying back and forth ever more widely as it overcorrects.
-
-Unlike stiffness, damping receives no contribution from gravity: gravity depends on the tilt angle, not on its speed. This is why the equation only needs an effective stiffness, while the damping is simply $$k_d$$.
+* Damping ($$k_d$$) describes a force that opposes how fast the body is moving ($$\dot{\theta}$$), whatever its position ($$\theta$$). It works like a shock absorber: without it, a spring keeps bouncing; with it, the bouncing fades away. In a handstand, damping is what stops the body from swaying back and forth ever more widely as it overcorrects.
+Unlike stiffness, damping receives no contribution from gravity: gravity depends on the tilt angle ($$\theta$$), not on its speed ($$\dot{\theta}$$). This is why the equation only needs an effective stiffness ($$k_p - mgh$$), while the damping is simply $$k_d$$.
 
 The body oscillates while returning to the vertical only if $$\zeta < 1$$. For $$\zeta = 1$$ the return is the fastest possible without oscillation, and for $$\zeta > 1$$ it is slower and non-oscillatory. The spring and the damper here are not passive materials: they are the controller, that is, muscles driven by the nervous system.
+
+<figure>
+  <img src="/assets/img/damped/damped-oscillator-ratio.gif" alt="Animation of three handstand-like inverted pendulums with the same natural frequency but damping ratios 0.2, 1 and 2, with their tilt angle plotted over time" loading="lazy">
+  <figcaption markdown="span">Figure 3. Same natural frequency $$\omega_n$$, three damping ratios $$\zeta$$: underdamped ($$\zeta < 1$$) the body swings while returning to the vertical; critically damped ($$\zeta = 1$$) it returns as fast as possible without swinging; overdamped ($$\zeta > 1$$) it returns slowly without swinging.</figcaption>
+</figure>
+
 
 ## Stability conditions
 
