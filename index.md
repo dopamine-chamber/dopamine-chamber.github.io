@@ -44,7 +44,7 @@ description: "Models and mechanics explained step by step to understand why the 
 <div class="home">
 
   <h1>Unraveling handstand balance</h1>
-  <p class="lead">Why is a handstand unstable, and why do humans do it anyway? A physical and philosophical approach to understanding the handstand phenomenon, built from the ground up.</p>
+  <p class="lead">The Handstand Dilemma is an editorial project where physical and philosophical approaches meet to explore the handstand phenomenon, deconstructing it from the ground up.</p>
   <p>
     <a class="btn btn-primary" href="{{ start_post.url | relative_url }}">Start here</a>
     <a class="btn" href="{{ '/blog/' | relative_url }}">Browse all posts</a>
@@ -58,13 +58,15 @@ description: "Models and mechanics explained step by step to understand why the 
     </iframe>
   </figure>
 
-  <p class="intro">A handstand looks like stillness. It isn’t. Physically: the body’s centre of mass sits above the hands, and any error grows exponentially, roughly doubling every quarter of a second. Staying up means correcting, continuously, with wrists and fingers that were never selected for the job. Evolution didn’t build us to balance on our hands. And yet humans learn to do it.<br>
+  <div class="intro">
+  <p>A handstand looks like stillness. It isn’t. Physically: the body’s centre of mass sits above the hands, and any error grows exponentially, roughly doubling every quarter of a second. Staying up means correcting, continuously, with wrists and fingers that were never selected for the job. Evolution didn’t build us to balance on our hands. And yet humans learn to do it.</p>
 
-That is what makes the handstand philosophically interesting. Heraclitus saw the harmony of the world in tension, like the bow and the lyre: opposing forces that hold each other in place. The handstand is that idea in a body: not a state but an action. You stay balanced only by continuing to balance. If it were stable, it would be a pose, like lying down, and it would be worth little; its value comes from its precariousness.<br>
+  <p>That is what makes the handstand philosophically interesting. Heraclitus saw the harmony of the world in tension, like the bow and the lyre: opposing forces that hold each other in place. The handstand is that idea in a body: not a state but an action. You stay balanced only by continuing to balance. If it were stable, it would be a pose, like lying down, and it would be worth little; its value comes from its precariousness.</p>
 
-It is also a small Sisyphus. No handstand is final: it always ends. Camus asks us to imagine Sisyphus happy. But Sisyphus is condemned to his rock, while we choose our handstands, and that may be the whole point. Anyone who practices knows the value lies not in the arrival but in the repeated attempt.<br>
+  <p>It is also a small Sisyphus. No handstand is final: it always ends. Camus asks us to imagine Sisyphus happy. But Sisyphus is condemned to his rock, while we choose our handstands, and that may be the whole point. Anyone who practices knows the value lies not in the arrival but in the repeated attempt.</p>
 
-The Handstand Dilemma is about that tension: a posture that looks like stillness, is made of constant motion, and serves no purpose except itself. I want to understand why we keep doing it.</p>
+  <p>The Handstand Dilemma is about that tension: a posture that looks like stillness, is made of constant motion, and serves no purpose except itself. I want to understand why we keep doing it.</p>
+</div>
 
   <h2>Follow the series</h2>
   <p>Read the posts in order, or jump to the topic that interests you.</p>
