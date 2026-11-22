@@ -8,7 +8,7 @@ date: 2026-10-25 12:00:00 +0200
 series_order: 4
 ---
 
-So far, we have described the motion of the center of mass of our stick figure, where all of its mass concentrated. For good control of a handstand, we aim for this motion to be fine and very precise. We have seen that it is not possible to obtain harmonic motion from our stick figure without introducing neuromuscular control, because, left on its own, our stick figure falls. This control is a *feedback rule*, which in the real world is exerted by our wrists. What does this feedback rule look like?
+So far, we have described the motion of the center of mass of our stick figure, where all of its mass is concentrated. For good control of a handstand, we aim for this motion to be fine and very precise. We have seen that it is not possible to obtain harmonic motion from our stick figure without introducing neuromuscular control, because, left on its own, our stick figure falls. This control is a *feedback rule*, which in the real world is exerted by our wrists. What does this feedback rule look like?
 
 ---
 <details markdown="1"> <summary>Toolbox</summary>
@@ -41,14 +41,14 @@ For small angles, it behaves like a *damped* oscillator: a system pulled back to
 
 In practice, the feedback rule adds a torque that depends on what the body *senses* in terms of angle and angular velocity. Here, the wrist torque of the model shows up as *pressure* shifting between the fingertips and the heel of the hand, which moves the **centre of pressure** under the body.
 
-What the nervous system actually controls is where the pressure sits under the hands. For a point mass at height h, the horizontal acceleration of the centre of mass is $$\ddot{x} = \frac{g}{h}(x - x_p)$$: the body accelerates away from the CoP. Press the fingertips and the CoP moves ahead of the centre of mass, pushing the body back; ease off and it moves behind, letting the body drift forward.
+What the nervous system actually controls is where the pressure sits under the hands. For a point mass at height $$h$$, the horizontal acceleration of the centre of mass is $$\ddot{x} = \frac{g}{h}(x - x_p)$$: the body accelerates away from the CoP. Press the fingertips and the CoP moves ahead of the centre of mass, pushing the body back; ease off and it moves behind, letting the body drift forward.
 
 <figure>
   <img src="/assets/img/damped/fig_sagittal_stickman.png" alt="Animation of three handstand-like inverted pendulums with the same natural frequency but damping ratios 0.2, 1 and 2, with their tilt angle plotted over time" loading="lazy">
   <figcaption markdown="span">Figure 1. Same natural frequency $$\omega_n$$, three damping ratios $$\zeta$$: underdamped ($$\zeta < 1$$) the body swings while returning to the vertical; critically damped ($$\zeta = 1$$) it returns as fast as possible without swinging; overdamped ($$\zeta > 1$$) it returns slowly without swinging.</figcaption>
 </figure>
 
-This is what we saw in [*The straight two-arm model and why to fit it*](https://dopamine-chamber.github.io/2026/10/20/straight-two-arm-handstand-model.html). Figure 3 (top view) illustrates this mechanism: when the centre of mass moves sideways relative to the hands, the hand position creates a restoring effect. By shifting the centre of pressure through the wrists and  that drives the system back toward equilibrium.
+This is what we saw in [*The straight two-arm model and why to fit it*](https://dopamine-chamber.github.io/2026/10/20/straight-two-arm-handstand-model.html). Figure 3 (top view) illustrates this mechanism: when the centre of mass moves sideways relative to the hands, the hand position creates a restoring effect. By shifting the centre of pressure through the wrists, you create a corrective torque that drives the system back toward equilibrium.
 
 ## Error is data: what does the feedback rule look like?
 
@@ -60,7 +60,7 @@ Anyway, PD control law is a **feedback rule** that combines a term *proportional
 
 $$\tau = -k_p\theta - k_d\dot{\theta}$$
 
-The coefficients (gains) $$k_p$$ and $$k_d$$ are tuning parameters (they set how strongly and how quickly the wrists respond to a perturbation: *here lies the trainign and all other jazz!*)
+The coefficients (gains) $$k_p$$ and $$k_d$$ are tuning parameters (they set how strongly and how quickly the wrists respond to a perturbation: *here lies the training and all other jazz!*)
 
 <figure>
   <img src="/assets/img/damped/fig_feedback_loop.png"
@@ -146,7 +146,7 @@ $$E_c \approx \tfrac{1}{2} I \omega^2 + \tfrac{1}{2}\,(k_p - mgh)\,\theta^2$$
 
 This is positive for every state except $$\theta = \omega = 0$$ (it is positive definite) exactly when $$k_p > mgh$$. In that case $$E_c$$ has the shape of a bowl with its bottom at the balanced handstand; otherwise the balanced handstand is a peak. Since $$E_c$$ can never increase, the body can never climb the walls of the bowl, so it stays close to the vertical. This property is called stability.
 
-Does it actually settle? Staying close to the vertical does not yet mean coming to rest there. The energy stops decreasing, $$dE_c/dt = 0$$, not only at equilibrium but whenever $$\omega = 0$$, even with $$\theta \neq 0$$, because a brake does nothing to a body that is momentarily still, for example at the extreme of a sway. However, the body cannot remain still away from the vertical: if $$\omega$$ stayed zero, $$\dot\omega$$ would be zero too, and the linearised equation of motion would give $$(k_p - mgh),\theta = 0$$, that is $$\theta = 0$$. Anywhere else, a net torque restarts the motion and the brake acts again. LaSalle’s invariance principle makes this argument rigorous: if the energy cannot increase and the motion stays bounded, the system converges to the largest set on which the energy remains constant and which the system cannot leave. Here that set is the balanced handstand alone, so the body returns to the vertical (asymptotic stability).
+Does it actually settle? Staying close to the vertical does not yet mean coming to rest there. The energy stops decreasing, $$dE_c/dt = 0$$, not only at equilibrium but whenever $$\omega = 0$$, even with $$\theta \neq 0$$, because a brake does nothing to a body that is momentarily still, for example at the extreme of a sway. However, the body cannot remain still away from the vertical: if $$\omega$$ stayed zero, $$\dot\omega$$ would be zero too, and the linearised equation of motion would give $$(k_p - mgh)\theta = 0$$, that is $$\theta = 0$$. Anywhere else, a net torque restarts the motion and the brake acts again. LaSalle’s invariance principle makes this argument rigorous: if the energy cannot increase and the motion stays bounded, the system converges to the largest set on which the energy remains constant and which the system cannot leave. Here that set is the balanced handstand alone, so the body returns to the vertical (asymptotic stability).
 
 A quick check: for the linearised equation $$I\ddot\theta + k_d\dot\theta + (k_p - mgh)\theta = 0$$, the solutions are combinations of $$e^{st}$$, where $$s$$ solves $$Is^2 + k_d s + (k_p - mgh) = 0$$. When all the coefficients are positive, both roots have a negative real part (their sum is $$-k_d/I < 0$$ and their product is positive), so every solution decays to zero. This gives the same conditions: $$k_p > mgh$$ and $$k_d > 0$$.
 
