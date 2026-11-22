@@ -10,6 +10,7 @@ series_order: 4
 
 So far, we have described the motion of the center of mass of our stick figure, where all of its mass concentrated. For good control of a handstand, we aim for this motion to be fine and very precise. We have seen that it is not possible to obtain harmonic motion from our stick figure without introducing neuromuscular control, because, left on its own, our stick figure falls. This control is a *feedback rule*, which in the real world is exerted by our wrists. What does this feedback rule look like?
 
+---
 <details markdown="1"> <summary>Toolbox</summary>
 
 * $$\theta$$ is the tilt angle of the body from the vertical
@@ -24,6 +25,7 @@ So far, we have described the motion of the center of mass of our stick figure, 
 * Damping (dissipation). The term $$-k_d\dot{\theta}$$ opposes motion and dissipates mechanical energy, reducing or eliminating oscillations.
 * Net stiffness. Gravity acts on the inverted pendulum as a destabilising spring of stiffness $$mgh$$. The stiffness that governs the dynamics is therefore $$k_p - mgh$$.
 </details>
+---
 
 # The feedback-stabilised single inverted pendulum
 
@@ -46,7 +48,7 @@ What the nervous system actually controls is where the pressure sits under the h
   <figcaption markdown="span">Figure 1. Same natural frequency $$\omega_n$$, three damping ratios $$\zeta$$: underdamped ($$\zeta < 1$$) the body swings while returning to the vertical; critically damped ($$\zeta = 1$$) it returns as fast as possible without swinging; overdamped ($$\zeta > 1$$) it returns slowly without swinging.</figcaption>
 </figure>
 
-This is what we saw in [*The straight two-arm model and why to fit it*]({% post_url 2026-10-20-the-straight-two-arm-model-and-why-to-fit-it %}). Figure 3 (top view) illustrates this mechanism: when the centre of mass moves sideways relative to the hands, the hand position creates a restoring effect. By shifting the centre of pressure through the wrists and  that drives the system back toward equilibrium.
+This is what we saw in [*The straight two-arm model and why to fit it*](https://dopamine-chamber.github.io/2026/10/20/straight-two-arm-handstand-model.html). Figure 3 (top view) illustrates this mechanism: when the centre of mass moves sideways relative to the hands, the hand position creates a restoring effect. By shifting the centre of pressure through the wrists and  that drives the system back toward equilibrium.
 
 ## Error is data: what does the feedback rule look like?
 
@@ -73,7 +75,7 @@ The coefficients (gains) $$k_p$$ and $$k_d$$ are tuning parameters (they set how
   </figcaption>
 </figure>
 
-We know that without control, the linearised equation of motion is $$I\ddot{\theta} = mgh,\theta + \tau$$. With $$\tau = 0$$ the tilt grows exponentially: this is the fall. Substituting the PD law gives:
+We know that without control, the linearised equation of motion is $$I\ddot{\theta} = mgh\theta + \tau$$. With $$\tau = 0$$ the tilt grows exponentially: this is the fall. Substituting the PD law gives:
 
 $$I\ddot{\theta} + k_d\dot{\theta} + (k_p - mgh)\theta = 0$$
 
