@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Unraveling handstand balance"
+title: "Handbalancing is a way of thinking"
 description: "Models and mechanics explained step by step to understand why the handstand is unstable and what it takes to hold it."
 ---
 
