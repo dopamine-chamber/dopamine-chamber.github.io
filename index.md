@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Handbalancing is a way of thinking"
-description: "Models and mechanics explained step by step to understand why the handstand is unstable and what it takes to hold it."
+title: "Movement is a way of thinking"
+description: "Physics lessons in an upside-down context: exploring the handstand balance"
 ---
 
 {% assign series_posts = site.posts | where_exp: "post", "post.series_order" | sort: "series_order" %}
@@ -44,7 +44,7 @@ description: "Models and mechanics explained step by step to understand why the 
 <div class="home">
 
   <h1>Unraveling handstand balance</h1>
-  <p class="lead">The Handstand Dilemma is an editorial project where physical and philosophical approaches meet to explore the handstand phenomenon, deconstructing it from the ground up.</p>
+  <p class="lead">It's how we experience the world. It's a way to look at human potential. The Handstand Dilemma is an editorial project where physical and philosophical approaches meet to explore the handstand phenomenon, deconstructing it from the ground up. Same physical principles, different context. </p>
   <p>
     <a class="btn btn-primary" href="{{ start_post.url | relative_url }}">Start here</a>
     <a class="btn" href="{{ '/blog/' | relative_url }}">Browse all posts</a>
@@ -59,7 +59,7 @@ description: "Models and mechanics explained step by step to understand why the 
   </figure>
 
   <div class="intro">
-  <p>A handstand looks like stillness. It isn’t. Physically: the body’s centre of mass sits above the hands, and any error grows exponentially, roughly doubling every quarter of a second. Staying up means correcting, continuously, with wrists and fingers that were never selected for the job. Evolution didn’t build us to balance on our hands. And yet humans learn to do it.</p>
+  <p>A handstand looks like stillness. It isn’t. Physically, the body’s centre of mass sits above the hands, and any error grows exponentially, roughly doubling every quarter of a second. Staying up means correcting, continuously, with wrists and fingers that were never selected for the job. Evolution didn’t build us to balance on our hands. And yet humans learn to do it.</p>
 
   <p>That is what makes the handstand philosophically interesting. Heraclitus saw the harmony of the world in tension, like the bow and the lyre: opposing forces that hold each other in place. The handstand is that idea in a body: not a state but an action. You stay balanced only by continuing to balance. If it were stable, it would be a pose, like lying down, and it would be worth little; its value comes from its precariousness.</p>
 
