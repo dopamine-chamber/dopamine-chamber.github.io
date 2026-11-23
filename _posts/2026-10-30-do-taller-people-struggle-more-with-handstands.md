@@ -67,7 +67,9 @@ Around the wrist, gravity pulls the CoM forward (at horizontal distance $$d = h\
 
 $$I\ddot{\theta} = mg\,d - F_y\,c$$
 
-Meanwhile, linear motion links the body’s acceleration to the external forces: horizontally, $$m\ddot{x}_{\text{CoM}} = F_x$$ (with $$\ddot{x}_{\text{CoM}}$$ coming from the geometry of $$\theta$$); vertically, $$m\ddot{y}_{\text{CoM}} = F_y - mg$$. 
+Meanwhile, linear motion links the body’s acceleration to the external forces: 
+* horizontally: $$m\ddot{x}_{\text{CoM}} = F_x$$ (with $$\ddot{x}_{\text{CoM}}$$ coming from the geometry of $$\theta$$)
+* vertically, $$m\ddot{y}_{\text{CoM}} = F_y - mg$$
 
 Combining these lets us isolate $$\ddot{\theta}$$ from the positions of the CoM and CoP—and once we know how the body is accelerating, we can plug that acceleration right back in to solve for the forces and wrist torque.
 
@@ -75,47 +77,22 @@ In practical terms, this means we don't need to measure complex internal muscle 
 
 Four quantities are monitored:
 
-- the **vertical force** $$F_y$$ ($$N$$), which supports body weight;
-- the **shear force** $$F_x$$, acting parallel to the ground;
-- the **resultant force** $$R=\sqrt{F_x^2+F_y^2}$$;
-- the **wrist moment** $$M_w$$, representing the torque that must be sustained by the wrist structures and surrounding muscles.
+- the *vertical force* $$F_y$$ ($$N$$), which supports body weight;
+- the *shear force* $$F_x$$, acting parallel to the ground;
+- the *resultant force* $$R=\sqrt{F_x^2+F_y^2}$$;
+- the *wrist moment* $$M_w$$, representing the torque that must be sustained by the wrist structures and surrounding muscles.
 
 ## The heat map: the space where you can feel the balance
 
-Rather than evaluating the equations for only one posture, we solve them across an entire grid of CoM and CoP locations. The result is a map showing how wrist loads shift throughout the balance space—revealing not only whether a posture is dynamically stable, but also how costly it is for the wrists (Figure 2).
+Rather than evaluating the equations for only one posture, we solve them across an entire grid of CoM and CoP locations. The result is a map showing how wrist loads shift throughout the balance space, revealing not only whether a posture is dynamically stable, but also how costly it is for the wrists (Figure 2).
 
 To ground the math in a concrete athlete, we start with a reference model:
 
-<table style="width: 100%; border-collapse: collapse; background-color: #ffffff; color: #111111; margin: 1.5em 0;">
-  <thead>
-    <tr style="background-color: #ffffff; border-bottom: 1.5px solid #222222;">
-      <th style="text-align: left; padding: 8px 4px; background-color: #ffffff;">Parameter</th>
-      <th style="text-align: left; padding: 8px 4px; background-color: #ffffff;">Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="background-color: #ffffff; border-bottom: 1px solid #eeeeee;">
-      <td style="padding: 8px 4px; background-color: #ffffff;">Body mass $$m$$</td>
-      <td style="padding: 8px 4px; background-color: #ffffff;">70 kg (body weight 687 N, 343 N per wrist)</td>
-    </tr>
-    <tr style="background-color: #ffffff; border-bottom: 1px solid #eeeeee;">
-      <td style="padding: 8px 4px; background-color: #ffffff;">Wrist-to-CoM distance $$h$$</td>
-      <td style="padding: 8px 4px; background-color: #ffffff;">1.00 m</td>
-    </tr>
-    <tr style="background-color: #ffffff; border-bottom: 1px solid #eeeeee;">
-      <td style="padding: 8px 4px; background-color: #ffffff;">Body height $$H$$</td>
-      <td style="padding: 8px 4px; background-color: #ffffff;">1.75 m</td>
-    </tr>
-    <tr style="background-color: #ffffff; border-bottom: 1px solid #eeeeee;">
-      <td style="padding: 8px 4px; background-color: #ffffff;">Hand length</td>
-      <td style="padding: 8px 4px; background-color: #ffffff;">20 cm</td>
-    </tr>
-    <tr style="background-color: #ffffff; border-bottom: 1.5px solid #222222;">
-      <td style="padding: 8px 4px; background-color: #ffffff;">Hand footprint</td>
-      <td style="padding: 8px 4px; background-color: #ffffff;">2 cm behind the wrist to 18 cm in front of it</td>
-    </tr>
-  </tbody>
-</table>
+* Body mass $$m$$: 70 kg (body weight 687 N, 343 N per wrist)
+* Wrist-to-CoM distance $$h$$: 1.00 m
+* Body height $$H$$: 1.75 m
+* Hand length: 20 cm
+* Hand footprint: 2 cm behind the wrist to 18 cm in front of it
 
 <figure>
   <img src="/assets/img/cop/maps_cop_com.png"
@@ -125,7 +102,7 @@ To ground the math in a concrete athlete, we start with a reference model:
   </figcaption>
 </figure>
 
-When you read these four panels together, four clear patterns jump out:
+Explaining these four panels:
 
 #### 1. The white square: where balance lives
 {: style="text-align: left;"}
@@ -166,18 +143,18 @@ $$
 
 that drives it:
 
-- **Zero** on the diagonal ($$d = c$$)
-- **Positive** when the CoM is ahead of the CoP (tipping toward the fingers)
-- **Negative** when the CoM is behind the CoP
+- zero on the diagonal ($$d = c$$)
+- positive when the CoM is ahead of the CoP (tipping toward the fingers)
+- negative when the CoM is behind the CoP
 
-Near equilibrium, every centimetre of offset adds roughly **2.7 N** of shear force per wrist—so a 5 cm offset produces about **14 N**, and doubling the offset roughly doubles the shear force too.
+Near equilibrium, every centimetre of offset adds roughly 2.7 N of shear force per wrist—so a 5 cm offset produces about 14 N, and doubling the offset roughly doubles the shear force too.
 
 #### 4. Vertical force barely flinches
 {: style="text-align: left;"}
 
 Interestingly, vertical force ($$F_y$$) is far less sensitive. Across most of the feasible region, it stays close to the static 343 N per wrist, shifting by only a few percent. In other words, big differences in wrist loading come mainly from **wrist moments and shear forces**, not from dramatic swings in vertical force.
 
-To see how balance behaves in motion, we simulate a small forward nudge from rest: an initial tilt of $$0.04\ \mathrm{rad}$$ (about $$2.3^\circ$$, or roughly **4 cm** of horizontal CoM shift). We test four starting CoM positions along the hand and consider a trial a fall if body tilt passes $$0.35\ \mathrm{rad}$$ (about $$20^\circ$$), tracking both the body’s trajectory and the resulting wrist loads.
+To see how balance behaves in motion, we simulate a small forward nudge from rest: an initial tilt of $$0.04\ \mathrm{rad}$$ (about $$2.3^\circ$$, or roughly 4 cm of horizontal CoM shift). We test four starting CoM positions along the hand and consider a trial a fall if body tilt passes $$0.35\ \mathrm{rad}$$ (about $$20^\circ$$), tracking both the body’s trajectory and the resulting wrist loads.
 
 <figure>
   <img src="/assets/img/cop/active_balance_simulation.png"
@@ -189,9 +166,9 @@ To see how balance behaves in motion, we simulate a small forward nudge from res
 
 Three clear takeaways stand out:
 
-* 1, 6, and 10 cm recover cleanly. Their dynamic transients are nearly identical, shear force stays under roughly **6 N** per wrist, and the baseline wrist moment simply scales at about **3.4 N·m** per centimetre of reference CoM
-* 15 cm falls after about 1.3 seconds. Braking the nudge would require moving the CoP to roughly **21 cm**—beyond the **18 cm** fingertip edge—so the controller saturates and can no longer save the balance
-* Once a fall begins, the plotted loads lose physical meaning because the model assumes a flat hand on the floor
+* 1, 6, and 10 cm recover cleanly. Their dynamic transients are nearly identical, shear force stays under roughly 6 N per wrist, and the baseline wrist moment simply scales at about 3.4 N·m per centimetre of reference CoM
+* 15 cm falls after about 1.3 seconds. Braking the nudge would require moving the CoP to roughly 21 cm—beyond the 18 cm fingertip edge—so the controller saturates and can no longer save the balance
+* once a fall begins, the plotted loads lose physical meaning because the model assumes a flat hand on the floor
 
 The key lesson here is sharp: *failure isn’t caused by excessive force, because the loads remain modest. Failure happens because the needed CoP lies outside the hand footprint—it is a controllability limit, not a strength limit.*
 
