@@ -82,7 +82,7 @@ Four quantities are monitored:
 
 ## The heat map: the space where you can feel the balance
 
-Rather than evaluating the equations for only one posture, we solve them across an entire grid of CoM and CoP locations. The result is a map showing how wrist loads shift throughout the balance space—revealing not only whether a posture is dynamically stable, but also how costly it is for the wrists (**Figure 2**).
+Rather than evaluating the equations for only one posture, we solve them across an entire grid of CoM and CoP locations. The result is a map showing how wrist loads shift throughout the balance space—revealing not only whether a posture is dynamically stable, but also how costly it is for the wrists (Figure 2).
 
 To ground the math in a concrete athlete, we start with a reference model:
 
@@ -127,15 +127,20 @@ To ground the math in a concrete athlete, we start with a reference model:
 
 When you read these four panels together, four clear patterns jump out:
 
-#### 1. The white square: where balance lives—and where room runs out
+#### 1. The white square: where balance lives
+{: style="text-align: left;"}
+
 Start with the white square in the middle of each panel. It defines the entire region where balance is physically possible, with both CoM and CoP inside the hand footprint:
 
-- To correct a **forward fall**, the CoP must move in front of the CoM by pressing through the fingers.
-- To correct a **backward fall**, the CoP must move behind the CoM by loading the heel of the hand.
+* To correct a **forward fall**, the CoP must move in front of the CoM by pressing through the fingers
+* To correct a **backward fall**, the CoP must move behind the CoM by loading the heel of the hand
+{: style="text-align: left;"}
 
-Whether you actually have that correction available depends on how much physical room remains between your CoM and the edges of your hand. As we will see next, **this geometric boundary turns out to be even more limiting than the raw magnitude of the forces themselves**.
+Whether you actually have that correction available depends on how much physical room remains between your CoM and the edges of your hand. As we will see next, *this geometric boundary turns out to be even more limiting than the raw magnitude of the forces themselves*.
 
-#### 2. In static equilibrium, your wrists carry torque—not extra vertical weight
+#### 2. In static equilibrium, your wrists carry torque (not extra vertical weight)
+{: style="text-align: left;"}
+
 Along the dashed diagonal, the CoM sits vertically above the CoP ($$d = c$$) and the body does not accelerate:
 
 $$
@@ -148,9 +153,11 @@ $$
 M = \frac{mg}{2}c \approx 3.4\ \text{N·m per cm of } c.
 $$
 
-Putting the CoP at 9 cm gives about **30.9 N·m** per wrist, whereas pushing all the way to the fingertips (18 cm) roughly doubles that to **62 N·m**. Look at the lower-right panel: the iso-lines run vertically. That tells us the wrist moment depends primarily on the **CoP position itself**—so even when perfectly balanced, holding farther toward the fingers directly increases the torque your wrists and forearm muscles have to sustain.
+Putting the CoP at 9 cm gives about 30.9 N·m per wrist, whereas pushing all the way to the fingertips (18 cm) roughly doubles that to 62 N·m. Look at the lower-right panel: the iso-lines run vertically. That tells us the wrist moment depends primarily on the CoP position itself, so even when perfectly balanced, holding farther toward the fingers directly increases the torque your wrists and forearm muscles have to sustain.
 
 #### 3. Away from equilibrium, shear force takes over
+{: style="text-align: left;"}
+
 As soon as the CoM and CoP separate, horizontal shear force ($$F_x$$) becomes the key player. Its iso-lines run parallel to the diagonal $$d = c$$ because, to first approximation, it is the offset between the two positions:
 
 $$
@@ -159,14 +166,16 @@ $$
 
 that drives it:
 
-- **Zero** on the diagonal ($$d = c$$);
-- **Positive** when the CoM is ahead of the CoP (tipping toward the fingers);
-- **Negative** when the CoM is behind the CoP.
+- **Zero** on the diagonal ($$d = c$$)
+- **Positive** when the CoM is ahead of the CoP (tipping toward the fingers)
+- **Negative** when the CoM is behind the CoP
 
 Near equilibrium, every centimetre of offset adds roughly **2.7 N** of shear force per wrist—so a 5 cm offset produces about **14 N**, and doubling the offset roughly doubles the shear force too.
 
 #### 4. Vertical force barely flinches
-Interestingly, vertical force ($$F_y$$) is far less sensitive. Across most of the feasible region, it stays close to the static **343 N** per wrist, shifting by only a few percent. In other words, big differences in wrist loading come mainly from **wrist moments and shear forces**, not from dramatic swings in vertical force.
+{: style="text-align: left;"}
+
+Interestingly, vertical force ($$F_y$$) is far less sensitive. Across most of the feasible region, it stays close to the static 343 N per wrist, shifting by only a few percent. In other words, big differences in wrist loading come mainly from **wrist moments and shear forces**, not from dramatic swings in vertical force.
 
 
 
