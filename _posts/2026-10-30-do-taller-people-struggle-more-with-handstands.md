@@ -60,20 +60,20 @@ At every instant, the model is defined by two quantities:
 
 Think of a handstand as a constant tug-of-war between two points: your CoM (where gravity pulls you down) and your CoP (where the floor pushes you back up through your hands). Together, these two positions tell the whole story of what your body is doing at any given instant.
 
-Usually, writing out the physics of a handstand gets messy because of all the unknown internal forces acting inside the wrist joint. However, if we choose the wrist as our pivot point when calculating rotational forces (torques), those unknown joint forces mathematically cancel out. Around the wrist, gravity pulls the CoM forward (at horizontal distance $d = h\sin\theta$) with a tipping torque $mg\,d$, while the ground reaction force pushes up at the CoP (at distance $c$) with a counter-torque $F_y\,c$. That gives us the rotational equation for angular acceleration $\ddot{\theta}$:
+Usually, writing out the physics of a handstand gets messy because of all the unknown internal forces acting inside the wrist joint. However, we can use a mathematical trick: if we choose the wrist as our pivot point when calculating rotational forces (torques), those unknown joint forces mathematically cancel out. Around the wrist, gravity pulls the CoM forward (at horizontal distance $$d = h\sin\theta$$) with a tipping torque $$mg\,d$$, while the ground reaction force pushes up at the CoP (at distance $$c$$) with a counter-torque $$F_y\,c$$. That gives us the rotational equation for angular acceleration $$\ddot{\theta}$$:
 
 $$I\ddot{\theta} = mg\,d - F_y\,c$$
 
-Meanwhile, linear motion links the body’s acceleration to the external forces: horizontally, $m\ddot{x}_{\text{CoM}} = F_x$ (with $\ddot{x}_{\text{CoM}}$ coming from the geometry of $\theta$); vertically, $m\ddot{y}_{\text{CoM}} = F_y - mg$. Combining these lets us isolate $\ddot{\theta}$ from the positions of the CoM and CoP—and once we know how the body is accelerating, we can plug that acceleration right back in to solve for the forces and wrist torque.
+Meanwhile, linear motion links the body’s acceleration to the external forces: horizontally, $$m\ddot{x}_{\text{CoM}} = F_x$$ (with $$\ddot{x}_{\text{CoM}}$$ coming from the geometry of $$\theta$$); vertically, $$m\ddot{y}_{\text{CoM}} = F_y - mg$$. Combining these lets us isolate $$\ddot{\theta}$$ from the positions of the CoM and CoP—and once we know how the body is accelerating, we can plug that acceleration right back in to solve for the forces and wrist torque.
 
 In practical terms, this means we don't need to measure complex internal muscle tensions to see what is happening. Just by knowing your body’s lean and where you feel pressure under your palms, the model immediately tells us whether you are falling forward or backward, how fast, and what that move demands from the wrists.
 
 Four quantities are monitored:
 
-- the **vertical force** $F_y$ ($N$), which supports body weight;
-- the **shear force** $F_x$, acting parallel to the ground;
-- the **resultant force** $R=\sqrt{F_x^2+F_y^2}$;
-- the **wrist moment** $M_w$, representing the torque that must be sustained by the wrist structures and surrounding muscles.
+- the **vertical force** $$F_y$$ ($$N$$), which supports body weight;
+- the **shear force** $$F_x$$, acting parallel to the ground;
+- the **resultant force** $$R=\sqrt{F_x^2+F_y^2}$$;
+- the **wrist moment** $$M_w$$, representing the torque that must be sustained by the wrist structures and surrounding muscles.
 
 
 
