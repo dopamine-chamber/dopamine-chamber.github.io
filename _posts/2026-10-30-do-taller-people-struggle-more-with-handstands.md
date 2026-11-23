@@ -6,7 +6,7 @@ tags: [handstand, biomechanics, inverted pendulum, control theory]
 image: /assets/img/damped-inverted-pendulum.png
 date: 2026-10-30 12:00:00 +0200
 series_order: 5
-published: false
+published: true
 ---
 
 There comes a moment, in the course of your practice, when you have to do something with everything you've learned from theory. Take what you're told by one person or another and make it your own experience, understand whether it's true, whether it works for you. The systems the human body uses to cope with gravity, the muscles, the nervous system, the antigravity myofascial chains, work well and, if all goes well, work the same way for everyone. They're the ones that let you walk, live, move.
