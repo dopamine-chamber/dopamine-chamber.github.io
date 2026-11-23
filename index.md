@@ -21,10 +21,16 @@ description: "Physics lessons in an upside-down context: exploring the handstand
   }
   .home a.btn-primary, .home a.btn-primary:visited { background: #222; color: #fff; }
   .home a.btn:hover { opacity: 0.85; text-decoration: none; }
+  .home .cta { text-align: center; }
+  .home .cta a.btn { margin: 0 0.25rem 0.5rem; }
 
   .hero-anim { margin: 1.5rem 0; }
   .hero-anim iframe { display: block; width: 100%; aspect-ratio: 20 / 9; max-height: 70vh; border: 0; background: transparent; }
   @media (max-width: 700px) { .hero-anim iframe { aspect-ratio: 35 / 27; } }
+
+  .music { max-width: 660px; margin: 1.5rem auto; }
+  .music-label { margin: 0 0 0.4rem; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: #6b6b6b; }
+  .music iframe { display: block; width: 100%; height: 120px; border: 1px solid #e5e5e5; border-radius: 8px; }
 
   .page-content .path-list { display: block; list-style: none; margin: 1rem 0; padding: 0; text-align: left; }
   .path-list li { display: flex; gap: 1rem; align-items: flex-start; padding: 0.9rem 0; margin: 0; border-top: 1px solid #e5e5e5; }
@@ -45,7 +51,7 @@ description: "Physics lessons in an upside-down context: exploring the handstand
 
   <h1>Movement is a way of thinking</h1>
   <p class="lead">It's how we experience the world. It's a way to look at human potential. The Handstand Dilemma is an editorial project where physical and philosophical approaches meet to explore the handstand phenomenon, deconstructing it from the ground up. Same physical principles, different context. </p>
-  <p>
+  <p class="cta">
     <a class="btn btn-primary" href="{{ start_post.url | relative_url }}">Start here</a>
     <a class="btn" href="{{ '/blog/' | relative_url }}">Browse all posts</a>
   </p>
@@ -58,45 +64,20 @@ description: "Physics lessons in an upside-down context: exploring the handstand
     </iframe>
   </figure>
 
+  <div class="music">
+    <p class="music-label">Now playing</p>
+    <iframe
+      src="https://bandcamp.com/EmbeddedPlayer/album=1524188113/size=large/bgcol=ffffff/linkcol=222222/tracklist=false/artwork=small/transparent=true/"
+      title="Dopamine Chamber by Fontaines D.C. on Bandcamp"
+      loading="lazy"
+      seamless>
+      <a href="https://fontainesdc.bandcamp.com/album/dopamine-chamber">Dopamine Chamber by Fontaines D.C.</a>
+    </iframe>
+  </div>
+
   <div class="intro">
   <p>A handstand looks like stillness. It isn’t. Physically, the body’s centre of mass sits above the hands, and any error grows exponentially, roughly doubling every quarter of a second. Staying up means correcting, continuously, with wrists and fingers that were never selected for the job. Evolution didn’t build us to balance on our hands. And yet humans learn to do it.</p>
 
   <p>That is what makes the handstand philosophically interesting. Heraclitus saw the harmony of the world in tension, like the bow and the lyre: opposing forces that hold each other in place. The handstand is that idea in a body: not a state but an action. You stay balanced only by continuing to balance. If it were stable, it would be a pose, like lying down, and it would be worth little; its value comes from its precariousness.</p>
 
-  <p>It is also a small Sisyphus. No handstand is final: it always ends. Camus asks us to imagine Sisyphus happy. But Sisyphus is condemned to his rock, while we choose our handstands, and that may be the whole point. Anyone who practices knows the value lies not in the arrival but in the repeated attempt.</p>
-
-  <p>The Handstand Dilemma is about that tension: a posture that looks like stillness, is made of constant motion, and serves no purpose except itself. I want to understand why we keep doing it.</p>
-</div>
-
-  <h2>Follow the series</h2>
-  <p>Read the posts in order, or jump to the topic that interests you.</p>
-  <ol class="path-list">
-  {% for post in series_posts %}
-    <li>
-      <span class="step">{{ post.series_order }}</span>
-      <div>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <small>{{ post.description | truncatewords: 22 }}</small>
-      </div>
-    </li>
-  {% endfor %}
-  </ol>
-
-    <h2>Latest posts</h2>
-  <ul class="latest-list">
-  {% for post in site.posts limit: 3 %}
-    <li>
-      <span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span>{% if post.series_order %}<span class="tag">Series, part {{ post.series_order }}</span>{% elsif post.label %}<span class="tag">{{ post.label }}</span>{% endif %}
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <small>{{ post.description | truncatewords: 22 }}</small>
-    </li>
-  {% endfor %}
-  </ul>
-  <p><a href="{{ '/blog/' | relative_url }}">See all posts</a></p>
-
-  <h2>Who writes this</h2>
-  <p>I’m a biomedical engineer with a long-standing interest in movement, art and human performance. This project is where handstand practice and analytical reasoning meet. I don’t claim to have answers: the purpose of this project is to document my search for them. <em><a href="{{ '/about/' | relative_url }}">More about the project</a>.</em></p>
-
-  <p><small>Want to follow along? <em><a href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a></em>.</small></p>
-
-</div>
+  <p>It is also a small Sisyphus. No handstand is final: it always ends. Camus asks us to imagine Sisyphus happy. But Sisyphus is condemned to his rock, while we choose our handstands, and that may be the whole point. Anyone who practices knows the value lies not in the arrival but in the repeated
