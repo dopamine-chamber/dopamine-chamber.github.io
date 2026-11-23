@@ -313,6 +313,8 @@ As $$h$$ increases, that rate softens: a taller athlete does not necessarily fal
 
 So it’s not that one person has to work harder to control the handstand than the other—it’s that they have to do a different kind of work. We need to understand our own model and adopt control strategies that fit it: build good hypotheses about our world, and interact with it using the most efficient tools.
 
+[Next post →](https://dopamine-chamber.github.io/2026/10/25/handstand-balance-damped-oscillator.html)
+
 #### Source and references
 
 <a href="https://www.circoteca.cl/wp-content/uploads/2019/08/Strategies-for-maintaining-a-handstand-in-the-anterior-posterior-direction-Revista-Ingles-DAVID-G.-KERWIN-GRANT-TREWARTHA-2001.pdf" target="_blank" rel="noopener noreferrer">
