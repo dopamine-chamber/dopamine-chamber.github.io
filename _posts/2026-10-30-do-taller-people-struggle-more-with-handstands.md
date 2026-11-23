@@ -35,8 +35,6 @@ Let’s give all this unapologetically mathematical talk a deep, individual, neu
 
 This is the strategy we've seen so far, with the rigid-body assumptions we've made up to now, in which nothing else moves or creates levers or twists. And remembering our other usual assumptions, the body is a rigid stick of mass $$m$$ and length $$H$$ rotating about the wrist, with the centre of mass (CoM) at distance $$h$$ from the pivot.
 
-## Another hypothesis about the world
-
 Let:
 
 - $$\theta$$ be the inclination from the vertical (positive towards the fingers);
@@ -170,11 +168,11 @@ Three clear takeaways stand out:
 * 15 cm falls after about 1.3 seconds. Braking the nudge would require moving the CoP to roughly 21 cm—beyond the 18 cm fingertip edge—so the controller saturates and can no longer save the balance
 * once a fall begins, the plotted loads lose physical meaning because the model assumes a flat hand on the floor
 
-The key lesson here is sharp: *failure isn’t caused by excessive force, because the loads remain modest. Failure happens because the needed CoP lies outside the hand footprint—it is a controllability limit, not a strength limit.*
+The key lesson here is sharp: failure isn’t caused by excessive force, because the loads remain modest. Failure happens because the needed CoP lies outside the hand footprint—it is a controllability limit, not a strength limit.
 
-## How far can the body lean before recovery becomes impossible?
+## Failure mode: the handstand collapse
 
-A nudge of 4 cm is just one test. What is the **recoverable balance margin**, the largest initial lean from rest that can still be saved? Expressing this limit as horizontal CoM displacement (in centimetres) makes robustness intuitive: it shows how far your CoM can drift from its reference spot and still be brought back inside the hand.
+A nudge of 4 cm is just one test. How far can the body lean before recovery becomes impossible? What is the **recoverable balance margin**, the largest initial lean from rest that can still be saved? Expressing this limit as horizontal CoM displacement (in centimetres) makes robustness intuitive: it shows how far your CoM can drift from its reference spot and still be brought back inside the hand.
 
 <table style="width: 100%; border-collapse: collapse; background-color: #ffffff; color: #111111; margin: 1.5em 0;">
   <thead>
@@ -213,7 +211,9 @@ A nudge of 4 cm is just one test. What is the **recoverable balance margin**, th
   </tbody>
 </table>
 
-**Table 1.** Recoverable CoM displacement (within ~0.1 cm resolution) and baseline wrist moment per wrist across four reference CoM positions.
+<p style="font-size: 0.9em; color: #555555; margin-top: -0.8em; margin-bottom: 1.5em;">
+  <strong>Table 1.</strong> Recoverable CoM displacement (within ~0.1 cm resolution) and baseline wrist moment per wrist across four reference CoM positions.
+</p>
 
 The rule is remarkably clean: your forward recovery margin matches the distance from your reference CoM to the fingertips, and your backward margin matches the distance to the heel of the hand. Balance is recoverable as long as the CoM can still be pulled back within the hand footprint.
 
@@ -223,18 +223,17 @@ The rule is remarkably clean: your forward recovery margin matches the distance 
 
 Once again, the trade-off is clear: *lower wrist load and wider balance margins do not peak at the same posture.*
 
-## Another hypothesis about the world
-{: style="text-align: left;"}
+## Another hypothesis about *my* world
 
 In the handbalancing world, ask whether taller people struggle more with handstands and the answer arrives almost before the question finishes—obvious, settled, woven into gym lore. This brings us back to the quiet thread running beneath the whole article: does body height really matter, or are we just looking at a different kind of weather?
 
 As someone who loves learning through experience, I need to measure this rather than merely inherit it. So let’s trace the heat maps again—our balance space—through my own coordinates: 47 kg, 150 cm tall, CoM at 0.86 m from the wrist, and a 13 cm hand footprint (from roughly -1.3 cm behind the wrist to +11.7 cm at the fingertips).
 
 <figure>
-  <img src="/assets/img/cop/maps_cop_com_47kg.png"
+  <img src="/assets/img/cop/maps_cop_com_47kg.webp"
        alt="Loads per wrist for a 47 kg athlete with a 13 cm hand footprint">
   <figcaption markdown="span">
-    Figure 3. Heat maps of vertical force ($$F_y$$), shear force ($$F_x$$), resultant force ($$R$$), and wrist moment ($$M_w$$) per wrist for a 47 kg athlete ($$H = 1.50\text{ m}$$, $$h = 0.86\text{ m}$$, hand footprint from about $$-1.3\text{ cm}$$ to $$+11.7\text{ cm}$$). Dashed line: CoM = CoP. Dotted lines: hand edges. White square: feasible balance region.
+    Figure 4. Heat maps of vertical force ($$F_y$$), shear force ($$F_x$$), resultant force ($$R$$), and wrist moment ($$M_w$$) per wrist for a 47 kg athlete ($$H = 1.50\text{ m}$$, $$h = 0.86\text{ m}$$, hand footprint from about $$-1.3\text{ cm}$$ to $$+11.7\text{ cm}$$). Dashed line: CoM = CoP. Dotted lines: hand edges. White square: feasible balance region.
   </figcaption>
 </figure>
 
