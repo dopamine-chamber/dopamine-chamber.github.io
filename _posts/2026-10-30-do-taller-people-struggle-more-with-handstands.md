@@ -1,4 +1,4 @@
----
+<img width="1108" height="2268" alt="image" src="https://github.com/user-attachments/assets/db23206b-ce3e-436c-b9ea-5608edc77733" /><img width="1108" height="2268" alt="image" src="https://github.com/user-attachments/assets/c9f2e3de-ea01-4252-a38c-31906eab3e62" />---
 layout: post
 title: "Where the movement becomes experience"
 description: "How the wrists keep a handstand upright: a damped-oscillator model with PD control, stability conditions, energy analysis and the effect of delay."
@@ -24,47 +24,68 @@ However, the study of balance strategies brings out the importance of another el
 
 The centre of pressure comes out of gait analysis and postural studies, but it applies just as well to the handstand.
 
-The body is a rigid stick of mass $$m$$ and length $$H$$ rotating about the wrist, with the centre of mass (CoM) at distance $$h$$ from the pivot. Let $$\theta$$ be the inclination from the vertical (positive towards the fingers), $$d = h\sin\theta$$ the horizontal position of the CoM relative to the wrist, and $$c$$ the position of the CoP under the hand, also relative to the wrist. The CoP can only lie within the hand footprint (Figure 1).
+Remembering our usual assumptions, the body is a rigid stick of mass $$m$$ and length $$H$$ rotating about the wrist, with the centre of mass (CoM) at distance $$h$$ from the pivot. Let $$\theta$$ be the inclination from the vertical (positive towards the fingers), $$d = h\sin\theta$$ the horizontal position of the CoM relative to the wrist, and $$c$$ the position of the CoP under the hand, also relative to the wrist. The CoP can only lie within the hand footprint (Figure 1).
 
 <figure>
   <img src="/assets/img/handstand_center_of_pressure_model.png" alt="centre of mass vs centre of pressure">
   <figcaption markdown="span">Figure 1. Schematic centre of mass and centre of pressure.</figcaption>
 </figure>
 
-Taking moments about the wrist, with the wrist at ground level and neglecting the mass hand:
+## From body position to wrist loads
 
-$$I\,\ddot\theta = m g\, d - N c, \qquad N = m(g + \ddot z), \qquad F_x = m\,\ddot x,$$
+At every instant, the model is defined by two quantities:
 
-where:
+- the position of the **centre of mass (CoM)** relative to the wrists;
+- the position of the **centre of pressure (CoP)** under the hands.
 
-$$I = m,(H^2/12 + h^2)$$<br>
-$$z = h\cos\theta$$<br>
-$$x = h\sin\theta$$
+The CoM determines how gravity tends to rotate the body, while the CoP determines where the ground reaction force acts. Together, these two positions completely determine the instantaneous dynamics of the handstand.
 
-Eliminating $$N$$ gives the instantaneous angular acceleration (Appendix A):
+Taking moments about the wrist eliminates the unknown wrist-reaction forces from the rotational equation. By combining the translational and rotational balance equations, the angular acceleration of the body can be expressed directly as a function of CoM and CoP position.
 
-$$\ddot\theta = \frac{m g (d - c) + m c\, h\cos\theta\ \omega^2}{I - m c\, d}, \qquad \omega = \dot\theta.$$
+In practical terms, once the body position and the pressure distribution beneath the hand are known, the model can immediately predict whether the body will start rotating forward or backward and how quickly.
 
-The loads on the wrists are the vertical force $$N$$, the shear force $$F_x$$ (positive towards the fingers, the direction in which the body accelerates), their resultant $$F$$, and the wrist moment $$M = N c$$, that is the moment of the ground reaction about the wrist. All values are reported per wrist, the total being shared equally between the two hands.
+The same equations also provide the loads transmitted through the wrists. Four quantities are monitored:
 
-The equations above are evaluated on a grid of CoP and CoM positions with $$\omega = 0$$, giving the instantaneous loads as functions of the two positions.
+- the **vertical force** \(F_y\), which supports body weight;
+- the **shear force** \(F_x\), acting parallel to the ground;
+- the **resultant force** \(R=\sqrt{F_x^2+F_y^2}\);
+- the **wrist moment** \(M_w\), representing the torque that must be sustained by the wrist structures and surrounding muscles.
 
-The CoP is commanded as
+Positive shear force is defined toward the fingers, that is, in the direction of the body's horizontal acceleration. Since the model is symmetric, the total load is assumed to be shared equally between the two hands, and all reported values refer to a single wrist.
+
+Rather than evaluating the equations for only one posture, they are solved over a grid of CoM and CoP locations. This produces a map showing how wrist loads change throughout the balance space. The resulting maps reveal not only whether a posture is dynamically stable, but also how costly it is for the wrists.
+
+## How the centre of pressure is controlled
+
+Balance is achieved by moving the CoP underneath the hands. Physiologically, this corresponds to changing the pressure applied by the palm and fingers against the floor.
+
+When the body starts to fall toward the fingers, the fingers press harder into the ground and shift the CoP forward. When the body falls back toward the palm, finger pressure decreases and the CoP moves backward. In this way, the performer continuously manipulates the location of the ground reaction force to generate corrective torques.
+
+In the model, the commanded CoP position is generated by a simple feedback controller:
 
 $$
-c = d_{ref} + k_p(\theta - \theta_{ref}) + k_d\,\omega
+x_{\mathrm{CoP}} = k_p \theta + k_d \dot{\theta}
 $$
 
-saturated to the hand footprint, with controllers $$k_p = 1.5$$ and $$k_d = 0.30\ \text{s}$$. 
+and is then saturated so that it remains within the physical footprint of the hand.
 
-This stands for the modulation of palm and finger pressure; the gains are illustrative and not identified from data. 
-The equations of motion are integrated with a fourth-order Runge–Kutta scheme (time step 1 ms, 6 s). A trial is counted as a fall if $$|\theta|$$ exceeds 0.35 rad. Each trial starts at rest with an angular offset of 0.04 rad (2.3°, about 4 cm of CoM displacement) from the reference posture 
+The proportional term \(k_p\) responds to body lean: the farther the body moves away from the reference posture, the more the pressure distribution shifts. The derivative term \(k_d\) responds to angular velocity and acts as a damping mechanism, counteracting rapid motion before large body angles develop.
 
-$$
-\theta_{ref} = \arcsin(d_{ref}/l)
-$$
+The controller should not be interpreted as a measured representation of human motor control. Rather, it is a simplified way of representing the combined action of the fingers, palm, forearm muscles, and nervous system. The gains are therefore illustrative and chosen only to reproduce plausible balancing behaviour.
 
-for four reference CoM positions.
+From a biomechanical perspective, moving the CoP is equivalent to changing finger and palm pressure. The model therefore captures the essential mechanism of handstand balance: rather than moving the hands, the performer continuously shifts the point of application of the ground reaction force inside the hand footprint, generating corrective moments that oppose the fall.
+
+## Numerical simulation
+
+The equations of motion are integrated using a fourth-order Runge-Kutta scheme with a time step of 1 ms over a simulation horizon of 6 s.
+
+Each trial starts from rest with an initial angular offset of \(0.04\ \mathrm{rad}\) (approximately \(2.3^\circ\)), corresponding to roughly 4 cm of horizontal CoM displacement from the reference posture. Four different reference CoM positions are considered.
+
+A trial is classified as a fall when the body angle exceeds \(0.35\ \mathrm{rad}\) (about \(20^\circ\)). This threshold represents the point at which balance can no longer be recovered within the assumptions of the model.
+
+For every simulated posture, the model evaluates the resulting angular motion together with the corresponding wrist forces and moments. This makes it possible to compare not only whether a handstand can be maintained, but also how the required wrist loading changes with body geometry, CoM location, and controller behaviour.
+
+---
 
 Regarding recoverable margins, for a given reference CoM, the largest initial angular offset from which balance is recovered, forwards and backwards, is found by bisection (14 iterations, time step 2 ms, 6 s). It is reported as the corresponding CoM displacement in centimetres.
 
