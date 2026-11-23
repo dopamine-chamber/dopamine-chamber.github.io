@@ -5,7 +5,7 @@ description: "How the wrists keep a handstand upright: a damped-oscillator model
 tags: [handstand, biomechanics, inverted pendulum, control theory]
 image: /assets/img/damped-inverted-pendulum.png
 date: 2026-10-25 12:00:00 +0200
-series_order: 4
+series_order: 5
 ---
 
 So far, we have described the motion of the center of mass of our stick figure, where all of its mass is concentrated. For good control of a handstand, we aim for this motion to be fine and very precise. We have seen that it is not possible to obtain harmonic motion from our stick figure without introducing neuromuscular control, because, left on its own, our stick figure falls. This control is a *feedback rule*, which in the real world is exerted by our wrists. What does this feedback rule look like?
