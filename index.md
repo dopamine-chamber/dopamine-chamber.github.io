@@ -21,8 +21,26 @@ description: "Physics lessons in an upside-down context: exploring the handstand
   }
   .home a.btn-primary, .home a.btn-primary:visited { background: #222; color: #fff; }
   .home a.btn:hover { opacity: 0.85; text-decoration: none; }
-  .home .cta { text-align: center; }
-  .home .cta a.btn { margin: 0 0.25rem 0.5rem; }
+    .home .cta { text-align: center; }
+  .home p.cta a.btn {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    margin: 0 0.25rem 0.5rem; padding: 0.4rem 1.2rem 0.4rem 0.5rem;
+    border-radius: 999px;
+  }
+  .home p.cta a.btn::before {
+    content: ""; flex: none; width: 1.7rem; height: 1.7rem; border-radius: 50%;
+    background:
+      conic-gradient(from 20deg, transparent 0 20%, rgba(255,255,255,.2) 25%, transparent 30% 70%, rgba(255,255,255,.2) 75%, transparent 80%),
+      radial-gradient(circle, #f5f0e6 0 8%, #c0392b 9% 32%, transparent 33%),
+      repeating-radial-gradient(circle, #111 0 1.5px, #262626 2.5px 3.5px);
+    box-shadow: 0 0 0 1px rgba(128, 128, 128, 0.5);
+  }
+  .home p.cta a.btn-primary::before { box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4); }
+  .home p.cta a.btn:hover::before, .home p.cta a.btn:focus-visible::before { animation: btn-spin 1.8s linear infinite; }
+  @keyframes btn-spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) {
+    .home p.cta a.btn:hover::before, .home p.cta a.btn:focus-visible::before { animation: none; }
+  }
 
   .hero-anim { margin: 1.5rem 0; }
   .hero-anim iframe { display: block; width: 100%; aspect-ratio: 20 / 9; max-height: 70vh; border: 0; background: transparent; }
