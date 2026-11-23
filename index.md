@@ -80,7 +80,7 @@ description: "Physics lessons in an upside-down context: exploring the handstand
 
 <div class="home">
 
-  <h2>Movement is a way of thinking</h2>
+  <h1>Movement is a way of thinking</h1>
   <p class="lead">It's how we experience the world. It's a way to look at human potential. The Handstand Dilemma is an editorial project where physical and philosophical approaches meet to explore the handstand phenomenon, deconstructing it from the ground up. Same physical principles, different context. </p>
 
   <figure class="hero-anim">
@@ -106,8 +106,6 @@ description: "Physics lessons in an upside-down context: exploring the handstand
   <p>The Handstand Dilemma is about that tension: a posture that looks like stillness, is made of constant motion, and serves no purpose except itself. I want to understand why we keep doing it.</p>
 </div>
 
-___
-
   <h2>Follow the series</h2>
   <p>The series is built like a 45 rpm record: one handstand, two sides. Part A treats the body as a single rigid block; Part B opens it up into an articulated one.</p>
   <div class="sides">
@@ -128,16 +126,12 @@ ___
   </div>
   <p><a href="{{ '/series/' | relative_url }}">See the whole series</a></p>
 
-  ___
+ <h2>A small Sisyphus</h2>
 
-  <p><strong>It is also a small Sisyphus.</strong> No handstand is final: it always ends. Camus asks us to imagine Sisyphus happy. But Sisyphus is condemned to his rock, while we choose our handstands, and that may be the whole point. Anyone who practices knows the value lies not in the arrival but in the repeated attempt.</p>
-
----
+  <p>No handstand is final: it always ends. Camus asks us to imagine Sisyphus happy. But Sisyphus is condemned to his rock, while we choose our handstands, and that may be the whole point. Anyone who practices knows the value lies not in the arrival but in the repeated attempt.</p>
 
   <h2>Who writes this</h2>
   <p>I’m a biomedical engineer with a long-standing interest in movement, art and human performance. This project is where handstand practice and analytical reasoning meet. I don’t claim to have answers: the purpose of this project is to document my search for them. <em><a href="{{ '/about/' | relative_url }}">More about the project</a>.</em></p>
-
----
 
   <h2>Latest posts</h2>
   <ul class="latest-list">
