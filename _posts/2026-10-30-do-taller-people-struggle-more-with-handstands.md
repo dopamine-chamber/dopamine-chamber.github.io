@@ -177,7 +177,19 @@ Near equilibrium, every centimetre of offset adds roughly **2.7 N** of shear for
 
 Interestingly, vertical force ($$F_y$$) is far less sensitive. Across most of the feasible region, it stays close to the static 343 N per wrist, shifting by only a few percent. In other words, big differences in wrist loading come mainly from **wrist moments and shear forces**, not from dramatic swings in vertical force.
 
+## Does tallers struggle more with handstands
 
+What happens if we plug in a smaller frame—say 47 kg, 1.50 m tall, CoM at 0.86 m from the wrist, and a 13 cm hand footprint (from roughly -1.3 cm behind the wrist to +11.7 cm at the fingertips)? The result is a handstand that is physically much more economical, yet geometrically much more demanding than the 70 kg model[cite: 1].
+
+<figure>
+  <img src="/assets/img/cop/maps_cop_com_47kg.png"
+       alt="Loads per wrist for a 47 kg athlete with a 13 cm hand footprint">
+  <figcaption markdown="span">
+    Figure 3. Heat maps of vertical force ($$F_y$$), shear force ($$F_x$$), resultant force ($$R$$), and wrist moment ($$M_w$$) per wrist for a 47 kg athlete ($$H = 1.50\text{ m}$$, $$h = 0.86\text{ m}$$, hand footprint from about $$-1.3\text{ cm}$$ to $$+11.7\text{ cm}$$)[cite: 1]. Dashed line: CoM = CoP[cite: 1]. Dotted lines: hand edges[cite: 1]. White square: feasible balance region[cite: 1].
+  </figcaption>
+</figure>
+
+On the force side, the discount is obvious: static vertical load drops to around 230 N per wrist, and even pushing all the way to the fingertips (11.7 cm) costs roughly 27 N·m of wrist moment—less than what the 70 kg model pays near mid-hand. At the same time, the white square shrinks to a 13 cm window (with only 6.5 cm of symmetric margin from its center at 5.2 cm), and a lower CoM means faster angular acceleration when you drift. Put simply, your handstand lives in a regime where strength costs almost nothing, but precision is everything.
 
 ## Active balance
 
