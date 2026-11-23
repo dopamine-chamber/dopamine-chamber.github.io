@@ -3,7 +3,7 @@ layout: post
 title: "Interlude: outside in (embody the theory)"
 description: "How the wrists keep a handstand upright: centre of pressure, balance margins and the effect of body height."
 tags: [handstand, biomechanics, inverted pendulum, control theory, embodiment]
-image: /assets/img/damped-inverted-pendulum.png
+image: /assets/img/cop/handstand_center_of_pressure.png
 date: 2026-10-30 12:00:00 +0200
 series_order: 5
 published: true
@@ -46,7 +46,7 @@ Let:
 The CoP can only lie within the hand footprint.This is where the problem changes character: once the CoP is introduced, balance is no longer only about where the body is, but also about where the body is able to push against the ground (Figure 1).
 
 <figure>
-  <img src="/assets/img/handstand_center_of_pressure_model.png"
+  <img src="/assets/img/cop/handstand_center_of_pressure_model.gif"
        alt="centre of mass vs centre of pressure">
   <figcaption markdown="span">
     Figure 1. Centre of mass (CoM), centre of pressure (CoP) and hand footprint.
@@ -60,11 +60,16 @@ At every instant, the model is defined by two quantities:
 
 Think of a handstand as a constant tug-of-war between two points: your CoM (where gravity pulls you down) and your CoP (where the floor pushes you back up through your hands). Together, these two positions tell the whole story of what your body is doing at any given instant.
 
-Usually, writing out the physics of a handstand gets messy because of all the unknown internal forces acting inside the wrist joint. However, we can use a mathematical trick: if we choose the wrist as our pivot point when calculating rotational forces (torques), those unknown joint forces mathematically cancel out. Around the wrist, gravity pulls the CoM forward (at horizontal distance $$d = h\sin\theta$$) with a tipping torque $$mg\,d$$, while the ground reaction force pushes up at the CoP (at distance $$c$$) with a counter-torque $$F_y\,c$$. That gives us the rotational equation for angular acceleration $$\ddot{\theta}$$:
+Usually, writing out the physics of a handstand gets messy because of all the unknown internal forces acting inside the wrist joint. However, we can use a mathematical trick: if we choose the wrist as our pivot point when calculating rotational forces (torques), those unknown joint forces mathematically cancel out. 
+
+In out model, positive shear force is defined toward the fingers, that is, in the direction of the body's horizontal acceleration. Since the model is symmetric, the total load is assumed to be shared equally between the two hands, and all reported values refer to a single wrist.
+Around the wrist, gravity pulls the CoM forward (at horizontal distance $$d = h\sin\theta$$) with a tipping torque $$mg\,d$$, while the ground reaction force pushes up at the CoP (at distance $$c$$) with a counter-torque $$F_y\,c$$. That gives us the rotational equation for angular acceleration $$\ddot{\theta}$$:
 
 $$I\ddot{\theta} = mg\,d - F_y\,c$$
 
-Meanwhile, linear motion links the body’s acceleration to the external forces: horizontally, $$m\ddot{x}_{\text{CoM}} = F_x$$ (with $$\ddot{x}_{\text{CoM}}$$ coming from the geometry of $$\theta$$); vertically, $$m\ddot{y}_{\text{CoM}} = F_y - mg$$. Combining these lets us isolate $$\ddot{\theta}$$ from the positions of the CoM and CoP—and once we know how the body is accelerating, we can plug that acceleration right back in to solve for the forces and wrist torque.
+Meanwhile, linear motion links the body’s acceleration to the external forces: horizontally, $$m\ddot{x}_{\text{CoM}} = F_x$$ (with $$\ddot{x}_{\text{CoM}}$$ coming from the geometry of $$\theta$$); vertically, $$m\ddot{y}_{\text{CoM}} = F_y - mg$$. 
+
+Combining these lets us isolate $$\ddot{\theta}$$ from the positions of the CoM and CoP—and once we know how the body is accelerating, we can plug that acceleration right back in to solve for the forces and wrist torque.
 
 In practical terms, this means we don't need to measure complex internal muscle tensions to see what is happening. Just by knowing your body’s lean and where you feel pressure under your palms, the model immediately tells us whether you are falling forward or backward, how fast, and what that move demands from the wrists.
 
@@ -75,46 +80,33 @@ Four quantities are monitored:
 - the **resultant force** $$R=\sqrt{F_x^2+F_y^2}$$;
 - the **wrist moment** $$M_w$$, representing the torque that must be sustained by the wrist structures and surrounding muscles.
 
+## The heat map: the space where you can feel the balance
 
-
-
------
-
-Positive shear force is defined toward the fingers, that is, in the direction of the body's horizontal acceleration.
-
-Since the model is symmetric, the total load is assumed to be shared equally between the two hands, and all reported values refer to a single wrist.
-
-Rather than evaluating the equations for only one posture, they are solved over a grid of CoM and CoP locations.
-
-This produces a map showing how wrist loads change throughout the balance space.
-
-The resulting maps reveal not only whether a posture is dynamically stable, but also how costly it is for the wrists.
+Rather than evaluating the equations for only one posture, they are solved over a grid of CoM and CoP locations. This produces a map showing how wrist loads change throughout the balance space—revealing not only whether a posture is dynamically stable, but also how costly it is for the wrists (Figure 2).
 
 If we initially set the parameters:
 
 | Parameter | Value |
 |:---|:---|
-| Body mass $$m$$ | 70 kg (body weight 687 N, 343 N per wrist) |
-| Wrist-to-CoM distance $$h$$ | 1.00 m |
-| Body height $$H$$ | 1.75 m |
+| Body mass $m$ | 70 kg (body weight 687 N, 343 N per wrist) |
+| Wrist-to-CoM distance $h$ | 1.00 m |
+| Body height $H$ | 1.75 m |
 | Hand length | 20 cm |
 | Hand footprint | 2 cm behind the wrist to 18 cm in front of it |
 
-we obtain the maps shown in Figure 2.
 
 <figure>
-  <img src="/assets/img/maps_cop_com.png"
+  <img src="/assets/img/cop/maps_cop_com.png"
        alt="Loads per wrist as functions of CoP and CoM">
   <figcaption markdown="span">
     Figure 2. Heat maps of the vertical force, shear force, resultant force and wrist moment as functions of CoP and CoM. Loads per wrist as functions of CoP (horizontal axis) and CoM (vertical axis), both relative to the wrist. Dashed line: CoM = CoP. Dotted lines: hand edges. White square: region where equilibrium is feasible, with CoM and CoP both inside the hand.
   </figcaption>
 </figure>
 
-Several things become immediately visible.
+Several patterns jump out right away when you read these four panels together:
 
-In static equilibrium the wrist is loaded mainly by a moment, not by extra force.
-
-When the CoM is vertically above the CoP ($$d=c$$), the body does not accelerate:
+#### 1. In static equilibrium, your wrists carry torque—not extra vertical weight
+When the CoM sits vertically above the CoP ($d = c$), the body does not accelerate:
 
 $$
 F_x = 0
@@ -123,90 +115,38 @@ $$
 and
 
 $$
-M = \frac{mg}{2}c
-\approx
-3.4\ \text{N·m per cm of } c.
+M = \frac{mg}{2}c \approx 3.4\ \text{N·m per cm of } c.
 $$
 
-A CoP at 9 cm gives about 30.9 N·m per wrist, whereas a CoP at the fingertips (18 cm) gives roughly 62 N·m.
+Putting the CoP at 9 cm gives about **30.9 N·m** per wrist, whereas pushing all the way to the fingertips (18 cm) roughly doubles that to **62 N·m**. Look at the lower-right panel: the iso-lines run vertically. That tells us the wrist moment depends primarily on the **CoP position itself**—so even in equilibrium, balancing farther toward the fingers directly increases the torque your wrists and forearm muscles have to sustain.
 
-The lower-right panel makes this particularly clear: the iso-lines are vertical.
-
-The wrist moment depends primarily on the CoP position itself. In equilibrium, where the CoM and CoP coincide, balancing farther toward the fingers directly increases the moment sustained by the wrists.
-
-Away from equilibrium, a different quantity becomes important.
-
-The shear force depends almost entirely on the offset between CoM and CoP.
-
-Its iso-lines run parallel to the diagonal $$d=c$$ because, to first approximation, it is the difference
+#### 2. Away from equilibrium, shear force takes over
+As soon as the CoM and CoP separate, horizontal shear force ($F_x$) becomes the key player. Its iso-lines run parallel to the diagonal $d = c$ because, to first approximation, it is the offset between the two positions:
 
 $$
-d-c
+d - c
 $$
 
-that matters.
+that drives it:
 
-The shear force is:
+* **Zero** on the diagonal ($d = c$);
+* **Positive** when the CoM is ahead of the CoP (tipping toward the fingers);
+* **Negative** when the CoM is behind the CoP.
 
-- zero on the diagonal;
-- positive when the CoM is ahead of the CoP;
-- negative when it is behind.
+Near equilibrium, every centimetre of offset adds roughly **2.7 N** of shear force per wrist—so a 5 cm offset produces about **14 N**, and doubling the offset roughly doubles the shear force too.
 
-Near equilibrium it is approximately 2.7 N per centimetre of offset, per wrist.
+#### 3. Vertical force barely flinches
+Interestingly, vertical force ($F_y$) is far less sensitive. Across most of the feasible region, it stays close to the static **343 N** per wrist, shifting by only a few percent. In other words, big differences in wrist loading come mainly from **wrist moments and shear forces**, not from dramatic swings in vertical force.
 
-An offset of 5 cm produces about 14 N of shear force; doubling the offset approximately doubles the shear force as well.
+#### 4. The white square: where balance lives—and where room runs out
+The white square identifies something even more important than static equilibrium: it defines the entire region where balance is physically possible, with both CoM and CoP inside the hand footprint.
 
-Interestingly, the vertical force is much less sensitive.
+* To correct a **forward fall**, the CoP must move in front of the CoM by pressing through the fingers.
+* To correct a **backward fall**, the CoP must move behind the CoM by loading the heel of the hand.
 
-Throughout most of the feasible region it remains close to the static value of 343 N per wrist, varying by only a few percent.
+Whether you actually have that correction available depends on how much room remains between your CoM and the edges of your hand. As we will see next, **this geometric boundary turns out to be even more limiting than the raw magnitude of the forces themselves**.
 
-In other words, large differences in wrist loading arise mainly through moments and shear forces, not through large changes in vertical force.
 
-The white square identifies something even more important than equilibrium.
-
-It defines the entire space where balance can exist.
-
-To correct a forward fall, the CoP must move in front of the CoM by pressing through the fingers.
-
-To correct a backward fall, the CoP must move behind the CoM by loading the heel of the hand.
-
-The availability of those corrections depends entirely on how much room remains between the CoM and the boundaries of the hand footprint.
-
-As we will see next, this geometric limitation turns out to be more important than the actual magnitude of the forces.
-
-## How the centre of pressure is controlled
-
-The maps above tell us what happens for any combination of CoM and CoP positions.
-
-The next question is how the body actually moves the CoP.
-
-Balance is achieved by shifting the centre of pressure underneath the hands. Physiologically, this corresponds to changing the pressure applied by the palm and fingers against the floor.
-
-When the body starts to fall towards the fingers, the fingers press harder into the ground and shift the CoP forwards. When the body falls back towards the palm, finger pressure decreases and the CoP moves backwards.
-
-In this way, the performer continuously manipulates the location of the ground reaction force to generate corrective torques.
-
-In the model, the commanded CoP position is generated by a simple feedback controller:
-
-$$
-c_{\mathrm{cmd}}
-=
-k_p\theta + k_d\dot{\theta}
-$$
-
-and is then saturated so that it remains within the physical footprint of the hand.
-
-The proportional term $$k_p$$ responds to body lean: the farther the body moves away from the reference posture, the more the pressure distribution shifts.
-
-The derivative term $$k_d$$ responds to angular velocity and acts as a damping mechanism, counteracting rapid motion before large body angles develop.
-
-The controller should not be interpreted as a measured representation of human motor control. Rather, it is a simplified way of representing the combined action of the fingers, palm, forearm muscles and nervous system.
-
-The gains are therefore illustrative and chosen only to reproduce plausible balancing behaviour.
-
-From a biomechanical perspective, moving the CoP is equivalent to changing finger and palm pressure.
-
-The model therefore captures the essential mechanism of handstand balance: rather than moving the hands, the performer continuously shifts the point of application of the ground reaction force inside the hand footprint, generating corrective moments that oppose the fall.
 
 ## Active balance
 
