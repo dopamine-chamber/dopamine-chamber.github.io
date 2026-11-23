@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Interlude: outside in (embody the theory)"
-description: "How the wrists keep a handstand upright: centre of pressure, balance margins and the effect of body height."
+description: "Control theory and the wrist strategy: where handstand collapses?"
 tags: [handstand, biomechanics, inverted pendulum, control theory, embodiment]
 image: /assets/img/cop/handstand_center_of_pressure.png
 date: 2026-10-30 12:00:00 +0200
-series_order: 4
+series_order: 5
 published: true
 ---
 
