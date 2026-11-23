@@ -5,7 +5,7 @@ description: "How the wrists keep a handstand upright: centre of pressure, balan
 tags: [handstand, biomechanics, inverted pendulum, control theory, embodiment]
 image: /assets/img/cop/handstand_center_of_pressure.png
 date: 2026-10-30 12:00:00 +0200
-series_order: 5
+series_order: 4
 published: true
 ---
 
@@ -177,47 +177,7 @@ Near equilibrium, every centimetre of offset adds roughly **2.7 N** of shear for
 
 Interestingly, vertical force ($$F_y$$) is far less sensitive. Across most of the feasible region, it stays close to the static 343 N per wrist, shifting by only a few percent. In other words, big differences in wrist loading come mainly from **wrist moments and shear forces**, not from dramatic swings in vertical force.
 
-## Does tallers struggle more with handstands
-
-What happens if we plug in a smaller frame—say 47 kg, 1.50 m tall, CoM at 0.86 m from the wrist, and a 13 cm hand footprint (from roughly -1.3 cm behind the wrist to +11.7 cm at the fingertips)? The result is a handstand that is physically much more economical, yet geometrically much more demanding than the 70 kg model[cite: 1].
-
-<figure>
-  <img src="/assets/img/cop/maps_cop_com_47kg.png"
-       alt="Loads per wrist for a 47 kg athlete with a 13 cm hand footprint">
-  <figcaption markdown="span">
-    Figure 3. Heat maps of vertical force ($$F_y$$), shear force ($$F_x$$), resultant force ($$R$$), and wrist moment ($$M_w$$) per wrist for a 47 kg athlete ($$H = 1.50\text{ m}$$, $$h = 0.86\text{ m}$$, hand footprint from about $$-1.3\text{ cm}$$ to $$+11.7\text{ cm}$$)[cite: 1]. Dashed line: CoM = CoP[cite: 1]. Dotted lines: hand edges[cite: 1]. White square: feasible balance region[cite: 1].
-  </figcaption>
-</figure>
-
-On the force side, the discount is obvious: static vertical load drops to around 230 N per wrist, and even pushing all the way to the fingertips (11.7 cm) costs roughly 27 N·m of wrist moment—less than what the 70 kg model pays near mid-hand. At the same time, the white square shrinks to a 13 cm window (with only 6.5 cm of symmetric margin from its center at 5.2 cm), and a lower CoM means faster angular acceleration when you drift. Put simply, your handstand lives in a regime where strength costs almost nothing, but precision is everything.
-
-## Active balance
-
-The equations of motion are integrated using a fourth-order Runge-Kutta scheme with a time step of 1 ms over a simulation horizon of 6 s.
-
-Each trial starts from rest with an initial angular offset of
-
-$$
-0.04\ \mathrm{rad}
-$$
-
-(approximately \(2.3^\circ\)), corresponding to roughly 4 cm of horizontal CoM displacement from the reference posture.
-
-Four different reference CoM positions are considered.
-
-A trial is classified as a fall when the body angle exceeds
-
-$$
-0.35\ \mathrm{rad}
-$$
-
-(about \(20^\circ\)).
-
-This threshold represents the point at which balance can no longer be recovered within the assumptions of the model.
-
-For every simulated posture, the model evaluates the resulting angular motion together with the corresponding wrist forces and moments.
-
-This makes it possible to compare not only whether a handstand can be maintained, but also how the required wrist loading changes with body geometry, CoM location and controller behaviour.
+To see how balance behaves in motion, we simulate a small forward nudge from rest: an initial tilt of $$0.04\ \mathrm{rad}$$ (about $$2.3^\circ$$, or roughly **4 cm** of horizontal CoM shift). We test four starting CoM positions along the hand and consider a trial a fall if body tilt passes $$0.35\ \mathrm{rad}$$ (about $$20^\circ$$), tracking both the body’s trajectory and the resulting wrist loads.
 
 <figure>
   <img src="/assets/img/active_balance_simulation.png"
@@ -227,96 +187,83 @@ This makes it possible to compare not only whether a handstand can be maintained
   </figcaption>
 </figure>
 
-Three results stand out.
+Three clear takeaways stand out:
 
-Reference positions of 1, 6 and 10 cm are recovered, and the transients of $$F_x$$ and $$N$$ are almost identical in the three cases.
+* 1, 6, and 10 cm recover cleanly. Their dynamic transients are nearly identical, shear force stays under roughly **6 N** per wrist, and the baseline wrist moment simply scales at about **3.4 N·m** per centimetre of reference CoM
+* 15 cm falls after about 1.3 seconds. Braking the nudge would require moving the CoP to roughly **21 cm**—beyond the **18 cm** fingertip edge—so the controller saturates and can no longer save the balance
+* Once a fall begins, the plotted loads lose physical meaning because the model assumes a flat hand on the floor
 
-Shear stays below about 6 N per wrist.
-
-The reference position only shifts the baseline of the wrist moment, which settles at about 3.4 N·m per centimetre of reference CoM.
-
-The 15 cm case behaves differently.
-
-After about 1.3 seconds the system falls.
-
-The correction requires a CoP of approximately 21 cm, beyond the 18 cm fingertip edge, so the controller saturates and can no longer restore balance.
-
-This observation is important.
-
-Failure is not caused by excessive force.
-
-The forces and moments remain relatively modest.
-
-Failure occurs because the required centre of pressure lies outside the available hand footprint.
-
-In other words, the limiting factor is not strength but controllability.
-
-Once the fall begins, the plotted forces no longer have a physical meaning, because the model assumes a flat hand and ceases to be valid.
+The key lesson here is sharp: *failure isn’t caused by excessive force, because the loads remain modest. Failure happens because the needed CoP lies outside the hand footprint—it is a controllability limit, not a strength limit.*
 
 ## How far can the body lean before recovery becomes impossible?
 
-The previous simulations determine whether a given perturbation can be recovered.
+A nudge of 4 cm is just one test. What is the **recoverable balance margin**, the largest initial lean from rest that can still be saved? Expressing this limit as horizontal CoM displacement (in centimetres) makes robustness intuitive: it shows how far your CoM can drift from its reference spot and still be brought back inside the hand.
 
-A natural question therefore follows:
+<table style="width: 100%; border-collapse: collapse; background-color: #ffffff; color: #111111; margin: 1.5em 0;">
+  <thead>
+    <tr style="background-color: #ffffff; border-bottom: 1.5px solid #222222;">
+      <th style="text-align: left; padding: 8px 4px; background-color: #ffffff;">Reference CoM</th>
+      <th style="text-align: left; padding: 8px 4px; background-color: #ffffff;">Max forward recovery</th>
+      <th style="text-align: left; padding: 8px 4px; background-color: #ffffff;">Max backward recovery</th>
+      <th style="text-align: left; padding: 8px 4px; background-color: #ffffff;">Wrist moment at reference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color: #ffffff; border-bottom: 1px solid #eeeeee;">
+      <td style="padding: 8px 4px; background-color: #ffffff;">3 cm</td>
+      <td style="padding: 8px 4px; background-color: #ffffff;">15.0 cm</td>
+      <td style="padding: 8px 4px; background-color: #ffffff;">5.0 cm</td>
+      <td style="padding: 8px 4px; background-color: #ffffff;">10.3 N·m</td>
+    </tr>
+    <tr style="background-color: #ffffff; border-bottom: 1px solid #eeeeee;">
+      <td style="padding: 8px 4px; background-color: #ffffff;">8 cm (mid-hand)</td>
+      <td style="padding: 8px 4px; background-color: #ffffff;">10.0 cm</td>
+      <td style="padding: 8px 4px; background-color: #ffffff;">10.0 cm</td>
+      <td style="padding: 8px 4px; background-color: #ffffff;">27.5 N·m</td>
+    </tr>
+    <tr style="background-color: #ffffff; border-bottom: 1px solid #eeeeee;">
+      <td style="padding: 8px 4px; background-color: #ffffff;">9 cm</td>
+      <td style="padding: 8px 4px; background-color: #ffffff;">9.0 cm</td>
+      <td style="padding: 8px 4px; background-color: #ffffff;">11.0 cm</td>
+      <td style="padding: 8px 4px; background-color: #ffffff;">30.9 N·m</td>
+    </tr>
+    <tr style="background-color: #ffffff; border-bottom: 1.5px solid #222222;">
+      <td style="padding: 8px 4px; background-color: #ffffff;">15 cm</td>
+      <td style="padding: 8px 4px; background-color: #ffffff;">3.0 cm</td>
+      <td style="padding: 8px 4px; background-color: #ffffff;">17.0 cm</td>
+      <td style="padding: 8px 4px; background-color: #ffffff;">51.5 N·m</td>
+    </tr>
+  </tbody>
+</table>
 
-*how far can the body lean before recovery becomes impossible?*
+**Table 1.** Recoverable CoM displacement (within ~0.1 cm resolution) and baseline wrist moment per wrist across four reference CoM positions.
 
-To quantify this, we define the **recoverable balance margin** as the largest initial perturbation from which the controller is still able to restore balance.
+The rule is remarkably clean: your forward recovery margin matches the distance from your reference CoM to the fingertips, and your backward margin matches the distance to the heel of the hand. Balance is recoverable as long as the CoM can still be pulled back within the hand footprint.
 
-For a given reference CoM position, the maximum recoverable forward and backward lean is found numerically using a bisection search.
+* At mid-hand (8 cm): forward and backward margins are equal (**10.0 cm** each) at a moderate wrist moment of about **27.5 N·m** per wrist
+* Closer to the wrist: wrist moment drops, but backward recovery room shrinks
+* Closer to the fingers: wrist moment rises, and forward recovery room shrinks
 
-Starting from a range of initial angular offsets known to contain the recovery threshold, successive simulations progressively narrow the interval until the boundary between recovery and fall is identified.
+Once again, the trade-off is clear: *lower wrist load and wider balance margins do not peak at the same posture.*
 
-The procedure uses 14 bisection iterations, with the equations of motion integrated for 6 s using a time step of 2 ms.
+## Another hypothesis about the world
+{: style="text-align: left;"}
 
-Rather than reporting this threshold as an angle, the result is expressed as the corresponding horizontal displacement of the CoM, measured in centimetres.
+In the handbalancing world, ask whether taller people struggle more with handstands and the answer arrives almost before the question finishes—obvious, settled, woven into gym lore. This brings us back to the quiet thread running beneath the whole article: does body height really matter, or are we just looking at a different kind of weather?
 
-This provides a more intuitive measure of balance robustness: it directly indicates how far the centre of mass can move from its reference position while still remaining recoverable.
+As someone who loves learning through experience, I need to measure this rather than merely inherit it. So let’s trace the heat maps again—our balance space—through my own coordinates: 47 kg, 150 cm tall, CoM at 0.86 m from the wrist, and a 13 cm hand footprint (from roughly -1.3 cm behind the wrist to +11.7 cm at the fingertips).
 
-Table 1 gives the largest CoM displacement from which balance is recovered, starting from rest, to within the numerical resolution of the bisection (about 0.1 cm).
+<figure>
+  <img src="/assets/img/cop/maps_cop_com_47kg.png"
+       alt="Loads per wrist for a 47 kg athlete with a 13 cm hand footprint">
+  <figcaption markdown="span">
+    Figure 3. Heat maps of vertical force ($$F_y$$), shear force ($$F_x$$), resultant force ($$R$$), and wrist moment ($$M_w$$) per wrist for a 47 kg athlete ($$H = 1.50\text{ m}$$, $$h = 0.86\text{ m}$$, hand footprint from about $$-1.3\text{ cm}$$ to $$+11.7\text{ cm}$$). Dashed line: CoM = CoP. Dotted lines: hand edges. White square: feasible balance region.
+  </figcaption>
+</figure>
 
-| Reference CoM | Max recoverable displacement, forwards | Max recoverable displacement, backwards | Wrist moment at the reference |
-| :--- | :--- | :--- | :--- |
-| 3 cm | 15.0 cm | 5.0 cm | 10.3 N·m |
-| 8 cm (mid-hand) | 10.0 cm | 10.0 cm | 27.5 N·m |
-| 9 cm | 9.0 cm | 11.0 cm | 30.9 N·m |
-| 15 cm | 3.0 cm | 17.0 cm | 51.5 N·m |
+On the force side, the discount is immediate: static vertical load drops to around 230 N per wrist, and even reaching all the way to the fingertips (11.7 cm) costs roughly 27 N·m of wrist moment—less than what the 70 kg model pays near mid-hand. At the same time, the white square narrows to a 13 cm window (only 6.5 cm of symmetric margin from its center at 5.2 cm), and a lower CoM means faster angular acceleration whenever you drift. The result is a handstand that is physically much more economical, yet geometrically much more demanding than the 70 kg model. Put simply, your handstand lives in a regime where strength costs almost nothing, but precision is everything.
 
-**Table 1.** Recoverable CoM displacement and wrist moment for four reference CoM positions.
-
-A simple pattern immediately emerges.
-
-In every case, the forward margin equals the distance from the reference CoM to the fingertip edge.
-
-Likewise, the backward margin equals the distance to the heel edge.
-
-Within the cases tested, balance is recoverable exactly as long as the CoM can still be brought back within the hand footprint.
-
-The two margins become equal at mid-hand (8 cm), where the wrist moment is approximately 27.5 N·m per wrist.
-
-Balancing closer to the wrist reduces the wrist moment but leaves little room to correct a backward fall.
-
-Balancing closer to the fingers increases the wrist moment and leaves little room to correct a forward fall.
-
-The familiar trade-off appears again.
-
-Lower wrist loading and larger balance margins are not necessarily achieved at the same posture.
-
-## The real question: does height matter?
-
-The previous results reveal something surprising.
-
-The model does not fail because forces become excessively large.
-
-It fails when the required CoP can no longer be placed where the controller needs it.
-
-This brings us back to the question raised at the beginning of the article:
-
-**does body height matter?**
-
-At first sight, the answer seems obvious.
-
-The gravitational torque scales with the distance between the wrist and the centre of mass:
+Wander from that small frame into the math of height and the picture shifts subtly. Gravitational torque scales with the distance $$h$$ between the wrist and the centre of mass:
 
 $$
 \tau_g
@@ -324,27 +271,13 @@ $$
 mgh\sin\theta.
 $$
 
-For the same lean angle, increasing $$h$$ increases the torque that must be controlled.
-
-<figure>
-  <img src="/assets/img/height_vs_hand_footprint.png"
-       alt="Effect of height on handstand geometry">
-  <figcaption markdown="span">
-    Figure 4. The hand footprint changes little between individuals, whereas the distance between the wrist and the centre of mass can change substantially.
-  </figcaption>
-</figure>
-
-For small angles,
+For the same lean angle, a larger $$h$$ asks for more torque. For small angles, horizontal CoM displacement is approximately
 
 $$
-d \approx h\theta.
+d \approx h\theta,
 $$
 
-The same angular lean therefore produces a larger horizontal displacement of the centre of mass when the body is taller.
-
-Because the hand footprint remains approximately fixed, the available CoP travel corresponds to a smaller angular range.
-
-A useful approximation is
+so the same tilt carries the centre of mass farther out when the body is taller. Because the hand footprint remains roughly fixed, a given CoP travel corresponds to a narrower angular span:
 
 $$
 \theta_{\max}
@@ -354,11 +287,7 @@ $$
 
 where $$L_{\text{hand}}$$ is the effective range available to the centre of pressure.
 
-This seems to support the common intuition that taller people should struggle more.
-
-But the dynamics tell a more nuanced story.
-
-The rotational inertia also increases with height:
+At first glance, this confirms the gym wisdom that tall bodies face a steeper climb. Yet rotational dynamics wander into a slightly different truth. Rotational inertia grows with height as
 
 $$
 I \approx mh^2.
@@ -369,10 +298,10 @@ Combining gravitational torque and inertia gives
 $$
 \ddot{\theta}
 =
-\frac{g}{h}\theta.
+\frac{g}{h}\theta,
 $$
 
-The characteristic instability rate is therefore
+and a characteristic instability rate of
 
 $$
 \omega_n
@@ -380,91 +309,9 @@ $$
 \sqrt{\frac{g}{h}}.
 $$
 
-As $$h$$ increases, the instability develops more slowly.
+As $$h$$ increases, that rate softens: a taller athlete does not necessarily fall faster in angular terms, because rotational inertia grows faster than gravitational torque. What shrinks is not the clock ticking down your reaction, but the angular range that wrist strategy alone can reclaim. Height, then, reshapes the geometry of control more than the speed of the fall itself.
 
-A taller athlete does not necessarily fall faster.
-
-In angular terms, the motion is actually slower because inertia grows faster than gravitational torque.
-
-The disadvantage appears elsewhere.
-
-What becomes smaller is not the time available to react, but the angular range that can be corrected through wrist strategy alone.
-
-<figure>
-  <img src="/assets/img/angular_margin_vs_height.png"
-       alt="Angular margin decreases with height">
-  <figcaption markdown="span">
-    Figure 5. The same hand footprint corresponds to a smaller admissible angular deviation when the centre of mass is farther from the wrist.
-  </figcaption>
-</figure>
-
-The model therefore suggests that body height primarily affects the geometry of control rather than the speed of the instability itself.
-
-## So, do taller people struggle more?
-
-Within the assumptions of this model, the answer is both yes and no.
-
-A taller athlete does not fall faster.
-
-If anything, the angular instability develops more slowly because rotational inertia grows faster than gravitational torque.
-
-However, the hand footprint does not increase in proportion to body size.
-
-The centre of pressure can only move within a limited range, and that range corresponds to a progressively smaller angular correction margin as the distance between the wrist and the centre of mass increases.
-
-The model therefore predicts that taller athletes possess less angular authority from wrist control alone.
-
-They do not fail because the body accelerates more violently.
-
-They fail because they reach the geometric limits of the hand sooner.
-
-In this framework, the limiting factor is not force but controllability.
-
-## How good is the model?
-
-Ultimately, the model is a model.
-
-The wrist is at ground level, the hand mass is neglected and the hand stays flat.
-
-The body is represented as a single inverted pendulum with one degree of freedom, ignoring active corrections at the shoulders, hips and knees.
-
-The parameters used here (mass, distance $$h$$, body length, hand footprint and controller gains) are plausible but not measured.
-
-The controller is idealised.
-
-There is no sensory delay, no noise and no actuator dynamics.
-
-The centre of pressure responds instantly to the control command within its limits.
-
-There is also no experimental validation.
-
-The model has not been compared against force-plate measurements or kinematic recordings from real performers.
-
-The recoverable-margin simulations evaluate initial displacement from rest only.
-
-They do not examine disturbances with initial angular velocity, which would significantly reduce the recoverable envelope in practice.
-
-While the model suggests that taller athletes experience a geometric disadvantage, real performers possess additional strategies that are absent here.
-
-Changes in shoulder position, finger stiffness, scapular control, hip compensation and even hand placement may all contribute to extending the practical limits of balance.
-
-These mechanisms remain outside the scope of the present model and would require a more complete multi-segment description of the body.
-
-In the next post we will see exactly that.
-
-A richer model, capable of incorporating additional joints and balance strategies.
-
-There is, however, one methodological lesson worth keeping.
-
-Throughout the analysis, the force acting on the wrist barely changes, while the wrist moment changes substantially.
-
-Studies that report only force magnitude or pressure under the hand would therefore miss most of what actually changes with posture in this model.
-
-The moment, which depends not only on how much force is applied but also on where it is applied, turns out to be the more informative quantity.
-
-
-
-
+So it’s not that one person has to work harder to control the handstand than the other—it’s that they have to do a different kind of work. We need to understand our own model and adopt control strategies that fit it: build good hypotheses about our world, and interact with it using the most efficient tools.
 
 #### Source and references
 
