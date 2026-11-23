@@ -180,7 +180,7 @@ Interestingly, vertical force ($$F_y$$) is far less sensitive. Across most of th
 To see how balance behaves in motion, we simulate a small forward nudge from rest: an initial tilt of $$0.04\ \mathrm{rad}$$ (about $$2.3^\circ$$, or roughly **4 cm** of horizontal CoM shift). We test four starting CoM positions along the hand and consider a trial a fall if body tilt passes $$0.35\ \mathrm{rad}$$ (about $$20^\circ$$), tracking both the body’s trajectory and the resulting wrist loads.
 
 <figure>
-  <img src="/assets/img/active_balance_simulation.png"
+  <img src="/assets/img/cop/active_balance_simulation.png"
        alt="Active balance after an initial perturbation of 2.3°">
   <figcaption markdown="span">
     Figure 3. Active balance with a saturated CoP controller after an initial perturbation of 2.3°, for four reference CoM positions (1, 6, 10 and 15 cm). Grey band: hand footprint.
