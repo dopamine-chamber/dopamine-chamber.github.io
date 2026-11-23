@@ -12,7 +12,8 @@ description: "Physics lessons in an upside-down context: exploring the handstand
 <style>
   .home { text-align: left; }
   .home h1 { font-size: 2.1rem; font-weight: 600; line-height: 1.2; margin: 1.5rem 0 0.6rem; text-align: left; }
-  .home h2 { font-size: 1.4rem; font-weight: 600; margin: 2.5rem 0 0.8rem; text-align: left; }
+  .home h2 { font-size: 1.75rem; font-weight: 600; line-height: 1.25; margin: 2.8rem 0 0.9rem; text-align: left; hyphens: manual; -webkit-hyphens: manual; }
+  @media (max-width: 700px) { .home h2 { font-size: 1.45rem; } }
   .home p { text-align: left; }
   .home .lead { font-size: 1.15rem; line-height: 1.5; margin-bottom: 1.2rem; }
   .home .intro { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
@@ -81,10 +82,6 @@ description: "Physics lessons in an upside-down context: exploring the handstand
 
   <h1>Movement is a way of thinking</h1>
   <p class="lead">It's how we experience the world. It's a way to look at human potential. The Handstand Dilemma is an editorial project where physical and philosophical approaches meet to explore the handstand phenomenon, deconstructing it from the ground up. Same physical principles, different context. </p>
-  <p class="cta">
-    <a class="btn btn-primary" href="{{ start_post.url | relative_url }}">Start here</a>
-    <a class="btn" href="{{ '/blog/' | relative_url }}">Browse all posts</a>
-  </p>
 
   <figure class="hero-anim">
     <iframe
@@ -94,12 +91,17 @@ description: "Physics lessons in an upside-down context: exploring the handstand
     </iframe>
   </figure>
 
+  <p class="cta">
+    <a class="btn btn-primary" href="{{ start_post.url | relative_url }}">Start here</a>
+    <a class="btn" href="{{ '/blog/' | relative_url }}">Browse all posts</a>
+  </p>
+
   <div class="intro">
-    
+
   <h2>What you're getting into: come for the quiet, stay for the search</h2>
   <p>A handstand looks like stillness. It isn’t. Physically, the body’s centre of mass sits above the hands, and any error grows exponentially, roughly doubling every quarter of a second. Staying up means correcting, continuously, with wrists and fingers that were never selected for the job. In a way, movement tied to the handstand comes with a certain musicality. And in fact, rhythm is the foundation of the idea behind this project. It is what inspired it and what continues to help it grow.</p>
 
-<p>Evolution didn’t build us to balance on our hands. And yet humans learn to do it. That is what makes the handstand also philosophically interesting. Heraclitus saw the harmony of the world in tension, like the bow and the lyre: opposing forces that hold each other in place. The handstand is that idea in a body: not a state but an action. You stay balanced only by continuing to balance. If it were stable, it would be a pose, like lying down, and it would be worth little; its value comes from its precariousness.</p>
+  <p>Evolution didn’t build us to balance on our hands. And yet humans learn to do it. That is what makes the handstand also philosophically interesting. Heraclitus saw the harmony of the world in tension, like the bow and the lyre: opposing forces that hold each other in place. The handstand is that idea in a body: not a state but an action. You stay balanced only by continuing to balance. If it were stable, it would be a pose, like lying down, and it would be worth little; its value comes from its precariousness.</p>
 
   <p>The Handstand Dilemma is about that tension: a posture that looks like stillness, is made of constant motion, and serves no purpose except itself. I want to understand why we keep doing it.</p>
 </div>
@@ -124,7 +126,7 @@ description: "Physics lessons in an upside-down context: exploring the handstand
   </div>
   <p><a href="{{ '/series/' | relative_url }}">See the whole series</a></p>
 
-   <p>It is also a small Sisyphus. No handstand is final: it always ends. Camus asks us to imagine Sisyphus happy. But Sisyphus is condemned to his rock, while we choose our handstands, and that may be the whole point. Anyone who practices knows the value lies not in the arrival but in the repeated attempt.</p>
+  <p>It is also a small Sisyphus. No handstand is final: it always ends. Camus asks us to imagine Sisyphus happy. But Sisyphus is condemned to his rock, while we choose our handstands, and that may be the whole point. Anyone who practices knows the value lies not in the arrival but in the repeated attempt.</p>
 
   <h2>Who writes this</h2>
   <p>I’m a biomedical engineer with a long-standing interest in movement, art and human performance. This project is where handstand practice and analytical reasoning meet. I don’t claim to have answers: the purpose of this project is to document my search for them. <em><a href="{{ '/about/' | relative_url }}">More about the project</a>.</em></p>
