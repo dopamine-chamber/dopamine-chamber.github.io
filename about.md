@@ -18,7 +18,6 @@ description: "About The Handstand Dilemma: a handstand practitioner's project wh
 </style>
 
 <div class="liner">
-  <p class="liner-kicker">Liner notes</p>
   <p class="liner-lead">This project holds what I’ve understood about handstands.</p>
 </div>
 
@@ -45,5 +44,5 @@ description: "About The Handstand Dilemma: a handstand practitioner's project wh
 <p>All rights are reserved. Content may not be reproduced or redistributed without prior written consent.</p>
 
 <div class="nowplaying">
-  <p><strong>Now playing.</strong> The page URL is a tribute to the latest Fontaines D.C. album.</p>
+  <p>The page URL is a tribute to the latest Fontaines D.C. album, <em>Dopamine Chamber</em>. The project was born in the days when the album was being released, and their music helped me get into the flow and inspired and motivated me deeply to create.</p>
 </div>
