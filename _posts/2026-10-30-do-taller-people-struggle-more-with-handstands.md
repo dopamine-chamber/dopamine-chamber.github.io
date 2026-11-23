@@ -1,27 +1,28 @@
 ---
 layout: post
-title: "Do taller people struggle more with handstands?"
-date: 2026-10-30
-published: true
+title: "Where the movement becomes experience"
+description: "How the wrists keep a handstand upright: a damped-oscillator model with PD control, stability conditions, energy analysis and the effect of delay."
+tags: [handstand, biomechanics, inverted pendulum, control theory]
+image: /assets/img/damped-inverted-pendulum.png
+date: 2026-10-30 12:00:00 +0200
+series_order: 4
 ---
 
-In my years of practice, one thing I have heard a lot is that, as a short girl, I must find it easier to balance in a handstand. And yes, but… it's a simplistic way of thinking about the phenomenon, and I'm not comfortable with assumptions that come without any evidence. Of course, if an experienced athlete says it, I trust them: it's empirical, and I don't necessarily need evidence. But, you know, I'm obsessed with handstands, so if there is more to it than this, I need to discover it. So let's introduce another important concept in this handstand-dismantling journey.
+There comes a moment, in the course of your practice, when you have to do something with everything you've learned from theory. Take what you're told by one person or another and make it your own experience, understand whether it's true, whether it works for you. The systems the human body uses to cope with gravity, the muscles, the nervous system, the antigravity myofascial chains, work well and, if all goes well, work the same way for everyone. They're the ones that let you walk, live, move. But when there's such an important cognitive component, as in the handstand, there is no perfect protocol. You have to embody it, you have to experience it. To gravity, at a certain point, you adapt: you have the tools to do it. It's the context that changes. It's about understanding where control stops being external and starts being internal.
 
-## The wrist strategy and the centre of pressure
+## Another hypothesis about the world
 
-In my previous post, we derived that the torque exerted at the wrist is the player that counteracts the fall:
+To manage gravity, the body uses joint strategies depending on how gross the movement we need to correct is, relying on the ankles, hips and knees. In the case of the handstand, of course, the joint most called upon is the wrists, and this strategy is called **the wrist strategy** among several studies of the handstand itself, which have examined how balance is maintained and controlled in the anterior–posterior direction. It's not always like this, obviously things are more complicated than that. This is the strategy we've seen so far, with the rigid-body assumptions we've made so far, in which nothing else moves or creates levers or twists. In short: the perfect athlete. But these studies, condupted among experienced athletes, have shown that wrist strategy is the most commonly used to recover the balance when the centre of mass is swaying from its stability range.
+
+In my [previous post](https://dopamine-chamber.github.io/2026/10/20/straight-two-arm-handstand-model.html) we worked out that the torque at the wrist is the main player when it comes to counteracting the fall:
 
 $$|\tau| = m g h \sin\theta$$
 
-and drew a first result: the magnitude of the torque depends on the tilt $$\theta$$ and on the height $$h$$ of the centre of mass, and therefore on the height of the performer. 
+First result: the magnitude of the torque depends on the tilt $\theta$ and on the height $h$ of the centre of mass. Which means it also depends on how tall you are.
 
-The ability to recover from falling is defined **wrist strategy** among several studies of the handstand itself, which have examined how balance is maintained and controlled in the anterior–posterior direction. These studies, condupted among experienced athletes, have shown that wrist strategy is the most commonly used to recover the balance when the centre of mass is swaying from its stability range. In the future posts, we will explore other strategies, but we will need to introduce different models: as like as happens in handstand trainings, we will go step by step along this journey.
+However, the study of balance strategies brings out the importance of another element called the **centre of pressure**, which is the point of application where all the ground reaction forces from the floor converge. In practice, it's the point of contact with the world, the point of passage from passive to active, where gravity goes from being something you endure to something you manage.
 
-There is another important concept that comes up when talking about upright stance: the **centre of pressure** (CoP), the point of application of the resultant ground reaction force acting on the plantar surface of the foot (or feet) during standing, walking or other activities. It is the weighted average of all the pressure exerted by the foot on the ground, and its trajectory over time is widely used to assess balance, postural control and gait.
-
-The same idea can be applied to the handstand, with the hands taking the place of the feet.
-
-## Let's complicate our model a bit
+The centre of pressure comes out of gait analysis and postural studies, but it applies just as well to the handstand.
 
 The body is a rigid stick of mass $$m$$ and length $$H$$ rotating about the wrist, with the centre of mass (CoM) at distance $$h$$ from the pivot. Let $$\theta$$ be the inclination from the vertical (positive towards the fingers), $$d = h\sin\theta$$ the horizontal position of the CoM relative to the wrist, and $$c$$ the position of the CoP under the hand, also relative to the wrist. The CoP can only lie within the hand footprint (Figure 1).
 
