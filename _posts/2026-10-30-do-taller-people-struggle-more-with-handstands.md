@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Do taller people struggle more with handstands?"
+title: "Where the movement theory becomes individual experience"
 description: "How the wrists keep a handstand upright: centre of pressure, balance margins and the effect of body height."
 tags: [handstand, biomechanics, inverted pendulum, control theory]
 image: /assets/img/damped-inverted-pendulum.png
 date: 2026-10-30 12:00:00 +0200
-series_order: 4
+series_order: 5
+published: false
 ---
 
 There comes a moment, in the course of your practice, when you have to do something with everything you've learned from theory. Take what you're told by one person or another and make it your own experience, understand whether it's true, whether it works for you. The systems the human body uses to cope with gravity, the muscles, the nervous system, the antigravity myofascial chains, work well and, if all goes well, work the same way for everyone. They're the ones that let you walk, live, move.
@@ -30,15 +31,9 @@ $$
 |\tau| = mgh\sin\theta
 $$
 
-First result: the magnitude of the torque depends on the tilt $$\theta$$ and on the height $$h$$ of the centre of mass.
+First result: the magnitude of the torque depends on the tilt $$\theta$$ and on the height $$h$$ of the centre of mass. Which means it also depends on *how tall you are*.
 
-Which means it also depends on how tall you are.
-
-However, the study of balance strategies brings out the importance of another element called the **centre of pressure** (CoP), which is the point of application where all the ground reaction forces from the floor converge.
-
-In practice, it's the point of contact with the world, the point of passage from passive to active, where gravity goes from being something you endure to something you manage.
-
-The centre of pressure comes out of gait analysis and postural studies, but it applies just as well to the handstand.
+However, the study of balance strategies brings out the importance of another element called the **centre of pressure** (CoP), which is the point of application where all the ground reaction forces from the floor converge. In practice, it's the point of contact with the world, the point of passage from passive to active, where gravity goes from being something you endure to something you manage. The centre of pressure comes out of gait analysis and postural studies, but it applies just as well to the handstand.
 
 Remembering our usual assumptions, the body is a rigid stick of mass $$m$$ and length $$H$$ rotating about the wrist, with the centre of mass (CoM) at distance $$h$$ from the pivot.
 
@@ -58,9 +53,7 @@ The CoP can only lie within the hand footprint.
   </figcaption>
 </figure>
 
-This is where the problem changes character.
-
-Until now we described the handstand mainly in terms of body position. Once the CoP is introduced, balance is no longer only about where the body is, but also about where the body is able to push against the ground.
+This is where the problem changes character: once the CoP is introduced, balance is no longer only about where the body is, but also about where the body is able to push against the ground.
 
 ## From body position to wrist loads
 
