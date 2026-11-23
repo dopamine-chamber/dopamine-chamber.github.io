@@ -80,7 +80,7 @@ description: "Physics lessons in an upside-down context: exploring the handstand
 
 <div class="home">
 
-  <h1>Movement is a way of thinking</h1>
+  <h1 style="text-align: center;">Movement is a way of thinking</h1>
   <p class="lead">It's how we experience the world. It's a way to look at human potential. The Handstand Dilemma is an editorial project where physical and philosophical approaches meet to explore the handstand phenomenon, deconstructing it from the ground up. Same physical principles, different context. </p>
 
   <figure class="hero-anim">
