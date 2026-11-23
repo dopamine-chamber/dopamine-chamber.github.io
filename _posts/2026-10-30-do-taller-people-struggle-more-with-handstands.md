@@ -1,31 +1,21 @@
 ---
 layout: post
-title: "Where the movement theory becomes individual experience"
+title: "Interlude: outside in (embody the theory)"
 description: "How the wrists keep a handstand upright: centre of pressure, balance margins and the effect of body height."
-tags: [handstand, biomechanics, inverted pendulum, control theory]
+tags: [handstand, biomechanics, inverted pendulum, control theory, embodiment]
 image: /assets/img/damped-inverted-pendulum.png
 date: 2026-10-30 12:00:00 +0200
 series_order: 5
 published: true
 ---
 
-There comes a moment, in the course of your practice, when you have to do something with everything you've learned from theory. Take what you're told by one person or another and make it your own experience, understand whether it's true, whether it works for you. The systems the human body uses to cope with gravity, the muscles, the nervous system, the antigravity myofascial chains, work well and, if all goes well, work the same way for everyone. They're the ones that let you walk, live, move.
+There comes a moment, in the course of your practice, when you have to do something with everything you've learned from theory. Take what you're told by one person or another and make it your own experience, understand whether it's true, whether it works for you. The systems the human body uses to cope with gravity, the muscles, the nervous system, the antigravity myofascial chains, work well and, if all goes well, work the same way for everyone. They're the ones that let you walk, live, move. But when there's such an important cognitive component, as in the handstand, there is no perfect protocol. *You have to embody it*. 
 
-But when there's such an important cognitive component, as in the handstand, there is no perfect protocol. You have to embody it, you have to experience it.
+To gravity, at a certain point, you adapt: you have the tools to do it. It's the context that changes. It's about *understanding where control stops being external and starts being internal*. 
 
-To gravity, at a certain point, you adapt: you have the tools to do it. It's the context that changes. It's about understanding where control stops being external and starts being internal.
+## An hypothesis about the world
 
-## Another hypothesis about the world
-
-To manage gravity, the body uses joint strategies depending on how gross the movement we need to correct is, relying on the ankles, hips and knees.
-
-In the case of the handstand, of course, the joint most called upon is the wrists, and this strategy is called **the wrist strategy** among several studies of the handstand itself, which have examined how balance is maintained and controlled in the anterior–posterior direction.
-
-It's not always like this, obviously things are more complicated than that. This is the strategy we've seen so far, with the rigid-body assumptions we've made up to now, in which nothing else moves or creates levers or twists. In short: the perfect athlete.
-
-But these studies, conducted among experienced athletes, have shown that wrist strategy is the most commonly used to recover balance when the centre of mass is swaying outside its stability range.
-
-In my [previous post](/2026/10/20/straight-two-arm-handstand-model.html) we worked out that the torque at the wrist is the main player when it comes to counteracting the fall:
+In my [previous posts](2026/10/20/an-energy-perspective.html) we have analyzed the model representing the handstand problem, unpacking why this system is unstable—both from a mechanical and force-balance perspective and from an energetic one. In particular, the energetic interpretation makes it even clearer that **stability is negotiated** and that active control is required for the handstand to happen. This torque is the wrist torque and here is how we framed it:
 
 $$
 |\tau| = mgh\sin\theta
@@ -33,9 +23,19 @@ $$
 
 First result: the magnitude of the torque depends on the tilt $$\theta$$ and on the height $$h$$ of the centre of mass. Which means it also depends on *how tall you are*.
 
-However, the study of balance strategies brings out the importance of another element called the **centre of pressure** (CoP), which is the point of application where all the ground reaction forces from the floor converge. In practice, it's the point of contact with the world, the point of passage from passive to active, where gravity goes from being something you endure to something you manage. The centre of pressure comes out of gait analysis and postural studies, but it applies just as well to the handstand.
+In practice, everything we have done so far is analyze which force, which external element is responsible for a fall—what makes us fragile, and whether some variables carry more weight than others. All of this is useful, yet it is nothing more than a hypothesis of the world we want to move in—a world that, let’s remember, is not as ideal as the one we are modeling. In short, it’s a nice story: coherent and interesting, sure, but it’s not the whole picture. At some point, the outside world meets the inner world. 
 
-Remembering our usual assumptions, the body is a rigid stick of mass $$m$$ and length $$H$$ rotating about the wrist, with the centre of mass (CoM) at distance $$h$$ from the pivot.
+The study of balance strategies brings out the importance of another element called the **centre of pressure** (CoP), which is the point of application where all the ground reaction forces from the floor converge. In practice, it's the point of contact with the world, the point of passage from passive to active, where gravity goes from being something you endure to something you manage. The centre of pressure comes out of gait analysis and postural studies, but it applies just as well to the handstand.
+
+We’ll pretend to make meet outside and inside worls right here: the moment we stop looking at what happens to our center of mass and start paying attention to what we feel on the palms of our hands, the only point where we can actually act, and through them, perhaps, bring our center of mass back under control.
+
+## Control theory: a negotiation between the body, the environment, the task
+
+Let’s give all this unapologetically mathematical talk a deep, individual, neuromuscular meaning. To manage gravity, the body uses joint strategies depending on how gross the movement we need to correct is, relying on the ankles, hips and knees. In the case of the handstand, of course, the joint most called upon is the wrists, and this strategy is called **the wrist strategy** among several studies of the handstand itself, which have examined how balance is maintained and controlled in the anterior–posterior direction. It's not always like this, obviously things are more complicated than that. But these studies, conducted among experienced athletes, have shown that wrist strategy is actually the most commonly used to recover balance when the centre of mass is swaying outside its stability range. So we can make one more assumption, and pretend we’re referring to experienced athletes who rely primarily on this control strategy.
+
+This is the strategy we've seen so far, with the rigid-body assumptions we've made up to now, in which nothing else moves or creates levers or twists. And remembering our other usual assumptions, the body is a rigid stick of mass $$m$$ and length $$H$$ rotating about the wrist, with the centre of mass (CoM) at distance $$h$$ from the pivot.
+
+## Another hypothesis about the world
 
 Let:
 
@@ -43,7 +43,7 @@ Let:
 - $$d = h\sin\theta$$ the horizontal position of the CoM relative to the wrist;
 - $$c$$ the position of the CoP under the hand, also relative to the wrist.
 
-The CoP can only lie within the hand footprint.
+The CoP can only lie within the hand footprint.This is where the problem changes character: once the CoP is introduced, balance is no longer only about where the body is, but also about where the body is able to push against the ground (Figure 1).
 
 <figure>
   <img src="/assets/img/handstand_center_of_pressure_model.png"
@@ -53,31 +53,32 @@ The CoP can only lie within the hand footprint.
   </figcaption>
 </figure>
 
-This is where the problem changes character: once the CoP is introduced, balance is no longer only about where the body is, but also about where the body is able to push against the ground.
-
-## From body position to wrist loads
-
 At every instant, the model is defined by two quantities:
 
-- the position of the **centre of mass (CoM)** relative to the wrists;
-- the position of the **centre of pressure (CoP)** under the hands.
+- the position of the **centre of mass (CoM)** relative to the wrists, determining how gravity tends to tilt the body
+- the position of the **centre of pressure (CoP)** under the hands, that determines where the ground reaction force acts
 
-The CoM determines how gravity tends to rotate the body, while the CoP determines where the ground reaction force acts.
+Think of a handstand as a constant tug-of-war between two points: your CoM (where gravity pulls you down) and your CoP (where the floor pushes you back up through your hands). Together, these two positions tell the whole story of what your body is doing at any given instant.
 
-Together, these two positions completely determine the instantaneous dynamics of the handstand.
+Usually, writing out the physics of a handstand gets messy because of all the unknown internal forces acting inside the wrist joint. However, if we choose the wrist as our pivot point when calculating rotational forces (torques), those unknown joint forces mathematically cancel out. Around the wrist, gravity pulls the CoM forward (at horizontal distance $d = h\sin\theta$) with a tipping torque $mg\,d$, while the ground reaction force pushes up at the CoP (at distance $c$) with a counter-torque $F_y\,c$. That gives us the rotational equation for angular acceleration $\ddot{\theta}$:
 
-Taking moments about the wrist eliminates the unknown wrist-reaction forces from the rotational equation. By combining the translational and rotational balance equations, the angular acceleration of the body can be expressed directly as a function of CoM and CoP position.
+$$I\ddot{\theta} = mg\,d - F_y\,c$$
 
-In practical terms, once the body position and the pressure distribution beneath the hand are known, the model can immediately predict whether the body will start rotating forward or backward and how quickly.
+Meanwhile, linear motion links the body’s acceleration to the external forces: horizontally, $m\ddot{x}_{\text{CoM}} = F_x$ (with $\ddot{x}_{\text{CoM}}$ coming from the geometry of $\theta$); vertically, $m\ddot{y}_{\text{CoM}} = F_y - mg$. Combining these lets us isolate $\ddot{\theta}$ from the positions of the CoM and CoP—and once we know how the body is accelerating, we can plug that acceleration right back in to solve for the forces and wrist torque.
 
-The same equations also provide the loads transmitted through the wrists.
+In practical terms, this means we don't need to measure complex internal muscle tensions to see what is happening. Just by knowing your body’s lean and where you feel pressure under your palms, the model immediately tells us whether you are falling forward or backward, how fast, and what that move demands from the wrists.
 
 Four quantities are monitored:
 
-- the **vertical force** $$F_y$$, which supports body weight;
-- the **shear force** $$F_x$$, acting parallel to the ground;
-- the **resultant force** $$R=\sqrt{F_x^2+F_y^2}$$;
-- the **wrist moment** $$M_w$$, representing the torque that must be sustained by the wrist structures and surrounding muscles.
+- the **vertical force** $F_y$ ($N$), which supports body weight;
+- the **shear force** $F_x$, acting parallel to the ground;
+- the **resultant force** $R=\sqrt{F_x^2+F_y^2}$;
+- the **wrist moment** $M_w$, representing the torque that must be sustained by the wrist structures and surrounding muscles.
+
+
+
+
+-----
 
 Positive shear force is defined toward the fingers, that is, in the direction of the body's horizontal acceleration.
 
