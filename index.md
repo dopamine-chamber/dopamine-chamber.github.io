@@ -126,7 +126,7 @@ description: "Physics lessons in an upside-down context: exploring the handstand
   <div class="music">
     <p class="music-label">Now playing</p>
     <iframe
-      src="https://bandcamp.com/EmbeddedPlayer/track=2663334220/size=large/bgcol=ffffff/linkcol=222222/tracklist=false/artwork=small/transparent=true/"
+      src="https://bandcamp.com/EmbeddedPlayer/album=1524188113/size=large/bgcol=ffffff/linkcol=222222/tracklist=false/artwork=small/transparent=true/"
       title="Japan by Fontaines D.C. on Bandcamp"
       loading="lazy"
       seamless>
