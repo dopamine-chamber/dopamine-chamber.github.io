@@ -1,4 +1,4 @@
-<img width="300" height="2268" alt="image" src="https://github.com/user-attachments/assets/23796923-d5c8-4712-a234-bc57da9a1d14" />---
+---
 layout: post
 title: "Do taller people struggle more with handstands?"
 description: "How the wrists keep a handstand upright: centre of pressure, balance margins and the effect of body height."
