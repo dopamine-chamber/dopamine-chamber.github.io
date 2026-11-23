@@ -41,21 +41,11 @@ description: "About The Handstand Dilemma: a handstand practitioner's project wh
   .flow { margin: 1.5rem 0; }
   .flow figcaption { font-size: 0.85rem; opacity: 0.7; margin-top: 0.25rem; }
 
-  .smallprint { border: 1px dashed rgba(128, 128, 128, 0.5); border-radius: 0.5rem; padding: 1rem 1.25rem; font-size: 0.9rem; margin: 2rem 0; }
-  .smallprint p { margin: 0 0 0.6rem; }
-  .smallprint p:last-child { margin-bottom: 0; }
-  .smallprint-label { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.7rem; opacity: 0.65; }
-
-  .nowplaying { display: flex; align-items: center; gap: 0.75rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(128, 128, 128, 0.35); }
+  .nowplaying { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(128, 128, 128, 0.35); }
   .nowplaying p { margin: 0; }
-  .eq { display: inline-flex; align-items: flex-end; gap: 2px; height: 1.1rem; flex: none; }
-  .eq span { width: 3px; height: 100%; background: #c0392b; transform-origin: bottom; animation: eq 1s ease-in-out infinite; }
-  .eq span:nth-child(2) { animation-delay: 0.2s; }
-  .eq span:nth-child(3) { animation-delay: 0.4s; }
-  @keyframes eq { 0%, 100% { transform: scaleY(0.3); } 50% { transform: scaleY(1); } }
 
   @media (prefers-reduced-motion: reduce) {
-    .vinyl, .eq span { animation: none; }
+    .vinyl { animation: none; }
   }
 </style>
 
@@ -85,13 +75,4 @@ description: "About The Handstand Dilemma: a handstand practitioner's project wh
   <figcaption>The editorial flow, roughly. Not to scale.</figcaption>
 </figure>
 
-<div class="smallprint">
-  <p class="smallprint-label">Small print</p>
-  <p>Therefore, the content published on this site is created in good faith and for informational purposes only, with all original sources duly cited within the articles. Every effort is made to respect third-party intellectual property rights. If you believe any content infringes upon your copyright, please contact me for immediate review and removal. Please see the privacy policy page for my contact details.</p>
-  <p>All rights are reserved. Content may not be reproduced or redistributed without prior written consent.</p>
-</div>
-
-<div class="nowplaying">
-  <div class="eq" aria-hidden="true"><span></span><span></span><span></span></div>
-  <p><strong>Now playing.</strong> The page URL is a tribute to the latest Fontaines D.C. album.</p>
-</div>
+<p>Therefore, the content published on this site is created in good faith and for informational purposes only, with all original sources duly cited within the articles. Every effort is made to respect third-party intellectual property rights. If you believe any content infringes upon your copyright, please contact me for immediate review and removal. Please see the privacy policy page for my contact
