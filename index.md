@@ -132,16 +132,25 @@ description: "Physics lessons in an upside-down context: exploring the handstand
   <p>I’m a biomedical engineer with a long-standing interest in movement, art and human performance. This project is where handstand practice and analytical reasoning meet. I don’t claim to have answers: the purpose of this project is to document my search for them. <em><a href="{{ '/about/' | relative_url }}">More about the project</a>.</em></p>
 
   <h2>Latest posts</h2>
-  <ul class="latest-list">
+<div class="latest-list" style="display: flex; flex-direction: column; gap: 1rem;">
   {% for post in site.posts limit: 3 %}
-    <li>
-      <span class="meta">{{ post.date | date: "%b %-d, %Y" }}</span>{% if post.series_order %}<span class="tag">Series, part {{ post.series_order }}</span>{% elsif post.label %}<span class="tag">{{ post.label }}</span>{% endif %}
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <small>{{ post.description | truncatewords: 22 }}</small>
-    </li>
+    <div>
+      <a href="{{ post.url | relative_url }}" style="color: inherit; font-style: normal; font-weight: 600; text-decoration: none;">
+        {{ post.title }}
+      </a>
+      <div style="font-size: 0.85em; opacity: 0.75;">
+        {% assign author = post.author | default: site.author %}
+        {% if author %}{{ author }} · {% endif %}
+        {% if post.series %}{{ post.series }}{% if post.series_order %} (part {{ post.series_order }}){% endif %} · {% elsif post.series_order %}Series, part {{ post.series_order }} · {% elsif post.label %}{{ post.label }} · {% endif %}
+        {{ post.date | date: "%b %-d, %Y" }}
+      </div>
+    </div>
   {% endfor %}
-  </ul>
-  <p><a href="{{ '/blog/' | relative_url }}">See all posts</a></p>
+</div>
+
+<div style="margin-top: 1.25rem;">
+  <a href="{{ '/blog/' | relative_url }}" style="color: inherit; font-style: normal; text-decoration: underline;">See all posts</a>
+</div>
 
   <p><small>Want to follow along? <em><a href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a></em>.</small></p>
 
