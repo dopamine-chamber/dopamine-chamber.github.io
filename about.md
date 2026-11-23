@@ -1,3 +1,10 @@
+---
+layout: page
+title: About
+permalink: /about/
+description: "About The Handstand Dilemma: a handstand practitioner's project where personal experience meets science communication."
+---
+
 <style>
   .liner { display: flex; align-items: center; gap: 1.5rem; margin: 1.5rem 0; }
   .liner-kicker { margin: 0; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.75rem; opacity: 0.65; }
