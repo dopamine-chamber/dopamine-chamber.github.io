@@ -1,4 +1,4 @@
-<img width="1108" height="2268" alt="image" src="https://github.com/user-attachments/assets/db23206b-ce3e-436c-b9ea-5608edc77733" /><img width="1108" height="2268" alt="image" src="https://github.com/user-attachments/assets/c9f2e3de-ea01-4252-a38c-31906eab3e62" />---
+---
 layout: post
 title: "Where the movement becomes experience"
 description: "How the wrists keep a handstand upright: a damped-oscillator model with PD control, stability conditions, energy analysis and the effect of delay."
