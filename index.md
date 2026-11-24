@@ -129,7 +129,7 @@ description: "Physics lessons in an upside-down context: exploring the handstand
 <p><em>It's also a quiet Sisyphus. No handstand is final: it always ends. Camus asks us to imagine Sisyphus happy. But Sisyphus is condemned to his rock, while we choose our handstands, and that may be the whole point. Anyone who practices knows the value lies not in the arrival but in the repeated attempt.</em></p>
 
   <h2>Who writes this</h2>
-  <p>I’m a biomedical engineer with a long-standing interest in movement, art and human performance. This project is where handstand practice and analytical reasoning meet. I don’t claim to have answers: the purpose of this project is to document my search for them. <em><a href="{{ '/about/' | relative_url }}">More about the project</a>.</em></p>
+  <p>Biomedical engineer, independent writer and amateur circus artist, exploring movement as a meeting place between science, art and philosophy. At its core, this project is not about the clinical physics of handstands. It's a window into how complex human systems mobilize and dialectically negotiate their physical, emotional and intellectual dimensions to learn, adapt and remain stable in changing environments. There are no answers here, only questions to navigate, and each one opens onto another in a never-ending why. <em><a href="{{ '/about/' | relative_url }}">More about the project</a>.</em></p>
 
   <h2>Latest posts</h2>
 <div class="latest-list" style="display: flex; flex-direction: column; gap: 1rem;">
