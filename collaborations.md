@@ -5,49 +5,59 @@ permalink: /collaborations/
 description: Science writer for professionals. Research to content, interview to article, newsletters, editorial plans, multimedia, ghostwriting and scientific copywriting, in English and Italian.
 ---
 
-# Work with me
-
 **Science & Technical writing for science, medicine and fitness professionals.**
 
-For more than ten years, before specialising in engineering, I wrote about everything. Turning abstract concepts into clear written text is what comes most naturally to me: I take research, data and expert knowledge and make it something specialists can trust and everyone else can follow, without flattening the science on the way.
+As a child, I lived on bread and the thesaurus. For more than ten years, before specialising in engineering, I wrote about everything. Turning abstract concepts into clear written text is what comes most naturally to me: I take research, data and expert knowledge and make it something specialists can trust and everyone else can follow, without flattening the science on the way.
 
 *Observe like a physicist. Unpack like an engineer. Experience like a practitioner.* That’s the method, and it’s the same one I use here on The Handstand Dilemma.
 
-## Why me
+## Why you can trust me
+{: style="text-align: left;"}
 
-- **Trained in the subject.** Biomedical engineering is my background, so I read papers, datasets and technical documentation as a practitioner, not as a translator working from the outside.
-- **A track record in published science communication.** Between 2022 and 2025 I wrote articles covering neuroscience, diagnostics, robotics, tissue engineering, cell therapy and rehabilitation technology.
-- **Long-form depth.** I like to dig deep, take things apart, and lose myself in the details.
-- **Two languages.** I write in English and Italian.
-- **Tone of voice.** Every editorial project has a soul of its own. My job is to recognise its tone of voice and carry that imprint through all of the work.
+**Trained in the subject** | biomedical engineering is my main background. I am confident in reading papers, datasets and technical documentation.
+**A track record in published science communication** | between 2022 and 2025 I wrote articles covering neuroscience, diagnostics, robotics, tissue engineering, cell therapy and rehabilitation technology.
+**Long-form depth** | I love to dig deep, take things apart, and lose myself in the details.
+**Two languages** | I write in English and Italian.
+**Tone of voice** | every editorial project has a soul of its own. My job is to recognise its tone of voice and carry that imprint through all of the work.
+**Passion** | everything that happens at the keyboard is driven by my passion for writing. A text won’t leave my desk until I’ve found the word that gives it exactly the right shade of meaning. 
 
 ## What I can do for you
+{: style="text-align: left;"}
 
-### Research to content
+#### Research to content
+{: style="text-align: left;"}
 You have a paper, a trial, a patent, a white paper or a pile of technical notes. I read it, check what it really claims, and turn it into an article, an explainer or a briefing for the audience you actually have: clinicians, engineers, investors, patients’ associations, students.
 
-### Interview to article
+#### Interview to article
+{: style="text-align: left;"}
 You (or your researchers) talk, I listen. I prepare the questions, run or join the conversation, and shape it into a feature, a Q&A or a profile that keeps the person’s voice and gets the science right.
 
-### Article writing
+#### Article writing
+{: style="text-align: left;"}
 News analysis, features, deep dives and explainers on biomedical and health technology. From 800-word pieces to long-form series with a thread running through them.
 
-### Newsletters
+#### Newsletters
+{: style="text-align: left;"}
 A recurring format, from a single edition to a full season: concept, structure, voice, writing and, if you need it, the monthly rhythm. Good for labs, companies and communities that want to stay in front of a specialist audience without a full-time editor.
 
-### Editorial plans
+#### Editorial plans
+{: style="text-align: left;"}
 A calendar built on what your audience needs to understand and what your organisation can credibly say: themes, formats, sources, cadence and the sequence that connects one piece to the next. Delivered as a document you can hand to a team.
 
-### Multimedia content
+#### Multimedia content
+{: style="text-align: left;"}
 Scripts and storylines for video, podcasts and talks; captions and copy for infographics and visual explainers; social carousels that carry the argument rather than just the headline.
 
-### Ghostwriting
+#### Ghostwriting
+{: style="text-align: left;"}
 Articles, op-eds, LinkedIn pieces and thought-leadership texts that go out under your name. I learn how you think and sound, and write from there. Ghostwritten work stays confidential and doesn’t appear in my portfolio unless you decide otherwise.
 
-### Scientific copywriting
+#### Scientific copywriting
+{: style="text-align: left;"}
 Website copy, product and service pages, project descriptions, grant-adjacent summaries, press releases and decks for technical audiences. Clear and persuasive, but never claiming more than the evidence allows.
 
-## How we’d work together
+## How we’d work 
+{: style="text-align: left;"}
 
 1. **Brief.** You tell me the audience, the goal, the sources and the deadline. I reply with a short proposal: scope, format, timeline and price.
 2. **Research.** I read the material, map the claims and list what needs checking or an expert’s input.
@@ -73,8 +83,10 @@ Independent long-form, in English:
 - [Why a handstand is unstable: an energy perspective](/2026/10/20/an-energy-perspective.html)
 - [Error is data: the damped oscillator](/2026/10/25/handstand-balance-damped-oscillator.html)
 - [The whole series](/series/) · [Newsletter](/newsletter/)
+{: style="text-align: left;"}
 
 ## Good to know
+{: style="text-align: left;"}
 
 **Do you write about regulated products?** I write about the evidence, not about regulatory claims. Anything that touches intended use, performance claims or compliance goes through your regulatory or clinical team before publication, and I flag exactly which sentences need that check.
 
@@ -85,6 +97,7 @@ Independent long-form, in English:
 **What about confidentiality?** Under NDA if you need it. Your materials stay yours.
 
 ## Let’s talk
+{: style="text-align: left;"}
 
 Send me a short message with:
 
