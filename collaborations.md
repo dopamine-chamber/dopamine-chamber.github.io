@@ -22,8 +22,7 @@ As a child, I lived on bread and the thesaurus. For more than ten years, before 
 ## What I can do for you
 {: style="text-align: left;"}
 
-##### Science & Technical writing for science, medicine and fitness professionals
-{: style="text-align: left;"}
+<strong>Science & Technical writing for science, medicine and fitness professionals</strong
 
 #### Research to content
 {: style="text-align: left;"}
@@ -71,6 +70,8 @@ Website copy, product and service pages, project descriptions, grant-adjacent su
 
 Published articles for IngegneriaBiomedica.org (in Italian):
 
+<div style="text-align: left;" markdown="1">
+
 - [Brain-spine interface: a bridge between brain and spinal cord](https://www.ingegneriabiomedica.org/news/neuroscience/brain-spine-interface-ponte-tra-cervello-midollo-spinale/) (July 2023)
 - [CAR-T: engineered cells between immunotherapy and personalised medicine](https://www.ingegneriabiomedica.org/news/terapia/car-t-cellule-ingegnerizzate-immunoterapia-medicina-personalizzata/) (March 2024)
 - [MSICLIMB: the first multisensory climbing wall for paediatric neurorehabilitation](https://www.ingegneriabiomedica.org/news/biotech-support/msiclimb-prima-parete-arrampicata-multisensoriale-neuroriabilitazione-pediatrica/) (March 2025)
@@ -79,8 +80,6 @@ Published articles for IngegneriaBiomedica.org (in Italian):
 - [Drop-on-demand: bioprinting in cancer research](https://www.ingegneriabiomedica.org/news/tessuti/drop-on-demand-bioprinting-ricerca-sul-cancro/) (September 2022)
 
 [See all my articles on IngegneriaBiomedica.org →](https://www.ingegneriabiomedica.org/author/benedetta-giglio/)
-
-<div style="text-align: left;" markdown="1">
 
 Independent long-form, in English:
 
