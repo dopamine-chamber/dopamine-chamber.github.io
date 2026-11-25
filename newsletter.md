@@ -73,7 +73,7 @@ description: A newsletter on the physics of handstand balance is on its way. Joi
     <li>Bonus track: the occasional note that doesn’t fit in an article <small>every now and then</small></li>
   </ol>
 
-  <p>Leave your email address and I’ll write to you once it’s ready.</p>
+  <p>Leave your email address to get in touch with me.</p>
 
   <ol class="steps" aria-label="Where the newsletter stands">
     <li class="done">Idea</li>
