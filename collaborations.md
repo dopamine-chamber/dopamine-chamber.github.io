@@ -82,6 +82,7 @@ Published articles for IngegneriaBiomedica.org (in Italian):
 
 [See all my articles on IngegneriaBiomedica.org →](https://www.ingegneriabiomedica.org/author/benedetta-giglio/)
 
+
 Independent long-form, in English:
 
 - [Why a handstand is unstable: an energy perspective](/2026/10/20/an-energy-perspective.html)
