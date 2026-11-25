@@ -161,3 +161,14 @@ description: "Physics lessons in an upside-down context: exploring the handstand
 
   <div class="music">
     <p class="music-label">Now playing</p>
+    <iframe
+      src="https://bandcamp.com/EmbeddedPlayer/album=1524188113/size=large/bgcol=ffffff/linkcol=222222/tracklist=false/artwork=small/transparent=true/"
+      title="Dopamine Chamber by Fontaines D.C. on Bandcamp"
+      loading="lazy"
+      seamless>
+      <a href="https://fontainesdc.bandcamp.com/album/dopamine-chamber">Dopamine Chamber by Fontaines D.C.</a>
+    </iframe>
+    </div>
+
+ </div>
+  
