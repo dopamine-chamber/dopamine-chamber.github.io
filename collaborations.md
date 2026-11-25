@@ -57,7 +57,7 @@ Articles, op-eds, LinkedIn pieces and thought-leadership texts that go out under
 {: style="text-align: left;"}
 Website copy, product and service pages, project descriptions, grant-adjacent summaries, press releases and decks for technical audiences. Clear and persuasive, but never claiming more than the evidence allows.
 
-## How we’d work 
+## How we turn your project into something real
 {: style="text-align: left;"}
 
 1. **Brief.** You tell me the audience, the goal, the sources and the deadline. I reply with a short proposal: scope, format, timeline and price.
@@ -94,13 +94,13 @@ Independent long-form, in English:
 ## Good to know
 {: style="text-align: left;"}
 
-**Do you write about regulated products?** I write about the evidence, not about regulatory claims. Anything that touches intended use, performance claims or compliance goes through your regulatory or clinical team before publication, and I flag exactly which sentences need that check.
+*Do you write about regulated products?* | I write about the evidence, not about regulatory claims. Anything that touches intended use, performance claims or compliance goes through your regulatory or clinical team before publication, and I flag exactly which sentences need that check.
 
-**Do you give medical advice?** No. I explain research and technology; I don’t advise on diagnosis or treatment.
+*Do you give medical advice?* | No. I explain research and technology; I don’t advise on diagnosis or treatment.
 
-**How are projects priced?** By scope, research depth and turnaround, quoted individually. A one-off article, a project package and a monthly retainer are all possible.
+*How are projects priced?* | By scope, research depth and turnaround, quoted individually. A one-off article, a project package and a monthly retainer are all possible.
 
-**What about confidentiality?** Under NDA if you need it. Your materials stay yours.
+*What about confidentiality?* | Under NDA if you need it. Your materials stay yours.
 
 ## Get in touch with me
 {: style="text-align: left;"}
