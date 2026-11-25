@@ -31,8 +31,8 @@ description: "About The Handstand Dilemma: a handstand practitioner's project wh
   <svg viewBox="0 0 420 170" role="img" aria-label="Schematic curve: the complexity of the writing grows as practice time increases" style="width:100%;max-width:26rem;height:auto">
     <line x1="30" y1="140" x2="400" y2="140" stroke="currentColor" stroke-opacity=".5"/>
     <line x1="30" y1="140" x2="30" y2="15" stroke="currentColor" stroke-opacity=".5"/>
-    <path d="M30 135 C 140 132, 220 120, 280 80 S 360 28, 395 18" fill="none" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="395" cy="18" r="4" fill="#c0392b"/>
+    <path d="M30 135 C 140 132, 220 120, 280 80 S 360 28, 395 18" fill="none" stroke="#3a3fd1" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="395" cy="18" r="4" fill="#3a3fd1"/>
     <text x="38" y="26" font-size="11" fill="currentColor" opacity=".7">complexity</text>
     <text x="400" y="158" text-anchor="end" font-size="11" fill="currentColor" opacity=".7">time spent practicing</text>
   </svg>
