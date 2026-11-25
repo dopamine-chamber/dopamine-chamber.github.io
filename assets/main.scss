@@ -9,6 +9,11 @@ $brand-color: #222222;
 $background-color: #ffffff;
 $grey-color: #777777;
 
+/* Link colours: blue / violet */
+$link-color: #3a3fd1;
+$link-visited-color: #6b3fc9;
+$link-hover-color: #7b3ff2;
+
 @import "minima";
 
 /* ---------- Centering ---------- */
@@ -77,14 +82,14 @@ table td {
   }
 
   .site-tagline {
-  display: block;
-  margin-top: 4px;
-  margin-bottom: 0;
-  font-size: 0.9rem;
-  color: #777;
-  font-weight: 400;
-  text-align: center;
-}
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: #777;
+    font-weight: 400;
+    text-align: center;
+  }
 
   .site-nav {
     float: none;
@@ -102,6 +107,23 @@ table td {
   width: auto;
   padding-left: 0;
   padding-right: 0;
+}
+
+/* ---------- Links ---------- */
+
+a,
+.page-content a,
+.post-content a {
+  color: $link-color;
+
+  &:visited {
+    color: $link-visited-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+  }
 }
 
 /* ---------- Figures ---------- */
