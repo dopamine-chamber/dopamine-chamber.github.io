@@ -96,8 +96,10 @@ description: "Physics lessons in an upside-down context: exploring the handstand
 
 <div class="home">
 
-  <h1 style="text-align: center;">Movement is a way of thinking</h1>
-  <p class="lead">It's how we experience the world. It's a way to look at human potential. The Handstand Dilemma is an editorial project where physical and philosophical approaches meet to explore the handstand phenomenon, deconstructing it from the ground up. Same physical principles, different context. </p>
+  <h1 style="text-align: center;">Welcome to the chamber</h1>
+  <p class="lead">A place for studying movement, learning, adaptation. Here we seek the strange machinery that transforms repetition into skill. The nervous system as a prediction machine, muscles as feedback loops. Every skill begins as a hallucination, and error is the reality's response to the model. Every movement is what prediction looks like when it meets reality. Reality disagrees, error is generated, the model updates. Repeat thousands of times. Error isn’t an error, it’s a form of data. And handstands are a dataset full of errors. What we call learning is a prediction engine slowly converging toward reality. 
+    
+The Handstand Dilemma is an editorial project where physical and philosophical approaches meet to disassembly, explore, digest this process. Same physical principles, different context. </p>
 
   <figure class="hero-anim">
     <iframe
@@ -112,18 +114,16 @@ description: "Physics lessons in an upside-down context: exploring the handstand
     <a class="btn" href="{{ '/blog/' | relative_url }}">Browse all posts</a>
   </p>
 
-  <div class="intro">
+ <div class="intro">
 
-  <h2>What you're getting into: come for the quiet, stay for the search</h2>
-  <p>A handstand looks like stillness. It isn’t. Physically, the body’s centre of mass sits above the hands, and any error grows exponentially, roughly doubling every quarter of a second. Staying up means correcting, continuously, with wrists and fingers that were never selected for the job. In a way, movement tied to the handstand comes with a certain musicality. And in fact, rhythm is the foundation of the idea behind this project. It is what inspired it and what continues to help it grow.</p>
+  <h2>What you’re getting into: come for the quiet, stay for the search</h2>
+  <p>Handstands make one think of quiescence: they aren’t. Physically, the bodyweight sits above the hands, and any error grows exponentially. Staying up means correcting, continuously, with wrists and fingers that were never selected for the job. Evolution didn’t build sapiens to balance on hands, and yet humans learn to do it. That is what makes the handstand also philosophically interesting: <b>handstands are punk.</b></p>
 
-  <p>Evolution didn’t build us to balance on our hands. And yet humans learn to do it. That is what makes the handstand also philosophically interesting. Heraclitus saw the harmony of the world in tension, like the bow and the lyre: opposing forces that hold each other in place. The handstand is that idea in a body: not a state but an action. You stay balanced only by continuing to balance. If it were stable, it would be a pose, like lying down, and it would be worth little; its value comes from its precariousness.</p>
-
-  <p>The Handstand Dilemma is about that tension: a posture that looks like stillness, is made of constant motion, and serves no purpose except itself. I want to understand why we keep doing it.</p>
+  <p>In a way, handbalancing comes with a certain musicality: it’s not a state but an action. You stay balanced only by continuing to balance, and <b>motor learning</b> is the wildest process you can experience. The Handstand Dilemma is not the hunt for the ultimate handstand solution, but the search for a simple, direct question: why do humans get obsessed with learning useless things?</p>
 </div>
 
   <h2>Follow the series</h2>
-  <p>The series is built like a 45 rpm record: one handstand, two sides. Part A treats the body as a single rigid block; Part B opens it up into an articulated one.</p>
+  <p>Inspired by a 45 rpm record: one handstand, two sides. Part A treats the body as a single rigid block; Part B opens it up into an articulated one.</p>
   <div class="sides">
     <a class="side-card" href="{{ '/series/#part-a' | relative_url }}">
       <span class="side-disc" aria-hidden="true">A</span>
