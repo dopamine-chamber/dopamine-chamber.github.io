@@ -5,8 +5,6 @@ permalink: /collaborations/
 description: Science writer for professionals. Research to content, interview to article, newsletters, editorial plans, multimedia, ghostwriting and scientific copywriting, in English and Italian.
 ---
 
-**Science & Technical writing for science, medicine and fitness professionals.**
-
 As a child, I lived on bread and the thesaurus. For more than ten years, before specialising in engineering, I wrote about everything. Turning abstract concepts into clear written text is what comes most naturally to me: I take research, data and expert knowledge and make it something specialists can trust and everyone else can follow, without flattening the science on the way.
 
 *Observe like a physicist. Unpack like an engineer. Experience like a practitioner.* That’s the method, and it’s the same one I use here on The Handstand Dilemma.
@@ -22,6 +20,9 @@ As a child, I lived on bread and the thesaurus. For more than ten years, before 
 **Passion** | everything that happens at the keyboard is driven by my passion for writing. A text won’t leave my desk until I’ve found the word that gives it exactly the right shade of meaning. 
 
 ## What I can do for you
+{: style="text-align: left;"}
+
+##### Science & Technical writing for science, medicine and fitness professionals
 {: style="text-align: left;"}
 
 #### Research to content
@@ -66,6 +67,7 @@ Website copy, product and service pages, project descriptions, grant-adjacent su
 5. **Delivery.** The final text, ready to publish, plus a source list and, if useful, short variants for other channels.
 
 ## Selected work
+{: style="text-align: left;"}
 
 Published articles for IngegneriaBiomedica.org (in Italian):
 
@@ -78,12 +80,15 @@ Published articles for IngegneriaBiomedica.org (in Italian):
 
 [See all my articles on IngegneriaBiomedica.org →](https://www.ingegneriabiomedica.org/author/benedetta-giglio/)
 
+<div style="text-align: left;" markdown="1">
+
 Independent long-form, in English:
 
 - [Why a handstand is unstable: an energy perspective](/2026/10/20/an-energy-perspective.html)
 - [Error is data: the damped oscillator](/2026/10/25/handstand-balance-damped-oscillator.html)
 - [The whole series](/series/) · [Newsletter](/newsletter/)
-{: style="text-align: left;"}
+
+</div>
 
 ## Good to know
 {: style="text-align: left;"}
@@ -96,7 +101,7 @@ Independent long-form, in English:
 
 **What about confidentiality?** Under NDA if you need it. Your materials stay yours.
 
-## Let’s talk
+Get in touch with me
 {: style="text-align: left;"}
 
 Send me a short message with:
