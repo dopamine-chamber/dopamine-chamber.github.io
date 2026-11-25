@@ -65,7 +65,7 @@ description: A newsletter on the physics of handstand balance is on its way. Joi
     <p class="liner-lead">A newsletter on the physics of handstand balance is on its way.</p>
   </div>
 
-  <p>I’m thinking about starting a newsletter: new posts on the physics of handstand balance delivered to your inbox, plus the occasional note that doesn’t fit in an article.</p>
+  <p>The physics of handstand balance delivered to your inbox, plus the occasional note that doesn’t fit in an article.</p>
 
   <p class="tracklist-label">Tracklist</p>
   <ol class="tracklist">
@@ -73,7 +73,7 @@ description: A newsletter on the physics of handstand balance is on its way. Joi
     <li>Bonus track: the occasional note that doesn’t fit in an article <small>every now and then</small></li>
   </ol>
 
-  <p>It isn’t set up yet, and before building it I’d like to know whether anyone would actually read it. Leave your email address and I’ll write to you once it’s ready.</p>
+  <p>Leave your email address and I’ll write to you once it’s ready.</p>
 
   <ol class="steps" aria-label="Where the newsletter stands">
     <li class="done">Idea</li>
