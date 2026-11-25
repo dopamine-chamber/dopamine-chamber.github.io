@@ -18,6 +18,7 @@ header_pages:
   - series.md
   - about.md
   - newsletter.md
+  - collaborations.md
    
 markdown: kramdown
 kramdown:
