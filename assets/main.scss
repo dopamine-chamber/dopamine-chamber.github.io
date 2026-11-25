@@ -56,6 +56,14 @@ code {
   text-align: left;
 }
 
+table tr,
+table tr:nth-child(even),
+table tr:nth-child(odd),
+table th,
+table td {
+  background-color: #fff;
+}
+
 /* Header: title and menu centred (desktop only) */
 @media (min-width: 600px) {
   .site-header .wrapper {
