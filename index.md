@@ -36,15 +36,22 @@ description: "Physics lessons in an upside-down context: exploring the handstand
     margin: 0 0.25rem 0.5rem; padding: 0.4rem 1.2rem 0.4rem 0.5rem;
     border-radius: 999px;
   }
+  /* LP icon in the buttons: label in link blue (primary) and violet (secondary) */
   .home p.cta a.btn::before {
     content: ""; flex: none; width: 1.7rem; height: 1.7rem; border-radius: 50%;
     background:
       conic-gradient(from 20deg, transparent 0 20%, rgba(255,255,255,.2) 25%, transparent 30% 70%, rgba(255,255,255,.2) 75%, transparent 80%),
-      radial-gradient(circle, #f5f0e6 0 8%, #c0392b 9% 32%, transparent 33%),
+      radial-gradient(circle, #f5f0e6 0 8%, #6b3fc9 9% 32%, transparent 33%),
       repeating-radial-gradient(circle, #111 0 1.5px, #262626 2.5px 3.5px);
     box-shadow: 0 0 0 1px rgba(128, 128, 128, 0.5);
   }
-  .home p.cta a.btn-primary::before { box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4); }
+  .home p.cta a.btn-primary::before {
+    background:
+      conic-gradient(from 20deg, transparent 0 20%, rgba(255,255,255,.2) 25%, transparent 30% 70%, rgba(255,255,255,.2) 75%, transparent 80%),
+      radial-gradient(circle, #f5f0e6 0 8%, #3a3fd1 9% 32%, transparent 33%),
+      repeating-radial-gradient(circle, #111 0 1.5px, #262626 2.5px 3.5px);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+  }
   .home p.cta a.btn:hover::before, .home p.cta a.btn:focus-visible::before { animation: btn-spin 1.8s linear infinite; }
   @keyframes btn-spin { to { transform: rotate(360deg); } }
   @media (prefers-reduced-motion: reduce) {
@@ -61,114 +68,4 @@ description: "Physics lessons in an upside-down context: exploring the handstand
     padding: 0.9rem 1rem; border: 1px solid #e5e5e5; border-radius: 8px;
     color: inherit; text-decoration: none;
   }
-  .home a.side-card:hover { border-color: #3a3fd1; text-decoration: none; }
-  .side-disc {
-    flex: none; width: 2.6rem; height: 2.6rem; border-radius: 50%;
-    display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 1.1rem;
-    background: radial-gradient(circle, #c0392b 0 40%, #111 41% 100%);
-  }
-  .side-text strong { display: block; }
-  .side-text small { display: block; margin-top: 0.15rem; color: #6b6b6b; line-height: 1.4; }
-
-  .page-content .latest-list { display: block; list-style: none; margin: 1rem 0; padding: 0; text-align: left; }
-  .latest-list li { padding: 0.9rem 0; margin: 0; border-top: 1px solid #e5e5e5; }
-  .latest-list li:last-child { border-bottom: 1px solid #e5e5e5; }
-  .latest-list .meta { font-size: 0.85rem; color: #6b6b6b; }
-  .latest-list .tag { margin-left: 0.6rem; padding: 0.05rem 0.5rem; border: 1px solid #222; border-radius: 999px; font-size: 0.75rem; }
-  .latest-list a { display: block; margin-top: 0.2rem; font-weight: 600; }
-  .latest-list small { display: block; margin-top: 0.2rem; color: #6b6b6b; line-height: 1.4; }
-
-  .music { max-width: 660px; margin: 2.5rem auto 1rem; }
-  .music-label { margin: 0 0 0.4rem; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: #6b6b6b; }
-  .music iframe { display: block; width: 100%; height: 120px; border: 1px solid #e5e5e5; border-radius: 8px; }
-</style>
-
-<div class="home">
-
-  <h1 style="text-align: center;">Movement is a way of thinking</h1>
-  <p class="lead">It's how we experience the world. It's a way to look at human potential. The Handstand Dilemma is an editorial project where physical and philosophical approaches meet to explore the handstand phenomenon, deconstructing it from the ground up. Same physical principles, different context. </p>
-
-  <figure class="hero-anim">
-    <iframe
-      src="{{ '/assets/img/handstand_home.html' | relative_url }}"
-      title="Animation of a stick figure doing a cartwheel and settling into a handstand, swaying slightly to keep its balance"
-      scrolling="no">
-    </iframe>
-  </figure>
-
-  <p class="cta">
-    <a class="btn btn-primary" href="{{ start_post.url | relative_url }}">Start here</a>
-    <a class="btn" href="{{ '/blog/' | relative_url }}">Browse all posts</a>
-  </p>
-
-  <div class="intro">
-
-  <h2>What you're getting into: come for the quiet, stay for the search</h2>
-  <p>A handstand looks like stillness. It isn’t. Physically, the body’s centre of mass sits above the hands, and any error grows exponentially, roughly doubling every quarter of a second. Staying up means correcting, continuously, with wrists and fingers that were never selected for the job. In a way, movement tied to the handstand comes with a certain musicality. And in fact, rhythm is the foundation of the idea behind this project. It is what inspired it and what continues to help it grow.</p>
-
-  <p>Evolution didn’t build us to balance on our hands. And yet humans learn to do it. That is what makes the handstand also philosophically interesting. Heraclitus saw the harmony of the world in tension, like the bow and the lyre: opposing forces that hold each other in place. The handstand is that idea in a body: not a state but an action. You stay balanced only by continuing to balance. If it were stable, it would be a pose, like lying down, and it would be worth little; its value comes from its precariousness.</p>
-
-  <p>The Handstand Dilemma is about that tension: a posture that looks like stillness, is made of constant motion, and serves no purpose except itself. I want to understand why we keep doing it.</p>
-</div>
-
-  <h2>Follow the series</h2>
-  <p>The series is built like a 45 rpm record: one handstand, two sides. Part A treats the body as a single rigid block; Part B opens it up into an articulated one.</p>
-  <div class="sides">
-    <a class="side-card" href="{{ '/series/#part-a' | relative_url }}">
-      <span class="side-disc" aria-hidden="true">A</span>
-      <span class="side-text">
-        <strong>Part A</strong>
-        <small>The rigid body hypothesis · {{ part_a.size }} post{% if part_a.size != 1 %}s{% endif %}</small>
-      </span>
-    </a>
-    <a class="side-card" href="{{ '/series/#part-b' | relative_url }}">
-      <span class="side-disc" aria-hidden="true">B</span>
-      <span class="side-text">
-        <strong>Part B</strong>
-        <small>The articulated body hypothesis · {% if part_b.size > 0 %}{{ part_b.size }} post{% if part_b.size != 1 %}s{% endif %}{% else %}coming soon{% endif %}</small>
-      </span>
-    </a>
-  </div>
-  <p><a href="{{ '/series/' | relative_url }}">See the whole series</a></p>
-
-<p><em>It's also a quiet Sisyphus. No handstand is final: it always ends. Camus asks us to imagine Sisyphus happy. But Sisyphus is condemned to his rock, while we choose our handstands, and that may be the whole point. Anyone who practices knows the value lies not in the arrival but in the repeated attempt.</em></p>
-
-  <h2>Who writes this</h2>
-  <p>Biomedical engineer, independent writer and amateur circus artist, exploring movement as a meeting place between science, art and philosophy. At its core, this project is not about the clinical physics of handstands. It's a window into how complex human systems mobilize and dialectically negotiate their physical, emotional and intellectual dimensions to learn, adapt and remain stable in changing environments. There are no answers here, only questions to navigate, and each one opens onto another in a never-ending why. <em><a href="{{ '/about/' | relative_url }}">More about the project</a>.</em></p>
-
-  <h2>Latest posts</h2>
-  <div class="latest-list" style="display: flex; flex-direction: column; gap: 1rem;">
-    {% for post in site.posts limit: 3 %}
-      <div>
-        <a href="{{ post.url | relative_url }}" style="font-style: normal; font-weight: 600; text-decoration: none;">
-          {{ post.title }}
-        </a>
-        <div style="font-size: 0.85em; opacity: 0.75;">
-          {% assign author = post.author | default: site.author %}
-          {% if author %}{{ author }} · {% endif %}
-          {% if post.series %}{{ post.series }}{% if post.series_order %} (part {{ post.series_order }}){% endif %} · {% elsif post.series_order %}Series, part {{ post.series_order }} · {% elsif post.label %}{{ post.label }} · {% endif %}
-          {{ post.date | date: "%b %-d, %Y" }}
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-
-  <div style="margin-top: 1.25rem;">
-    <a href="{{ '/blog/' | relative_url }}" style="font-style: normal; text-decoration: underline;">See all posts</a>
-  </div>
-
-  <p><small>Want to follow along? <em><a href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a></em>.</small></p>
-
-  <div class="music">
-    <p class="music-label">Now playing</p>
-    <iframe
-      src="https://bandcamp.com/EmbeddedPlayer/album=1524188113/size=large/bgcol=ffffff/linkcol=222222/tracklist=false/artwork=small/transparent=true/"
-      title="Dopamine Chamber by Fontaines D.C. on Bandcamp"
-      loading="lazy"
-      seamless>
-      <a href="https://fontainesdc.bandcamp.com/album/dopamine-chamber">Dopamine Chamber by Fontaines D.C.</a>
-    </iframe>
-    </div>
-
- </div>
-  
+  .home a.side-card:hover { border-color: #3a3fd1; text-decoration: none;
