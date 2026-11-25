@@ -97,11 +97,11 @@ description: "Physics lessons in an upside-down context: exploring the handstand
 <div class="home">
 
   <h1 style="text-align: center;">Welcome to the handstand black hole</h1>
-  <p class="lead">A chamber for studying movement, learning, adaptation, and the strange machinery that transforms repetition into skill. 
+  <p class="lead">A chamber for studying movement, learning, adaptation, and the strange machinery that transforms repetition into skill.<br>
     
-  <strong>The nervous system as a prediction machine</strong>. Every skill begins as a <strong>hallucination</strong>, and error is the reality's response to the model.
+  <strong>The nervous system as a prediction machine</strong>. Every skill begins as a <strong>hallucination</strong>, and error is the reality's response to the model.<br>
   
-  <strong>Anatomical wires as feedback loops.</strong> Reality disagrees, error is generated, the model updates. Repeat thousands of times. 
+  <strong>Anatomical wires as feedback loops.</strong> Reality disagrees, error is generated, the model updates. Repeat thousands of times.<br>
     
  Error isn’t an error, it's the ultimate form of data. Handstands are a dataset full of errors. 
 
