@@ -22,7 +22,8 @@ As a child, I lived on bread and the thesaurus. For more than ten years, before 
 ## What I can do for you
 {: style="text-align: left;"}
 
-<strong>Science & Technical writing for science, medicine and fitness professionals</strong
+### Science & Technical writing for science, medicine and fitness professionals
+{: style="text-align: left;"}
 
 #### Research to content
 {: style="text-align: left;"}
