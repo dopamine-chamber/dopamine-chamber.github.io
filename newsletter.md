@@ -7,8 +7,8 @@ description: A newsletter on the physics of handstand balance is on its way. Joi
 
 <style>
   .newsletter, .newsletter p { text-align: left; }
-  .newsletter a.btn, .newsletter a.btn:visited { display: inline-block; padding: 0.55rem 1.1rem; margin: 0.5rem 0; border-radius: 6px; background: #222; color: #fff; text-decoration: none; }
-  .newsletter a.btn:hover { opacity: 0.85; text-decoration: none; }
+  .newsletter a.btn, .newsletter a.btn:visited { display: inline-block; padding: 0.55rem 1.1rem; margin: 0.5rem 0; border-radius: 6px; background: #222222; color: #fff; text-decoration: none; }
+  .newsletter a.btn:hover, .newsletter a.btn:focus { background: #3a3fd1; color: #fff; text-decoration: none; }
 
   .liner { margin: 1.5rem 0 2rem; }
   .newsletter .liner p { text-align: center; }
@@ -27,14 +27,15 @@ description: A newsletter on the physics of handstand balance is on its way. Joi
     box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.35);
     animation: spin 6s linear infinite;
   }
-  .vinyl::before { content: ""; position: absolute; inset: 33%; border-radius: 50%; background: radial-gradient(circle, #f5f0e6 0 5%, #c0392b 6% 100%); }
+  /* LP label: link blue, with a violet halo toward the edge */
+  .vinyl::before { content: ""; position: absolute; inset: 33%; border-radius: 50%; background: radial-gradient(circle, #f5f0e6 0 5%, #3a3fd1 6% 70%, #6b3fc9 71% 100%); }
   .vinyl::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: conic-gradient(from 20deg, transparent 0 20%, rgba(255,255,255,.12) 25%, transparent 30% 70%, rgba(255,255,255,.12) 75%, transparent 80%); }
   @keyframes spin { to { transform: rotate(360deg); } }
 
   .tracklist-label { margin: 1.5rem 0 0; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.75rem; opacity: 0.65; }
   .tracklist { list-style: none; counter-reset: track; padding: 0; margin: 0.5rem 0 1.5rem; border-top: 1px solid rgba(128, 128, 128, 0.35); }
   .tracklist li { counter-increment: track; display: flex; align-items: baseline; gap: 1rem; padding: 0.55rem 0; border-bottom: 1px dashed rgba(128, 128, 128, 0.35); }
-  .tracklist li::before { content: counter(track, decimal-leading-zero); font-weight: 700; font-variant-numeric: tabular-nums; opacity: 0.55; }
+  .tracklist li::before { content: counter(track, decimal-leading-zero); font-weight: 700; font-variant-numeric: tabular-nums; color: #3a3fd1; opacity: 0.8; }
   .tracklist small { margin-left: auto; opacity: 0.6; white-space: nowrap; }
 
   .steps { list-style: none; display: flex; padding: 0; margin: 1.5rem 0; }
@@ -44,9 +45,9 @@ description: A newsletter on the physics of handstand balance is on its way. Joi
   .steps li:first-child::after { display: none; }
   .steps li.done { opacity: 1; }
   .steps li.done::before { background: currentColor; }
-  .steps li.now { opacity: 1; font-weight: 700; color: #c0392b; }
-  .steps li.now::before { background: #c0392b; animation: pulse 1.6s ease-in-out infinite; }
-  @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(192, 57, 43, .5); } 50% { box-shadow: 0 0 0 6px rgba(192, 57, 43, 0); } }
+  .steps li.now { opacity: 1; font-weight: 700; color: #3a3fd1; }
+  .steps li.now::before { background: #3a3fd1; animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(58, 63, 209, .5); } 50% { box-shadow: 0 0 0 6px rgba(58, 63, 209, 0); } }
 
   .smallprint { border: 1px dashed rgba(128, 128, 128, 0.5); border-radius: 0.5rem; padding: 1rem 1.25rem; font-size: 0.9rem; margin: 2rem 0; }
   .smallprint-label { margin: 0 0 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.7rem; opacity: 0.65; }
