@@ -43,7 +43,7 @@ description: "About The Handstand Dilemma: a handstand practitioner's project wh
 
 <p>The editorial flow is a reorganization of my stream of consciousness, and each topic is explored based on what the scientific literature and reliable sources tell us about handstand practice.</p>
 
----
+***
 
 <p>The content published on this site is created in good faith and for informational purposes only, with all original sources duly cited within the articles. Every effort is made to respect third-party intellectual property rights. If you believe any content infringes upon your copyright, please contact me for immediate review and removal. Please see the privacy policy page for my contact details.</p>
 
