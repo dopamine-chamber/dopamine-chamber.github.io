@@ -7,7 +7,7 @@ description: Science writer for professionals. Research to content, interview to
 
 As a child, I lived on bread and the thesaurus. For more than ten years, before specialising in engineering, I wrote about everything. Turning abstract concepts into clear written text is what comes most naturally to me: I take research, data and expert knowledge and make it something specialists can trust and everyone else can follow, without flattening the science on the way.
 
-*Observe like a physicist. Unpack like an engineer. Experience like a practitioner.* That’s the method, the same one I use in this space.
+*Observe like a physicist. Unpack like an engineer. Experience like a practitioner.* That’s the method, the same one I use in this site.
 
 ## Why you can trust me
 {: style="text-align: left;"}
