@@ -87,7 +87,7 @@ Independent long-form, in English:
 
 - [Why a handstand is unstable: an energy perspective](/2026/10/20/an-energy-perspective.html)
 - [Error is data: the damped oscillator](/2026/10/25/handstand-balance-damped-oscillator.html)
-{: style="margin-left: 0; padding-left: 0;"}
+{: .list-left}
 
 </div>
 
