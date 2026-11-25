@@ -113,7 +113,7 @@ description: "Physics lessons in an upside-down context: exploring the handstand
 
 <div class="home">
 
-  <h1>Welcome to the handstand black hole</h1>
+  <h1>Welcome to the handstand dark hole</h1>
 
   <!-- Intro -->
   <section class="intro">
