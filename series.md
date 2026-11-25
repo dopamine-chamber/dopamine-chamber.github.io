@@ -24,9 +24,12 @@ A step-by-step exploration of the handstand, released like a 45 rpm record: <str
     font-size: 1.5rem;
     font-weight: 700;
     color: #fff;
-    background: radial-gradient(circle, #c0392b 0 40%, #111 41% 100%);
+    /* Side A: link blue label */
+    background: radial-gradient(circle, #3a3fd1 0 40%, #111 41% 100%);
     box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.35);
   }
+  /* Side B: visited violet label */
+  #part-b .side-disc { background: radial-gradient(circle, #6b3fc9 0 40%, #111 41% 100%); }
   .side-title { margin: 0; line-height: 1.2; }
   .side-subtitle { margin: 0; opacity: 0.7; font-size: 0.95rem; }
   .side ol { margin-top: 0; }
