@@ -100,7 +100,7 @@ Independent long-form, in English:
 
 **What about confidentiality?** Under NDA if you need it. Your materials stay yours.
 
-Get in touch with me
+## Get in touch with me
 {: style="text-align: left;"}
 
 Send me a short message with:
