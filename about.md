@@ -19,6 +19,10 @@ description: "About The Handstand Dilemma: a handstand practitioner's project wh
 
 <p>I’ve been practicing handstands for about six years, and in that time I’ve come to realize that practice doesn't builds ability, it improves the quality of your predictions. This led me to become obsessed with it. The Handstand Dilemma was born because my practice had grown too intricate for these thoughts to stay inside my head.</p>
 
+<div class="liner">
+  <p class="liner-lead">Learning is controlled hallucination converging toward truth.</p>
+</div>
+
 <figure class="flow">
   <svg viewBox="0 0 420 170" role="img" aria-label="Schematic curve: the complexity of the writing grows as practice time increases" style="width:100%;max-width:26rem;height:auto">
     <line x1="30" y1="140" x2="400" y2="140" stroke="currentColor" stroke-opacity=".5"/>
@@ -31,10 +35,6 @@ description: "About The Handstand Dilemma: a handstand practitioner's project wh
   <figcaption>The editorial flow, roughly. Not to scale.</figcaption>
 </figure>
 
-<div class="liner">
-  <p class="liner-lead">Learning is controlled hallucination converging toward truth.</p>
-</div>
-
 <p>I’m a ’90s kid: blogging is my love language, and sharing so much with strangers online is something I’ve always found almost therapeutic. This project is where many parts of myself meet, and holds what I’ve understood about handstands. A system does not care whether you call an attempt a success or a failure: it only receives information and learns by updating its model of reality.
 
 <div class="liner">
@@ -43,7 +43,9 @@ description: "About The Handstand Dilemma: a handstand practitioner's project wh
 
 <p>The editorial flow is a reorganization of my stream of consciousness, and each topic is explored based on what the scientific literature and reliable sources tell us about handstand practice.</p>
 
-<p>Therefore, the content published on this site is created in good faith and for informational purposes only, with all original sources duly cited within the articles. Every effort is made to respect third-party intellectual property rights. If you believe any content infringes upon your copyright, please contact me for immediate review and removal. Please see the privacy policy page for my contact details.</p>
+---
+
+<p>The content published on this site is created in good faith and for informational purposes only, with all original sources duly cited within the articles. Every effort is made to respect third-party intellectual property rights. If you believe any content infringes upon your copyright, please contact me for immediate review and removal. Please see the privacy policy page for my contact details.</p>
 
 <p>All rights are reserved. Content may not be reproduced or redistributed without prior written consent.</p>
 
