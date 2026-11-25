@@ -87,7 +87,7 @@ Independent long-form, in English:
 
 - [Why a handstand is unstable: an energy perspective](/2026/10/20/an-energy-perspective.html)
 - [Error is data: the damped oscillator](/2026/10/25/handstand-balance-damped-oscillator.html)
-- [The whole series](/series/) · [Newsletter](/newsletter/)
+{: style="margin-left: 0; padding-left: 0;"}
 
 </div>
 
@@ -95,11 +95,8 @@ Independent long-form, in English:
 {: style="text-align: left;"}
 
 *Do you write about regulated products?* | I write about the evidence, not about regulatory claims. Anything that touches intended use, performance claims or compliance goes through your regulatory or clinical team before publication, and I flag exactly which sentences need that check.
-
 *Do you give medical advice?* | No. I explain research and technology; I don’t advise on diagnosis or treatment.
-
 *How are projects priced?* | By scope, research depth and turnaround, quoted individually. A one-off article, a project package and a monthly retainer are all possible.
-
 *What about confidentiality?* | Under NDA if you need it. Your materials stay yours.
 
 ## Get in touch with me
