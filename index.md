@@ -121,8 +121,7 @@ description: "Physics lessons in an upside-down context: exploring the handstand
     <div class="intro-body">
       <p><strong>The nervous system as a prediction machine.</strong> Every skill begins as a <strong>hallucination</strong>; error is reality’s response to the model.</p>
       <p><strong>Anatomical wires as feedback loops.</strong> Reality disagrees, error is generated, the model updates. Repeat thousands of times.</p>
-      <p>Error isn’t an error: it’s the ultimate form of data. Handstands are a dataset full of errors.</p>
-      <p><strong>The Handstand Dilemma</strong> is an editorial project where physical and philosophical approaches meet to disassemble, explore, and digest this process.</p>
+      <p>Error isn’t an error: it’s the ultimate form of data. Handstands are a dataset full of errors. <strong>The Handstand Dilemma</strong> is an editorial project where physical and philosophical approaches meet to disassemble, explore, and digest this process.</p>
     </div>
     <p class="closing"><strong>What we call learning is a prediction engine slowly converging toward reality.</strong></p>
   </section>
