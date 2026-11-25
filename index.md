@@ -96,10 +96,10 @@ description: "Physics lessons in an upside-down context: exploring the handstand
 
 <div class="home">
 
-  <h1 style="text-align: center;">Welcome to the chamber</h1>
-  <p class="lead">A place for studying movement, learning, adaptation. Here we seek the strange machinery that transforms repetition into skill. The nervous system as a prediction machine, muscles as feedback loops. Every skill begins as a hallucination, and error is the reality's response to the model. Every movement is what prediction looks like when it meets reality. Reality disagrees, error is generated, the model updates. Repeat thousands of times. Error isn’t an error, it’s a form of data. And handstands are a dataset full of errors. What we call learning is a prediction engine slowly converging toward reality. 
+  <h1 style="text-align: center;">Welcome to the handstand black hole</h1>
+  <p class="lead">A chamber for studying movement, learning, adaptation, and the strange machinery that transforms repetition into skill. <strong>The nervous system as a prediction machine</strong>. Every skill begins as a <strong>hallucination</strong>, and error is the reality's response to the model. <strong>Anatomical wires as feedback loops.</strong> Reality disagrees, error is generated, the model updates. Repeat thousands of times. 
     
-The Handstand Dilemma is an editorial project where physical and philosophical approaches meet to disassembly, explore, digest this process. Same physical principles, different context. </p>
+<strong>What we call learning is a prediction engine slowly converging toward reality</strong>. Error isn’t an error, it’s a form of data. And handstands are a dataset full of errors. The Handstand Dilemma is an editorial project where physical and philosophical approaches meet to disassembly, explore, digest this process. Same physical principles, different context. </p>
 
   <figure class="hero-anim">
     <iframe
