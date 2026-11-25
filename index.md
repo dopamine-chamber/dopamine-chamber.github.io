@@ -18,6 +18,11 @@ description: "Physics lessons in an upside-down context: exploring the handstand
   .home .lead { font-size: 1.15rem; line-height: 1.5; margin-bottom: 1.2rem; }
   .home .intro { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 
+  .home a:not(.btn):not(.side-card) { color: #3a3fd1; }
+  .home a:not(.btn):not(.side-card):visited { color: #6b3fc9; }
+  .home a:not(.btn):not(.side-card):hover,
+  .home a:not(.btn):not(.side-card):focus { color: #7b3ff2; }
+
   .home a.btn, .home a.btn:visited {
     display: inline-block; padding: 0.55rem 1.1rem; margin: 0 0.5rem 0.5rem 0;
     border: 1px solid #222; border-radius: 6px; color: #222; text-decoration: none;
@@ -56,7 +61,7 @@ description: "Physics lessons in an upside-down context: exploring the handstand
     padding: 0.9rem 1rem; border: 1px solid #e5e5e5; border-radius: 8px;
     color: inherit; text-decoration: none;
   }
-  .home a.side-card:hover { border-color: #222; text-decoration: none; }
+  .home a.side-card:hover { border-color: #3a3fd1; text-decoration: none; }
   .side-disc {
     flex: none; width: 2.6rem; height: 2.6rem; border-radius: 50%;
     display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 1.1rem;
@@ -132,37 +137,27 @@ description: "Physics lessons in an upside-down context: exploring the handstand
   <p>Biomedical engineer, independent writer and amateur circus artist, exploring movement as a meeting place between science, art and philosophy. At its core, this project is not about the clinical physics of handstands. It's a window into how complex human systems mobilize and dialectically negotiate their physical, emotional and intellectual dimensions to learn, adapt and remain stable in changing environments. There are no answers here, only questions to navigate, and each one opens onto another in a never-ending why. <em><a href="{{ '/about/' | relative_url }}">More about the project</a>.</em></p>
 
   <h2>Latest posts</h2>
-<div class="latest-list" style="display: flex; flex-direction: column; gap: 1rem;">
-  {% for post in site.posts limit: 3 %}
-    <div>
-      <a href="{{ post.url | relative_url }}" style="color: inherit; font-style: normal; font-weight: 600; text-decoration: none;">
-        {{ post.title }}
-      </a>
-      <div style="font-size: 0.85em; opacity: 0.75;">
-        {% assign author = post.author | default: site.author %}
-        {% if author %}{{ author }} · {% endif %}
-        {% if post.series %}{{ post.series }}{% if post.series_order %} (part {{ post.series_order }}){% endif %} · {% elsif post.series_order %}Series, part {{ post.series_order }} · {% elsif post.label %}{{ post.label }} · {% endif %}
-        {{ post.date | date: "%b %-d, %Y" }}
+  <div class="latest-list" style="display: flex; flex-direction: column; gap: 1rem;">
+    {% for post in site.posts limit: 3 %}
+      <div>
+        <a href="{{ post.url | relative_url }}" style="font-style: normal; font-weight: 600; text-decoration: none;">
+          {{ post.title }}
+        </a>
+        <div style="font-size: 0.85em; opacity: 0.75;">
+          {% assign author = post.author | default: site.author %}
+          {% if author %}{{ author }} · {% endif %}
+          {% if post.series %}{{ post.series }}{% if post.series_order %} (part {{ post.series_order }}){% endif %} · {% elsif post.series_order %}Series, part {{ post.series_order }} · {% elsif post.label %}{{ post.label }} · {% endif %}
+          {{ post.date | date: "%b %-d, %Y" }}
+        </div>
       </div>
-    </div>
-  {% endfor %}
-</div>
+    {% endfor %}
+  </div>
 
-<div style="margin-top: 1.25rem;">
-  <a href="{{ '/blog/' | relative_url }}" style="color: inherit; font-style: normal; text-decoration: underline;">See all posts</a>
-</div>
+  <div style="margin-top: 1.25rem;">
+    <a href="{{ '/blog/' | relative_url }}" style="font-style: normal; text-decoration: underline;">See all posts</a>
+  </div>
 
   <p><small>Want to follow along? <em><a href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a></em>.</small></p>
 
   <div class="music">
     <p class="music-label">Now playing</p>
-    <iframe
-      src="https://bandcamp.com/EmbeddedPlayer/album=1524188113/size=large/bgcol=ffffff/linkcol=222222/tracklist=false/artwork=small/transparent=true/"
-      title="Dopamine Chamber by Fontaines D.C. on Bandcamp"
-      loading="lazy"
-      seamless>
-      <a href="https://fontainesdc.bandcamp.com/album/dopamine-chamber">Dopamine Chamber by Fontaines D.C.</a>
-    </iframe>
-  </div>
-
-</div>
