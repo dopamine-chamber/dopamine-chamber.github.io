@@ -66,31 +66,6 @@ Website copy, product and service pages, project descriptions, grant-adjacent su
 4. **Review.** Your experts check accuracy, I revise. One structured round is included, more by agreement.
 5. **Delivery.** The final text, ready to publish, plus a source list and, if useful, short variants for other channels.
 
-## Selected work
-{: style="text-align: left;"}
-
-Published articles for IngegneriaBiomedica.org (in Italian):
-
-<div style="text-align: left;" markdown="1">
-
-- [Brain-spine interface: a bridge between brain and spinal cord](https://www.ingegneriabiomedica.org/news/neuroscience/brain-spine-interface-ponte-tra-cervello-midollo-spinale/) (July 2023)
-- [CAR-T: engineered cells between immunotherapy and personalised medicine](https://www.ingegneriabiomedica.org/news/terapia/car-t-cellule-ingegnerizzate-immunoterapia-medicina-personalizzata/) (March 2024)
-- [MSICLIMB: the first multisensory climbing wall for paediatric neurorehabilitation](https://www.ingegneriabiomedica.org/news/biotech-support/msiclimb-prima-parete-arrampicata-multisensoriale-neuroriabilitazione-pediatrica/) (March 2025)
-- [A hi-tech ultrasound patch that monitors the heart in real time](https://www.ingegneriabiomedica.org/news/diagnostica/cerotto-hi-tech-ultrasuoni-monitora-cuore-in-tempo-reale/) (May 2023)
-- [Soft robotics is the future of artificial ventilation](https://www.ingegneriabiomedica.org/news/biotech-support/soft-robotics-futuro-ventilazione-artificiale/) (March 2023)
-- [Drop-on-demand: bioprinting in cancer research](https://www.ingegneriabiomedica.org/news/tessuti/drop-on-demand-bioprinting-ricerca-sul-cancro/) (September 2022)
-
-[See all my articles on IngegneriaBiomedica.org →](https://www.ingegneriabiomedica.org/author/benedetta-giglio/)
-
-
-Independent long-form, in English:
-
-- [Why a handstand is unstable: an energy perspective](/2026/10/20/an-energy-perspective.html)
-- [Error is data: the damped oscillator](/2026/10/25/handstand-balance-damped-oscillator.html)
-{: .list-left}
-
-</div>
-
 ## Good to know
 {: style="text-align: left;"}
 
