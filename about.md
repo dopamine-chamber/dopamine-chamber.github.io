@@ -58,5 +58,5 @@ description: "About The Handstand Dilemma: a handstand practitioner's project wh
 </div>
 
 <div class="nowplaying">
-  <p>The page URL is a tribute to the latest Fontaines D.C. album, <em>Dopamine Chamber</em>. The project was born in the days when the album was being released, and their music helped me get into the flow and inspired and motivated me deeply to create.</p>
+  <p>The project was born in the days when the latest Fontaines D.C. album, <em>Dopamine Chamber</em> was being released, and their music helped me get into the flow and inspired and motivated me deeply to create.</p>
 </div>
