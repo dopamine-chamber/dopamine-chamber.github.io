@@ -37,7 +37,7 @@ This website, **the handstand dilemma**, is a personal blog about the physics of
 
 ### Data Controller
 
-The data controller is Benedetta Giglio, based in Turin, Italy. For any question about this policy or your data, write to benedettagiglio@gmail.com.
+The data controller is based in Turin, Italy. For any question about this policy or your data, write to info@slowconvergence.com.
 
 ---
 
