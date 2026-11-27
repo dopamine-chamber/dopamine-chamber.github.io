@@ -113,9 +113,6 @@ description: "Physics lessons in an upside-down context: exploring the handstand
 
 <div class="home">
 
-  <h1>Welcome to the handstand dark hole</h1>
-
-  <!-- Intro -->
   <section class="intro">
     <p class="lead">A chamber for studying movement, learning, adaptation, and the strange machinery that transforms repetition into skill.</p>
     <div class="intro-body">
