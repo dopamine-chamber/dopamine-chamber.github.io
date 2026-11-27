@@ -87,7 +87,7 @@ description: A newsletter on the physics of handstand balance is on its way. Joi
 
   <div class="smallprint">
     <p class="smallprint-label">Small print</p>
-    <p>The form is hosted by Google Forms and opens in a new tab. I’ll use your email address only to tell you when the newsletter launches and to send it afterwards. I won’t share it with anyone, and you can ask me to delete it at any time. Details in the <a href="{{ '/privacy-policy/' | relative_url }}">privacy policy</a>. Prefer not to use the form? Write to <a href="mailto:benedettagiglio@gmail.com">benedettagiglio@gmail.com</a> with “Newsletter” in the subject.</p>
+    <p>The form is hosted by Google Forms and opens in a new tab. I’ll use your email address only to tell you when the newsletter launches and to send it afterwards. I won’t share it with anyone, and you can ask me to delete it at any time. Details in the <a href="{{ '/privacy-policy/' | relative_url }}">privacy policy</a>. Prefer not to use the form? Write to <a href="mailto:info@slowconvergence.com">benedettagiglio@gmail.com</a> with “Newsletter” in the subject.</p>
   </div>
 
 </div>
