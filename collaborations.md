@@ -108,4 +108,4 @@ Send me a short message with:
 2. the material you already have (papers, notes, recordings, nothing yet);
 3. the format and the deadline, if you have them.
 
-**Email:** [benedettagiglio@gmail.com](mailto:benedettagiglio@gmail.com)
+**Email:** [info@slowconvergence.com](mailto:info@slowconvergence.com)
