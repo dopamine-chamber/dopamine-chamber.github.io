@@ -161,3 +161,13 @@ figcaption {
     flex-direction: column;
   }
 }
+
+/* ---------- Desktop scale ---------- */
+
+/* Su mobile ci pensa già il meta viewport (initial-scale=0.85).
+   Su PC (mouse/trackpad) replico la stessa scala. */
+@media (min-width: 600px) and (hover: hover) and (pointer: fine) {
+  body {
+    zoom: 0.85;
+  }
+}
