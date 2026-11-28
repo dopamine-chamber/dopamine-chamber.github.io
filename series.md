@@ -1,9 +1,11 @@
 ---
 layout: page
-title: "The handstand logs"
+title: "Series"
 description: "All the posts of the handstand dilemma series in order: models, energy and mechanics to understand how handbalancing works."
 permalink: /blog/series/
 ---
+
+<h2>The handstand logs</h2>
 
 Handstands make one think of quiescence: they aren’t. Physically, the bodyweight sits above the hands, and any error grows exponentially. Staying up means correcting, continuously, with wrists and fingers that were never selected for the job. Evolution didn’t build sapiens to balance on hands, and yet humans learn to do it. That is what makes the handstand also philosophically interesting: handstands are punk.
 
