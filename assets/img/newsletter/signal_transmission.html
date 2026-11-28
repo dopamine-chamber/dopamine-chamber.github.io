@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>signals from noise · transmission</title>
+<style>
+  html,body{margin:0;height:100%;background:#04050a;overflow:hidden}
+  #wrap{position:relative;width:100%;height:100%;min-height:220px}
+  canvas{display:block;width:100%;height:100%}
+  /* CRT scanlines + vignette */
+  #wrap::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply;
+    background:repeating-linear-gradient(0deg,rgba(0,0,0,.28) 0 1px,transparent 1px 3px),
+               radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.75) 100%)}
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="c" role="img" aria-label="Animated diagram: data packets travel from a transmitter labelled blog to a receiver labelled inbox across a noisy channel. Corrupted packets are rejected and sent again until one arrives intact."></canvas></div>
+<script>
+(() => {
+  const cv = document.getElementById('c'), ctx = cv.getContext('2d');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const C = { sig: '#19f0ff', mod: '#ff2bd6', txt: 'rgba(160,220,235,.6)' };
+  const DT = 1 / 60, TRAVEL = 3.2, GAP = 1.15, FONT = '11px ui-monospace,Menlo,Consolas,monospace';
+  const rnd = Math.random;
+  const gauss = () => { let u = 0; for (let i = 0; i < 4; i++) u += rnd(); return (u - 2) * 1.73; };
+  const hh = (i, k) => { const x = Math.sin(i * 12.9898 + k * 78.233) * 43758.5453; return x - Math.floor(x); };
+  const newBits = () => Array.from({ length: 8 }, () => (rnd() < .5 ? 1 : 0));
+  const pad = n => String(n).padStart(4, '0');
+
+  let W, H, dpr, tx, rx, cy, sc;
+  let t = 0, nextSpawn = .3, glitch = 0, fc = 0, id = 0, sent = 0, ack = 0, nak = 0, retry = null;
+  let lastByte = [1, 0, 1, 1, 0, 0, 1, 0];
+  const pk = [], rip = [];
+
+  // static noise layer
+  const nc = document.createElement('canvas'); nc.width = 192; nc.height = 108;
+  const nx = nc.getContext('2d'), img = nx.createImageData(192, 108);
+  function noise() {
+    const d = img.data;
+    for (let i = 0; i < d.length; i += 4) { const v = rnd() * 255 | 0; d[i] = v * .4; d[i + 1] = v; d[i + 2] = v; d[i + 3] = rnd() < .5 ? 0 : 60; }
+    nx.putImageData(img, 0, 0);
+  }
+
+  // ARQ loop: send a packet, the channel may corrupt it, a corrupted packet is rejected (NAK) and the same bits are sent again
+  function spawn() {
+    const bits = retry || newBits(), isRetry = !!retry; retry = null;
+    pk.push({ t0: t, bits, flip: [], corr: false, checked: false, retry: isRetry, id: ++id, state: 0, dead: 0 });
+    sent++; rip.push({ x: tx, t0: t, col: C.sig });
+  }
+
+  function step() {
+    t += DT;
+    if (t >= nextSpawn) { spawn(); nextSpawn = t + GAP; }
+    for (const p of pk) {
+      if (p.state !== 0) continue;
+      const u = (t - p.t0) / TRAVEL;
+      if (!p.checked && u >= .5) {
+        p.checked = true;
+        if (rnd() < .4) { p.corr = true; const n = rnd() < .4 ? 2 : 1; for (let i = 0; i < n; i++) p.flip.push(rnd() * 8 | 0); glitch = Math.max(glitch, .18); }
+      }
+      if (u >= 1) {
+        p.state = 1; p.dead = t;
+        if (p.corr) { nak++; retry = p.bits.slice(); glitch = .55; rip.push({ x: rx, t0: t, col: C.mod }); }
+        else { ack++; lastByte = p.bits.slice(); rip.push({ x: rx, t0: t, col: C.sig }); }
+      }
+    }
+    while (pk.length && pk[0].state === 1 && t - pk[0].dead > 1.2) pk.shift();
+    while (rip.length && t - rip[0].t0 > 1.6) rip.shift();
+  }
+
+  function node(x, col, label) {
+    ctx.fillStyle = '#04050a'; ctx.strokeStyle = col; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.arc(x, cy, 9, 0, 7); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = col; ctx.beginPath(); ctx.arc(x, cy, 2.5, 0, 7); ctx.fill();
+    ctx.fillStyle = C.txt; ctx.textAlign = 'center'; ctx.fillText(label, x, cy + 28);
+  }
+
+  function draw() {
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.globalAlpha = 1; ctx.font = FONT;
+    ctx.fillStyle = 'rgba(4,5,10,.42)'; ctx.fillRect(0, 0, W, H);
+    if (++fc % 3 === 0) noise();
+    ctx.imageSmoothingEnabled = false; ctx.globalAlpha = .55; ctx.drawImage(nc, 0, 0, W, H); ctx.globalAlpha = 1;
+
+    const mid = (tx + rx) / 2, span = rx - tx;
+
+    // noise zone: guides + label
+    ctx.setLineDash([3, 6]); ctx.strokeStyle = 'rgba(255,43,214,.2)'; ctx.lineWidth = 1; ctx.beginPath();
+    for (const x of [mid - span * .2, mid + span * .2]) { ctx.moveTo(x, cy - 44 * sc); ctx.lineTo(x, cy + 44 * sc); }
+    ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = 'rgba(255,43,214,.55)'; ctx.textAlign = 'center'; ctx.fillText('NOISE', mid, cy + 58 * sc);
+
+    // carrier: clean at the ends, jittery in the middle
+    ctx.lineWidth = 1.4; ctx.strokeStyle = C.sig; ctx.shadowColor = C.sig; ctx.shadowBlur = 8; ctx.beginPath();
+    for (let x = tx; x <= rx; x += 3) {
+      const sg = 14 * sc * Math.exp(-(((x - mid) / (span * .2)) ** 2));
+      const y = cy + Math.sin(x * .05 - t * 4) * 3 * sc + (rnd() - .5) * 2 * sg;
+      ctx[x === tx ? 'moveTo' : 'lineTo'](x, y);
+    }
+    ctx.stroke(); ctx.shadowBlur = 0;
+    for (let i = 0; i < 70; i++) {
+      ctx.fillStyle = i % 3 ? 'rgba(200,245,255,.45)' : 'rgba(255,43,214,.5)';
+      ctx.fillRect(mid + gauss() * span * .11, cy + gauss() * 26 * sc, 1.5, 1.5);
+    }
+
+    // ripples
+    for (const r of rip) {
+      const u = (t - r.t0) / 1.2; if (u > 1) continue;
+      ctx.strokeStyle = r.col; ctx.globalAlpha = .55 * (1 - u); ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.arc(r.x, cy, 9 + 30 * sc * u, 0, 7); ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+
+    node(tx, C.sig, 'BLOG'); node(rx, 'rgba(190,235,245,.95)', 'INBOX');
+
+    // last intact byte received
+    const q = 4, qg = 2, qw = 8 * (q + qg) - qg;
+    ctx.strokeStyle = C.sig; ctx.fillStyle = C.sig; ctx.globalAlpha = .8;
+    lastByte.forEach((b, i) => { const x = rx - qw / 2 + i * (q + qg), y = cy + 36; if (b) ctx.fillRect(x, y, q, q); else ctx.strokeRect(x + .5, y + .5, q - 1, q - 1); });
+    ctx.globalAlpha = 1;
+
+    // packets
+    const s = 5 * sc, g = 2 * sc, w = 8 * (s + g) - g, py = cy - 20 * sc;
+    for (const p of pk) {
+      if (p.state === 0) {
+        const u = (t - p.t0) / TRAVEL, x0 = tx + span * u - w / 2, late = u >= .5;
+        p.bits.forEach((b, i) => {
+          const bad = late && p.flip.includes(i), v = bad ? 1 - b : b, x = x0 + i * (s + g);
+          ctx.strokeStyle = ctx.fillStyle = bad ? C.mod : C.sig; ctx.globalAlpha = bad ? .5 + rnd() * .5 : 1;
+          if (v) ctx.fillRect(x, py - s / 2, s, s); else ctx.strokeRect(x + .5, py - s / 2 + .5, s - 1, s - 1);
+        });
+        ctx.globalAlpha = 1; ctx.textAlign = 'center'; ctx.fillStyle = p.retry ? C.mod : C.txt;
+        ctx.fillText(p.retry ? 'RETX' : 'PKT ' + pad(p.id), x0 + w / 2, py - s - 6);
+      } else {
+        const v = (t - p.dead) / .7; if (v >= 1) continue;
+        ctx.fillStyle = p.corr ? C.mod : C.sig; ctx.globalAlpha = 1 - v;
+        p.bits.forEach((b, i) => {
+          let x = rx - w / 2 + i * (s + g), y = py - s / 2;
+          if (p.corr) { x += (hh(i, p.id) - .5) * 90 * v; y += (hh(i + 9, p.id) - .5) * 60 * v; }
+          else { x += (rx - x) * v; y += (cy - y) * v; }
+          ctx.fillRect(x, y, s, s);
+        });
+        ctx.globalAlpha = 1;
+      }
+    }
+
+    // HUD
+    ctx.textAlign = 'left';
+    ctx.fillStyle = C.sig; ctx.fillText('SIGNALS_FROM_NOISE // NEWSLETTER' + (Math.floor(t * 2) % 2 ? '_' : ' '), 14, 22);
+    ctx.fillStyle = C.mod; ctx.fillText('status: test transmission', 14, 40);
+    ctx.fillStyle = C.txt;
+    ctx.fillText('tx ' + pad(sent) + '  ack ' + pad(ack) + '  nak ' + pad(nak) + '  snr +' + (9.5 + 1.5 * Math.sin(t * .7)).toFixed(1) + ' dB', 14, H - 14);
+
+    // glitch slices on corrupted packets
+    if (glitch > 0) {
+      for (let j = 0; j < 4; j++) {
+        const sy = rnd() * H, sh = 6 + rnd() * 30;
+        ctx.drawImage(cv, 0, sy * dpr, cv.width, sh * dpr, (rnd() - .5) * 240 * glitch, sy, W, sh);
+      }
+      glitch = Math.max(0, glitch - DT * 1.5);
+    }
+  }
+
+  function resize() {
+    dpr = Math.min(devicePixelRatio || 1, 2); W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = '#04050a'; ctx.fillRect(0, 0, cv.width, cv.height);
+    tx = W * .12; rx = W * .88; cy = H * .54; sc = Math.max(.6, Math.min(1, W / 700));
+    if (reduce) draw();
+  }
+
+  let last = 0, acc = 0;
+  function frame(ts) {
+    acc += Math.min((ts - last) / 1000, .1); last = ts;
+    while (acc >= DT) { step(); acc -= DT; }
+    draw(); requestAnimationFrame(frame);
+  }
+
+  addEventListener('resize', resize);
+  resize();
+  for (let i = 0; i < 420; i++) step();   // start mid-transmission
+  if (reduce) draw(); else requestAnimationFrame(ts => { last = ts; frame(ts); });
+})();
+</script>
+</body>
+</html>
