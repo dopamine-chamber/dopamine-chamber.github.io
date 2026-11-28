@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Work with me
+title: Collaborations
 permalink: /collaborations/
 description: Science writer for professionals. Research to content, interview to article, newsletters, editorial plans, multimedia, ghostwriting and scientific copywriting, in English and Italian.
 ---
