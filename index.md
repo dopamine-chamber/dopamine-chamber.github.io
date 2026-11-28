@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Signals from noise"
-description: "Blog on motor learning: error, adaption and convercence toward reality."
+description: "Blog on motor learning: error, adaptation and convergence toward reality."
 ---
 
 {% assign series_posts = site.posts | where_exp: "post", "post.series_order" | sort: "series_order" %}
@@ -37,6 +37,12 @@ description: "Blog on motor learning: error, adaption and convercence toward rea
   .home a:not(.btn):not(.side-card):hover,
   .home a:not(.btn):not(.side-card):focus { color: #7b3ff2; }
 
+  /* ---------- 45 rpm discs: dark record, signal burst engraved in the groove ---------- */
+  .home {
+    --disc-a: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='49.4' fill='%2304050a' stroke='%2319f0ff' stroke-opacity='.5' stroke-width='1'/%3E%3Ccircle cx='50' cy='50' r='47' fill='none' stroke='%2319f0ff' stroke-opacity='.12' stroke-width='.7'/%3E%3Ccircle cx='50' cy='50' r='44.6' fill='none' stroke='%2319f0ff' stroke-opacity='.12' stroke-width='.7'/%3E%3Ccircle cx='50' cy='50' r='42.4' fill='none' stroke='%2319f0ff' stroke-opacity='.12' stroke-width='.7'/%3E%3Cpath d='M14.3,37.0 A38,38 0 0 1 26.6,20.1' fill='none' stroke='%23fff' stroke-opacity='.09' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M85.7,63.0 A38,38 0 0 1 73.4,79.9' fill='none' stroke='%23fff' stroke-opacity='.09' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M50.0,15.0 L51.4,13.1 L52.8,11.7 L54.3,11.2 L55.7,11.4 L57.0,12.5 L58.1,14.1 L59.0,16.0 L59.8,17.9 L60.6,19.4 L61.5,20.4 L62.5,20.9 L63.9,20.8 L65.5,20.3 L67.2,19.8 L69.0,19.3 L70.7,19.2 L72.1,19.5 L73.3,20.4 L74.0,21.6 L74.5,23.1 L74.7,24.8 L74.9,26.5 L75.1,28.0 L75.5,29.2 L76.2,30.2 L77.2,31.0 L78.4,31.7 L79.8,32.3 L81.2,33.0 L82.5,33.8 L83.4,34.9 L84.0,36.1 L84.3,37.4 L84.2,38.9 L84.0,40.3 L83.6,41.8 L83.3,43.1 L83.2,44.4 L83.3,45.7 L83.6,46.9 L84.1,48.1 L84.7,49.4 L85.3,50.7 L85.7,52.0 L85.9,53.3 L85.9,54.7 L85.5,56.0 L85.0,57.2 L84.3,58.4 L83.5,59.5 L82.7,60.6 L82.0,61.7 L81.5,62.9 L81.1,64.1 L80.8,65.3 L80.5,66.6 L80.2,67.9 L79.8,69.2 L79.3,70.4 L78.6,71.6 L77.7,72.6 L76.7,73.4 L75.6,74.2 L74.5,74.9 L73.3,75.6 L72.3,76.3 L71.2,77.0 L70.2,77.8 L69.3,78.7 L68.3,79.6 L67.3,80.5 L66.3,81.3 L65.2,82.0 L64.0,82.6 L62.8,83.1 L61.5,83.4 L60.3,83.7 L59.0,83.8 L57.7,83.9 L56.4,84.1 L55.1,84.2 L53.8,84.4 L52.6,84.6 L51.3,84.8 L50.0,85.0 L48.7,85.1 L47.4,85.2 L46.1,85.1 L44.8,84.9 L43.5,84.7 L42.3,84.3 L41.0,83.8 L39.8,83.4 L38.6,82.9 L37.5,82.4 L36.3,81.9 L35.1,81.4 L33.9,80.9 L32.7,80.4 L31.5,79.8 L30.4,79.2 L29.3,78.5 L28.3,77.7 L27.3,76.9 L26.3,75.9 L25.5,75.0 L24.6,74.0 L23.8,73.0 L23.0,72.0 L22.2,71.0 L21.4,70.0 L20.7,68.9 L19.9,67.9 L19.2,66.8 L18.6,65.6 L18.0,64.5 L17.5,63.3 L17.0,62.1 L16.6,60.8 L16.3,59.6 L16.0,58.3 L15.8,57.0 L15.6,55.8 L15.4,54.5 L15.3,53.2 L15.1,51.9 L15.0,50.6 L15.0,49.4 L15.0,48.1 L15.1,46.8 L15.2,45.5 L15.4,44.2 L15.7,42.9 L16.0,41.7 L16.4,40.4 L16.8,39.2 L17.2,38.0 L17.7,36.8 L18.2,35.6 L18.7,34.4 L19.3,33.3 L19.9,32.1 L20.6,31.0 L21.3,29.9 L22.0,28.9 L22.8,27.9 L23.7,26.9 L24.6,25.9 L25.5,25.0 L26.4,24.2 L27.4,23.3 L28.4,22.5 L29.5,21.7 L30.5,21.0 L31.6,20.3 L32.7,19.6 L33.8,18.9 L35.0,18.4 L36.1,17.8 L37.3,17.3 L38.6,16.9 L39.8,16.5 L41.0,16.2 L42.3,15.9 L43.6,15.6 L44.8,15.4 L46.1,15.2 L47.4,15.1 L48.7,15.0 L50.0,15.0Z' fill='none' stroke='%2319f0ff' stroke-opacity='.2' stroke-width='3.2' stroke-linejoin='round'/%3E%3Cpath d='M50.0,15.0 L51.4,13.1 L52.8,11.7 L54.3,11.2 L55.7,11.4 L57.0,12.5 L58.1,14.1 L59.0,16.0 L59.8,17.9 L60.6,19.4 L61.5,20.4 L62.5,20.9 L63.9,20.8 L65.5,20.3 L67.2,19.8 L69.0,19.3 L70.7,19.2 L72.1,19.5 L73.3,20.4 L74.0,21.6 L74.5,23.1 L74.7,24.8 L74.9,26.5 L75.1,28.0 L75.5,29.2 L76.2,30.2 L77.2,31.0 L78.4,31.7 L79.8,32.3 L81.2,33.0 L82.5,33.8 L83.4,34.9 L84.0,36.1 L84.3,37.4 L84.2,38.9 L84.0,40.3 L83.6,41.8 L83.3,43.1 L83.2,44.4 L83.3,45.7 L83.6,46.9 L84.1,48.1 L84.7,49.4 L85.3,50.7 L85.7,52.0 L85.9,53.3 L85.9,54.7 L85.5,56.0 L85.0,57.2 L84.3,58.4 L83.5,59.5 L82.7,60.6 L82.0,61.7 L81.5,62.9 L81.1,64.1 L80.8,65.3 L80.5,66.6 L80.2,67.9 L79.8,69.2 L79.3,70.4 L78.6,71.6 L77.7,72.6 L76.7,73.4 L75.6,74.2 L74.5,74.9 L73.3,75.6 L72.3,76.3 L71.2,77.0 L70.2,77.8 L69.3,78.7 L68.3,79.6 L67.3,80.5 L66.3,81.3 L65.2,82.0 L64.0,82.6 L62.8,83.1 L61.5,83.4 L60.3,83.7 L59.0,83.8 L57.7,83.9 L56.4,84.1 L55.1,84.2 L53.8,84.4 L52.6,84.6 L51.3,84.8 L50.0,85.0 L48.7,85.1 L47.4,85.2 L46.1,85.1 L44.8,84.9 L43.5,84.7 L42.3,84.3 L41.0,83.8 L39.8,83.4 L38.6,82.9 L37.5,82.4 L36.3,81.9 L35.1,81.4 L33.9,80.9 L32.7,80.4 L31.5,79.8 L30.4,79.2 L29.3,78.5 L28.3,77.7 L27.3,76.9 L26.3,75.9 L25.5,75.0 L24.6,74.0 L23.8,73.0 L23.0,72.0 L22.2,71.0 L21.4,70.0 L20.7,68.9 L19.9,67.9 L19.2,66.8 L18.6,65.6 L18.0,64.5 L17.5,63.3 L17.0,62.1 L16.6,60.8 L16.3,59.6 L16.0,58.3 L15.8,57.0 L15.6,55.8 L15.4,54.5 L15.3,53.2 L15.1,51.9 L15.0,50.6 L15.0,49.4 L15.0,48.1 L15.1,46.8 L15.2,45.5 L15.4,44.2 L15.7,42.9 L16.0,41.7 L16.4,40.4 L16.8,39.2 L17.2,38.0 L17.7,36.8 L18.2,35.6 L18.7,34.4 L19.3,33.3 L19.9,32.1 L20.6,31.0 L21.3,29.9 L22.0,28.9 L22.8,27.9 L23.7,26.9 L24.6,25.9 L25.5,25.0 L26.4,24.2 L27.4,23.3 L28.4,22.5 L29.5,21.7 L30.5,21.0 L31.6,20.3 L32.7,19.6 L33.8,18.9 L35.0,18.4 L36.1,17.8 L37.3,17.3 L38.6,16.9 L39.8,16.5 L41.0,16.2 L42.3,15.9 L43.6,15.6 L44.8,15.4 L46.1,15.2 L47.4,15.1 L48.7,15.0 L50.0,15.0Z' fill='none' stroke='%2319f0ff' stroke-opacity='.9' stroke-width='.9' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='50' r='21' fill='%23070910' stroke='%2319f0ff' stroke-opacity='.6' stroke-width='1.1'/%3E%3C/svg%3E");
+    --disc-b: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='49.4' fill='%2304050a' stroke='%23ff2bd6' stroke-opacity='.5' stroke-width='1'/%3E%3Ccircle cx='50' cy='50' r='47' fill='none' stroke='%23ff2bd6' stroke-opacity='.12' stroke-width='.7'/%3E%3Ccircle cx='50' cy='50' r='44.6' fill='none' stroke='%23ff2bd6' stroke-opacity='.12' stroke-width='.7'/%3E%3Ccircle cx='50' cy='50' r='42.4' fill='none' stroke='%23ff2bd6' stroke-opacity='.12' stroke-width='.7'/%3E%3Cpath d='M14.3,37.0 A38,38 0 0 1 26.6,20.1' fill='none' stroke='%23fff' stroke-opacity='.09' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M85.7,63.0 A38,38 0 0 1 73.4,79.9' fill='none' stroke='%23fff' stroke-opacity='.09' stroke-width='2.2' stroke-linecap='round'/%3E%3Cpath d='M50.0,85.0 L48.6,86.9 L47.2,88.3 L45.7,88.8 L44.3,88.6 L43.0,87.5 L41.9,85.9 L41.0,84.0 L40.2,82.1 L39.4,80.6 L38.5,79.6 L37.5,79.1 L36.1,79.2 L34.5,79.7 L32.8,80.2 L31.0,80.7 L29.3,80.8 L27.9,80.5 L26.7,79.6 L26.0,78.4 L25.5,76.9 L25.3,75.2 L25.1,73.5 L24.9,72.0 L24.5,70.8 L23.8,69.8 L22.8,69.0 L21.6,68.3 L20.2,67.7 L18.8,67.0 L17.5,66.2 L16.6,65.1 L16.0,63.9 L15.7,62.6 L15.8,61.1 L16.0,59.7 L16.4,58.2 L16.7,56.9 L16.8,55.6 L16.7,54.3 L16.4,53.1 L15.9,51.9 L15.3,50.6 L14.7,49.3 L14.3,48.0 L14.1,46.7 L14.1,45.3 L14.5,44.0 L15.0,42.8 L15.7,41.6 L16.5,40.5 L17.3,39.4 L18.0,38.3 L18.5,37.1 L18.9,35.9 L19.2,34.7 L19.5,33.4 L19.8,32.1 L20.2,30.8 L20.7,29.6 L21.4,28.4 L22.3,27.4 L23.3,26.6 L24.4,25.8 L25.5,25.1 L26.7,24.4 L27.7,23.7 L28.8,23.0 L29.8,22.2 L30.7,21.3 L31.7,20.4 L32.7,19.5 L33.7,18.7 L34.8,18.0 L36.0,17.4 L37.2,16.9 L38.5,16.6 L39.7,16.3 L41.0,16.2 L42.3,16.1 L43.6,15.9 L44.9,15.8 L46.2,15.6 L47.4,15.4 L48.7,15.2 L50.0,15.0 L51.3,14.9 L52.6,14.8 L53.9,14.9 L55.2,15.1 L56.5,15.3 L57.7,15.7 L59.0,16.2 L60.2,16.6 L61.4,17.1 L62.5,17.6 L63.7,18.1 L64.9,18.6 L66.1,19.1 L67.3,19.6 L68.5,20.2 L69.6,20.8 L70.7,21.5 L71.7,22.3 L72.7,23.1 L73.7,24.1 L74.5,25.0 L75.4,26.0 L76.2,27.0 L77.0,28.0 L77.8,29.0 L78.6,30.0 L79.3,31.1 L80.1,32.1 L80.8,33.2 L81.4,34.4 L82.0,35.5 L82.5,36.7 L83.0,37.9 L83.4,39.2 L83.7,40.4 L84.0,41.7 L84.2,43.0 L84.4,44.2 L84.6,45.5 L84.7,46.8 L84.9,48.1 L85.0,49.4 L85.0,50.6 L85.0,51.9 L84.9,53.2 L84.8,54.5 L84.6,55.8 L84.3,57.1 L84.0,58.3 L83.6,59.6 L83.2,60.8 L82.8,62.0 L82.3,63.2 L81.8,64.4 L81.3,65.6 L80.7,66.7 L80.1,67.9 L79.4,69.0 L78.7,70.1 L78.0,71.1 L77.2,72.1 L76.3,73.1 L75.4,74.1 L74.5,75.0 L73.6,75.8 L72.6,76.7 L71.6,77.5 L70.5,78.3 L69.5,79.0 L68.4,79.7 L67.3,80.4 L66.2,81.1 L65.0,81.6 L63.9,82.2 L62.7,82.7 L61.4,83.1 L60.2,83.5 L59.0,83.8 L57.7,84.1 L56.4,84.4 L55.2,84.6 L53.9,84.8 L52.6,84.9 L51.3,85.0 L50.0,85.0Z' fill='none' stroke='%23ff2bd6' stroke-opacity='.2' stroke-width='3.2' stroke-linejoin='round'/%3E%3Cpath d='M50.0,85.0 L48.6,86.9 L47.2,88.3 L45.7,88.8 L44.3,88.6 L43.0,87.5 L41.9,85.9 L41.0,84.0 L40.2,82.1 L39.4,80.6 L38.5,79.6 L37.5,79.1 L36.1,79.2 L34.5,79.7 L32.8,80.2 L31.0,80.7 L29.3,80.8 L27.9,80.5 L26.7,79.6 L26.0,78.4 L25.5,76.9 L25.3,75.2 L25.1,73.5 L24.9,72.0 L24.5,70.8 L23.8,69.8 L22.8,69.0 L21.6,68.3 L20.2,67.7 L18.8,67.0 L17.5,66.2 L16.6,65.1 L16.0,63.9 L15.7,62.6 L15.8,61.1 L16.0,59.7 L16.4,58.2 L16.7,56.9 L16.8,55.6 L16.7,54.3 L16.4,53.1 L15.9,51.9 L15.3,50.6 L14.7,49.3 L14.3,48.0 L14.1,46.7 L14.1,45.3 L14.5,44.0 L15.0,42.8 L15.7,41.6 L16.5,40.5 L17.3,39.4 L18.0,38.3 L18.5,37.1 L18.9,35.9 L19.2,34.7 L19.5,33.4 L19.8,32.1 L20.2,30.8 L20.7,29.6 L21.4,28.4 L22.3,27.4 L23.3,26.6 L24.4,25.8 L25.5,25.1 L26.7,24.4 L27.7,23.7 L28.8,23.0 L29.8,22.2 L30.7,21.3 L31.7,20.4 L32.7,19.5 L33.7,18.7 L34.8,18.0 L36.0,17.4 L37.2,16.9 L38.5,16.6 L39.7,16.3 L41.0,16.2 L42.3,16.1 L43.6,15.9 L44.9,15.8 L46.2,15.6 L47.4,15.4 L48.7,15.2 L50.0,15.0 L51.3,14.9 L52.6,14.8 L53.9,14.9 L55.2,15.1 L56.5,15.3 L57.7,15.7 L59.0,16.2 L60.2,16.6 L61.4,17.1 L62.5,17.6 L63.7,18.1 L64.9,18.6 L66.1,19.1 L67.3,19.6 L68.5,20.2 L69.6,20.8 L70.7,21.5 L71.7,22.3 L72.7,23.1 L73.7,24.1 L74.5,25.0 L75.4,26.0 L76.2,27.0 L77.0,28.0 L77.8,29.0 L78.6,30.0 L79.3,31.1 L80.1,32.1 L80.8,33.2 L81.4,34.4 L82.0,35.5 L82.5,36.7 L83.0,37.9 L83.4,39.2 L83.7,40.4 L84.0,41.7 L84.2,43.0 L84.4,44.2 L84.6,45.5 L84.7,46.8 L84.9,48.1 L85.0,49.4 L85.0,50.6 L85.0,51.9 L84.9,53.2 L84.8,54.5 L84.6,55.8 L84.3,57.1 L84.0,58.3 L83.6,59.6 L83.2,60.8 L82.8,62.0 L82.3,63.2 L81.8,64.4 L81.3,65.6 L80.7,66.7 L80.1,67.9 L79.4,69.0 L78.7,70.1 L78.0,71.1 L77.2,72.1 L76.3,73.1 L75.4,74.1 L74.5,75.0 L73.6,75.8 L72.6,76.7 L71.6,77.5 L70.5,78.3 L69.5,79.0 L68.4,79.7 L67.3,80.4 L66.2,81.1 L65.0,81.6 L63.9,82.2 L62.7,82.7 L61.4,83.1 L60.2,83.5 L59.0,83.8 L57.7,84.1 L56.4,84.4 L55.2,84.6 L53.9,84.8 L52.6,84.9 L51.3,85.0 L50.0,85.0Z' fill='none' stroke='%23ff2bd6' stroke-opacity='.9' stroke-width='.9' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='50' r='21' fill='%23070910' stroke='%23ff2bd6' stroke-opacity='.6' stroke-width='1.1'/%3E%3C/svg%3E");
+  }
+
   /* ---------- Buttons ---------- */
   .home a.btn, .home a.btn:visited {
     display: inline-block; padding: 0.55rem 1.1rem; margin: 0 0.5rem 0.5rem 0;
@@ -51,21 +57,19 @@ description: "Blog on motor learning: error, adaption and convercence toward rea
     margin: 0 0.25rem 0.5rem; padding: 0.4rem 1.2rem 0.4rem 0.5rem;
     border-radius: 999px;
   }
-  /* LP icon in the buttons: label in link blue (primary) and violet (secondary) */
+  /* 45 rpm icon in the buttons: cyan on the primary, magenta on the secondary */
   .home p.cta a.btn::before {
     content: ""; flex: none; width: 1.7rem; height: 1.7rem; border-radius: 50%;
     background:
-      conic-gradient(from 20deg, transparent 0 20%, rgba(255,255,255,.2) 25%, transparent 30% 70%, rgba(255,255,255,.2) 75%, transparent 80%),
-      radial-gradient(circle, #f5f0e6 0 8%, #6b3fc9 9% 32%, transparent 33%),
-      repeating-radial-gradient(circle, #111 0 1.5px, #262626 2.5px 3.5px);
-    box-shadow: 0 0 0 1px rgba(128, 128, 128, 0.5);
+      radial-gradient(circle, #f5f0e6 0 1.4px, transparent 1.9px),
+      var(--disc-b) center / 100% 100% no-repeat;
+    box-shadow: 0 0 0 1px rgba(255, 43, 214, 0.35);
   }
   .home p.cta a.btn-primary::before {
     background:
-      conic-gradient(from 20deg, transparent 0 20%, rgba(255,255,255,.2) 25%, transparent 30% 70%, rgba(255,255,255,.2) 75%, transparent 80%),
-      radial-gradient(circle, #f5f0e6 0 8%, #3a3fd1 9% 32%, transparent 33%),
-      repeating-radial-gradient(circle, #111 0 1.5px, #262626 2.5px 3.5px);
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+      radial-gradient(circle, #f5f0e6 0 1.4px, transparent 1.9px),
+      var(--disc-a) center / 100% 100% no-repeat;
+    box-shadow: 0 0 0 1px rgba(25, 240, 255, 0.45);
   }
   .home p.cta a.btn:hover::before, .home p.cta a.btn:focus-visible::before { animation: btn-spin 1.8s linear infinite; }
   @keyframes btn-spin { to { transform: rotate(360deg); } }
@@ -75,7 +79,7 @@ description: "Blog on motor learning: error, adaption and convercence toward rea
 
   /* ---------- Hero animation ---------- */
   .hero-anim { margin: 1.5rem 0; }
-  .hero-anim iframe { display: block; width: 100%; aspect-ratio: 20 / 9; max-height: 70vh; border: 0; background: transparent; }
+  .hero-anim iframe { display: block; width: 100%; aspect-ratio: 20 / 9; max-height: 70vh; border: 0; background: #04050a; border-radius: 8px; }
   @media (max-width: 700px) { .hero-anim iframe { aspect-ratio: 35 / 27; } }
 
   /* ---------- Series: Side A / Side B ---------- */
@@ -85,16 +89,21 @@ description: "Blog on motor learning: error, adaption and convercence toward rea
     padding: 0.9rem 1rem; border: 1px solid #e5e5e5; border-radius: 8px;
     color: inherit; text-decoration: none;
   }
-  .home a.side-card:hover { border-color: #3a3fd1; text-decoration: none; }
-  .home a.side-card:nth-child(2):hover { border-color: #6b3fc9; }
+  .home a.side-card:hover { border-color: #0bc3d3; text-decoration: none; }
+  .home a.side-card:nth-child(2):hover { border-color: #d11fb0; }
   .side-disc {
-    flex: none; width: 2.6rem; height: 2.6rem; border-radius: 50%;
-    display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 1.1rem;
-    /* Side A: link blue label */
-    background: radial-gradient(circle, #3a3fd1 0 40%, #111 41% 100%);
+    flex: none; width: 2.8rem; height: 2.8rem; border-radius: 50%;
+    display: grid; place-items: center;
+    font: 600 0.85rem/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    color: #19f0ff; text-shadow: 0 0 6px rgba(25, 240, 255, 0.55);
+    /* Side A: cyan signal */
+    background: var(--disc-a) center / 100% 100% no-repeat;
+    transition: box-shadow 0.2s;
   }
-  /* Side B: visited violet label */
-  .side-card:nth-child(2) .side-disc { background: radial-gradient(circle, #6b3fc9 0 40%, #111 41% 100%); }
+  /* Side B: magenta signal */
+  .side-card:nth-child(2) .side-disc { color: #ff2bd6; text-shadow: 0 0 6px rgba(255, 43, 214, 0.55); background: var(--disc-b) center / 100% 100% no-repeat; }
+  .home a.side-card:hover .side-disc { box-shadow: 0 0 12px rgba(25, 240, 255, 0.45); }
+  .home a.side-card:nth-child(2):hover .side-disc { box-shadow: 0 0 12px rgba(255, 43, 214, 0.45); }
   .side-text strong { display: block; }
   .side-text small { display: block; margin-top: 0.15rem; color: #6b6b6b; line-height: 1.4; }
 
@@ -120,8 +129,8 @@ description: "Blog on motor learning: error, adaption and convercence toward rea
   <!-- Hero animation -->
   <figure class="hero-anim">
     <iframe
-      src="{{ '/assets/img/handstand_home.html' | relative_url }}"
-      title="Animation of a stick figure doing a cartwheel and settling into a handstand, swaying slightly to keep its balance"
+      src="{{ '/assets/img/home/signal_noise_home.html' | relative_url }}"
+      title="Animation of a noisy signal on an oscilloscope: a prediction model starts as a hallucination and converges toward the true signal as the error shrinks"
       scrolling="no">
     </iframe>
   </figure>
@@ -139,16 +148,15 @@ description: "Blog on motor learning: error, adaption and convercence toward rea
 
   <p>Anatomical wires as feedback loops. Reality disagrees, error is generated, the model updates. Repeat thousands of times.</p>
 
-  <p>Error isn’t an error: it’s the ultimate form of data. Motor learning is a dataset full of errors. </p>
-  
-  <p></p>Signals to noise is an editorial project where physical and philosophical approaches meet to disassemble, explore, and digest this process.</p>
+  <p>Error isn’t an error: it’s the ultimate form of data. Motor learning is a dataset full of errors.</p>
+
+  <p>Signals from noise is an editorial project where physical and philosophical approaches meet to disassemble, explore, and digest this process.</p>
 
   <p class="closing">What we call learning is a prediction engine slowly converging toward reality.</p>
 </div>
 
   <!-- Series -->
-  <h2>Follow the series</h2>
-<p>Inspired by a 45 rpm record: one handstand, two sides. Part A treats the body as a single rigid block; Part B opens it up into an articulated one.</p>
+  <h2>Follow the logs</h2>
 <div class="sides">
   <a class="side-card" href="{{ '/blog/series/#part-a' | relative_url }}">
     <span class="side-disc" aria-hidden="true">A</span>
