@@ -18,6 +18,11 @@ $link-hover-color: #7b3ff2;
 
 /* ---------- Centering ---------- */
 
+.page-heading,
+.post-title {
+    display: none;
+}
+
 /* Page body: home, posts and pages */
 .page-content {
   text-align: center;
