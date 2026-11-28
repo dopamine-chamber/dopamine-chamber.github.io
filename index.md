@@ -135,35 +135,37 @@ description: "Blog on motor learning: error, adaption and convercence toward rea
   <div class="prose">
   <h2>What you’re getting into: come for the quiet, stay for the search</h2>
 
-  <p>The nervous system as a prediction machine. Every skill begins as a hallucination; error is reality’s response to the model.</p>
+  <p>The nervous system as a prediction machine. Every skill begins as a hallucination: error is reality’s response to the model.</p>
 
   <p>Anatomical wires as feedback loops. Reality disagrees, error is generated, the model updates. Repeat thousands of times.</p>
 
-  <p>Error isn’t an error: it’s the ultimate form of data. Motor learning is a dataset full of errors. Signals to noise is an editorial project where physical and philosophical approaches meet to disassemble, explore, and digest this process.</p>
+  <p>Error isn’t an error: it’s the ultimate form of data. Motor learning is a dataset full of errors. </p>
+  
+  <p></p>Signals to noise is an editorial project where physical and philosophical approaches meet to disassemble, explore, and digest this process.</p>
 
   <p class="closing">What we call learning is a prediction engine slowly converging toward reality.</p>
 </div>
 
   <!-- Series -->
   <h2>Follow the series</h2>
-  <p>Inspired by a 45 rpm record: one handstand, two sides. Part A treats the body as a single rigid block; Part B opens it up into an articulated one.</p>
-  <div class="sides">
-    <a class="side-card" href="{{ '/series/#part-a' | relative_url }}">
-      <span class="side-disc" aria-hidden="true">A</span>
-      <span class="side-text">
-        <strong>Part A</strong>
-        <small>The rigid body hypothesis · {{ part_a.size }} post{% if part_a.size != 1 %}s{% endif %}</small>
-      </span>
-    </a>
-    <a class="side-card" href="{{ '/series/#part-b' | relative_url }}">
-      <span class="side-disc" aria-hidden="true">B</span>
-      <span class="side-text">
-        <strong>Part B</strong>
-        <small>The articulated body hypothesis · {% if part_b.size > 0 %}{{ part_b.size }} post{% if part_b.size != 1 %}s{% endif %}{% else %}coming soon{% endif %}</small>
-      </span>
-    </a>
-  </div>
-  <p><a href="{{ '/series/' | relative_url }}">See the whole series</a></p>
+<p>Inspired by a 45 rpm record: one handstand, two sides. Part A treats the body as a single rigid block; Part B opens it up into an articulated one.</p>
+<div class="sides">
+  <a class="side-card" href="{{ '/blog/series/#part-a' | relative_url }}">
+    <span class="side-disc" aria-hidden="true">A</span>
+    <span class="side-text">
+      <strong>Part A</strong>
+      <small>The rigid body hypothesis · {{ part_a.size }} post{% if part_a.size != 1 %}s{% endif %}</small>
+    </span>
+  </a>
+  <a class="side-card" href="{{ '/blog/series/#part-b' | relative_url }}">
+    <span class="side-disc" aria-hidden="true">B</span>
+    <span class="side-text">
+      <strong>Part B</strong>
+      <small>The articulated body hypothesis · {% if part_b.size > 0 %}{{ part_b.size }} post{% if part_b.size != 1 %}s{% endif %}{% else %}coming soon{% endif %}</small>
+    </span>
+  </a>
+</div>
+<p><a href="{{ '/blog/series/' | relative_url }}">See the whole series</a></p>
 
   <p><em>It’s also a quiet Sisyphus. No handstand is final: it always ends. Camus asks us to imagine Sisyphus happy. But Sisyphus is condemned to his rock, while we choose our handstands, and that may be the whole point. Anyone who practices knows the value lies not in the arrival but in the repeated attempt.</em></p>
 
