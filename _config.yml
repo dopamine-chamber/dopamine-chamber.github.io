@@ -16,7 +16,6 @@ plugins:
   
 header_pages:
   - blog-index.md
-  - series.md
   - about.md
   - newsletter.md
   - collaborations.md
