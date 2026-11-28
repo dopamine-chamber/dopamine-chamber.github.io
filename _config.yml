@@ -17,7 +17,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/img/home/home_preview.jpg
+      image: /assets/img/home/home_preview.jpeg
 
 header_pages:
   - series.md
