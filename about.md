@@ -57,15 +57,3 @@ description: "About Slow Convergence: a handstand practitioner's project where p
   <p>The project was born in the days when the latest Fontaines D.C. album, <em>Dopamine Chamber</em> was being released, and their music helped me get into the flow and inspired and motivated me deeply to create.</p>
 </div>
 
-<p>I’m a ’90s kid: blogging is my love language, and sharing so much with strangers online is something I’ve always found almost therapeutic. This project is where many parts of myself meet, and holds what I’ve understood about handstands.</p>
-
-<p>The editorial flow is a reorganization of my stream of consciousness, and each topic is explored based on what the scientific literature and reliable sources tell us about handstand practice. You can follow it from the start in <a href="{{ '/blog/series/' | relative_url }}">The handstand logs</a>.</p>
-
-<div class="nowplaying">
-  <p>The content published on this site is created in good faith and for informational purposes only, with all original sources duly cited within the articles. Every effort is made to respect third-party intellectual property rights. If you believe any content infringes upon your copyright, please contact me for immediate review and removal. Please see the <a href="{{ '/privacy-policy/' | relative_url }}">privacy policy page</a> for my contact details.</p>
-  <p>All rights are reserved. Content may not be reproduced or redistributed without prior written consent.</p>
-</div>
-
-<div class="nowplaying">
-  <p>The project was born in the days when the latest Fontaines D.C. album, <em>Dopamine Chamber</em>, was being released, and their music helped me get into the flow and inspired and motivated me deeply to create.</p>
-</div>
