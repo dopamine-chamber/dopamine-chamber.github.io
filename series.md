@@ -2,7 +2,7 @@
 layout: page
 title: "Series"
 description: "All the posts of the handstand dilemma series in order: models, energy and mechanics to understand how handbalancing works."
-permalink: /series/
+permalink: /blog/series/
 ---
 
 A step-by-step exploration of the handstand, released like a 45 rpm record: <strong>Part A</strong> treats the body as a single rigid block, <strong>Part B</strong> opens it up into an articulated one. Read the posts in order, or jump to the topic that interests you.
