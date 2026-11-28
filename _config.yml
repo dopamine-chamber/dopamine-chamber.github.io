@@ -4,7 +4,6 @@ author: 2026 Slow Convergence. All rights are reserved
 description: Observe like a physicist. Unpack like an engineer. Experience like a practitioner.
 url: "https://www.slowconvergence.com"
 baseurl: ""
-image: /assets/img/handstand_home.html
 theme: minima
 lang: en
 
@@ -13,14 +12,20 @@ plugins:
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
-  
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/home/home_preview.png
+
 header_pages:
   - series.md
   - blog-index.md
   - newsletter.md
   - about.md
   - collaborations.md
-   
+
 markdown: kramdown
 kramdown:
   math_engine: mathjax
