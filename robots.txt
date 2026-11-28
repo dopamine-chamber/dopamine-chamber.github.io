@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://dopamine-chamber.github.io/sitemap.xml
+
+Sitemap: https://www.slowconvergence.com/sitemap.xml
