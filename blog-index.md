@@ -1,8 +1,10 @@
 ---
 layout: page
 title: Blog
+has_children: true
+nav_order: 2
 permalink: /blog/
-description: All the posts on the physics of the handstand, from newest to oldest.
+description: Notes on biologial systems updating their models through experience, error and feedback.
 ---
 
 <style>
