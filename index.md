@@ -115,8 +115,7 @@ description: "Blog on motor learning: error, adaption and convercence toward rea
 
   <section class="intro">
     <p class="lead">A collection of notes on learning, adaptation, and the strange machinery that transforms repetition into skill.</p>
-    <p class="closing"><strong>What we call learning is a prediction engine slowly converging toward reality.</strong></p>
-  </section>
+      </section>
 
   <!-- Hero animation -->
   <figure class="hero-anim">
