@@ -115,8 +115,6 @@ description: "Blog on motor learning: error, adaption and convercence toward rea
 
   <section class="intro">
     <p class="lead">A collection of notes on learning, adaptation, and the strange machinery that transforms repetition into skill.</p>
-    <p>Error isn’t an error: it’s the ultimate form of data. Motor learning is a dataset full of errors. <strong>Signals to noise</strong> is an editorial project where physical and philosophical approaches meet to disassemble, explore, and digest this process.</p>
-    </div>
     <p class="closing"><strong>What we call learning is a prediction engine slowly converging toward reality.</strong></p>
   </section>
 
@@ -136,13 +134,16 @@ description: "Blog on motor learning: error, adaption and convercence toward rea
 
   <!-- What you’re getting into -->
   <div class="prose">
-    <h2>What you’re getting into: come for the quiet, stay for the search</h2>
-      <p><strong>The nervous system as a prediction machine.</strong> Every skill begins as a <strong>hallucination</strong>; error is reality’s response to the model.</p>
-      <p><strong>Anatomical wires as feedback loops.</strong> Reality disagrees, error is generated, the model updates. Repeat thousands of times.</p>
-    </div>
-    <p class="closing"><strong>What we call learning is a prediction engine slowly converging toward reality.</strong></p>
-    
-   </div>
+  <h2>What you’re getting into: come for the quiet, stay for the search</h2>
+
+  <p>The nervous system as a prediction machine. Every skill begins as a hallucination; error is reality’s response to the model.</p>
+
+  <p>Anatomical wires as feedback loops. Reality disagrees, error is generated, the model updates. Repeat thousands of times.</p>
+
+  <p>Error isn’t an error: it’s the ultimate form of data. Motor learning is a dataset full of errors. Signals to noise is an editorial project where physical and philosophical approaches meet to disassemble, explore, and digest this process.</p>
+
+  <p class="closing">What we call learning is a prediction engine slowly converging toward reality.</p>
+</div>
 
   <!-- Series -->
   <h2>Follow the series</h2>
