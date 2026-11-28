@@ -2,7 +2,7 @@
 layout: page
 title: Privacy policy
 permalink: /privacy-policy/
-description: "How the handstand dilemma handles personal data: analytics cookies with your consent, the newsletter list, third-party services and your rights."
+description: "How signals from noise (slowconvergence.com) handles personal data: analytics cookies with your consent, the newsletter list, third-party services and your rights."
 ---
 
 <style>
@@ -29,15 +29,15 @@ description: "How the handstand dilemma handles personal data: analytics cookies
 
 # Privacy policy
 
-*Last updated: November 10, 2026*
+*Last updated: November 28, 2026*
 
-This website, **the handstand dilemma**, is a personal blog about the physics of handstand balance. It does not display advertising, and I do not sell your personal data or share it for marketing purposes. This page explains what data is processed when you visit the site or write to me, why, and what rights you have.
+This website, **signals from noise** (slowconvergence.com), is a personal blog about motor learning, adaptation and the physics of balance, with the handstand as its main case study. It does not display advertising, and I do not sell your personal data or share it for marketing purposes. This page explains what data is processed when you visit the site or write to me, why, and what rights you have.
 
 ---
 
 ### Data Controller
 
-The data controller is based in Turin, Italy. For any question about this policy or your data, write to info@slowconvergence.com.
+The data controller of signals from noise is based in Turin, Italy. For any question about this policy or your data, write to info@slowconvergence.com.
 
 ---
 
@@ -55,7 +55,7 @@ I do not ask you to create an account or to provide personal information to read
 
 **When you ask to join the newsletter:** your email address, which you enter in the sign-up form (hosted by Google Forms) or send to me by email.
 
-**When you ask to join the newsletter:** your email address and, if you include it, your name.
+**When you write to me** (for example with a question or a collaboration request): your email address, your name if you include it, and the content of your message.
 
 ---
 
@@ -66,7 +66,7 @@ If you are located in the European Economic Area (EEA), the United Kingdom, or r
 | Purpose | Legal basis | Retention |
 |---|---|---|
 | Understanding how the website is used (Google Analytics) | Consent | Up to 14 months, as configured in Google Analytics |
-| Hosting, security and technical operation of the website, including the delivery of its code libraries | Legitimate interest | According to the providers' own policies |
+| Hosting, security and technical operation of the website, including the delivery of its code libraries and embedded content | Legitimate interest | According to the providers’ own policies |
 | Replying to your emails | Legitimate interest | As long as needed to handle your request |
 | Newsletter list | Consent | Until you withdraw your consent or ask for deletion |
 
@@ -76,7 +76,7 @@ Legitimate interest here means keeping the website secure and working properly, 
 
 ### Cookies
 
-This website uses analytics cookies to understand how visitors use it (for example, which pages are read and from which country visitors come), so that I can improve its content. These cookies are installed only after you give your consent through the cookie banner. You can change or withdraw your choice at any time using the "Cookie settings" link at the bottom of every page. Your choice is stored in your browser's local storage (not as a cookie) so that you are not asked again every time, and I will ask you again after 12 months.
+This website uses analytics cookies to understand how visitors use it (for example, which pages are read and from which country visitors come), so that I can improve its content. These cookies are installed only after you give your consent through the cookie banner. You can change or withdraw your choice at any time using the “Cookie settings” link at the bottom of every page. Your choice is stored in your browser’s local storage (not as a cookie) so that you are not asked again every time, and I will ask you again after 12 months.
 
 | Cookie | Provider | Purpose | Duration |
 |---|---|---|---|
@@ -91,7 +91,7 @@ This website does not use cookies for advertising or profiling.
 
 ### Newsletter
 
-The newsletter has not been launched yet. If you ask to join the list, I collect your email address through a sign-up form hosted by Google Forms (or by email, if you prefer to write to me). I use it only to tell you when the newsletter starts and, afterwards, to send it to you. The responses are stored in my personal Google account (Google Forms and Google Sheets) and I do not share them with anyone. This website does not embed the form: it opens on a Google page, where Google may set its own cookies, governed by Google's privacy policy. If I decide to use a dedicated email service in the future, I will update this policy before doing so.
+The newsletter has not been launched yet. If you ask to join the list, I collect your email address through a sign-up form hosted by Google Forms (or by email, if you prefer to write to me). I use it only to tell you when the newsletter starts and, afterwards, to send it to you. The responses are stored in my personal Google account (Google Forms and Google Sheets) and I do not share them with anyone. This website does not embed the form: it opens on a Google page, where Google may set its own cookies, governed by Google’s privacy policy. If I decide to use a dedicated email service in the future, I will update this policy before doing so.
 
 You can withdraw your consent and ask me to delete your address at any time, and every newsletter will explain how to unsubscribe. If the newsletter is never launched, I will delete all the addresses collected.
 
@@ -105,7 +105,8 @@ These services may collect information directly from your browser or device, and
 - **Gmail (Google)**, which hosts the email account I use to receive messages and newsletter requests: [Google Privacy Policy](https://policies.google.com/privacy)
 - **GitHub Pages**, which hosts this website and may log technical data such as IP addresses: [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement)
 - **jsDelivr**, a content delivery network that serves the library used to display equations; it receives your IP address when your browser loads it: [jsDelivr Privacy Policy](https://www.jsdelivr.com/privacy-policy-jsdelivr-net)
-- - **Google Forms and Google Sheets**, which host the newsletter sign-up form and store the list: [Google Privacy Policy](https://policies.google.com/privacy)
+- **Bandcamp**, which provides the music player embedded in the “Now playing” section of the home page; it receives your IP address when the player loads and may set its own cookies: [Bandcamp Privacy Policy](https://bandcamp.com/privacy)
+- **Google Forms and Google Sheets**, which host the newsletter sign-up form and store the list: [Google Privacy Policy](https://policies.google.com/privacy)
 
 ---
 
@@ -126,6 +127,24 @@ You have the right to:
 - Receive your data in a portable format.
 - Object to the processing.
 - Withdraw your consent at any time, without affecting the processing carried out before.
+
+To exercise any of these rights, write to the address above. I will reply as soon as I can and in any case within one month.
+
+You also have the right to lodge a complaint with the Italian data protection authority, the Garante per la protezione dei dati personali ([garanteprivacy.it](https://www.garanteprivacy.it)), or with the authority of your own country.
+
+---
+
+### Children
+
+This website is not directed at children, and I do not knowingly collect their personal data.
+
+---
+
+### Changes to This Policy
+
+I may update this Privacy Policy from time to time. The date of the latest revision is shown at the top of this page.
+
+</div>
 
 To exercise any of these rights, write to the address above. I will reply as soon as I can and in any case within one month.
 
