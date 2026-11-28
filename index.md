@@ -177,7 +177,7 @@ Every movement begins as a hallucination: a guess about the world. The nervous s
 
   <!-- Who writes this -->
   <h2>Who writes this</h2>
-  <p>Biomedical engineer, independent writer and amateur circus artist, exploring movement as a meeting place between science, art and philosophy. At its core, this project is not about the clinical physics of handstands. It’s a window into how complex human systems mobilize and dialectically negotiate their physical, emotional and intellectual dimensions to learn, adapt and remain stable in changing environments. There are no answers here, only questions to navigate, and each one opens onto another in a never-ending why. <em><a href="{{ '/about/' | relative_url }}">More about the project</a>.</em></p>
+  <p>Biomedical engineer, independent writer and circus amateur, exploring movement as a meeting place between science, art and philosophy. At its core, this project is not about the clinical physics of handstands. It’s a window into how complex human systems mobilize and dialectically negotiate their physical, emotional and intellectual dimensions to learn, adapt and remain stable in changing environments. There are no answers here, only questions to navigate, and each one opens onto another in a never-ending why. <em><a href="{{ '/about/' | relative_url }}">More about the project</a>.</em></p>
 
   <!-- Latest posts -->
   <h2>Latest posts</h2>
