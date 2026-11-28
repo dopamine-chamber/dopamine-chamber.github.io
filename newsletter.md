@@ -72,14 +72,14 @@ description: "A newsletter from signals from noise is on its way: new posts on m
 
   <p>Leave your email address and I’ll let you know when the channel opens.</p>
 
-  <ol class="steps" aria-label="Where the newsletter stands">
-    <li class="done">Idea</li>
-    <li class="now">Test signal</li>
-    <li>Setup</li>
-    <li>Broadcast</li>
-  </ol>
-
-  <p><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScUHUH19eT3a6SQB5pTEzOYSEjTDFkXbTV4GtIru3jY2EoDoA/viewform" target="_blank" rel="noopener">Join the list</a></p>
+ <p style="text-align: center;">
+    <a class="btn"
+       href="https://docs.google.com/forms/d/e/1FAIpQLScUHUH19eT3a6SQB5pTEzOYSEjTDFkXbTV4GtIru3jY2EoDoA/viewform"
+       target="_blank"
+       rel="noopener">
+        Join the list
+    </a>
+</p>
 
   <div class="smallprint">
     <p class="smallprint-label">Small print</p>
