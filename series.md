@@ -1,11 +1,15 @@
 ---
 layout: page
-title: "Series"
+title: "The handstand logs"
 description: "All the posts of the handstand dilemma series in order: models, energy and mechanics to understand how handbalancing works."
 permalink: /blog/series/
 ---
 
-A step-by-step exploration of the handstand, released like a 45 rpm record: <strong>Part A</strong> treats the body as a single rigid block, <strong>Part B</strong> opens it up into an articulated one. Read the posts in order, or jump to the topic that interests you.
+Handstands make one think of quiescence: they aren’t. Physically, the bodyweight sits above the hands, and any error grows exponentially. Staying up means correcting, continuously, with wrists and fingers that were never selected for the job. Evolution didn’t build sapiens to balance on hands, and yet humans learn to do it. That is what makes the handstand also philosophically interesting: handstands are punk.
+
+In a way, handbalancing comes with a certain musicality: it’s not a state but an action. You stay balanced only by continuing to balance, and motor learning is the wildest process you can experience. The Handstand Dilemma is not the hunt for the ultimate handstand solution, but the search for a simple, direct question: why do humans get obsessed with learning useless things?
+
+Inpired by a 45 rpm record: <strong>Part A</strong> treats the body as a single rigid block, <strong>Part B</strong> opens it up into an articulated one. Read the posts in order, or jump to the topic that interests you.
 
 {% assign series_posts = site.posts | where_exp: "post", "post.series_order" | sort: "series_order" %}
 {% assign part_a = series_posts | where_exp: "post", "post.series_part != 'B'" %}
