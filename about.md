@@ -28,22 +28,22 @@ description: "About The Handstand Dilemma: a handstand practitioner's project wh
 
 <p>I’ve been practicing handstands for about six years, and in that time I’ve come to realize that practice doesn’t build ability, it improves the quality of your predictions. This led me to become obsessed with it. Slow Convergence was born because my practice had grown too intricate for these thoughts to stay inside my head.</p>
 
+<div class="signal">
+  <iframe src="{{ '/assets/img/about/learning_diverges.html' | relative_url }}" title="Animation: a learning model that diverges and explodes" loading="lazy" scrolling="no"></iframe>
+</div>
+
 <div class="liner">
   <p class="liner-lead">Learning is controlled hallucination converging toward truth.</p>
 </div>
+
+<p>I’m a ’90s kid: blogging is my love language, and sharing so much with strangers online is something I’ve always found almost therapeutic. This project is where many parts of myself meet, and holds what I’ve understood about handstands. A system does not care whether you call an attempt a success or a failure: it only receives information and learns by updating its model of reality.</p>
 
 <div class="signal">
   <iframe src="{{ '/assets/img/about/learning_converges.html' | relative_url }}" title="Animation: a learning model that slowly converges" loading="lazy" scrolling="no"></iframe>
 </div>
 
-<p>I’m a ’90s kid: blogging is my love language, and sharing so much with strangers online is something I’ve always found almost therapeutic. This project is where many parts of myself meet, and holds what I’ve understood about handstands. A system does not care whether you call an attempt a success or a failure: it only receives information and learns by updating its model of reality.</p>
-
 <div class="liner">
   <p class="liner-lead">No error signal. No adaptation. No learning.</p>
-</div>
-
-<div class="signal">
-  <iframe src="{{ '/assets/img/about/learning_diverges.html' | relative_url }}" title="Animation: a learning model that diverges and explodes" loading="lazy" scrolling="no"></iframe>
 </div>
 
 <p>The editorial flow is a reorganization of my stream of consciousness, and each topic is explored based on what the scientific literature and reliable sources tell us about handstand practice.</p>
