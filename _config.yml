@@ -15,9 +15,10 @@ plugins:
   - jekyll-sitemap
   
 header_pages:
+  - series.md
   - blog-index.md
-  - about.md
   - newsletter.md
+  - about.md
   - collaborations.md
    
 markdown: kramdown
