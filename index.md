@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Movement is a way of thinking"
-description: "Physics lessons in an upside-down context: exploring the handstand balance"
+title: "Signals from noise"
+description: "Blog on motor learning: error, adaption and convercence toward reality."
 ---
 
 {% assign series_posts = site.posts | where_exp: "post", "post.series_order" | sort: "series_order" %}
@@ -141,7 +141,7 @@ description: "Physics lessons in an upside-down context: exploring the handstand
   <div class="prose">
     <h2>What you’re getting into: come for the quiet, stay for the search</h2>
     <p>Handstands make one think of quiescence: they aren’t. Physically, the bodyweight sits above the hands, and any error grows exponentially. Staying up means correcting, continuously, with wrists and fingers that were never selected for the job. Evolution didn’t build sapiens to balance on hands, and yet humans learn to do it. That is what makes the handstand also philosophically interesting: <strong>handstands are punk.</strong></p>
-    <p>In a way, handbalancing comes with a certain musicality: it’s not a state but an action. You stay balanced only by continuing to balance, and <strong>motor learning</strong> is the wildest process you can experience. The Handstand Dilemma is not the hunt for the ultimate handstand solution, but the search for a simple, direct question: why do humans get obsessed with learning useless things?</p>
+    <p>In a way, handbalancing comes with a certain musicality: it’s not a state but an action. You stay balanced only by continuing to balance, and <strong>motor learning</strong> is the wildest process you can experience. The Handstand Logs is not the hunt for the ultimate handstand solution, but the search for a simple, direct question: why do humans get obsessed with learning useless things?</p>
   </div>
 
   <!-- Series -->
