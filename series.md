@@ -9,7 +9,7 @@ permalink: /blog/series/
 
 Handstands make one think of quiescence: they aren’t. Physically, the bodyweight sits above the hands, and any error grows exponentially. Staying up means correcting, continuously, with wrists and fingers that were never selected for the job. Evolution didn’t build sapiens to balance on hands, and yet humans learn to do it. That is what makes the handstand also philosophically interesting: handstands are punk.
 
-In a way, handbalancing comes with a certain musicality: it’s not a state but an action. You stay balanced only by continuing to balance, and motor learning is the wildest process you can experience. The Handstand Dilemma is not the hunt for the ultimate handstand solution, but the search for a simple, direct question: why do humans get obsessed with learning useless things?
+In a way, handbalancing comes with a certain musicality: it’s not a state but an action. You stay balanced only by continuing to balance, and motor learning is the wildest process you can experience. Signal to noise is not the hunt for the ultimate handstand solution, but the search for a simple, direct question: why do humans get obsessed with learning useless things?
 
 Inspired by a 45 rpm record: <strong>Part A</strong> treats the body as a single rigid block, <strong>Part B</strong> opens it up into an articulated one. Read the posts in order, or jump to the topic that interests you.
 
