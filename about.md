@@ -26,7 +26,7 @@ description: "About The Handstand Dilemma: a handstand practitioner's project wh
   .nowplaying p:last-child { margin-bottom: 0; }
 </style>
 
-<p>I’ve been practicing handstands for about six years, and in that time I’ve come to realize that practice doesn’t build ability, it improves the quality of your predictions. This led me to become obsessed with it. The Handstand Dilemma was born because my practice had grown too intricate for these thoughts to stay inside my head.</p>
+<p>I’ve been practicing handstands for about six years, and in that time I’ve come to realize that practice doesn’t build ability, it improves the quality of your predictions. This led me to become obsessed with it. Slow Convergence was born because my practice had grown too intricate for these thoughts to stay inside my head.</p>
 
 <div class="liner">
   <p class="liner-lead">Learning is controlled hallucination converging toward truth.</p>
