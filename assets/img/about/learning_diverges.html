@@ -133,7 +133,6 @@
     if (state !== 'dead') { ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(MX(head), MY(head), 3, 0, 7); ctx.fill(); }
     ctx.restore();
     ctx.strokeStyle = state === 'dead' ? 'rgba(255,43,214,.7)' : 'rgba(160,220,235,.22)'; ctx.strokeRect(x - r + .5, y - r + .5, 2 * r - 1, 2 * r - 1);
-    ctx.fillStyle = C.txt; ctx.textAlign = 'center'; ctx.fillText('WEIGHT SPACE', x, y + r + 15); ctx.textAlign = 'left';
   }
 
   function draw() {
@@ -190,7 +189,6 @@
     ctx.fillText('step  ' + String(k).padStart(3, '0') + '   epoch ' + String(epoch).padStart(3, '0'), 14, 58);
     ctx.fillText('loss  ' + (state === 'dead' ? 'inf' : l.toFixed(4)), 14, 72);
     ctx.fillText('rate  ' + GAIN.toFixed(2) + '  (limit 2.00)', 14, 86);
-    ctx.fillText(DIVERGE ? 'every update overshoots' : 'small updates / error shrinks', 14, H - 14);
     if (state === 'dead' && Math.floor(stateT * 5) % 4 !== 3) {
       ctx.font = 'bold ' + Math.round(Math.min(28, W / 15)) + 'px ui-monospace,Menlo,Consolas,monospace'; ctx.textAlign = 'center';
       const cx = wave.x + wave.w / 2, cy = wave.y;
@@ -239,7 +237,7 @@
     let n = 0; const target = DIVERGE ? 'dead' : 'locked';
     while (state !== target && n++ < 3000) step();
     for (let i = 0; i < 18; i++) step();
-    glitch = 0; draw();
+    glitch = 0; for (let i = 0; i < 8; i++) draw();
   } else requestAnimationFrame(ts => { last = ts; frame(ts); });
 })();
 </script>
