@@ -75,7 +75,7 @@ description: "Blog on motor learning: error, adaption and convercence toward rea
 
   /* ---------- Hero animation ---------- */
   .hero-anim { margin: 1.5rem 0; }
-  .hero-anim iframe { display: block; width: 100%; aspect-ratio: 20 / 9; max-height: 70vh; border: 0; background: transparent; }
+  .hero-anim iframe { display: block; width: 100%; aspect-ratio: 20 / 9; max-height: 70vh; border: 0; background: #04050a; border-radius: 8px; }
   @media (max-width: 700px) { .hero-anim iframe { aspect-ratio: 35 / 27; } }
 
   /* ---------- Series: Side A / Side B ---------- */
@@ -120,8 +120,8 @@ description: "Blog on motor learning: error, adaption and convercence toward rea
   <!-- Hero animation -->
   <figure class="hero-anim">
     <iframe
-      src="{{ '/assets/img/handstand_home.html' | relative_url }}"
-      title="Animation of a stick figure doing a cartwheel and settling into a handstand, swaying slightly to keep its balance"
+      src="{{ '/assets/img/home.html' | relative_url }}"
+      title="Animation of a noisy signal on an oscilloscope: a prediction model starts as a hallucination and converges toward the true signal as the error shrinks"
       scrolling="no">
     </iframe>
   </figure>
