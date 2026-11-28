@@ -115,10 +115,7 @@ description: "Blog on motor learning: error, adaption and convercence toward rea
 
   <section class="intro">
     <p class="lead">A collection of notes on learning, adaptation, and the strange machinery that transforms repetition into skill.</p>
-    <div class="intro-body">
-      <p><strong>The nervous system as a prediction machine.</strong> Every skill begins as a <strong>hallucination</strong>; error is reality’s response to the model.</p>
-      <p><strong>Anatomical wires as feedback loops.</strong> Reality disagrees, error is generated, the model updates. Repeat thousands of times.</p>
-      <p>Error isn’t an error: it’s the ultimate form of data. Handstands are a dataset full of errors. <strong>The Handstand Dilemma</strong> is an editorial project where physical and philosophical approaches meet to disassemble, explore, and digest this process.</p>
+    <p>Error isn’t an error: it’s the ultimate form of data. Motor learning is a dataset full of errors. <strong>Signals to noise</strong> is an editorial project where physical and philosophical approaches meet to disassemble, explore, and digest this process.</p>
     </div>
     <p class="closing"><strong>What we call learning is a prediction engine slowly converging toward reality.</strong></p>
   </section>
@@ -140,9 +137,12 @@ description: "Blog on motor learning: error, adaption and convercence toward rea
   <!-- What you’re getting into -->
   <div class="prose">
     <h2>What you’re getting into: come for the quiet, stay for the search</h2>
-    <p>Handstands make one think of quiescence: they aren’t. Physically, the bodyweight sits above the hands, and any error grows exponentially. Staying up means correcting, continuously, with wrists and fingers that were never selected for the job. Evolution didn’t build sapiens to balance on hands, and yet humans learn to do it. That is what makes the handstand also philosophically interesting: <strong>handstands are punk.</strong></p>
-    <p>In a way, handbalancing comes with a certain musicality: it’s not a state but an action. You stay balanced only by continuing to balance, and <strong>motor learning</strong> is the wildest process you can experience. The Handstand Logs is not the hunt for the ultimate handstand solution, but the search for a simple, direct question: why do humans get obsessed with learning useless things?</p>
-  </div>
+      <p><strong>The nervous system as a prediction machine.</strong> Every skill begins as a <strong>hallucination</strong>; error is reality’s response to the model.</p>
+      <p><strong>Anatomical wires as feedback loops.</strong> Reality disagrees, error is generated, the model updates. Repeat thousands of times.</p>
+    </div>
+    <p class="closing"><strong>What we call learning is a prediction engine slowly converging toward reality.</strong></p>
+    
+   </div>
 
   <!-- Series -->
   <h2>Follow the series</h2>
