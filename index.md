@@ -143,7 +143,7 @@ description: "Blog on motor learning: error, adaptation and convergence toward r
   <!-- What you’re getting into -->
 <h2>What you’re getting into: come for the quiet, stay for the search</h2>
 
-Every movement begins as a hallucination: a guess about the world. The nervous system builds a model of the world, and the muscles put it to the test. Error is reality’s response to the model. Motor learning is how our guesses improve: as error is generated, the model updates. What we call learning is a prediction engine slowly converging toward reality.
+Every movement begins as a hallucination, a guess about the world. The nervous system builds a model, and the muscles put it to the test. Error is reality’s response. Motor learning is how our guesses improve: as error is generated, the model updates. What we call learning is a prediction engine slowly converging toward reality.
 
 {% include feedback-loop.html
    step1="the guess meets reality"
