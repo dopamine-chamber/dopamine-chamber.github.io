@@ -7,6 +7,8 @@ permalink: /blog/
 description: Notes on biologial systems updating their models through experience, error and feedback.
 ---
 
+All the signals collected from the noise of learning, perception and reality.
+
 <style>
   .post-list li h2 {
     font-size: 1.15rem;
