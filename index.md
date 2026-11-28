@@ -141,19 +141,7 @@ description: "Blog on motor learning: error, adaptation and convergence toward r
   </p>
 
   <!-- What you’re getting into -->
-  <div class="prose">
-  <h2>What you’re getting into: come for the quiet, stay for the search</h2>
-
-  <p>The nervous system as a prediction machine. Every skill begins as a hallucination: error is reality’s response to the model.</p>
-
-  <p>Anatomical wires as feedback loops. Reality disagrees, error is generated, the model updates. Repeat thousands of times.</p>
-
-  <p>Error isn’t an error: it’s the ultimate form of data. Motor learning is a dataset full of errors.</p>
-
-  <p>Signals from noise is an editorial project where physical and philosophical approaches meet to disassemble, explore, and digest this process.</p>
-
-  <p class="closing">What we call learning is a prediction engine slowly converging toward reality.</p>
-</div>
+ {% include what-you-get.html %}
 
   <!-- Series -->
   <h2>Follow the logs</h2>
