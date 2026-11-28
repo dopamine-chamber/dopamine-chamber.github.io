@@ -1,0 +1,36 @@
+<div class="sfn-loopbox" aria-hidden="true">
+<style>
+  .sfn-loopbox { position:relative; margin:1.5rem 0 2rem; padding:1.75rem 1.5rem 1.25rem; background:#04050a; color:#e3f6f9;
+    font:400 .9rem/1.3 ui-monospace,Menlo,Consolas,monospace; text-align:center; }
+  .sfn-loopbox::after { content:""; position:absolute; inset:0; pointer-events:none;
+    background:repeating-linear-gradient(0deg,rgba(0,0,0,.22) 0 1px,transparent 1px 3px); }
+  .sfn-loopbox .sfn-steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.75rem; list-style:none; margin:0; padding:0; }
+  .sfn-loopbox .sfn-steps li { position:relative; display:flex; align-items:center; justify-content:center; min-height:3.2rem; margin:0; padding:.5rem;
+    border:1px solid rgba(25,240,255,.4); }
+  .sfn-loopbox .sfn-steps li + li::before { content:"\2192"; position:absolute; right:100%; width:1.75rem; text-align:center; color:#19f0ff; }
+  .sfn-loopbox .sfn-return { position:relative; margin:0 calc((100% - 3.5rem) / 6); height:1.9rem; border:1px solid rgba(255,43,214,.7); border-top:0; }
+  .sfn-loopbox .sfn-return::before { content:""; position:absolute; left:-5px; top:-1px; border:4.5px solid transparent; border-top:0; border-bottom:7px solid #ff2bd6; }
+  .sfn-loopbox .sfn-repeat { position:relative; width:max-content; max-width:100%; margin:-.7rem auto 0; padding:0 .7rem; background:#04050a; color:#ff2bd6; }
+  @media (prefers-reduced-motion:no-preference) {
+    .sfn-loopbox .sfn-steps li { animation:sfn-step 4.8s steps(1,end) infinite; }
+    .sfn-loopbox .sfn-steps li:nth-child(2) { animation-delay:1.6s; }
+    .sfn-loopbox .sfn-steps li:nth-child(3) { animation-delay:3.2s; }
+  }
+  @keyframes sfn-step { 0% { background:rgba(255,43,214,.24); border-color:#ff2bd6; } 33.34%, 100% { background:transparent; border-color:rgba(25,240,255,.4); } }
+  @media (max-width:600px) {
+    .sfn-loopbox { padding:1.25rem 1.1rem; }
+    .sfn-loopbox .sfn-steps { grid-template-columns:minmax(0,1fr); gap:1.6rem; }
+    .sfn-loopbox .sfn-steps li + li::before { content:"\2193"; right:auto; left:0; width:100%; top:-1.45rem; line-height:1.3rem; }
+    .sfn-loopbox .sfn-return { display:none; }
+    .sfn-loopbox .sfn-repeat { margin-top:.9rem; }
+    .sfn-loopbox .sfn-repeat::before { content:"\21BB\00a0"; }
+  }
+</style>
+<ol class="sfn-steps">
+  <li>{{ include.step1 }}</li>
+  <li>{{ include.step2 }}</li>
+  <li>{{ include.step3 }}</li>
+</ol>
+<div class="sfn-return"></div>
+<p class="sfn-repeat">{{ include.repeat }}</p>
+</div>
