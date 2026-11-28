@@ -2,7 +2,7 @@
 layout: page
 title: Newsletter
 permalink: /newsletter/
-description: A newsletter on the physics of handstand balance is on its way. Join the list if you'd like to hear about it.
+description: "A newsletter from signals from noise is on its way: new posts on motor learning and the physics of balance, plus the occasional note. Join the list to hear when the channel opens."
 ---
 
 <style>
@@ -10,33 +10,21 @@ description: A newsletter on the physics of handstand balance is on its way. Joi
   .newsletter a.btn, .newsletter a.btn:visited { display: inline-block; padding: 0.55rem 1.1rem; margin: 0.5rem 0; border-radius: 6px; background: #222222; color: #fff; text-decoration: none; }
   .newsletter a.btn:hover, .newsletter a.btn:focus { background: #3a3fd1; color: #fff; text-decoration: none; }
 
+  /* ---------- Hero animation ---------- */
+  .hero-anim { margin: 0 0 1.5rem; }
+  .hero-anim iframe { display: block; width: 100%; aspect-ratio: 20 / 7; max-height: 60vh; border: 0; background: #04050a; border-radius: 8px; }
+  @media (max-width: 700px) { .hero-anim iframe { aspect-ratio: 4 / 3; } }
+
   .liner { margin: 1.5rem 0 2rem; }
   .newsletter .liner p { text-align: center; }
   .liner-kicker { margin: 0; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.75rem; opacity: 0.65; }
   .liner-lead { margin: 0.25rem auto 0; max-width: 30rem; font-size: 1.25rem; line-height: 1.3; font-weight: 600; }
 
-  .vinyl {
-    position: relative;
-    width: 9rem;
-    aspect-ratio: 1;
-    margin: 0 auto 1.25rem;
-    border-radius: 50%;
-    background:
-      radial-gradient(circle, transparent 0 30%, rgba(255,255,255,.06) 31% 32%, transparent 33% 100%),
-      repeating-radial-gradient(circle, #111 0 2px, #1d1d1d 3px 4px);
-    box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.35);
-    animation: spin 6s linear infinite;
-  }
-  /* LP label: link blue, with a violet halo toward the edge */
-  .vinyl::before { content: ""; position: absolute; inset: 33%; border-radius: 50%; background: radial-gradient(circle, #f5f0e6 0 5%, #3a3fd1 6% 70%, #6b3fc9 71% 100%); }
-  .vinyl::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: conic-gradient(from 20deg, transparent 0 20%, rgba(255,255,255,.12) 25%, transparent 30% 70%, rgba(255,255,255,.12) 75%, transparent 80%); }
-  @keyframes spin { to { transform: rotate(360deg); } }
-
-  .tracklist-label { margin: 1.5rem 0 0; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.75rem; opacity: 0.65; }
-  .tracklist { list-style: none; counter-reset: track; padding: 0; margin: 0.5rem 0 1.5rem; border-top: 1px solid rgba(128, 128, 128, 0.35); }
-  .tracklist li { counter-increment: track; display: flex; align-items: baseline; gap: 1rem; padding: 0.55rem 0; border-bottom: 1px dashed rgba(128, 128, 128, 0.35); }
-  .tracklist li::before { content: counter(track, decimal-leading-zero); font-weight: 700; font-variant-numeric: tabular-nums; color: #3a3fd1; opacity: 0.8; }
-  .tracklist small { margin-left: auto; opacity: 0.6; white-space: nowrap; }
+  .payload-label { margin: 1.5rem 0 0; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.75rem; opacity: 0.65; }
+  .payload { list-style: none; counter-reset: packet; padding: 0; margin: 0.5rem 0 1.5rem; border-top: 1px solid rgba(128, 128, 128, 0.35); }
+  .payload li { counter-increment: packet; display: flex; align-items: baseline; gap: 1rem; padding: 0.55rem 0; border-bottom: 1px dashed rgba(128, 128, 128, 0.35); }
+  .payload li::before { content: counter(packet, decimal-leading-zero); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-weight: 700; font-variant-numeric: tabular-nums; color: #3a3fd1; opacity: 0.8; }
+  .payload small { margin-left: auto; opacity: 0.6; white-space: nowrap; }
 
   .steps { list-style: none; display: flex; padding: 0; margin: 1.5rem 0; }
   .steps li { flex: 1; position: relative; text-align: center; font-size: 0.8rem; padding-top: 1.4rem; opacity: 0.6; }
@@ -54,40 +42,48 @@ description: A newsletter on the physics of handstand balance is on its way. Joi
   .smallprint p:last-child { margin-bottom: 0; }
 
   @media (prefers-reduced-motion: reduce) {
-    .vinyl, .steps li.now::before { animation: none; }
+    .steps li.now::before { animation: none; }
   }
 </style>
 
 <div class="newsletter">
 
+  <figure class="hero-anim">
+    <iframe
+      src="{{ '/assets/img/newsletter/signal_transmission.html' | relative_url }}"
+      title="Animation of data packets travelling from a transmitter to a receiver across a noisy channel: corrupted packets are rejected and sent again until one arrives intact"
+      loading="lazy"
+      scrolling="no">
+    </iframe>
+  </figure>
+
   <div class="liner">
-    <div class="vinyl" aria-hidden="true"></div>
-    <p class="liner-kicker">Coming soon</p>
-    <p class="liner-lead">A newsletter on the physics of handstand balance is on its way.</p>
+    <p class="liner-kicker">Channel opening soon</p>
+    <p class="liner-lead">A newsletter on motor learning and the physics of balance is on its way.</p>
   </div>
 
-  <p>The physics of handstand balance delivered to your inbox, plus the occasional note that doesn’t fit in an article.</p>
+  <p>New posts and the occasional note that doesn’t fit in an article, delivered straight to your inbox. Think of it as a low-bandwidth channel: the signal, without the noise, sent when there is something worth sending.</p>
 
-  <p class="tracklist-label">Tracklist</p>
-  <ol class="tracklist">
-    <li>New posts on the physics of handstand balance <small>in your inbox</small></li>
-    <li>Bonus track: the occasional note that doesn’t fit in an article <small>every now and then</small></li>
+  <p class="payload-label">Payload</p>
+  <ol class="payload">
+    <li>New posts on motor learning and the physics of balance <small>in your inbox</small></li>
+    <li>Side notes that don’t fit in an article <small>every now and then</small></li>
   </ol>
 
-  <p>Leave your email address to get in touch with me.</p>
+  <p>Leave your email address and I’ll let you know when the channel opens.</p>
 
   <ol class="steps" aria-label="Where the newsletter stands">
     <li class="done">Idea</li>
-    <li class="now">Test pressing</li>
+    <li class="now">Test signal</li>
     <li>Setup</li>
-    <li>Release</li>
+    <li>Broadcast</li>
   </ol>
 
   <p><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScUHUH19eT3a6SQB5pTEzOYSEjTDFkXbTV4GtIru3jY2EoDoA/viewform" target="_blank" rel="noopener">Join the list</a></p>
 
   <div class="smallprint">
     <p class="smallprint-label">Small print</p>
-    <p>The form is hosted by Google Forms and opens in a new tab. I’ll use your email address only to tell you when the newsletter launches and to send it afterwards. I won’t share it with anyone, and you can ask me to delete it at any time. Details in the <a href="{{ '/privacy-policy/' | relative_url }}">privacy policy</a>. Prefer not to use the form? Write to <a href="mailto:info@slowconvergence.com">benedettagiglio@gmail.com</a> with “Newsletter” in the subject.</p>
+    <p>The form is hosted by Google Forms and opens in a new tab. I’ll use your email address only to tell you when the newsletter launches and to send it afterwards. I won’t share it with anyone, and you can ask me to delete it at any time. Details in the <a href="{{ '/privacy-policy/' | relative_url }}">privacy policy</a>. Prefer not to use the form? Write to <a href="mailto:info@slowconvergence.com">info@slowconvergence.com</a> with “Newsletter” in the subject.</p>
   </div>
 
 </div>
