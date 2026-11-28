@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Signals from noise"
-description: "Blog on motor learning: error, adaption and convercence toward reality."
+description: "Blog on motor learning: error, adaptation and convergence toward reality."
 ---
 
 {% assign series_posts = site.posts | where_exp: "post", "post.series_order" | sort: "series_order" %}
@@ -120,7 +120,7 @@ description: "Blog on motor learning: error, adaption and convercence toward rea
   <!-- Hero animation -->
   <figure class="hero-anim">
     <iframe
-      src="{{ '/assets/img/home.html' | relative_url }}"
+      src="{{ '/assets/img/home/signal_noise_home.html' | relative_url }}"
       title="Animation of a noisy signal on an oscilloscope: a prediction model starts as a hallucination and converges toward the true signal as the error shrinks"
       scrolling="no">
     </iframe>
@@ -139,9 +139,9 @@ description: "Blog on motor learning: error, adaption and convercence toward rea
 
   <p>Anatomical wires as feedback loops. Reality disagrees, error is generated, the model updates. Repeat thousands of times.</p>
 
-  <p>Error isn’t an error: it’s the ultimate form of data. Motor learning is a dataset full of errors. </p>
-  
-  <p></p>Signals to noise is an editorial project where physical and philosophical approaches meet to disassemble, explore, and digest this process.</p>
+  <p>Error isn’t an error: it’s the ultimate form of data. Motor learning is a dataset full of errors.</p>
+
+  <p>Signals from noise is an editorial project where physical and philosophical approaches meet to disassemble, explore, and digest this process.</p>
 
   <p class="closing">What we call learning is a prediction engine slowly converging toward reality.</p>
 </div>
