@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-description: "About The Handstand Dilemma: a handstand practitioner's project where personal experience meets science communication."
+description: "About Slow Convergence: a handstand practitioner's project where personal experience meets science communication."
 ---
 
 <style>
