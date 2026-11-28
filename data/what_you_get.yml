@@ -1,0 +1,41 @@
+# All the words of the "What you're getting into" section.
+# Edit only the indented lines, and keep the two spaces in front of them.
+
+title: >-
+  What you’re getting into: come for the quiet, stay for the search.
+
+# first part (magenta)
+model_heading: >-
+  A new model of your nervous system
+model_lead: >-
+  The nervous system as a prediction machine.
+model_text: >-
+  Every skill begins as a hallucination: error is reality’s response to the model.
+
+# second part (cyan): the loop
+loop_heading: >-
+  The loop behind every skill
+loop_lead: >-
+  Anatomical wires as feedback loops.
+loop_step_1: >-
+  Reality disagrees
+loop_step_2: >-
+  error is generated
+loop_step_3: >-
+  the model updates
+loop_repeat: >-
+  Repeat thousands of times.
+
+# third part (amber)
+data_heading: >-
+  Another way to read error
+data_lead: >-
+  Error isn’t an error: it’s the ultimate form of data.
+data_text: >-
+  Motor learning is a dataset full of errors.
+
+# ending
+project: >-
+  Signals from noise is an editorial project where physical and philosophical approaches meet to disassemble, explore, and digest this process.
+closing: >-
+  What we call learning is a prediction engine slowly converging toward reality.
